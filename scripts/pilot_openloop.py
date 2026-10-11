@@ -366,7 +366,10 @@ def window_stats(raw, scn_id, t0, t1, timeout_ms, slo_ms=None, bin_s=SLO_BIN, re
     }
     if slo_ms is not None:
         bins = []
-        edges = np.arange(t0, t1 + 1e-9, bin_s)
+        # Count the bins, then build the edges: at epoch magnitudes t1 + 1e-9 == t1, so np.arange(t0, t1 + 1e-9, bin_s)
+        # stopped one edge short and the last bin of the window was never evaluated.
+        n_bins = int(round((t1 - t0) / bin_s))
+        edges = t0 + bin_s * np.arange(n_bins + 1)
         for a, b in zip(edges[:-1], edges[1:]):
             bm = m & (start >= a) & (start < b)
             p = pctl(np.where(raw.e_ok[bm], raw.e_ms[bm], INF), 95)
