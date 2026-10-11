@@ -24,6 +24,17 @@ Analyses
   A5  resource use against O1 per service x pattern, non-dominated configs marked
   A6  mechanism figures (load, autoscaler reading, replicas) for selected runs
 
+Exploratory analyses added on 2026-10-11 after an external review of the thesis draft (not part of the plan; reported
+separately and not used to test the hypotheses)
+  X1  the three planned contrasts on O4 (first scale-up, first new pod Ready, and time until 3 pods are Ready, the
+      capacity the peak needs), same test, A12 and Holm within each family of 3
+  X2  Hodges-Lehmann shift and its exact distribution-free interval for the 36 planned contrasts of A2
+  X3  the 36 planned contrasts inside each cluster session (reps 1-2 and 3-5)
+  X4  pod placement: node of the k6 pod and of every new replica (from the scheduler events); association between the
+      share of new replicas placed on the k6 node and the cell-centred O1 and O2, within-cell permutation test
+  X5  CPU of one pod against its request rate (healthy ladder steps in analysis/ladder.json and the base phase of the
+      campaign runs): request rates at which CPU reaches the HPA targets 50% and 80% of the 250m request
+
 Run on Windows with the bundled interpreter (reads the campaign folder, writes only to --out):
   PYTHONUTF8=1 tools/python312/python.exe scripts/analyze_openloop_campaign.py
 """
@@ -50,6 +61,11 @@ SERVICES = po.SERVICES
 PATTERNS = po.PATTERNS
 CONFIGS = po.CONFIGS
 AUTOSCALED = po.AUTOSCALED
+# SLOs (ms) used for O1. pilot-config.env keeps the values frozen before the campaign (auth 1500, shipping 1200).
+# After the campaign the rule was made the same for both services: B2's p95 in the closed-loop campaign under its
+# heaviest pattern, rounded up to the next 100 ms (auth 1452 -> 1500, shipping 917 -> 1000). Thesis 3.3.4 and 3.3.6;
+# --original-slo reproduces the results with the frozen values (analysis/part12-slo-awal/).
+ANALYSIS_SLO_MS = {"auth-service": 1500, "shipping-rate-service": 1000}
 SHORT = {"auth-service": "auth", "shipping-rate-service": "shipping"}
 CONTRASTS = [("h2", "h3", "metric"), ("h3", "k1", "engine"), ("h1", "h2", "default vs tuned")]
 SESSION_1 = (1, 2)            # reps 1-2: 2026-10-06 12:33 -> 10-07 13:31 UTC
@@ -200,6 +216,25 @@ def cpu_core_seconds(run_dir, t_start):
     return sum(by_ts.values()) * PROM_STEP, len(by_ts)
 
 
+def scheduled_nodes(run_dir):
+    """Pod -> node from the scheduler's 'Successfully assigned' events of the run."""
+    path = run_dir / "k8s-events.txt"
+    text = path.read_text(encoding="utf-8", errors="replace") if path.exists() else ""
+    return dict(re.findall(r"\tScheduled\tpod/(\S+)\tSuccessfully assigned \S+ to (\S+)", text))
+
+
+def base_phase_cpu(run_dir, t_start):
+    """Mean CPU (cores) of the tested service during the base phase: rate[1m] samples whose window lies inside k6 t
+    0-120 s, summed over its pods."""
+    pods = po.per_pod(run_dir / "prom_cpu_usage.json")
+    by_ts = defaultdict(float)
+    for series in pods.values():
+        for t, v in series.items():
+            if t_start + RATE_WINDOW <= t <= t_start + po.ONSET:
+                by_ts[t] += v
+    return float(np.mean(list(by_ts.values()))) if by_ts else None
+
+
 # ── statistics ───────────────────────────────────────────────────────────────
 
 def midranks(values):
@@ -269,6 +304,176 @@ def mad(values):
     return med([abs(v - m) for v in values]) if m is not None else None
 
 
+def rank_sum_null(n, m):
+    """Number of splits per value of U (no ties) for samples of n and m."""
+    dp = [defaultdict(int) for _ in range(n + 1)]
+    dp[0][0] = 1
+    for r in range(1, n + m + 1):
+        for k in range(n, 0, -1):
+            for s, c in list(dp[k - 1].items()):
+                dp[k][s + r] += c
+    return {s - n * (n + 1) // 2: c for s, c in dp[n].items()}
+
+
+def hodges_lehmann(x, y, level=0.95):
+    """Shift y - x: median of the pairwise differences, and the exact distribution-free interval (order statistics k
+    and nm + 1 - k of the differences), k the largest whose two-sided coverage under the null distribution of U
+    (without ties) is at least `level`; n = m = 5 gives k = 3 and coverage 96.8%."""
+    n, m = len(x), len(y)
+    diffs = sorted(b - a for a in x for b in y)
+    null = rank_sum_null(n, m)
+    total = sum(null.values())
+
+    def coverage(k):     # interval from the k-th smallest to the k-th largest difference: 1 - 2 P(U <= k - 1)
+        return 1 - 2 * sum(null.get(u, 0) for u in range(k)) / total
+    k = max(kk for kk in range(1, n * m // 2 + 1) if coverage(kk) >= level)
+    return float(np.median(diffs)), diffs[k - 1], diffs[n * m - k], coverage(k)
+
+
+def spearman(x, y):
+    rx, ry = midranks(list(x)), midranks(list(y))
+    mx, my = np.mean(rx), np.mean(ry)
+    num = sum((a - mx) * (b - my) for a, b in zip(rx, ry))
+    den = math.sqrt(sum((a - mx) ** 2 for a in rx) * sum((b - my) ** 2 for b in ry))
+    return num / den if den else 0.0
+
+
+def within_cell_permutation(x, y, groups, n_perm=20000, seed=20261011):
+    """Two-sided permutation p for Spearman(x, y) with x shuffled inside each group (cell)."""
+    import random
+    rng = random.Random(seed)
+    obs = spearman(x, y)
+    idx = defaultdict(list)
+    for i, g in enumerate(groups):
+        idx[g].append(i)
+    hits = 0
+    for _ in range(n_perm):
+        xp = list(x)
+        for members in idx.values():
+            vals = [x[i] for i in members]
+            rng.shuffle(vals)
+            for i, v in zip(members, vals):
+                xp[i] = v
+        if abs(spearman(xp, y)) >= abs(obs) - 1e-12:
+            hits += 1
+    return obs, (hits + 1) / (n_perm + 1)
+
+
+def crossing(points, level):
+    """Rate at which the piecewise-linear CPU curve through `points` (rate, cpu) first reaches `level`."""
+    pts = sorted(points)
+    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+        if y0 < level <= y1:
+            return x0 + (level - y0) * (x1 - x0) / (y1 - y0)
+    return None
+
+
+CPU_REQUEST_M = 250          # CPU request of both services (Tabel 3.11)
+CPU_TARGETS = {"h2": 50, "h1": 80}
+
+
+def exploratory(runs, cells, res):
+    """X1-X5 (see the module docstring)."""
+    x = {"X1": [], "X2": [], "X3": {"contrasts": [], "agreement": {}}, "X4": {}, "X5": {}}
+
+    def values(service, pattern, config, field):
+        reps = cells[(service, pattern, config)]
+        return [reps[k][field] for k in sorted(reps)]
+
+    # X1
+    for service in SERVICES:
+        for pattern in PATTERNS:
+            for field in ("O4_first_up_s", "O4_first_new_ready_s", "O4_three_ready_s"):
+                family = []
+                for a, b, label in CONTRASTS:
+                    xa, xb = values(service, pattern, a, field), values(service, pattern, b, field)
+                    assert None not in xa + xb, (service, pattern, field)
+                    u, p = rank_sum_test(xa, xb)
+                    est, lo, hi, cov = hodges_lehmann(xa, xb)
+                    family.append({"service": service, "pattern": pattern, "outcome": field, "contrast": f"{a} vs {b}",
+                                   "factor": label, "median_a": med(xa), "median_b": med(xb), "U_a": u, "p": p,
+                                   "A12_a_gt_b": a12(xa, xb), "hl_shift": est, "hl_low": lo, "hl_high": hi,
+                                   "hl_coverage": cov})
+                for row, adj in zip(family, holm([f["p"] for f in family])):
+                    row["p_holm"] = adj
+                    row["significant_0.05"] = adj <= 0.05
+                x["X1"].extend(family)
+
+    # X2 and X3: the planned contrasts of A2
+    for row in res["A2"]:
+        a, b = row["contrast"].split(" vs ")
+        xa = values(row["service"], row["pattern"], a, row["outcome"])
+        xb = values(row["service"], row["pattern"], b, row["outcome"])
+        est, lo, hi, cov = hodges_lehmann(xa, xb)
+        x["X2"].append({k: row[k] for k in ("service", "pattern", "outcome", "contrast", "factor")}
+                       | {"hl_shift": est, "hl_low": lo, "hl_high": hi, "hl_coverage": cov})
+        reps = cells[(row["service"], row["pattern"], a)], cells[(row["service"], row["pattern"], b)]
+        diff = {name: med([reps[1][k][row["outcome"]] for k in ses]) - med([reps[0][k][row["outcome"]] for k in ses])
+                for name, ses in (("session1", SESSION_1), ("session2", SESSION_2))}
+        x["X3"]["contrasts"].append({k: row[k] for k in ("service", "pattern", "outcome", "contrast", "factor")} | diff)
+    for factor in sorted({r["factor"] for r in x["X3"]["contrasts"]}):
+        rows = [r for r in x["X3"]["contrasts"] if r["factor"] == factor]
+        x["X3"]["agreement"][factor] = {
+            "contrasts": len(rows),
+            "same_direction": sum(1 for r in rows if r["session1"] * r["session2"] > 0),
+            "opposite": sum(1 for r in rows if r["session1"] * r["session2"] < 0),
+            "zero_in_a_session": sum(1 for r in rows if r["session1"] * r["session2"] == 0)}
+
+    # X4
+    auto = [r for r in runs if r["config"] in AUTOSCALED and r["new_pods"]]
+    for r in auto:
+        reps = cells[(r["service"], r["pattern"], r["config"])].values()
+        r["_res"] = {f: r[f] - med([q[f] for q in reps]) for f in ("O1_slo_s", "O2_error_pct")}
+    place = {"runs_with_new_pods": len(auto), "sessions": {}, "tests": {}}
+    for name, ses in (("session1", SESSION_1), ("session2", SESSION_2)):
+        sel = [r for r in auto if r["rep"] in ses]
+        shares = [r["new_pods_on_k6_node"] / r["new_pods"] for r in sel]
+        place["sessions"][name] = {
+            "runs": len(sel), "new_pods": sum(r["new_pods"] for r in sel),
+            "new_pods_on_k6_node": sum(r["new_pods_on_k6_node"] for r in sel),
+            "share_min": min(shares), "share_median": med(shares), "share_max": max(shares),
+            "runs_all_on_k6_node": sum(1 for s in shares if s == 1),
+            "k6_nodes": sorted({r["k6_node"] for r in sel}),
+            "base_nodes": {svc: sorted({n for r in sel if r["service"] == svc for _, n in r["base_pods"]})
+                           for svc in SERVICES}}
+        if len({s for s in shares}) > 1:
+            for f in ("O1_slo_s", "O2_error_pct"):
+                rho, p = within_cell_permutation(shares, [r["_res"][f] for r in sel],
+                                                 [(r["service"], r["pattern"], r["config"]) for r in sel])
+                place["tests"][f"{name}|{f}"] = {"spearman": rho, "p_permutation": p, "runs": len(sel)}
+    shares = [r["new_pods_on_k6_node"] / r["new_pods"] for r in auto]
+    for f in ("O1_slo_s", "O2_error_pct"):
+        rho, p = within_cell_permutation(shares, [r["_res"][f] for r in auto],
+                                         [(r["service"], r["pattern"], r["config"]) for r in auto])
+        place["tests"][f"both|{f}"] = {"spearman": rho, "p_permutation": p, "runs": len(auto)}
+    for r in auto:
+        del r["_res"]
+    x["X4"] = place
+
+    # X5
+    ladder_path = po.PILOT_DIR / "analysis" / "ladder.json"
+    ladder = json.loads(ladder_path.read_text(encoding="utf-8")) if ladder_path.exists() else {}
+    for service in SERVICES:
+        pts = []
+        for run_name, v in ladder.items():
+            if v["meta"].get("service") != service:
+                continue
+            for st in v["steps"]:
+                if st.get("missing") or st["error_pct"] > 1.0:        # healthy steps only
+                    continue
+                n = len(st["pod_cpu_mean_m"])
+                pts.append({"source": f"ladder {v['meta'].get('config')}", "rate_per_pod": st["goodput_rps"] / n,
+                            "cpu_m_per_pod": float(np.mean(st["pod_cpu_mean_m"]))})
+        for label, cfgs in (("base phase, 1 pod", [c for c in CONFIGS if c != "b2"]), ("base phase, B2", ["b2"])):
+            sel = [r for r in runs if r["service"] == service and r["config"] in cfgs and r["base_cpu_m_per_pod"]]
+            pts.append({"source": label, "runs": len(sel), "rate_per_pod": med([r["base_rate_per_pod"] for r in sel]),
+                        "cpu_m_per_pod": med([r["base_cpu_m_per_pod"] for r in sel])})
+        curve = [(p["rate_per_pod"], p["cpu_m_per_pod"]) for p in pts]
+        x["X5"][service] = {"points": pts, "cpu_request_m": CPU_REQUEST_M,
+                            "rate_at_target": {c: crossing(curve, CPU_REQUEST_M * t / 100) for c, t in CPU_TARGETS.items()}}
+    return x
+
+
 # ── per-run outcomes ─────────────────────────────────────────────────────────
 
 def analyze(run_dir, cfg):
@@ -291,6 +496,18 @@ def analyze(run_dir, cfg):
     anti = [c for c in downs if any(a <= c["t"] < b for a, b in peaks)]
     core_s, cpu_samples = cpu_core_seconds(run_dir, t_start)
     base = [(name, rec["node"]) for name, rec in pods.items() if any(s <= onset < e for s, e in rec["intervals"])]
+    # X1: time until 3 pods are Ready (the peak needs 3 pods at one pod's healthy capacity: 30/10 and 105/50)
+    starts = sorted({s for rec in pods.values() for s, _ in rec["intervals"] if s >= onset} | {onset})
+    three = next((t for t in starts if t <= w1 and ready_count(pods, t) >= 3), None)
+    # X4: placement of the k6 pod and of the replicas added during the run
+    nodes = scheduled_nodes(run_dir)
+    k6_node = nodes.get(meta.get("k6_pod_name"))
+    base_names = {name for name, _ in base}
+    new_nodes = [n for p, n in nodes.items() if p.startswith(service + "-") and p not in base_names]
+    # X5: CPU per pod and request rate per pod in the base phase
+    base_cpu = base_phase_cpu(run_dir, t_start)
+    base_ready = ready_count(pods, t_start + po.ONSET / 2) or None
+    base_rate = (meta.get("load_profile") or {}).get("base_rate")
     return {
         "service": service, "config": config, "pattern": pattern, "rep": r["rep"],
         "plan_position": r["plan_position"], "run_dir": run_dir.relative_to(po.PILOT_DIR).as_posix(),
@@ -309,6 +526,12 @@ def analyze(run_dir, cfg):
         "scale_changes": [{"t_k6": round(c["t"] - t_start, 1), "from": c["from"], "to": c["to"]} for c in changes],
         "base_pods": base, "hpa_name": snaps[0]["name"] if snaps else None,
         "raw_md5_verified": (meta.get("raw_results") or {}).get("verified"),
+        "O4_three_ready_s": (three - onset) if three is not None else None,
+        "k6_node": k6_node, "new_pods": len(new_nodes),
+        "new_pods_on_k6_node": sum(1 for n in new_nodes if n == k6_node),
+        "base_ready_pods": base_ready,
+        "base_cpu_m_per_pod": base_cpu * 1000 / base_ready if base_cpu is not None and base_ready else None,
+        "base_rate_per_pod": base_rate / base_ready if base_rate and base_ready else None,
     }
 
 
@@ -441,6 +664,8 @@ def run_analyses(runs):
                     pts[o]["O1"] <= pts[c]["O1"] and pts[o][res_key] <= pts[c][res_key]
                     and (pts[o]["O1"] < pts[c]["O1"] or pts[o][res_key] < pts[c][res_key]) for o in CONFIGS))
             res["A5"][f"{service}|{pattern}"] = {"points": pts, "non_dominated": front}
+
+    res["X"] = exploratory(runs, cells, res)
     return res
 
 
@@ -459,7 +684,8 @@ def write_report(runs, res, out_dir):
     L.append("# Part 12 analyses — open-loop campaign (180 runs)\n")
     L.append("Generated by `scripts/analyze_openloop_campaign.py` from `experiment-results-openloop/`. Plan: "
              "`thesis_blueprint/12-deviation-and-analysis-plan.md`. KPI window k6 t 120–540 s; onset k6 t 120 s. "
-             "Cells are service × pattern × config, 5 reps each.\n")
+             "Cells are service × pattern × config, 5 reps each. SLO for O1: "
+             + ", ".join(f"{s} {v:.0f} ms" for s, v in res["slo_ms"].items()) + ".\n")
     flags = sum(r["inexact_scale_times"] for r in runs)
     pre = sum(r["scale_ups_before_onset"] for r in runs)
     L.append(f"Checks: {len(runs)} runs; scale changes without a usable `lastScaleTime` (snapshot time used): {flags}; "
@@ -569,6 +795,49 @@ def write_report(runs, res, out_dir):
                         for c, p in v["points"].items())
         L.append(f"| {SHORT[service]} | {pattern} | {', '.join(c.upper() for c in v['non_dominated']['replica_s'])} | "
                  f"{', '.join(c.upper() for c in v['non_dominated']['cpu_core_s'])} | {pts} |")
+
+    X = res["X"]
+    L.append("\n## X — exploratory analyses added on 2026-10-11 after a review of the thesis draft (not planned)\n")
+    L.append("### X1 — planned contrasts on O4 (exact rank-sum test, A12, Holm within each family of 3; "
+             "HL = Hodges–Lehmann shift second − first with its exact interval)\n")
+    L.append("| Service | Pattern | Outcome | Contrast | Medians | HL [interval] | p | p (Holm) | A12 |")
+    L.append("|---|---|---|---|---|---|---|---|---|")
+    for row in X["X1"]:
+        sig = " **sig.**" if row["significant_0.05"] else ""
+        L.append(f"| {SHORT[row['service']]} | {row['pattern']} | {row['outcome']} | {row['contrast'].upper()} "
+                 f"({row['factor']}) | {fmt(row['median_a'], 1)} vs {fmt(row['median_b'], 1)} | {fmt(row['hl_shift'], 1)} "
+                 f"[{fmt(row['hl_low'], 1)}, {fmt(row['hl_high'], 1)}] | {row['p']:.4f} | {row['p_holm']:.4f}{sig} | "
+                 f"{row['A12_a_gt_b']:.2f} |")
+    cov = X["X2"][0]["hl_coverage"]
+    L.append(f"\n### X2/X3 — the 36 planned contrasts: Hodges–Lehmann shift [{100 * cov:.1f}% interval] and the "
+             "difference of medians inside each session (second − first config)\n")
+    L.append("| Service | Pattern | Outcome | Contrast | HL [interval] | Session 1 | Session 2 |")
+    L.append("|---|---|---|---|---|---|---|")
+    for h, s in zip(X["X2"], X["X3"]["contrasts"]):
+        d = 0 if h["outcome"] == "O1_slo_s" else 2
+        L.append(f"| {SHORT[h['service']]} | {h['pattern']} | {h['outcome'].split('_')[0]} | {h['contrast'].upper()} "
+                 f"({h['factor']}) | {fmt(h['hl_shift'], d)} [{fmt(h['hl_low'], d)}, {fmt(h['hl_high'], d)}] | "
+                 f"{fmt(s['session1'], d)} | {fmt(s['session2'], d)} |")
+    L.append("\nDirection of the contrast in the two sessions: " + "; ".join(
+        f"{f}: same {v['same_direction']}, opposite {v['opposite']}, zero in a session {v['zero_in_a_session']} "
+        f"(of {v['contrasts']})" for f, v in X["X3"]["agreement"].items()) + ".\n")
+    P = X["X4"]
+    L.append("### X4 — placement of new replicas (scheduler events)\n")
+    for name, v in P["sessions"].items():
+        L.append(f"- {name}: {v['runs']} runs with new replicas; {v['new_pods_on_k6_node']} of {v['new_pods']} new "
+                 f"replicas on the k6 node (per run {fmt(v['share_min'], 2)}–{fmt(v['share_max'], 2)}, median "
+                 f"{fmt(v['share_median'], 2)}; {v['runs_all_on_k6_node']} runs with all on it); k6 node(s) "
+                 f"{v['k6_nodes']}; nodes of the serving pod at onset {v['base_nodes']}")
+    L.append("\nSpearman between the share of new replicas on the k6 node and the run's deviation from its cell median "
+             "(within-cell permutation, 20,000 draws):\n")
+    for k, v in P["tests"].items():
+        L.append(f"- {k}: rho {v['spearman']:.3f}, p {v['p_permutation']:.4f} ({v['runs']} runs)")
+    L.append("\n### X5 — CPU per pod against request rate per pod\n")
+    for service, v in X["X5"].items():
+        pts = "; ".join(f"{p['source']} {fmt(p['rate_per_pod'], 2)} req/s → {fmt(p['cpu_m_per_pod'], 0)} m"
+                        for p in sorted(v["points"], key=lambda p: p["rate_per_pod"]))
+        tgt = ", ".join(f"{c.upper()} {CPU_TARGETS[c]}% ≈ {fmt(r, 1)} req/s" for c, r in v["rate_at_target"].items())
+        L.append(f"- {SHORT[service]}: {pts}. Request rate per pod at the CPU target: {tgt}.")
     (out_dir / "report.md").write_text("\n".join(L) + "\n", encoding="utf-8")
 
 
@@ -695,20 +964,26 @@ def figures(runs, res, cfg, out_dir):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1])
-    ap.add_argument("--out", default=str(po.PILOT_DIR / "analysis" / "part12"))
+    ap.add_argument("--out", default=None, help="default: analysis/part12 (analysis/part12-slo-awal with --original-slo)")
+    ap.add_argument("--original-slo", action="store_true", help="use the SLOs frozen in pilot-config.env")
     ap.add_argument("--no-figures", action="store_true")
     args = ap.parse_args()
-    out_dir = Path(args.out)
+    out_dir = Path(args.out or po.PILOT_DIR / "analysis" / ("part12-slo-awal" if args.original_slo else "part12"))
     out_dir.mkdir(parents=True, exist_ok=True)
     cfg = po.load_config()
+    if not args.original_slo:
+        cfg["AUTH_SLO_MS"] = str(ANALYSIS_SLO_MS["auth-service"])
+        cfg["SHIPPING_SLO_MS"] = str(ANALYSIS_SLO_MS["shipping-rate-service"])
     runs = [analyze(d, cfg) for d in po.pilot_run_dirs()]
     if len(runs) != 180:
         print(f"warning: {len(runs)} runs found, expected 180", file=sys.stderr)
     res = run_analyses(runs)
+    res["slo_ms"] = {s: po.slo_for(cfg, s) for s in SERVICES}
     with (out_dir / "runs.csv").open("w", newline="", encoding="utf-8") as fh:
         cols = ["service", "pattern", "config", "rep", "plan_position", "O1_slo_s", "O2_error_pct", "O3_goodput_rps",
                 "timeout_pct", "shed_pct", "requests", "O4_first_up_s", "O4_first_new_ready_s", "O5_replica_s",
-                "O5_cpu_core_s", "anti_phase_downs", "scale_ups_before_onset", "inexact_scale_times", "run_dir"]
+                "O5_cpu_core_s", "anti_phase_downs", "scale_ups_before_onset", "inexact_scale_times", "run_dir",
+                "O4_three_ready_s", "k6_node", "new_pods", "new_pods_on_k6_node", "base_cpu_m_per_pod"]
         w = csv.writer(fh)
         w.writerow(cols)
         for r in sorted(runs, key=lambda r: (r["service"], r["pattern"], r["config"], r["rep"])):
