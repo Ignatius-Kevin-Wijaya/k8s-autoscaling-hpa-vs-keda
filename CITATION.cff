@@ -5,10 +5,10 @@ abstract: >-
   A controlled experiment on Azure Kubernetes Service that separates the effect of the scaling metric
   (CPU vs request rate) from that of the autoscaler (the Kubernetes Horizontal Pod Autoscaler vs KEDA):
   180 open-loop load-test runs (2 services x 6 configurations x 3 load patterns x 5 repetitions) with
-  per-request data, the code and manifests that produced them, the pre-registered analysis, and the
-  research log of the undergraduate thesis "Analisis Pengaruh Jenis Metrik Penskalaan dan Mekanisme
-  Autoscaler (HPA vs KEDA) terhadap Responsivitas dan Efisiensi Resource Aplikasi Microservices pada
-  Kubernetes".
+  per-request data, the code and manifests that produced them, the pre-registered analysis with its later
+  dated changes, the scripts that produce the thesis results chapter, and the research log of the
+  undergraduate thesis "Analisis Pengaruh Jenis Metrik Penskalaan dan Mekanisme Autoscaler (HPA vs KEDA)
+  terhadap Responsivitas dan Efisiensi Resource Aplikasi Microservices pada Kubernetes".
 type: software
 authors:
   - family-names: Wijaya
@@ -21,7 +21,7 @@ identifiers:
     description: "All versions (Zenodo concept DOI)"
   - type: doi
     value: 10.5281/zenodo.23263355
-    description: "Version 1.0.0, the snapshot cited by the thesis"
+    description: "Version 1.0.0"
 repository-code: "https://github.com/Ignatius-Kevin-Wijaya/k8s-autoscaling-hpa-vs-keda"
 keywords:
   - kubernetes
@@ -31,5 +31,5 @@ keywords:
   - prometheus
   - load testing
   - azure kubernetes service
-version: "1.0.0"
-date-released: "2026-10-09"
+version: "1.1.0"
+date-released: "2026-10-12"

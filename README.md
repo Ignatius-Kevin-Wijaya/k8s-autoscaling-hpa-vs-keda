@@ -20,11 +20,11 @@ Medians over 5 runs; p-values from exact rank-sum tests with Holm correction
   Request rate starts scaling sooner: first scale-up after 35.2 vs 65.0 s (auth) and 19.7 vs 64.8 s (shipping).
 - **HPA and KEDA are indistinguishable.** With the same request-rate metric and threshold, none of the 12 engine tests is
   significant (smallest p = 0.31).
-- **Oscillating load defeats every autoscaler.** They close 4.2–29.2% (auth) and 24.0–60.0% (shipping) of the gap
-  between 1 and 5 fixed pods, against 55.3–100% under gradual and spike load. Request-rate autoscalers scale back to one
+- **Oscillating load defeats every autoscaler.** They close 4.0–32.0% (auth) and 23.1–61.5% (shipping) of the gap
+  between 1 and 5 fixed pods, against 56.4–100% under gradual and spike load. Request-rate autoscalers scale back to one
   pod in every trough and meet each new peak on it.
 - **CPU-based scaling repeats worse.** The run-to-run spread of seconds over SLO is larger for CPU-based configurations
-  (median range 60 vs 20 s per cell, p = 0.0004). The HPA's CPU reading changed only about once a minute on this
+  (median range 60 vs 20 s per cell, p = 0.0003). The HPA's CPU reading changed only about once a minute on this
   cluster, and all 23 scale-downs during a load peak came from the tuned CPU HPA under oscillating load.
 - **Autoscaling saves reserved capacity, not CPU.** The autoscalers held 41.1–87.0% of the fixed 5-pod baseline's
   replica-seconds but used 64.3–102.8% of its CPU.
@@ -48,8 +48,12 @@ H2 vs H3 isolates the metric, H3 vs K1 the engine, and H1 vs H2 the default vs t
   `carrier-mock-service`.
 - **Load:** k6 `ramping-arrival-rate`: auth 2→30 req/s, shipping 10→105 req/s, gradual, spike and oscillating
   12-minute schedules, 5 s timeout, no connection reuse. Each pod sheds load above a fixed number of requests in flight.
-- **Outcomes** over k6 time 120–540 s: seconds over the SLO (auth 1.5 s, shipping 1.2 s p95), failed requests, goodput,
-  time to scale and resource use.
+- **Outcomes** over k6 time 120–540 s: seconds over the SLO (10 s bins whose p95 exceeds 1.5 s for auth, 1.0 s for
+  shipping), failed requests, goodput, time to scale and resource use. The shipping SLO was set on 2026-10-11, after the
+  results, by the rule already used for auth (the 5-pod baseline's p95 in the closed-loop campaign under its heaviest
+  pattern, rounded up to 100 ms); the pre-registered 1.2 s gives the outputs in
+  [`part12-slo-awal/`](experiment-results-openloop/analysis/part12-slo-awal/report.md), where one planned test
+  (shipping, gradual, H1 vs H2 on seconds over SLO) is not significant.
 - **Platform:** AKS, 3 × Standard_D4as_v5, Kubernetes 1.33.7, Prometheus scraping every 15 s, KEDA as an AKS add-on.
 
 ```mermaid
@@ -71,7 +75,9 @@ flowchart LR
   exactly the same arrivals (for example 54,274 requests per shipping spike run).
 - All 187 raw per-request files match the checksums recorded inside the k6 pod at capture.
 - The analysis plan was committed before the last three repetitions ran; departures from the plan are documented with
-  timestamps in [Part 12](thesis_blueprint/12-deviation-and-analysis-plan.md).
+  timestamps in [Part 12](thesis_blueprint/12-deviation-and-analysis-plan.md). Three later changes are dated in the
+  script headers and commit messages: the O1 bin fix (2026-10-10), the shipping SLO (2026-10-11) and the exploratory
+  analyses X1–X5 (2026-10-11), which the report labels as not planned.
 - The dataset is tagged [`openloop-dataset-v1`](../../releases/tag/openloop-dataset-v1).
 
 An earlier closed-loop campaign (180 runs, August 2026, in `experiment-results/`) is kept as methodology background: its
@@ -84,10 +90,15 @@ load generator slowed down with the server and hid overload, which is why the th
 ```bash
 pip install numpy matplotlib
 python scripts/analyze_openloop_campaign.py
+python scripts/analyze_openloop_campaign.py --original-slo --no-figures
+python scripts/thesis_bab4_outputs.py
 ```
 
-It reads every run's per-request k6 data and writes `report.md`, `runs.csv`, `results.json` and the figures to
-`experiment-results-openloop/analysis/part12/`. The output is deterministic.
+The first command reads every run's per-request k6 data and writes `report.md`, `runs.csv`, `results.json` and the
+figures to `experiment-results-openloop/analysis/part12/`; the second does the same with the pre-registered SLOs into
+`part12-slo-awal/`; the third writes the numbers and figures of the thesis's results chapter (BAB 4) to
+`experiment-results-openloop/analysis/thesis/` and runs no new statistical test. The output is deterministic: in a
+clean checkout the three commands reproduce every committed file byte for byte.
 
 **The experiment** needs a Kubernetes cluster with KEDA, prometheus-adapter and Prometheus. The manifests are in
 `infrastructure/kubernetes/`; the runner is `scripts/run-pilot-openloop.sh`, and the commands are in
@@ -115,10 +126,9 @@ It reads every run's per-request k6 data and writes `report.md`, `runs.csv`, `re
 
 ## Cite
 
-The release used by the thesis is archived on Zenodo:
-
-> Wijaya, I. K. (2026). *Kubernetes autoscaling: HPA vs KEDA, CPU vs request rate* (Version 1.0.0) [Software].
-> Zenodo. https://doi.org/10.5281/zenodo.23263355
+The thesis cites version 1.1.0, the first release that holds the scripts and outputs behind its results chapter.
+Releases are archived on Zenodo; version 1.0.0 (the same raw data, analysed before the changes listed above) is
+https://doi.org/10.5281/zenodo.23263355.
 
 The concept DOI [10.5281/zenodo.23263354](https://doi.org/10.5281/zenodo.23263354) always resolves to the latest
 version. GitHub's "Cite this repository" button uses [CITATION.cff](CITATION.cff).
