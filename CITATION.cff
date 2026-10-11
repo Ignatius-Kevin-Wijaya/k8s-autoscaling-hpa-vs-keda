@@ -20,6 +20,9 @@ identifiers:
     value: 10.5281/zenodo.23263354
     description: "All versions (Zenodo concept DOI)"
   - type: doi
+    value: 10.5281/zenodo.23304398
+    description: "Version 1.1.0, the snapshot cited by the thesis"
+  - type: doi
     value: 10.5281/zenodo.23263355
     description: "Version 1.0.0"
 repository-code: "https://github.com/Ignatius-Kevin-Wijaya/k8s-autoscaling-hpa-vs-keda"
@@ -32,4 +35,4 @@ keywords:
   - load testing
   - azure kubernetes service
 version: "1.1.0"
-date-released: "2026-10-12"
+date-released: "2026-10-11"

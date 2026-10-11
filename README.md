@@ -126,8 +126,12 @@ clean checkout the three commands reproduce every committed file byte for byte.
 
 ## Cite
 
-The thesis cites version 1.1.0, the first release that holds the scripts and outputs behind its results chapter.
-Releases are archived on Zenodo; version 1.0.0 (the same raw data, analysed before the changes listed above) is
+The thesis cites version 1.1.0, the first release that holds the scripts and outputs behind its results chapter:
+
+> Wijaya, I. K. (2026). *Kubernetes autoscaling: HPA vs KEDA, CPU vs request rate* (Version 1.1.0) [Software].
+> Zenodo. https://doi.org/10.5281/zenodo.23304398
+
+Version 1.0.0 (the same raw data, analysed before the changes listed above) is
 https://doi.org/10.5281/zenodo.23263355.
 
 The concept DOI [10.5281/zenodo.23263354](https://doi.org/10.5281/zenodo.23263354) always resolves to the latest
