@@ -237,3 +237,124 @@ Node of the pod(s) serving at onset, per session (run counts):
 | shipping | gradual | B1, H1, H2 | B1, H2 | B1 290/420/165.4; B2 0/2100/222.9; H1 50/863/215.4; H2 0/1183/210.2; H3 0/1485/213.9; K1 0/1477/215.9 |
 | shipping | spike | B1, B2, H1, H2, K1 | B1, B2, H1, H2, K1 | B1 420/420/202.2; B2 0/2100/320.1; H1 100/1310/281.1; H2 90/1593/296.5; H3 70/1828/309.3; K1 70/1783/305.7 |
 | shipping | oscillating | B1, B2, H1, H2 | B1, B2, H1 | B1 260/420/127.7; B2 0/2100/190.1; H1 100/1177/175.2; H2 150/1101/177.8; H3 200/1113/178.7; K1 200/1137/178.0 |
+
+## X — exploratory analyses added on 2026-10-11 after a review of the thesis draft (not planned)
+
+### X1 — planned contrasts on O4 (exact rank-sum test, A12, Holm within each family of 3; HL = Hodges–Lehmann shift second − first with its exact interval)
+
+| Service | Pattern | Outcome | Contrast | Medians | HL [interval] | p | p (Holm) | A12 |
+|---|---|---|---|---|---|---|---|---|
+| auth | gradual | O4_first_up_s | H2 VS H3 (metric) | 95.8 vs 79.8 | -29.0 [-45.2, 14.7] | 0.1508 | 0.4524 | 0.80 |
+| auth | gradual | O4_first_up_s | H3 VS K1 (engine) | 79.8 vs 66.4 | -9.3 [-14.4, 1.9] | 0.6905 | 0.6905 | 0.60 |
+| auth | gradual | O4_first_up_s | H1 VS H2 (default vs tuned) | 109.8 vs 95.8 | -14.3 [-45.1, 15.2] | 0.3095 | 0.6190 | 0.72 |
+| auth | gradual | O4_first_new_ready_s | H2 VS H3 (metric) | 112.8 vs 97.2 | -28.0 [-45.8, 15.1] | 0.1508 | 0.4524 | 0.80 |
+| auth | gradual | O4_first_new_ready_s | H3 VS K1 (engine) | 97.2 vs 84.0 | -9.9 [-15.3, 1.9] | 0.2222 | 0.4524 | 0.76 |
+| auth | gradual | O4_first_new_ready_s | H1 VS H2 (default vs tuned) | 126.8 vs 112.8 | -14.4 [-44.7, 16.2] | 0.3095 | 0.4524 | 0.72 |
+| auth | gradual | O4_three_ready_s | H2 VS H3 (metric) | 142.1 vs 157.2 | 15.2 [-15.0, 43.4] | 0.3095 | 0.6190 | 0.28 |
+| auth | gradual | O4_three_ready_s | H3 VS K1 (engine) | 157.2 vs 158.4 | 0.8 [-8.3, 16.6] | 0.3095 | 0.6190 | 0.28 |
+| auth | gradual | O4_three_ready_s | H1 VS H2 (default vs tuned) | 233.3 vs 142.1 | -90.5 [-120.0, 0.1] | 0.0556 | 0.1667 | 0.88 |
+| auth | spike | O4_first_up_s | H2 VS H3 (metric) | 65.0 vs 35.2 | -29.8 [-44.2, -14.7] | 0.0079 | 0.0238 **sig.** | 1.00 |
+| auth | spike | O4_first_up_s | H3 VS K1 (engine) | 35.2 vs 35.5 | 0.4 [-7.3, 1.7] | 0.4206 | 0.8413 | 0.32 |
+| auth | spike | O4_first_up_s | H1 VS H2 (default vs tuned) | 65.1 vs 65.0 | -0.8 [-30.3, 17.0] | 0.8413 | 0.8413 | 0.56 |
+| auth | spike | O4_first_new_ready_s | H2 VS H3 (metric) | 83.2 vs 52.4 | -30.3 [-45.0, -14.5] | 0.0079 | 0.0238 **sig.** | 1.00 |
+| auth | spike | O4_first_new_ready_s | H3 VS K1 (engine) | 52.4 vs 53.5 | 0.2 [-7.5, 2.0] | 0.5476 | 1.0000 | 0.36 |
+| auth | spike | O4_first_new_ready_s | H1 VS H2 (default vs tuned) | 83.1 vs 83.2 | -0.9 [-30.3, 17.3] | 1.0000 | 1.0000 | 0.52 |
+| auth | spike | O4_three_ready_s | H2 VS H3 (metric) | 83.2 vs 68.7 | -14.6 [-28.7, 1.2] | 0.1508 | 0.3016 | 0.80 |
+| auth | spike | O4_three_ready_s | H3 VS K1 (engine) | 68.7 vs 68.8 | 0.7 [-13.6, 30.4] | 0.8413 | 0.8413 | 0.44 |
+| auth | spike | O4_three_ready_s | H1 VS H2 (default vs tuned) | 113.1 vs 83.2 | -29.3 [-58.8, 1.2] | 0.0952 | 0.2857 | 0.84 |
+| auth | oscillating | O4_first_up_s | H2 VS H3 (metric) | 49.8 vs 34.4 | -15.4 [-46.1, 14.4] | 0.2222 | 0.6667 | 0.76 |
+| auth | oscillating | O4_first_up_s | H3 VS K1 (engine) | 34.4 vs 24.2 | 0.7 [-14.4, 16.1] | 0.6905 | 0.6905 | 0.40 |
+| auth | oscillating | O4_first_up_s | H1 VS H2 (default vs tuned) | 65.2 vs 49.8 | -29.2 [-60.5, 15.5] | 0.2222 | 0.6667 | 0.76 |
+| auth | oscillating | O4_first_new_ready_s | H2 VS H3 (metric) | 67.8 vs 52.3 | -15.4 [-44.8, 15.4] | 0.4206 | 0.8413 | 0.68 |
+| auth | oscillating | O4_first_new_ready_s | H3 VS K1 (engine) | 52.3 vs 42.2 | 0.7 [-15.3, 15.5] | 0.8413 | 0.8413 | 0.44 |
+| auth | oscillating | O4_first_new_ready_s | H1 VS H2 (default vs tuned) | 82.4 vs 67.8 | -29.6 [-61.5, 15.0] | 0.1508 | 0.4524 | 0.80 |
+| auth | oscillating | O4_three_ready_s | H2 VS H3 (metric) | 97.0 vs 67.0 | -28.9 [-44.2, -0.7] | 0.0317 | 0.0952 | 0.92 |
+| auth | oscillating | O4_three_ready_s | H3 VS K1 (engine) | 67.0 vs 71.2 | 3.1 [-11.1, 17.1] | 0.1508 | 0.1905 | 0.20 |
+| auth | oscillating | O4_three_ready_s | H1 VS H2 (default vs tuned) | 112.7 vs 97.0 | -29.2 [-165.2, 14.6] | 0.0952 | 0.1905 | 0.84 |
+| shipping | gradual | O4_first_up_s | H2 VS H3 (metric) | 109.3 vs 64.4 | -45.0 [-74.4, -14.4] | 0.0079 | 0.0238 **sig.** | 1.00 |
+| shipping | gradual | O4_first_up_s | H3 VS K1 (engine) | 64.4 vs 66.7 | 3.0 [-13.6, 17.2] | 0.2222 | 0.2222 | 0.24 |
+| shipping | gradual | O4_first_up_s | H1 VS H2 (default vs tuned) | 153.2 vs 109.3 | -30.3 [-74.4, -13.9] | 0.0317 | 0.0635 | 0.92 |
+| shipping | gradual | O4_first_new_ready_s | H2 VS H3 (metric) | 127.3 vs 82.2 | -45.4 [-74.4, -13.5] | 0.0079 | 0.0238 **sig.** | 1.00 |
+| shipping | gradual | O4_first_new_ready_s | H3 VS K1 (engine) | 82.2 vs 83.7 | 2.0 [-13.5, 17.2] | 0.1508 | 0.1508 | 0.20 |
+| shipping | gradual | O4_first_new_ready_s | H1 VS H2 (default vs tuned) | 171.2 vs 127.3 | -31.3 [-75.4, -13.9] | 0.0317 | 0.0635 | 0.92 |
+| shipping | gradual | O4_three_ready_s | H2 VS H3 (metric) | 215.8 vs 127.4 | -88.4 [-120.0, -15.2] | 0.0079 | 0.0238 **sig.** | 1.00 |
+| shipping | gradual | O4_three_ready_s | H3 VS K1 (engine) | 127.4 vs 129.3 | 1.2 [-0.8, 3.8] | 0.2222 | 0.2222 | 0.24 |
+| shipping | gradual | O4_three_ready_s | H1 VS H2 (default vs tuned) | 291.6 vs 215.8 | -61.0 [-149.0, -29.5] | 0.0079 | 0.0238 **sig.** | 1.00 |
+| shipping | spike | O4_first_up_s | H2 VS H3 (metric) | 64.8 vs 19.7 | -44.7 [-59.9, -29.0] | 0.0079 | 0.0238 **sig.** | 1.00 |
+| shipping | spike | O4_first_up_s | H3 VS K1 (engine) | 19.7 vs 35.0 | 15.2 [-0.1, 16.8] | 0.1508 | 0.3016 | 0.20 |
+| shipping | spike | O4_first_up_s | H1 VS H2 (default vs tuned) | 65.1 vs 64.8 | -14.1 [-30.1, 14.5] | 0.5476 | 0.5476 | 0.64 |
+| shipping | spike | O4_first_new_ready_s | H2 VS H3 (metric) | 81.8 vs 37.9 | -43.2 [-59.7, -28.2] | 0.0079 | 0.0238 **sig.** | 1.00 |
+| shipping | spike | O4_first_new_ready_s | H3 VS K1 (engine) | 37.9 vs 52.0 | 14.2 [-1.4, 16.6] | 0.3095 | 0.3095 | 0.28 |
+| shipping | spike | O4_first_new_ready_s | H1 VS H2 (default vs tuned) | 83.6 vs 81.8 | -15.1 [-30.1, 13.9] | 0.1508 | 0.3016 | 0.80 |
+| shipping | spike | O4_three_ready_s | H2 VS H3 (metric) | 81.9 vs 66.8 | -14.5 [-32.7, 0.6] | 0.1508 | 0.4524 | 0.80 |
+| shipping | spike | O4_three_ready_s | H3 VS K1 (engine) | 66.8 vs 67.0 | 0.4 [-1.8, 14.4] | 0.6905 | 0.6905 | 0.40 |
+| shipping | spike | O4_three_ready_s | H1 VS H2 (default vs tuned) | 96.9 vs 81.9 | -15.6 [-60.7, 2.6] | 0.1508 | 0.4524 | 0.80 |
+| shipping | oscillating | O4_first_up_s | H2 VS H3 (metric) | 34.7 vs 19.8 | -15.1 [-45.3, 0.8] | 0.0556 | 0.1667 | 0.88 |
+| shipping | oscillating | O4_first_up_s | H3 VS K1 (engine) | 19.8 vs 22.8 | 2.6 [-12.7, 7.7] | 0.1508 | 0.3016 | 0.20 |
+| shipping | oscillating | O4_first_up_s | H1 VS H2 (default vs tuned) | 50.0 vs 34.7 | -14.6 [-30.0, 15.1] | 0.4206 | 0.4206 | 0.68 |
+| shipping | oscillating | O4_first_new_ready_s | H2 VS H3 (metric) | 52.9 vs 37.4 | -16.0 [-45.2, -0.4] | 0.0159 | 0.0476 **sig.** | 0.96 |
+| shipping | oscillating | O4_first_new_ready_s | H3 VS K1 (engine) | 37.4 vs 40.0 | 2.7 [-12.5, 9.1] | 0.1508 | 0.3016 | 0.20 |
+| shipping | oscillating | O4_first_new_ready_s | H1 VS H2 (default vs tuned) | 68.3 vs 52.9 | -14.4 [-30.0, 14.8] | 0.3095 | 0.3095 | 0.72 |
+| shipping | oscillating | O4_three_ready_s | H2 VS H3 (metric) | 111.7 vs 66.9 | -44.3 [-45.0, -15.2] | 0.0079 | 0.0238 **sig.** | 1.00 |
+| shipping | oscillating | O4_three_ready_s | H3 VS K1 (engine) | 66.9 vs 69.8 | 2.9 [-9.4, 4.1] | 0.6905 | 0.6905 | 0.40 |
+| shipping | oscillating | O4_three_ready_s | H1 VS H2 (default vs tuned) | 127.0 vs 111.7 | -15.6 [-150.4, 29.0] | 0.0952 | 0.1905 | 0.84 |
+
+### X2/X3 — the 36 planned contrasts: Hodges–Lehmann shift [96.8% interval] and the difference of medians inside each session (second − first config)
+
+| Service | Pattern | Outcome | Contrast | HL [interval] | Session 1 | Session 2 |
+|---|---|---|---|---|---|---|
+| auth | gradual | O1 | H2 VS H3 (metric) | -40 [-70, 10] | -35 | -30 |
+| auth | gradual | O1 | H3 VS K1 (engine) | -10 [-20, 30] | -10 | 10 |
+| auth | gradual | O1 | H1 VS H2 (default vs tuned) | -50 [-80, 0] | -20 | -60 |
+| auth | gradual | O2 | H2 VS H3 (metric) | -0.24 [-1.69, 0.35] | -1.01 | 0.08 |
+| auth | gradual | O2 | H3 VS K1 (engine) | 0.00 [-0.65, 0.07] | 0.04 | -0.07 |
+| auth | gradual | O2 | H1 VS H2 (default vs tuned) | -0.77 [-2.74, 0.63] | -0.83 | -1.06 |
+| auth | spike | O1 | H2 VS H3 (metric) | -20 [-50, 20] | 20 | -30 |
+| auth | spike | O1 | H3 VS K1 (engine) | 10 [-30, 40] | -10 | 10 |
+| auth | spike | O1 | H1 VS H2 (default vs tuned) | -80 [-110, -40] | -110 | -70 |
+| auth | spike | O2 | H2 VS H3 (metric) | -4.17 [-6.36, -1.04] | -3.31 | -4.82 |
+| auth | spike | O2 | H3 VS K1 (engine) | 0.67 [-2.66, 3.52] | -1.35 | 2.81 |
+| auth | spike | O2 | H1 VS H2 (default vs tuned) | -3.25 [-6.37, 0.23] | -4.02 | -1.52 |
+| auth | oscillating | O1 | H2 VS H3 (metric) | 40 [0, 90] | 65 | 0 |
+| auth | oscillating | O1 | H3 VS K1 (engine) | 0 [-40, 20] | -10 | 0 |
+| auth | oscillating | O1 | H1 VS H2 (default vs tuned) | 30 [-20, 80] | 15 | 50 |
+| auth | oscillating | O2 | H2 VS H3 (metric) | 4.19 [-9.58, 20.23] | 3.14 | 4.19 |
+| auth | oscillating | O2 | H3 VS K1 (engine) | -1.62 [-8.58, 8.40] | 5.93 | -4.62 |
+| auth | oscillating | O2 | H1 VS H2 (default vs tuned) | 10.46 [-5.77, 24.04] | 8.75 | 12.24 |
+| shipping | gradual | O1 | H2 VS H3 (metric) | 0 [-20, 10] | -10 | 0 |
+| shipping | gradual | O1 | H3 VS K1 (engine) | 0 [-10, 10] | 0 | 0 |
+| shipping | gradual | O1 | H1 VS H2 (default vs tuned) | -40 [-70, 0] | -55 | -20 |
+| shipping | gradual | O2 | H2 VS H3 (metric) | 0.00 [-0.20, 0.29] | -0.09 | 0.00 |
+| shipping | gradual | O2 | H3 VS K1 (engine) | 0.00 [-0.30, 0.11] | 0.00 | 0.00 |
+| shipping | gradual | O2 | H1 VS H2 (default vs tuned) | -1.93 [-2.36, -0.28] | -2.17 | -0.73 |
+| shipping | spike | O1 | H2 VS H3 (metric) | -20 [-40, -10] | -25 | -20 |
+| shipping | spike | O1 | H3 VS K1 (engine) | 0 [-10, 20] | -5 | 0 |
+| shipping | spike | O1 | H1 VS H2 (default vs tuned) | -10 [-50, 10] | -20 | -10 |
+| shipping | spike | O2 | H2 VS H3 (metric) | -5.31 [-7.97, -3.29] | -4.70 | -5.66 |
+| shipping | spike | O2 | H3 VS K1 (engine) | 1.69 [-0.45, 2.22] | 0.62 | 1.84 |
+| shipping | spike | O2 | H1 VS H2 (default vs tuned) | -1.77 [-3.72, 0.89] | -1.54 | -0.52 |
+| shipping | oscillating | O1 | H2 VS H3 (metric) | 50 [0, 70] | 0 | 50 |
+| shipping | oscillating | O1 | H3 VS K1 (engine) | 0 [-20, 0] | -10 | 0 |
+| shipping | oscillating | O1 | H1 VS H2 (default vs tuned) | 50 [-20, 110] | 70 | 50 |
+| shipping | oscillating | O2 | H2 VS H3 (metric) | 8.69 [-16.18, 14.49] | -13.41 | 12.30 |
+| shipping | oscillating | O2 | H3 VS K1 (engine) | -1.36 [-4.20, 2.07] | -1.51 | -1.81 |
+| shipping | oscillating | O2 | H1 VS H2 (default vs tuned) | 1.35 [-4.25, 26.23] | 23.23 | 0.83 |
+
+Direction of the contrast in the two sessions: default vs tuned: same 12, opposite 0, zero in a session 0 (of 12); engine: same 2, opposite 5, zero in a session 5 (of 12); metric: same 5, opposite 3, zero in a session 4 (of 12).
+
+### X4 — placement of new replicas (scheduler events)
+
+- session1: 48 runs with new replicas; 268 of 268 new replicas on the k6 node (per run 1.00–1.00, median 1.00; 48 runs with all on it); k6 node(s) ['aks-userpool-16719200-vmss00002n']; nodes of the serving pod at onset {'auth-service': ['aks-userpool-16719200-vmss00002l'], 'shipping-rate-service': ['aks-userpool-16719200-vmss00002l']}
+- session2: 72 runs with new replicas; 288 of 396 new replicas on the k6 node (per run 0.50–1.00, median 0.75; 1 runs with all on it); k6 node(s) ['aks-userpool-16719200-vmss00002q']; nodes of the serving pod at onset {'auth-service': ['aks-userpool-16719200-vmss00002p'], 'shipping-rate-service': ['aks-userpool-16719200-vmss00002o', 'aks-userpool-16719200-vmss00002q']}
+
+Spearman between the share of new replicas on the k6 node and the run's deviation from its cell median (within-cell permutation, 20,000 draws):
+
+- session2|O1_slo_s: rho 0.003, p 0.9759 (72 runs)
+- session2|O2_error_pct: rho 0.056, p 0.5544 (72 runs)
+- both|O1_slo_s: rho 0.232, p 0.0099 (120 runs)
+- both|O2_error_pct: rho 0.260, p 0.0063 (120 runs)
+
+### X5 — CPU per pod against request rate per pod
+
+- auth: base phase, B2 0.40 req/s → 16 m; base phase, 1 pod 2.00 req/s → 73 m; ladder b1 6.00 req/s → 257 m; ladder b2 6.00 req/s → 236 m; ladder b2 7.95 req/s → 317 m; ladder b1 8.00 req/s → 314 m. Request rate per pod at the CPU target: H2 50% ≈ 3.3 req/s, H1 80% ≈ 5.1 req/s.
+- shipping: base phase, B2 2.00 req/s → 14 m; base phase, 1 pod 10.00 req/s → 59 m; ladder b2 24.00 req/s → 177 m; ladder b2 39.96 req/s → 337 m; ladder b1 40.00 req/s → 266 m; ladder b1 49.58 req/s → 405 m; ladder b1 50.00 req/s → 377 m. Request rate per pod at the CPU target: H2 50% ≈ 17.9 req/s, H1 80% ≈ 26.3 req/s.
