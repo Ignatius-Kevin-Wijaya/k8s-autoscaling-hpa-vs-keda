@@ -1,0 +1,10506 @@
+{
+ "inputs": {
+  "results": "analysis/part12/results.json (scripts/analyze_openloop_campaign.py)"
+ },
+ "decomposition": [
+  {
+   "service": "auth-service",
+   "pattern": "gradual",
+   "outcome": "O1",
+   "metric": {
+    "median_a": 70.0,
+    "median_b": 50.0,
+    "diff_b_minus_a": -20.0,
+    "U_a": 22.0,
+    "p": 0.05555555555555555,
+    "p_holm": 0.11904761904761904,
+    "A12_a_gt_b": 0.88,
+    "vd_size": "besar",
+    "significant": false
+   },
+   "engine": {
+    "median_a": 50.0,
+    "median_b": 40.0,
+    "diff_b_minus_a": -10.0,
+    "U_a": 15.5,
+    "p": 0.5714285714285714,
+    "p_holm": 0.5714285714285714,
+    "A12_a_gt_b": 0.62,
+    "vd_size": "kecil",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 120.0,
+    "median_b": 70.0,
+    "diff_b_minus_a": -50.0,
+    "U_a": 22.5,
+    "p": 0.03968253968253968,
+    "p_holm": 0.11904761904761904,
+    "A12_a_gt_b": 0.9,
+    "vd_size": "besar",
+    "significant": false
+   },
+   "gap_share_points": {
+    "metric": 6.451612903225811,
+    "engine": 3.2258064516129004,
+    "tuning": 16.129032258064512
+   }
+  },
+  {
+   "service": "auth-service",
+   "pattern": "gradual",
+   "outcome": "O2",
+   "metric": {
+    "median_a": 0.32142857142857145,
+    "median_b": 0.0,
+    "diff_b_minus_a": -0.32142857142857145,
+    "U_a": 16.0,
+    "p": 0.5238095238095238,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.64,
+    "vd_size": "sedang",
+    "significant": false
+   },
+   "engine": {
+    "median_a": 0.0,
+    "median_b": 0.011904761904761904,
+    "diff_b_minus_a": 0.011904761904761904,
+    "U_a": 13.0,
+    "p": 1.0,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.52,
+    "vd_size": "dapat diabaikan",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 1.0595238095238095,
+    "median_b": 0.32142857142857145,
+    "diff_b_minus_a": -0.7380952380952381,
+    "U_a": 21.0,
+    "p": 0.0873015873015873,
+    "p_holm": 0.26190476190476186,
+    "A12_a_gt_b": 0.84,
+    "vd_size": "besar",
+    "significant": false
+   }
+  },
+  {
+   "service": "auth-service",
+   "pattern": "spike",
+   "outcome": "O1",
+   "metric": {
+    "median_a": 130.0,
+    "median_b": 100.0,
+    "diff_b_minus_a": -30.0,
+    "U_a": 17.0,
+    "p": 0.4365079365079365,
+    "p_holm": 0.873015873015873,
+    "A12_a_gt_b": 0.68,
+    "vd_size": "sedang",
+    "significant": false
+   },
+   "engine": {
+    "median_a": 100.0,
+    "median_b": 110.0,
+    "diff_b_minus_a": 10.0,
+    "U_a": 8.5,
+    "p": 0.47619047619047616,
+    "p_holm": 0.873015873015873,
+    "A12_a_gt_b": 0.34,
+    "vd_size": "sedang",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 200.0,
+    "median_b": 130.0,
+    "diff_b_minus_a": -70.0,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "p_holm": 0.023809523809523808,
+    "A12_a_gt_b": 1.0,
+    "vd_size": "besar",
+    "significant": true
+   },
+   "gap_share_points": {
+    "metric": 7.692307692307687,
+    "engine": -2.564102564102566,
+    "tuning": 17.948717948717952
+   }
+  },
+  {
+   "service": "auth-service",
+   "pattern": "spike",
+   "outcome": "O2",
+   "metric": {
+    "median_a": 12.495987158908507,
+    "median_b": 7.728731942215088,
+    "diff_b_minus_a": -4.767255216693419,
+    "U_a": 24.0,
+    "p": 0.015873015873015872,
+    "p_holm": 0.047619047619047616,
+    "A12_a_gt_b": 0.96,
+    "vd_size": "besar",
+    "significant": true
+   },
+   "engine": {
+    "median_a": 7.728731942215088,
+    "median_b": 8.68378812199037,
+    "diff_b_minus_a": 0.9550561797752817,
+    "U_a": 11.0,
+    "p": 0.8412698412698413,
+    "p_holm": 0.8412698412698413,
+    "A12_a_gt_b": 0.44,
+    "vd_size": "kecil",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 15.14446227929374,
+    "median_b": 12.495987158908507,
+    "diff_b_minus_a": -2.648475120385232,
+    "U_a": 22.0,
+    "p": 0.05555555555555555,
+    "p_holm": 0.1111111111111111,
+    "A12_a_gt_b": 0.88,
+    "vd_size": "besar",
+    "significant": false
+   }
+  },
+  {
+   "service": "auth-service",
+   "pattern": "oscillating",
+   "outcome": "O1",
+   "metric": {
+    "median_a": 210.0,
+    "median_b": 250.0,
+    "diff_b_minus_a": 40.0,
+    "U_a": 3.0,
+    "p": 0.05555555555555555,
+    "p_holm": 0.16666666666666666,
+    "A12_a_gt_b": 0.12,
+    "vd_size": "besar",
+    "significant": false
+   },
+   "engine": {
+    "median_a": 250.0,
+    "median_b": 230.0,
+    "diff_b_minus_a": -20.0,
+    "U_a": 14.5,
+    "p": 0.873015873015873,
+    "p_holm": 0.873015873015873,
+    "A12_a_gt_b": 0.58,
+    "vd_size": "kecil",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 180.0,
+    "median_b": 210.0,
+    "diff_b_minus_a": 30.0,
+    "U_a": 4.5,
+    "p": 0.1111111111111111,
+    "p_holm": 0.2222222222222222,
+    "A12_a_gt_b": 0.18,
+    "vd_size": "besar",
+    "significant": false
+   },
+   "gap_share_points": {
+    "metric": -16.0,
+    "engine": 7.999999999999999,
+    "tuning": -12.0
+   }
+  },
+  {
+   "service": "auth-service",
+   "pattern": "oscillating",
+   "outcome": "O2",
+   "metric": {
+    "median_a": 34.285714285714285,
+    "median_b": 36.509433962264154,
+    "diff_b_minus_a": 2.2237196765498695,
+    "U_a": 9.0,
+    "p": 0.5476190476190477,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.36,
+    "vd_size": "sedang",
+    "significant": false
+   },
+   "engine": {
+    "median_a": 36.509433962264154,
+    "median_b": 34.02964959568733,
+    "diff_b_minus_a": -2.4797843665768227,
+    "U_a": 13.0,
+    "p": 1.0,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.52,
+    "vd_size": "dapat diabaikan",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 22.048517520215633,
+    "median_b": 34.285714285714285,
+    "diff_b_minus_a": 12.237196765498652,
+    "U_a": 6.0,
+    "p": 0.2222222222222222,
+    "p_holm": 0.6666666666666666,
+    "A12_a_gt_b": 0.24,
+    "vd_size": "besar",
+    "significant": false
+   }
+  },
+  {
+   "service": "shipping-rate-service",
+   "pattern": "gradual",
+   "outcome": "O1",
+   "metric": {
+    "median_a": 0.0,
+    "median_b": 0.0,
+    "diff_b_minus_a": 0.0,
+    "U_a": 16.0,
+    "p": 0.4444444444444444,
+    "p_holm": 0.8888888888888888,
+    "A12_a_gt_b": 0.64,
+    "vd_size": "sedang",
+    "significant": false
+   },
+   "engine": {
+    "median_a": 0.0,
+    "median_b": 0.0,
+    "diff_b_minus_a": 0.0,
+    "U_a": 12.5,
+    "p": 1.0,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.5,
+    "vd_size": "dapat diabaikan",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 80.0,
+    "median_b": 0.0,
+    "diff_b_minus_a": -80.0,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "p_holm": 0.023809523809523808,
+    "A12_a_gt_b": 1.0,
+    "vd_size": "besar",
+    "significant": true
+   },
+   "gap_share_points": {
+    "metric": 0.0,
+    "engine": 0.0,
+    "tuning": 27.586206896551722
+   }
+  },
+  {
+   "service": "shipping-rate-service",
+   "pattern": "gradual",
+   "outcome": "O2",
+   "metric": {
+    "median_a": 0.010050924685071027,
+    "median_b": 0.0,
+    "diff_b_minus_a": -0.010050924685071027,
+    "U_a": 16.0,
+    "p": 0.5238095238095238,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.64,
+    "vd_size": "sedang",
+    "significant": false
+   },
+   "engine": {
+    "median_a": 0.0,
+    "median_b": 0.0,
+    "diff_b_minus_a": 0.0,
+    "U_a": 13.0,
+    "p": 1.0,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.52,
+    "vd_size": "dapat diabaikan",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 1.9364132801768903,
+    "median_b": 0.010050924685071027,
+    "diff_b_minus_a": -1.9263623554918192,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "p_holm": 0.023809523809523808,
+    "A12_a_gt_b": 1.0,
+    "vd_size": "besar",
+    "significant": true
+   }
+  },
+  {
+   "service": "shipping-rate-service",
+   "pattern": "spike",
+   "outcome": "O1",
+   "metric": {
+    "median_a": 90.0,
+    "median_b": 70.0,
+    "diff_b_minus_a": -20.0,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "p_holm": 0.023809523809523808,
+    "A12_a_gt_b": 1.0,
+    "vd_size": "besar",
+    "significant": true
+   },
+   "engine": {
+    "median_a": 70.0,
+    "median_b": 70.0,
+    "diff_b_minus_a": 0.0,
+    "U_a": 10.5,
+    "p": 1.0,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.42,
+    "vd_size": "kecil",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 100.0,
+    "median_b": 90.0,
+    "diff_b_minus_a": -10.0,
+    "U_a": 19.0,
+    "p": 0.16666666666666666,
+    "p_holm": 0.3333333333333333,
+    "A12_a_gt_b": 0.76,
+    "vd_size": "besar",
+    "significant": false
+   },
+   "gap_share_points": {
+    "metric": 4.761904761904767,
+    "engine": 0.0,
+    "tuning": 2.3809523809523836
+   }
+  },
+  {
+   "service": "shipping-rate-service",
+   "pattern": "spike",
+   "outcome": "O2",
+   "metric": {
+    "median_a": 10.643223913442142,
+    "median_b": 5.187511461580781,
+    "diff_b_minus_a": -5.455712451861361,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "p_holm": 0.023809523809523808,
+    "A12_a_gt_b": 1.0,
+    "vd_size": "besar",
+    "significant": true
+   },
+   "engine": {
+    "median_a": 5.187511461580781,
+    "median_b": 6.897579314139006,
+    "diff_b_minus_a": 1.7100678525582245,
+    "U_a": 7.0,
+    "p": 0.30952380952380953,
+    "p_holm": 0.4444444444444444,
+    "A12_a_gt_b": 0.28,
+    "vd_size": "besar",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 12.268476068219329,
+    "median_b": 10.643223913442142,
+    "diff_b_minus_a": -1.6252521547771863,
+    "U_a": 19.0,
+    "p": 0.2222222222222222,
+    "p_holm": 0.4444444444444444,
+    "A12_a_gt_b": 0.76,
+    "vd_size": "besar",
+    "significant": false
+   }
+  },
+  {
+   "service": "shipping-rate-service",
+   "pattern": "oscillating",
+   "outcome": "O1",
+   "metric": {
+    "median_a": 160.0,
+    "median_b": 200.0,
+    "diff_b_minus_a": 40.0,
+    "U_a": 4.0,
+    "p": 0.11904761904761904,
+    "p_holm": 0.23809523809523808,
+    "A12_a_gt_b": 0.16,
+    "vd_size": "besar",
+    "significant": false
+   },
+   "engine": {
+    "median_a": 200.0,
+    "median_b": 200.0,
+    "diff_b_minus_a": 0.0,
+    "U_a": 14.0,
+    "p": 1.0,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.56,
+    "vd_size": "kecil",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 100.0,
+    "median_b": 160.0,
+    "diff_b_minus_a": 60.0,
+    "U_a": 3.0,
+    "p": 0.05555555555555555,
+    "p_holm": 0.16666666666666666,
+    "A12_a_gt_b": 0.12,
+    "vd_size": "besar",
+    "significant": false
+   },
+   "gap_share_points": {
+    "metric": -15.384615384615385,
+    "engine": 0.0,
+    "tuning": -23.076923076923077
+   }
+  },
+  {
+   "service": "shipping-rate-service",
+   "pattern": "oscillating",
+   "outcome": "O2",
+   "metric": {
+    "median_a": 16.64907253807872,
+    "median_b": 28.419544563414266,
+    "diff_b_minus_a": 11.770472025335547,
+    "U_a": 10.0,
+    "p": 0.6904761904761905,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.4,
+    "vd_size": "kecil",
+    "significant": false
+   },
+   "engine": {
+    "median_a": 28.419544563414266,
+    "median_b": 26.610866040794782,
+    "diff_b_minus_a": -1.8086785226194841,
+    "U_a": 14.0,
+    "p": 0.8412698412698413,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.56,
+    "vd_size": "kecil",
+    "significant": false
+   },
+   "tuning": {
+    "median_a": 15.29527113658647,
+    "median_b": 16.64907253807872,
+    "diff_b_minus_a": 1.35380140149225,
+    "U_a": 9.0,
+    "p": 0.5476190476190477,
+    "p_holm": 1.0,
+    "A12_a_gt_b": 0.36,
+    "vd_size": "sedang",
+    "significant": false
+   }
+  }
+ ],
+ "metric_vs_engine": {
+  "comparisons": 12,
+  "metric_larger": 10,
+  "ties": 1,
+  "significant": {
+   "metric": 3,
+   "engine": 0,
+   "tuning": 3
+  },
+  "engine_abs_diff_max": {
+   "O1": 20.0,
+   "O2": 2.4797843665768227
+  },
+  "engine_a12_range": [
+   0.28,
+   0.62
+  ],
+  "engine_vd_sizes": {
+   "dapat diabaikan": 4,
+   "kecil": 6,
+   "sedang": 1,
+   "besar": 1
+  },
+  "engine_direction": {
+   "h3_better": 4,
+   "k1_better": 7,
+   "tie": 1
+  },
+  "engine_smallest_p": 0.30952380952380953,
+  "engine_smallest_p_holm": 0.4444444444444444
+ },
+ "vs_baselines": [
+  {
+   "service": "auth-service",
+   "pattern": "gradual",
+   "B1": {
+    "O1_slo_s": 320.0,
+    "O2_error_pct": 49.857142857142854,
+    "O3_goodput_rps": 10.028571428571428
+   },
+   "B2": {
+    "O1_slo_s": 10.0,
+    "O2_error_pct": 0.0,
+    "O3_goodput_rps": 20.0,
+    "O5_replica_s": 2100.0,
+    "O5_cpu_core_s": 314.3853333346163
+   },
+   "autoscalers": {
+    "h1": {
+     "O1": 120.0,
+     "O2": 1.0595238095238095,
+     "O3": 19.788095238095238,
+     "replica_share_of_B2": 0.5555276189531598,
+     "cpu_share_of_B2": 1.0166832378468587,
+     "gap_closed": 0.6451612903225806
+    },
+    "h2": {
+     "O1": 70.0,
+     "O2": 0.32142857142857145,
+     "O3": 19.935714285714287,
+     "replica_share_of_B2": 0.6442704763866606,
+     "cpu_share_of_B2": 1.0283716039376836,
+     "gap_closed": 0.8064516129032258
+    },
+    "h3": {
+     "O1": 50.0,
+     "O2": 0.0,
+     "O3": 20.0,
+     "replica_share_of_B2": 0.6630152379898798,
+     "cpu_share_of_B2": 1.012970033184674,
+     "gap_closed": 0.8709677419354839
+    },
+    "k1": {
+     "O1": 40.0,
+     "O2": 0.011904761904761904,
+     "O3": 19.997619047619047,
+     "replica_share_of_B2": 0.66150666645595,
+     "cpu_share_of_B2": 1.027440484433548,
+     "gap_closed": 0.9032258064516129
+    }
+   }
+  },
+  {
+   "service": "auth-service",
+   "pattern": "spike",
+   "B1": {
+    "O1_slo_s": 420.0,
+    "O2_error_pct": 65.24879614767255,
+    "O3_goodput_rps": 10.30952380952381
+   },
+   "B2": {
+    "O1_slo_s": 30.0,
+    "O2_error_pct": 0.008025682182985553,
+    "O3_goodput_rps": 29.664285714285715,
+    "O5_replica_s": 2100.0,
+    "O5_cpu_core_s": 460.64612524458704
+   },
+   "autoscalers": {
+    "h1": {
+     "O1": 200.0,
+     "O2": 15.14446227929374,
+     "O3": 25.173809523809524,
+     "replica_share_of_B2": 0.7006571429116385,
+     "cpu_share_of_B2": 0.9084322279288142,
+     "gap_closed": 0.5641025641025641
+    },
+    "h2": {
+     "O1": 130.0,
+     "O2": 12.495987158908507,
+     "O3": 25.95952380952381,
+     "replica_share_of_B2": 0.7591600000290644,
+     "cpu_share_of_B2": 0.9108856268195349,
+     "gap_closed": 0.7435897435897436
+    },
+    "h3": {
+     "O1": 100.0,
+     "O2": 7.728731942215088,
+     "O3": 27.373809523809523,
+     "replica_share_of_B2": 0.8369733333587647,
+     "cpu_share_of_B2": 0.9295699905953616,
+     "gap_closed": 0.8205128205128205
+    },
+    "k1": {
+     "O1": 110.0,
+     "O2": 8.68378812199037,
+     "O3": 27.090476190476192,
+     "replica_share_of_B2": 0.8342019049326579,
+     "cpu_share_of_B2": 0.9717281081337439,
+     "gap_closed": 0.7948717948717948
+    }
+   }
+  },
+  {
+   "service": "auth-service",
+   "pattern": "oscillating",
+   "B1": {
+    "O1_slo_s": 260.0,
+    "O2_error_pct": 56.73854447439353,
+    "O3_goodput_rps": 7.642857142857143
+   },
+   "B2": {
+    "O1_slo_s": 10.0,
+    "O2_error_pct": 0.026954177897574125,
+    "O3_goodput_rps": 17.66190476190476,
+    "O5_replica_s": 2100.0,
+    "O5_cpu_core_s": 280.32009562319723
+   },
+   "autoscalers": {
+    "h1": {
+     "O1": 180.0,
+     "O2": 22.048517520215633,
+     "O3": 13.771428571428572,
+     "replica_share_of_B2": 0.61404571442377,
+     "cpu_share_of_B2": 0.8372509901134536,
+     "gap_closed": 0.32
+    },
+    "h2": {
+     "O1": 210.0,
+     "O2": 34.285714285714285,
+     "O3": 11.60952380952381,
+     "replica_share_of_B2": 0.5373335715702602,
+     "cpu_share_of_B2": 0.6426074947654917,
+     "gap_closed": 0.2
+    },
+    "h3": {
+     "O1": 250.0,
+     "O2": 36.509433962264154,
+     "O3": 11.216666666666667,
+     "replica_share_of_B2": 0.49075714292980377,
+     "cpu_share_of_B2": 0.6441190136676007,
+     "gap_closed": 0.04
+    },
+    "k1": {
+     "O1": 230.0,
+     "O2": 34.02964959568733,
+     "O3": 11.654761904761905,
+     "replica_share_of_B2": 0.4844302379517328,
+     "cpu_share_of_B2": 0.6842801096067822,
+     "gap_closed": 0.12
+    }
+   }
+  },
+  {
+   "service": "shipping-rate-service",
+   "pattern": "gradual",
+   "B1": {
+    "O1_slo_s": 290.0,
+    "O2_error_pct": 43.78057770926882,
+    "O3_goodput_rps": 39.945238095238096
+   },
+   "B2": {
+    "O1_slo_s": 0.0,
+    "O2_error_pct": 0.0,
+    "O3_goodput_rps": 71.0547619047619,
+    "O5_replica_s": 2100.0,
+    "O5_cpu_core_s": 222.9173751003071
+   },
+   "autoscalers": {
+    "h1": {
+     "O1": 80.0,
+     "O2": 1.9364132801768903,
+     "O3": 69.69285714285714,
+     "replica_share_of_B2": 0.4110733333088103,
+     "cpu_share_of_B2": 0.966174859800272,
+     "gap_closed": 0.7241379310344828
+    },
+    "h2": {
+     "O1": 0.0,
+     "O2": 0.010050924685071027,
+     "O3": 71.05952380952381,
+     "replica_share_of_B2": 0.5633409522828602,
+     "cpu_share_of_B2": 0.9429848321784134,
+     "gap_closed": 1.0
+    },
+    "h3": {
+     "O1": 0.0,
+     "O2": 0.0,
+     "O3": 71.06904761904762,
+     "replica_share_of_B2": 0.707150476092384,
+     "cpu_share_of_B2": 0.9594797591856643,
+     "gap_closed": 1.0
+    },
+    "k1": {
+     "O1": 0.0,
+     "O2": 0.0,
+     "O3": 71.06666666666666,
+     "replica_share_of_B2": 0.7033580952598935,
+     "cpu_share_of_B2": 0.9685847182011116,
+     "gap_closed": 1.0
+    }
+   }
+  },
+  {
+   "service": "shipping-rate-service",
+   "pattern": "spike",
+   "B1": {
+    "O1_slo_s": 420.0,
+    "O2_error_pct": 58.25138115214451,
+    "O3_goodput_rps": 43.36190476190476
+   },
+   "B2": {
+    "O1_slo_s": 0.0,
+    "O2_error_pct": 0.002292368704582445,
+    "O3_goodput_rps": 103.86190476190477,
+    "O5_replica_s": 2100.0,
+    "O5_cpu_core_s": 320.1043412610871
+   },
+   "autoscalers": {
+    "h1": {
+     "O1": 100.0,
+     "O2": 12.268476068219329,
+     "O3": 91.12380952380953,
+     "replica_share_of_B2": 0.6237138096491496,
+     "cpu_share_of_B2": 0.8780991257173929,
+     "gap_closed": 0.7619047619047619
+    },
+    "h2": {
+     "O1": 90.0,
+     "O2": 10.643223913442142,
+     "O3": 92.81190476190476,
+     "replica_share_of_B2": 0.7584247620900472,
+     "cpu_share_of_B2": 0.9263373661302767,
+     "gap_closed": 0.7857142857142857
+    },
+    "h3": {
+     "O1": 70.0,
+     "O2": 5.187511461580781,
+     "O3": 98.47857142857143,
+     "replica_share_of_B2": 0.8702495238894508,
+     "cpu_share_of_B2": 0.9663123413558248,
+     "gap_closed": 0.8333333333333334
+    },
+    "k1": {
+     "O1": 70.0,
+     "O2": 6.897579314139006,
+     "O3": 96.70238095238095,
+     "replica_share_of_B2": 0.8489580953688849,
+     "cpu_share_of_B2": 0.9549175705664518,
+     "gap_closed": 0.8333333333333334
+    }
+   }
+  },
+  {
+   "service": "shipping-rate-service",
+   "pattern": "oscillating",
+   "B1": {
+    "O1_slo_s": 260.0,
+    "O2_error_pct": 52.039662192731114,
+    "O3_goodput_rps": 30.288095238095238
+   },
+   "B2": {
+    "O1_slo_s": 0.0,
+    "O2_error_pct": 0.0037703125589111336,
+    "O3_goodput_rps": 63.147619047619045,
+    "O5_replica_s": 2100.0,
+    "O5_cpu_core_s": 190.06958929990353
+   },
+   "autoscalers": {
+    "h1": {
+     "O1": 100.0,
+     "O2": 15.29527113658647,
+     "O3": 53.48095238095238,
+     "replica_share_of_B2": 0.5604676189876738,
+     "cpu_share_of_B2": 0.9218439169716909,
+     "gap_closed": 0.6153846153846154
+    },
+    "h2": {
+     "O1": 160.0,
+     "O2": 16.64907253807872,
+     "O3": 52.63809523809524,
+     "replica_share_of_B2": 0.5244992856752305,
+     "cpu_share_of_B2": 0.9354609003636266,
+     "gap_closed": 0.38461538461538464
+    },
+    "h3": {
+     "O1": 200.0,
+     "O2": 28.419544563414266,
+     "O3": 45.2047619047619,
+     "replica_share_of_B2": 0.5302014287312825,
+     "cpu_share_of_B2": 0.9399605805853141,
+     "gap_closed": 0.23076923076923078
+    },
+    "k1": {
+     "O1": 200.0,
+     "O2": 26.610866040794782,
+     "O3": 46.345238095238095,
+     "replica_share_of_B2": 0.5414547617094857,
+     "cpu_share_of_B2": 0.9363784363380105,
+     "gap_closed": 0.23076923076923078
+    }
+   }
+  }
+ ],
+ "vs_baselines_summary": {
+  "B1_O1_range": [
+   260.0,
+   420.0
+  ],
+  "B1_O2_range": [
+   43.78057770926882,
+   65.24879614767255
+  ],
+  "autoscaler_O1_range": [
+   0.0,
+   250.0
+  ],
+  "autoscaler_O2_range": [
+   0.0,
+   36.509433962264154
+  ],
+  "replica_share_range": [
+   0.4110733333088103,
+   0.8702495238894508
+  ],
+  "cpu_share_range": [
+   0.6426074947654917,
+   1.0283716039376836
+  ],
+  "gap_closed_range_by_pattern": {
+   "gradual": [
+    0.6451612903225806,
+    1.0
+   ],
+   "spike": [
+    0.5641025641025641,
+    0.8333333333333334
+   ],
+   "oscillating": [
+    0.04,
+    0.6153846153846154
+   ]
+  }
+ },
+ "pareto": {
+  "auth-service|gradual": {
+   "all_replica_s": [
+    "b1",
+    "b2",
+    "h1",
+    "h2",
+    "k1"
+   ],
+   "all_cpu_core_s": [
+    "b1",
+    "b2"
+   ],
+   "autoscalers_replica_s": [
+    "h1",
+    "h2",
+    "k1"
+   ],
+   "autoscalers_cpu_core_s": [
+    "h3",
+    "k1"
+   ],
+   "best_O1": [
+    "k1"
+   ],
+   "least_replica_s": "h1"
+  },
+  "auth-service|spike": {
+   "all_replica_s": [
+    "b1",
+    "b2",
+    "h1",
+    "h2",
+    "h3",
+    "k1"
+   ],
+   "all_cpu_core_s": [
+    "b1",
+    "b2",
+    "h1",
+    "h2",
+    "h3"
+   ],
+   "autoscalers_replica_s": [
+    "h1",
+    "h2",
+    "h3",
+    "k1"
+   ],
+   "autoscalers_cpu_core_s": [
+    "h1",
+    "h2",
+    "h3"
+   ],
+   "best_O1": [
+    "h3"
+   ],
+   "least_replica_s": "h1"
+  },
+  "auth-service|oscillating": {
+   "all_replica_s": [
+    "b1",
+    "b2",
+    "h1",
+    "h2",
+    "k1"
+   ],
+   "all_cpu_core_s": [
+    "b1",
+    "b2",
+    "h1",
+    "h2"
+   ],
+   "autoscalers_replica_s": [
+    "h1",
+    "h2",
+    "k1"
+   ],
+   "autoscalers_cpu_core_s": [
+    "h1",
+    "h2"
+   ],
+   "best_O1": [
+    "h1"
+   ],
+   "least_replica_s": "k1"
+  },
+  "shipping-rate-service|gradual": {
+   "all_replica_s": [
+    "b1",
+    "h1",
+    "h2"
+   ],
+   "all_cpu_core_s": [
+    "b1",
+    "h2"
+   ],
+   "autoscalers_replica_s": [
+    "h1",
+    "h2"
+   ],
+   "autoscalers_cpu_core_s": [
+    "h2"
+   ],
+   "best_O1": [
+    "h2",
+    "h3",
+    "k1"
+   ],
+   "least_replica_s": "h1"
+  },
+  "shipping-rate-service|spike": {
+   "all_replica_s": [
+    "b1",
+    "b2",
+    "h1",
+    "h2",
+    "k1"
+   ],
+   "all_cpu_core_s": [
+    "b1",
+    "b2",
+    "h1",
+    "h2",
+    "k1"
+   ],
+   "autoscalers_replica_s": [
+    "h1",
+    "h2",
+    "k1"
+   ],
+   "autoscalers_cpu_core_s": [
+    "h1",
+    "h2",
+    "k1"
+   ],
+   "best_O1": [
+    "h3",
+    "k1"
+   ],
+   "least_replica_s": "h1"
+  },
+  "shipping-rate-service|oscillating": {
+   "all_replica_s": [
+    "b1",
+    "b2",
+    "h1",
+    "h2"
+   ],
+   "all_cpu_core_s": [
+    "b1",
+    "b2",
+    "h1"
+   ],
+   "autoscalers_replica_s": [
+    "h1",
+    "h2"
+   ],
+   "autoscalers_cpu_core_s": [
+    "h1"
+   ],
+   "best_O1": [
+    "h1"
+   ],
+   "least_replica_s": "h2"
+  }
+ },
+ "ready_lag": {
+  "runs": 120,
+  "min": 17.0,
+  "median": 18.0,
+  "max": 19.0
+ },
+ "gate_reps_1_2": {
+  "auth-service|gradual|b1": {
+   "1": {
+    "O1": 350.0,
+    "O2": 49.857142857142854
+   },
+   "2": {
+    "O1": 310.0,
+    "O2": 53.32142857142857
+   }
+  },
+  "auth-service|oscillating|b1": {
+   "1": {
+    "O1": 270.0,
+    "O2": 60.902964959568735
+   },
+   "2": {
+    "O1": 260.0,
+    "O2": 59.13746630727763
+   }
+  },
+  "auth-service|spike|b1": {
+   "1": {
+    "O1": 420.0,
+    "O2": 66.90208667736758
+   },
+   "2": {
+    "O1": 420.0,
+    "O2": 68.93258426966293
+   }
+  },
+  "auth-service|gradual|b2": {
+   "1": {
+    "O1": 10.0,
+    "O2": 0.0
+   },
+   "2": {
+    "O1": 10.0,
+    "O2": 0.05952380952380952
+   }
+  },
+  "auth-service|oscillating|b2": {
+   "1": {
+    "O1": 10.0,
+    "O2": 0.04043126684636118
+   },
+   "2": {
+    "O1": 0.0,
+    "O2": 0.0
+   }
+  },
+  "auth-service|spike|b2": {
+   "1": {
+    "O1": 30.0,
+    "O2": 0.024077046548956663
+   },
+   "2": {
+    "O1": 30.0,
+    "O2": 0.0
+   }
+  },
+  "auth-service|gradual|h1": {
+   "1": {
+    "O1": 140.0,
+    "O2": 3.0595238095238093
+   },
+   "2": {
+    "O1": 70.0,
+    "O2": 0.6190476190476191
+   }
+  },
+  "auth-service|oscillating|h1": {
+   "1": {
+    "O1": 180.0,
+    "O2": 23.827493261455526
+   },
+   "2": {
+    "O1": 160.0,
+    "O2": 21.037735849056602
+   }
+  },
+  "auth-service|spike|h1": {
+   "1": {
+    "O1": 240.0,
+    "O2": 16.98234349919743
+   },
+   "2": {
+    "O1": 210.0,
+    "O2": 16.53290529695024
+   }
+  },
+  "auth-service|gradual|h2": {
+   "1": {
+    "O1": 100.0,
+    "O2": 1.6904761904761905
+   },
+   "2": {
+    "O1": 70.0,
+    "O2": 0.32142857142857145
+   }
+  },
+  "auth-service|oscillating|h2": {
+   "1": {
+    "O1": 210.0,
+    "O2": 46.091644204851754
+   },
+   "2": {
+    "O1": 160.0,
+    "O2": 16.28032345013477
+   }
+  },
+  "auth-service|spike|h2": {
+   "1": {
+    "O1": 100.0,
+    "O2": 11.741573033707866
+   },
+   "2": {
+    "O1": 130.0,
+    "O2": 13.731942215088283
+   }
+  },
+  "auth-service|gradual|h3": {
+   "1": {
+    "O1": 50.0,
+    "O2": 0.0
+   },
+   "2": {
+    "O1": 50.0,
+    "O2": 0.0
+   }
+  },
+  "auth-service|oscillating|h3": {
+   "1": {
+    "O1": 250.0,
+    "O2": 36.509433962264154
+   },
+   "2": {
+    "O1": 250.0,
+    "O2": 32.142857142857146
+   }
+  },
+  "auth-service|spike|h3": {
+   "1": {
+    "O1": 130.0,
+    "O2": 10.529695024077046
+   },
+   "2": {
+    "O1": 140.0,
+    "O2": 8.330658105939005
+   }
+  },
+  "auth-service|gradual|k1": {
+   "1": {
+    "O1": 40.0,
+    "O2": 0.0
+   },
+   "2": {
+    "O1": 40.0,
+    "O2": 0.07142857142857142
+   }
+  },
+  "auth-service|oscillating|k1": {
+   "1": {
+    "O1": 250.0,
+    "O2": 40.539083557951486
+   },
+   "2": {
+    "O1": 230.0,
+    "O2": 39.97304582210243
+   }
+  },
+  "auth-service|spike|k1": {
+   "1": {
+    "O1": 110.0,
+    "O2": 7.47191011235955
+   },
+   "2": {
+    "O1": 140.0,
+    "O2": 8.68378812199037
+   }
+  },
+  "shipping-rate-service|gradual|b1": {
+   "1": {
+    "O1": 290.0,
+    "O2": 43.70142053068882
+   },
+   "2": {
+    "O1": 290.0,
+    "O2": 43.56551747244279
+   }
+  },
+  "shipping-rate-service|oscillating|b1": {
+   "1": {
+    "O1": 260.0,
+    "O2": 51.99683222083946
+   },
+   "2": {
+    "O1": 260.0,
+    "O2": 52.039662192731114
+   }
+  },
+  "shipping-rate-service|spike|b1": {
+   "1": {
+    "O1": 420.0,
+    "O2": 58.25138115214451
+   },
+   "2": {
+    "O1": 420.0,
+    "O2": 58.5402196089219
+   }
+  },
+  "shipping-rate-service|gradual|b2": {
+   "1": {
+    "O1": 0.0,
+    "O2": 0.0
+   },
+   "2": {
+    "O1": 10.0,
+    "O2": 0.03350757271143279
+   }
+  },
+  "shipping-rate-service|oscillating|b2": {
+   "1": {
+    "O1": 0.0,
+    "O2": 0.007540340823405218
+   },
+   "2": {
+    "O1": 0.0,
+    "O2": 0.0
+   }
+  },
+  "shipping-rate-service|spike|b2": {
+   "1": {
+    "O1": 0.0,
+    "O2": 0.002292368704582445
+   },
+   "2": {
+    "O1": 0.0,
+    "O2": 0.0
+   }
+  },
+  "shipping-rate-service|gradual|h1": {
+   "1": {
+    "O1": 80.0,
+    "O2": 2.3720182256767623
+   },
+   "2": {
+    "O1": 90.0,
+    "O2": 2.1474756273241984
+   }
+  },
+  "shipping-rate-service|oscillating|h1": {
+   "1": {
+    "O1": 180.0,
+    "O2": 20.901824762479265
+   },
+   "2": {
+    "O1": 90.0,
+    "O2": 15.19812992497078
+   }
+  },
+  "shipping-rate-service|spike|h1": {
+   "1": {
+    "O1": 150.0,
+    "O2": 12.268476068219329
+   },
+   "2": {
+    "O1": 100.0,
+    "O2": 12.902929983034527
+   }
+  },
+  "shipping-rate-service|gradual|h2": {
+   "1": {
+    "O1": 20.0,
+    "O2": 0.17085999530972562
+   },
+   "2": {
+    "O1": 0.0,
+    "O2": 0.010050924685071027
+   }
+  },
+  "shipping-rate-service|oscillating|h2": {
+   "1": {
+    "O1": 200.0,
+    "O2": 41.52842708490424
+   },
+   "2": {
+    "O1": 200.0,
+    "O2": 41.026511294641175
+   }
+  },
+  "shipping-rate-service|spike|h2": {
+   "1": {
+    "O1": 110.0,
+    "O2": 13.157412077582649
+   },
+   "2": {
+    "O1": 90.0,
+    "O2": 8.935448377040162
+   }
+  },
+  "shipping-rate-service|gradual|h3": {
+   "1": {
+    "O1": 0.0,
+    "O2": 0.0
+   },
+   "2": {
+    "O1": 0.0,
+    "O2": 0.0
+   }
+  },
+  "shipping-rate-service|oscillating|h3": {
+   "1": {
+    "O1": 200.0,
+    "O2": 30.398884029558136
+   },
+   "2": {
+    "O1": 200.0,
+    "O2": 25.344041021000642
+   }
+  },
+  "shipping-rate-service|spike|h3": {
+   "1": {
+    "O1": 80.0,
+    "O2": 7.351626435595901
+   },
+   "2": {
+    "O1": 70.0,
+    "O2": 5.334341975563349
+   }
+  },
+  "shipping-rate-service|gradual|k1": {
+   "1": {
+    "O1": 0.0,
+    "O2": 0.0
+   },
+   "2": {
+    "O1": 0.0,
+    "O2": 0.0
+   }
+  },
+  "shipping-rate-service|oscillating|k1": {
+   "1": {
+    "O1": 180.0,
+    "O2": 26.776759793386873
+   },
+   "2": {
+    "O1": 210.0,
+    "O2": 25.95385311416076
+   }
+  },
+  "shipping-rate-service|spike|k1": {
+   "1": {
+    "O1": 70.0,
+    "O2": 6.897579314139006
+   },
+   "2": {
+    "O1": 70.0,
+    "O2": 7.019393883820091
+   }
+  }
+ },
+ "window_requests": {
+  "auth-service|gradual": {
+   "min": 8400,
+   "max": 8400
+  },
+  "auth-service|oscillating": {
+   "min": 7420,
+   "max": 7420
+  },
+  "auth-service|spike": {
+   "min": 12460,
+   "max": 12460
+  },
+  "shipping-rate-service|gradual": {
+   "min": 29841,
+   "max": 29849
+  },
+  "shipping-rate-service|oscillating": {
+   "min": 26517,
+   "max": 26524
+  },
+  "shipping-rate-service|spike": {
+   "min": 43618,
+   "max": 43624
+  }
+ },
+ "error_composition": {
+  "auth-service|B1": {
+   "failed": 83062,
+   "shed_share": 0.8784040836965159,
+   "timeout_share": 0.12159591630348414
+  },
+  "shipping-rate-service|B1": {
+   "failed": 262192,
+   "shed_share": 0.9997635320681028,
+   "timeout_share": 0.00023646793189723562
+  },
+  "auth-service|B2": {
+   "failed": 39,
+   "shed_share": 0.5897435897435898,
+   "timeout_share": 0.41025641025641024
+  },
+  "shipping-rate-service|B2": {
+   "failed": 165,
+   "shed_share": 0.7696969696969697,
+   "timeout_share": 0.23030303030303031
+  },
+  "auth-service|CPU": {
+   "failed": 37584,
+   "shed_share": 0.8593550446998723,
+   "timeout_share": 0.14040549169859515
+  },
+  "shipping-rate-service|CPU": {
+   "failed": 107849,
+   "shed_share": 0.9976819441997608,
+   "timeout_share": 0.001650455729770327
+  },
+  "auth-service|laju permintaan": {
+   "failed": 36988,
+   "shed_share": 0.895317400237915,
+   "timeout_share": 0.10462852817129879
+  },
+  "shipping-rate-service|laju permintaan": {
+   "failed": 99283,
+   "shed_share": 0.9856571618504678,
+   "timeout_share": 0.014312621496127232
+  }
+ },
+ "scale_changes_auth_osc_h2": {
+  "1": [
+   {
+    "t_k6": 185.1,
+    "from": 1,
+    "to": 4
+   },
+   {
+    "t_k6": 320.1,
+    "from": 4,
+    "to": 1
+   },
+   {
+    "t_k6": 365.1,
+    "from": 1,
+    "to": 4
+   },
+   {
+    "t_k6": 501.1,
+    "from": 4,
+    "to": 1
+   },
+   {
+    "t_k6": 546.1,
+    "from": 1,
+    "to": 3
+   },
+   {
+    "t_k6": 666.1,
+    "from": 3,
+    "to": 5
+   },
+   {
+    "t_k6": 741.1,
+    "from": 5,
+    "to": 2
+   },
+   {
+    "t_k6": 771.1,
+    "from": 2,
+    "to": 1
+   }
+  ],
+  "2": [
+   {
+    "t_k6": 154.2,
+    "from": 1,
+    "to": 2
+   },
+   {
+    "t_k6": 214.2,
+    "from": 2,
+    "to": 4
+   },
+   {
+    "t_k6": 349.2,
+    "from": 4,
+    "to": 3
+   },
+   {
+    "t_k6": 379.2,
+    "from": 3,
+    "to": 2
+   },
+   {
+    "t_k6": 394.2,
+    "from": 2,
+    "to": 5
+   },
+   {
+    "t_k6": 529.2,
+    "from": 5,
+    "to": 3
+   },
+   {
+    "t_k6": 559.2,
+    "from": 3,
+    "to": 2
+   },
+   {
+    "t_k6": 574.2,
+    "from": 2,
+    "to": 5
+   },
+   {
+    "t_k6": 710.2,
+    "from": 5,
+    "to": 4
+   },
+   {
+    "t_k6": 740.2,
+    "from": 4,
+    "to": 3
+   },
+   {
+    "t_k6": 770.2,
+    "from": 3,
+    "to": 1
+   }
+  ]
+ },
+ "cpu_reading_refresh": {
+  "runs": 60,
+  "gaps": 387,
+  "median_s": 61.187000036239624,
+  "share_50_70": 0.8087855297157622,
+  "p10_s": 30.539000082015992,
+  "p90_s": 63.08039999008179
+ },
+ "peak_start_pods": {
+  "per_run": {
+   "auth-service|h1|1": [
+    1,
+    3,
+    5
+   ],
+   "auth-service|h1|2": [
+    1,
+    3,
+    5
+   ],
+   "auth-service|h1|3": [
+    1,
+    3,
+    5
+   ],
+   "auth-service|h1|4": [
+    1,
+    3,
+    5
+   ],
+   "auth-service|h1|5": [
+    1,
+    2,
+    4
+   ],
+   "auth-service|h2|1": [
+    1,
+    4,
+    4
+   ],
+   "auth-service|h2|2": [
+    1,
+    4,
+    5
+   ],
+   "auth-service|h2|3": [
+    1,
+    4,
+    3
+   ],
+   "auth-service|h2|4": [
+    1,
+    4,
+    4
+   ],
+   "auth-service|h2|5": [
+    1,
+    2,
+    2
+   ],
+   "auth-service|h3|1": [
+    1,
+    1,
+    1
+   ],
+   "auth-service|h3|2": [
+    1,
+    1,
+    1
+   ],
+   "auth-service|h3|3": [
+    1,
+    1,
+    1
+   ],
+   "auth-service|h3|4": [
+    1,
+    1,
+    1
+   ],
+   "auth-service|h3|5": [
+    1,
+    1,
+    1
+   ],
+   "auth-service|k1|1": [
+    1,
+    1,
+    1
+   ],
+   "auth-service|k1|2": [
+    1,
+    1,
+    1
+   ],
+   "auth-service|k1|3": [
+    1,
+    1,
+    1
+   ],
+   "auth-service|k1|4": [
+    1,
+    1,
+    1
+   ],
+   "auth-service|k1|5": [
+    1,
+    1,
+    1
+   ],
+   "shipping-rate-service|h1|1": [
+    1,
+    2,
+    4
+   ],
+   "shipping-rate-service|h1|2": [
+    1,
+    3,
+    4
+   ],
+   "shipping-rate-service|h1|3": [
+    1,
+    3,
+    3
+   ],
+   "shipping-rate-service|h1|4": [
+    1,
+    3,
+    4
+   ],
+   "shipping-rate-service|h1|5": [
+    1,
+    3,
+    4
+   ],
+   "shipping-rate-service|h2|1": [
+    1,
+    4,
+    3
+   ],
+   "shipping-rate-service|h2|2": [
+    1,
+    3,
+    3
+   ],
+   "shipping-rate-service|h2|3": [
+    1,
+    4,
+    2
+   ],
+   "shipping-rate-service|h2|4": [
+    1,
+    4,
+    3
+   ],
+   "shipping-rate-service|h2|5": [
+    1,
+    4,
+    3
+   ],
+   "shipping-rate-service|h3|1": [
+    1,
+    1,
+    1
+   ],
+   "shipping-rate-service|h3|2": [
+    1,
+    1,
+    1
+   ],
+   "shipping-rate-service|h3|3": [
+    1,
+    1,
+    1
+   ],
+   "shipping-rate-service|h3|4": [
+    1,
+    1,
+    1
+   ],
+   "shipping-rate-service|h3|5": [
+    1,
+    1,
+    1
+   ],
+   "shipping-rate-service|k1|1": [
+    1,
+    1,
+    1
+   ],
+   "shipping-rate-service|k1|2": [
+    1,
+    1,
+    1
+   ],
+   "shipping-rate-service|k1|3": [
+    1,
+    1,
+    1
+   ],
+   "shipping-rate-service|k1|4": [
+    1,
+    1,
+    1
+   ],
+   "shipping-rate-service|k1|5": [
+    1,
+    1,
+    1
+   ]
+  },
+  "per_config": {
+   "h1": {
+    "runs": 10,
+    "peak2_min": 2,
+    "peak2_max": 3,
+    "peak3_min": 3,
+    "peak3_max": 5,
+    "runs_one_pod_at_peaks_2_and_3": 0
+   },
+   "h2": {
+    "runs": 10,
+    "peak2_min": 2,
+    "peak2_max": 4,
+    "peak3_min": 2,
+    "peak3_max": 5,
+    "runs_one_pod_at_peaks_2_and_3": 0
+   },
+   "h3": {
+    "runs": 10,
+    "peak2_min": 1,
+    "peak2_max": 1,
+    "peak3_min": 1,
+    "peak3_max": 1,
+    "runs_one_pod_at_peaks_2_and_3": 10
+   },
+   "k1": {
+    "runs": 10,
+    "peak2_min": 1,
+    "peak2_max": 1,
+    "peak3_min": 1,
+    "peak3_max": 1,
+    "runs_one_pod_at_peaks_2_and_3": 10
+   }
+  }
+ },
+ "anti_phase": {
+  "auth-service|oscillating|h2|1": [
+   320.1,
+   501.1
+  ],
+  "auth-service|oscillating|h2|2": [
+   349.2,
+   379.2,
+   529.2
+  ],
+  "auth-service|oscillating|h2|3": [
+   335.2,
+   515.2
+  ],
+  "auth-service|oscillating|h2|4": [
+   335.0,
+   365.0,
+   515.0
+  ],
+  "auth-service|oscillating|h2|5": [
+   335.8,
+   515.8
+  ],
+  "shipping-rate-service|oscillating|h2|1": [
+   319.8,
+   499.8
+  ],
+  "shipping-rate-service|oscillating|h2|2": [
+   320.1,
+   500.1
+  ],
+  "shipping-rate-service|oscillating|h2|3": [
+   364.7
+  ],
+  "shipping-rate-service|oscillating|h2|4": [
+   348.9,
+   378.9,
+   529.9
+  ],
+  "shipping-rate-service|oscillating|h2|5": [
+   349.7,
+   379.7,
+   530.7
+  ]
+ },
+ "checks": {
+  "runs": 180,
+  "inexact_scale_times": 0,
+  "scale_ups_before_onset": 0,
+  "raw_md5_verified": 180,
+  "cpu_samples": [
+   28,
+   28
+  ]
+ },
+ "config_evidence": {
+  "auth-service|b1": {
+   "runs": 15,
+   "overlay=58d754bd7213": 15,
+   "cap=22": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=225/225": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=2->30": 15,
+   "exit=0": 15,
+   "preauth=True/120": 15,
+   "log PREAUTH_USED tokens=120": 15
+  },
+  "auth-service|b2": {
+   "runs": 15,
+   "overlay=58d754bd7213": 15,
+   "cap=22": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=225/225": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=2->30": 15,
+   "exit=0": 15,
+   "preauth=True/120": 15,
+   "log PREAUTH_USED tokens=120": 15
+  },
+  "auth-service|h1": {
+   "runs": 15,
+   "overlay=58d754bd7213": 15,
+   "cap=22": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=225/225": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=2->30": 15,
+   "exit=0": 15,
+   "preauth=True/120": 15,
+   "log PREAUTH_USED tokens=120": 15,
+   "cpu_target=80": 15,
+   "behavior_block=no": 15
+  },
+  "auth-service|h2": {
+   "runs": 15,
+   "overlay=58d754bd7213": 15,
+   "cap=22": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=225/225": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=2->30": 15,
+   "exit=0": 15,
+   "preauth=True/120": 15,
+   "log PREAUTH_USED tokens=120": 15,
+   "cpu_target=50": 15,
+   "behavior_block=yes": 15,
+   "windows down=30 up=0": 15
+  },
+  "auth-service|h3": {
+   "runs": 15,
+   "overlay=58d754bd7213": 15,
+   "cap=22": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=225/225": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=2->30": 15,
+   "exit=0": 15,
+   "preauth=True/120": 15,
+   "log PREAUTH_USED tokens=120": 15,
+   "metric=http_requests_per_second/5": 15,
+   "windows down=30 up=0": 15
+  },
+  "auth-service|k1": {
+   "runs": 15,
+   "overlay=58d754bd7213": 15,
+   "cap=22": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=225/225": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=2->30": 15,
+   "exit=0": 15,
+   "preauth=True/120": 15,
+   "log PREAUTH_USED tokens=120": 15,
+   "keda threshold=5 polling=15 cooldown=30": 15,
+   "managed_hpa_metric=s0-prometheus/5": 15,
+   "windows down=30 up=0": 15
+  },
+  "shipping-rate-service|b1": {
+   "runs": 15,
+   "overlay=5b5de9e30a49": 15,
+   "cap=48": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=788/788": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=10->105": 15,
+   "exit=0": 15
+  },
+  "shipping-rate-service|b2": {
+   "runs": 15,
+   "overlay=5b5de9e30a49": 15,
+   "cap=48": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=788/788": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=10->105": 15,
+   "exit=0": 15
+  },
+  "shipping-rate-service|h1": {
+   "runs": 15,
+   "overlay=5b5de9e30a49": 15,
+   "cap=48": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=788/788": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=10->105": 15,
+   "exit=0": 15,
+   "cpu_target=80": 15,
+   "behavior_block=no": 15
+  },
+  "shipping-rate-service|h2": {
+   "runs": 15,
+   "overlay=5b5de9e30a49": 15,
+   "cap=48": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=788/788": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=10->105": 15,
+   "exit=0": 15,
+   "cpu_target=50": 15,
+   "behavior_block=yes": 15,
+   "windows down=30 up=0": 15
+  },
+  "shipping-rate-service|h3": {
+   "runs": 15,
+   "overlay=5b5de9e30a49": 15,
+   "cap=48": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=788/788": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=10->105": 15,
+   "exit=0": 15,
+   "metric=http_requests_per_second/15": 15,
+   "windows down=30 up=0": 15
+  },
+  "shipping-rate-service|k1": {
+   "runs": 15,
+   "overlay=5b5de9e30a49": 15,
+   "cap=48": 15,
+   "k6=grafana/k6:0.46.0": 15,
+   "vus=788/788": 15,
+   "no_reuse=True": 15,
+   "timeout=5s": 15,
+   "rates=10->105": 15,
+   "exit=0": 15,
+   "keda threshold=15 polling=15 cooldown=30": 15,
+   "managed_hpa_metric=s0-prometheus/15": 15,
+   "windows down=30 up=0": 15
+  }
+ },
+ "A4_cpu_vs_rate": [
+  {
+   "outcome": "O1_slo_s",
+   "dispersion": "range",
+   "n_cpu": 12,
+   "n_rate": 12,
+   "median_cpu": 60.0,
+   "median_rate": 20.0,
+   "U_cpu": 130.0,
+   "p": 0.00030841415953813316,
+   "A12_cpu_gt_rate": 0.9027777777777778
+  },
+  {
+   "outcome": "O1_slo_s",
+   "dispersion": "mad",
+   "n_cpu": 12,
+   "n_rate": 12,
+   "median_cpu": 10.0,
+   "median_rate": 0.0,
+   "U_cpu": 111.0,
+   "p": 0.02122732564245554,
+   "A12_cpu_gt_rate": 0.7708333333333334
+  },
+  {
+   "outcome": "O2_error_pct",
+   "dispersion": "range",
+   "n_cpu": 12,
+   "n_rate": 12,
+   "median_cpu": 4.487622760642259,
+   "median_rate": 2.823498547799765,
+   "U_cpu": 86.0,
+   "p": 0.4428331797425888,
+   "A12_cpu_gt_rate": 0.5972222222222222
+  },
+  {
+   "outcome": "O2_error_pct",
+   "dispersion": "mad",
+   "n_cpu": 12,
+   "n_rate": 12,
+   "median_cpu": 0.69443402000792,
+   "median_rate": 0.29686101762036055,
+   "U_cpu": 88.0,
+   "p": 0.3771683290461053,
+   "A12_cpu_gt_rate": 0.6111111111111112
+  }
+ ],
+ "session_sign_tests": {
+  "B1/B2|O1_slo_s": {
+   "cells": 12,
+   "session1_worse": 5,
+   "session1_better": 2,
+   "ties": 5,
+   "p_two_sided": 0.453125
+  },
+  "B1/B2|O2_error_pct": {
+   "cells": 12,
+   "session1_worse": 7,
+   "session1_better": 5,
+   "ties": 0,
+   "p_two_sided": 0.7744140625
+  },
+  "autoscaled|O1_slo_s": {
+   "cells": 24,
+   "session1_worse": 14,
+   "session1_better": 5,
+   "ties": 5,
+   "p_two_sided": 0.063568115234375
+  },
+  "autoscaled|O2_error_pct": {
+   "cells": 24,
+   "session1_worse": 16,
+   "session1_better": 6,
+   "ties": 2,
+   "p_two_sided": 0.052478790283203125
+  }
+ },
+ "slo_ms": {
+  "auth-service": 1500.0,
+  "shipping-rate-service": 1000.0
+ },
+ "slo_validation": {
+  "auth-service": {
+   "slo_ms": 1500.0,
+   "patterns": {
+    "gradual": {
+     "window_p95_min": 655.0,
+     "window_p95_max": 802.0499999999993,
+     "bins": 210,
+     "bins_over_slo": 4
+    },
+    "spike": {
+     "window_p95_min": 823.0,
+     "window_p95_max": 943.0499999999993,
+     "bins": 210,
+     "bins_over_slo": 11
+    },
+    "oscillating": {
+     "window_p95_min": 773.0499999999993,
+     "window_p95_max": 828.0499999999993,
+     "bins": 210,
+     "bins_over_slo": 5
+    }
+   },
+   "bins": 630,
+   "bins_over_slo": 20
+  },
+  "shipping-rate-service": {
+   "slo_ms": 1000.0,
+   "patterns": {
+    "gradual": {
+     "window_p95_min": 916.0,
+     "window_p95_max": 919.0,
+     "bins": 210,
+     "bins_over_slo": 1
+    },
+    "spike": {
+     "window_p95_min": 917.0,
+     "window_p95_max": 919.0,
+     "bins": 210,
+     "bins_over_slo": 2
+    },
+    "oscillating": {
+     "window_p95_min": 917.0,
+     "window_p95_max": 918.0,
+     "bins": 210,
+     "bins_over_slo": 0
+    }
+   },
+   "bins": 630,
+   "bins_over_slo": 3
+  }
+ },
+ "slo_sensitivity": {
+  "auth-service": [
+   {
+    "slo_ms": 900,
+    "analysis_slo": false,
+    "patterns": {
+     "gradual": {
+      "medians": {
+       "b1": 350.0,
+       "b2": 60.0,
+       "h1": 220.0,
+       "h2": 180.0,
+       "h3": 180.0,
+       "k1": 120.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.56,
+        "p": 0.8333333333333334,
+        "p_holm": 0.8333333333333334,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -60.0,
+        "A12_a_gt_b": 0.88,
+        "p": 0.05555555555555555,
+        "p_holm": 0.16666666666666666,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -40.0,
+        "A12_a_gt_b": 0.82,
+        "p": 0.1111111111111111,
+        "p_holm": 0.2222222222222222,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.4482758620689655,
+       "h2": 0.5862068965517241,
+       "h3": 0.5862068965517241,
+       "k1": 0.7931034482758621
+      },
+      "best_autoscalers": [
+       "k1"
+      ]
+     },
+     "spike": {
+      "medians": {
+       "b1": 420.0,
+       "b2": 170.0,
+       "h1": 310.0,
+       "h2": 280.0,
+       "h3": 250.0,
+       "k1": 230.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -30.0,
+        "A12_a_gt_b": 0.76,
+        "p": 0.2222222222222222,
+        "p_holm": 0.4444444444444444,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -20.0,
+        "A12_a_gt_b": 0.64,
+        "p": 0.48412698412698413,
+        "p_holm": 0.48412698412698413,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -30.0,
+        "A12_a_gt_b": 0.9,
+        "p": 0.047619047619047616,
+        "p_holm": 0.14285714285714285,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.44,
+       "h2": 0.56,
+       "h3": 0.68,
+       "k1": 0.76
+      },
+      "best_autoscalers": [
+       "k1"
+      ]
+     },
+     "oscillating": {
+      "medians": {
+       "b1": 260.0,
+       "b2": 80.0,
+       "h1": 200.0,
+       "h2": 220.0,
+       "h3": 250.0,
+       "k1": 260.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.3,
+        "p": 0.35714285714285715,
+        "p_holm": 0.7142857142857143,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 10.0,
+        "A12_a_gt_b": 0.38,
+        "p": 0.7142857142857143,
+        "p_holm": 0.7142857142857143,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": 20.0,
+        "A12_a_gt_b": 0.12,
+        "p": 0.06349206349206349,
+        "p_holm": 0.19047619047619047,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.3333333333333333,
+       "h2": 0.2222222222222222,
+       "h3": 0.05555555555555555,
+       "k1": 0.0
+      },
+      "best_autoscalers": [
+       "h1"
+      ]
+     }
+    },
+    "significant": []
+   },
+   {
+    "slo_ms": 1000,
+    "analysis_slo": false,
+    "patterns": {
+     "gradual": {
+      "medians": {
+       "b1": 340.0,
+       "b2": 40.0,
+       "h1": 190.0,
+       "h2": 110.0,
+       "h3": 140.0,
+       "k1": 100.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.5,
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -40.0,
+        "A12_a_gt_b": 0.8,
+        "p": 0.15873015873015872,
+        "p_holm": 0.31746031746031744,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -80.0,
+        "A12_a_gt_b": 0.86,
+        "p": 0.06349206349206349,
+        "p_holm": 0.19047619047619047,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.5,
+       "h2": 0.7666666666666667,
+       "h3": 0.6666666666666666,
+       "k1": 0.8
+      },
+      "best_autoscalers": [
+       "k1"
+      ]
+     },
+     "spike": {
+      "medians": {
+       "b1": 420.0,
+       "b2": 140.0,
+       "h1": 290.0,
+       "h2": 240.0,
+       "h3": 210.0,
+       "k1": 190.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -30.0,
+        "A12_a_gt_b": 0.72,
+        "p": 0.2857142857142857,
+        "p_holm": 0.3968253968253968,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -20.0,
+        "A12_a_gt_b": 0.76,
+        "p": 0.1984126984126984,
+        "p_holm": 0.3968253968253968,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -50.0,
+        "A12_a_gt_b": 0.98,
+        "p": 0.015873015873015872,
+        "p_holm": 0.047619047619047616,
+        "significant": true
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.4642857142857143,
+       "h2": 0.6428571428571429,
+       "h3": 0.75,
+       "k1": 0.8214285714285714
+      },
+      "best_autoscalers": [
+       "k1"
+      ]
+     },
+     "oscillating": {
+      "medians": {
+       "b1": 260.0,
+       "b2": 50.0,
+       "h1": 190.0,
+       "h2": 220.0,
+       "h3": 250.0,
+       "k1": 250.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.24,
+        "p": 0.1984126984126984,
+        "p_holm": 0.3968253968253968,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.48,
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.14,
+        "p": 0.07142857142857142,
+        "p_holm": 0.21428571428571427,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.3333333333333333,
+       "h2": 0.19047619047619047,
+       "h3": 0.047619047619047616,
+       "k1": 0.047619047619047616
+      },
+      "best_autoscalers": [
+       "h1"
+      ]
+     }
+    },
+    "significant": [
+     "spike|default vs tuned"
+    ]
+   },
+   {
+    "slo_ms": 1100,
+    "analysis_slo": false,
+    "patterns": {
+     "gradual": {
+      "medians": {
+       "b1": 330.0,
+       "b2": 30.0,
+       "h1": 160.0,
+       "h2": 100.0,
+       "h3": 100.0,
+       "k1": 90.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.56,
+        "p": 0.8253968253968254,
+        "p_holm": 0.8253968253968254,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -10.0,
+        "A12_a_gt_b": 0.74,
+        "p": 0.23809523809523808,
+        "p_holm": 0.47619047619047616,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -60.0,
+        "A12_a_gt_b": 0.84,
+        "p": 0.07936507936507936,
+        "p_holm": 0.23809523809523808,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.5666666666666667,
+       "h2": 0.7666666666666667,
+       "h3": 0.7666666666666667,
+       "k1": 0.8
+      },
+      "best_autoscalers": [
+       "k1"
+      ]
+     },
+     "spike": {
+      "medians": {
+       "b1": 420.0,
+       "b2": 60.0,
+       "h1": 270.0,
+       "h2": 220.0,
+       "h3": 170.0,
+       "k1": 160.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -50.0,
+        "A12_a_gt_b": 0.84,
+        "p": 0.10317460317460317,
+        "p_holm": 0.20634920634920634,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -10.0,
+        "A12_a_gt_b": 0.6,
+        "p": 0.6349206349206349,
+        "p_holm": 0.6349206349206349,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -50.0,
+        "A12_a_gt_b": 0.88,
+        "p": 0.047619047619047616,
+        "p_holm": 0.14285714285714285,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.4166666666666667,
+       "h2": 0.5555555555555556,
+       "h3": 0.6944444444444444,
+       "k1": 0.7222222222222222
+      },
+      "best_autoscalers": [
+       "k1"
+      ]
+     },
+     "oscillating": {
+      "medians": {
+       "b1": 260.0,
+       "b2": 40.0,
+       "h1": 190.0,
+       "h2": 220.0,
+       "h3": 250.0,
+       "k1": 240.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.24,
+        "p": 0.1984126984126984,
+        "p_holm": 0.3968253968253968,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -10.0,
+        "A12_a_gt_b": 0.66,
+        "p": 0.49206349206349204,
+        "p_holm": 0.49206349206349204,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.06,
+        "p": 0.023809523809523808,
+        "p_holm": 0.07142857142857142,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.3181818181818182,
+       "h2": 0.18181818181818182,
+       "h3": 0.045454545454545456,
+       "k1": 0.09090909090909091
+      },
+      "best_autoscalers": [
+       "h1"
+      ]
+     }
+    },
+    "significant": []
+   },
+   {
+    "slo_ms": 1200,
+    "analysis_slo": false,
+    "patterns": {
+     "gradual": {
+      "medians": {
+       "b1": 330.0,
+       "b2": 20.0,
+       "h1": 150.0,
+       "h2": 100.0,
+       "h3": 100.0,
+       "k1": 60.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.58,
+        "p": 0.753968253968254,
+        "p_holm": 0.753968253968254,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -40.0,
+        "A12_a_gt_b": 0.74,
+        "p": 0.24603174603174602,
+        "p_holm": 0.49206349206349204,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -50.0,
+        "A12_a_gt_b": 0.94,
+        "p": 0.023809523809523808,
+        "p_holm": 0.07142857142857142,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.5806451612903226,
+       "h2": 0.7419354838709677,
+       "h3": 0.7419354838709677,
+       "k1": 0.8709677419354839
+      },
+      "best_autoscalers": [
+       "k1"
+      ]
+     },
+     "spike": {
+      "medians": {
+       "b1": 420.0,
+       "b2": 40.0,
+       "h1": 240.0,
+       "h2": 190.0,
+       "h3": 140.0,
+       "k1": 150.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -50.0,
+        "A12_a_gt_b": 0.76,
+        "p": 0.2222222222222222,
+        "p_holm": 0.4444444444444444,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 10.0,
+        "A12_a_gt_b": 0.48,
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -50.0,
+        "A12_a_gt_b": 0.88,
+        "p": 0.047619047619047616,
+        "p_holm": 0.14285714285714285,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.47368421052631576,
+       "h2": 0.6052631578947368,
+       "h3": 0.7368421052631579,
+       "k1": 0.7105263157894737
+      },
+      "best_autoscalers": [
+       "h3"
+      ]
+     },
+     "oscillating": {
+      "medians": {
+       "b1": 260.0,
+       "b2": 30.0,
+       "h1": 190.0,
+       "h2": 220.0,
+       "h3": 250.0,
+       "k1": 240.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.18,
+        "p": 0.1111111111111111,
+        "p_holm": 0.2222222222222222,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -10.0,
+        "A12_a_gt_b": 0.62,
+        "p": 0.6507936507936508,
+        "p_holm": 0.6507936507936508,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.1,
+        "p": 0.05555555555555555,
+        "p_holm": 0.16666666666666666,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.30434782608695654,
+       "h2": 0.17391304347826086,
+       "h3": 0.043478260869565216,
+       "k1": 0.08695652173913043
+      },
+      "best_autoscalers": [
+       "h1"
+      ]
+     }
+    },
+    "significant": []
+   },
+   {
+    "slo_ms": 1300,
+    "analysis_slo": false,
+    "patterns": {
+     "gradual": {
+      "medians": {
+       "b1": 330.0,
+       "b2": 10.0,
+       "h1": 140.0,
+       "h2": 100.0,
+       "h3": 90.0,
+       "k1": 50.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -10.0,
+        "A12_a_gt_b": 0.52,
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -40.0,
+        "A12_a_gt_b": 0.76,
+        "p": 0.21428571428571427,
+        "p_holm": 0.42857142857142855,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -40.0,
+        "A12_a_gt_b": 0.94,
+        "p": 0.031746031746031744,
+        "p_holm": 0.09523809523809523,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.59375,
+       "h2": 0.71875,
+       "h3": 0.75,
+       "k1": 0.875
+      },
+      "best_autoscalers": [
+       "k1"
+      ]
+     },
+     "spike": {
+      "medians": {
+       "b1": 420.0,
+       "b2": 30.0,
+       "h1": 210.0,
+       "h2": 170.0,
+       "h3": 130.0,
+       "k1": 140.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -40.0,
+        "A12_a_gt_b": 0.8,
+        "p": 0.16666666666666666,
+        "p_holm": 0.3333333333333333,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 10.0,
+        "A12_a_gt_b": 0.54,
+        "p": 0.8571428571428571,
+        "p_holm": 0.8571428571428571,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -40.0,
+        "A12_a_gt_b": 0.94,
+        "p": 0.023809523809523808,
+        "p_holm": 0.07142857142857142,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.5384615384615384,
+       "h2": 0.6410256410256411,
+       "h3": 0.7435897435897436,
+       "k1": 0.717948717948718
+      },
+      "best_autoscalers": [
+       "h3"
+      ]
+     },
+     "oscillating": {
+      "medians": {
+       "b1": 260.0,
+       "b2": 20.0,
+       "h1": 180.0,
+       "h2": 210.0,
+       "h3": 250.0,
+       "k1": 230.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 40.0,
+        "A12_a_gt_b": 0.22,
+        "p": 0.1746031746031746,
+        "p_holm": 0.3492063492063492,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -20.0,
+        "A12_a_gt_b": 0.58,
+        "p": 0.873015873015873,
+        "p_holm": 0.873015873015873,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.14,
+        "p": 0.07936507936507936,
+        "p_holm": 0.23809523809523808,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.3333333333333333,
+       "h2": 0.20833333333333334,
+       "h3": 0.041666666666666664,
+       "k1": 0.125
+      },
+      "best_autoscalers": [
+       "h1"
+      ]
+     }
+    },
+    "significant": []
+   },
+   {
+    "slo_ms": 1400,
+    "analysis_slo": false,
+    "patterns": {
+     "gradual": {
+      "medians": {
+       "b1": 330.0,
+       "b2": 10.0,
+       "h1": 140.0,
+       "h2": 90.0,
+       "h3": 60.0,
+       "k1": 40.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -30.0,
+        "A12_a_gt_b": 0.78,
+        "p": 0.19047619047619047,
+        "p_holm": 0.38095238095238093,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -20.0,
+        "A12_a_gt_b": 0.7,
+        "p": 0.30158730158730157,
+        "p_holm": 0.38095238095238093,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -50.0,
+        "A12_a_gt_b": 0.88,
+        "p": 0.03968253968253968,
+        "p_holm": 0.11904761904761904,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.59375,
+       "h2": 0.75,
+       "h3": 0.84375,
+       "k1": 0.90625
+      },
+      "best_autoscalers": [
+       "k1"
+      ]
+     },
+     "spike": {
+      "medians": {
+       "b1": 420.0,
+       "b2": 30.0,
+       "h1": 210.0,
+       "h2": 140.0,
+       "h3": 100.0,
+       "k1": 110.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -40.0,
+        "A12_a_gt_b": 0.7,
+        "p": 0.3333333333333333,
+        "p_holm": 0.6666666666666666,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 10.0,
+        "A12_a_gt_b": 0.34,
+        "p": 0.47619047619047616,
+        "p_holm": 0.6666666666666666,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -70.0,
+        "A12_a_gt_b": 0.98,
+        "p": 0.015873015873015872,
+        "p_holm": 0.047619047619047616,
+        "significant": true
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.5384615384615384,
+       "h2": 0.717948717948718,
+       "h3": 0.8205128205128205,
+       "k1": 0.7948717948717948
+      },
+      "best_autoscalers": [
+       "h3"
+      ]
+     },
+     "oscillating": {
+      "medians": {
+       "b1": 260.0,
+       "b2": 20.0,
+       "h1": 180.0,
+       "h2": 210.0,
+       "h3": 250.0,
+       "k1": 230.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 40.0,
+        "A12_a_gt_b": 0.16,
+        "p": 0.06349206349206349,
+        "p_holm": 0.19047619047619047,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -20.0,
+        "A12_a_gt_b": 0.58,
+        "p": 0.873015873015873,
+        "p_holm": 0.873015873015873,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.16,
+        "p": 0.07936507936507936,
+        "p_holm": 0.19047619047619047,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.3333333333333333,
+       "h2": 0.20833333333333334,
+       "h3": 0.041666666666666664,
+       "k1": 0.125
+      },
+      "best_autoscalers": [
+       "h1"
+      ]
+     }
+    },
+    "significant": [
+     "spike|default vs tuned"
+    ]
+   },
+   {
+    "slo_ms": 1500,
+    "analysis_slo": true,
+    "patterns": {
+     "gradual": {
+      "medians": {
+       "b1": 320.0,
+       "b2": 10.0,
+       "h1": 120.0,
+       "h2": 70.0,
+       "h3": 50.0,
+       "k1": 40.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -20.0,
+        "A12_a_gt_b": 0.88,
+        "p": 0.05555555555555555,
+        "p_holm": 0.11904761904761904,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -10.0,
+        "A12_a_gt_b": 0.62,
+        "p": 0.5714285714285714,
+        "p_holm": 0.5714285714285714,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -50.0,
+        "A12_a_gt_b": 0.9,
+        "p": 0.03968253968253968,
+        "p_holm": 0.11904761904761904,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.6451612903225806,
+       "h2": 0.8064516129032258,
+       "h3": 0.8709677419354839,
+       "k1": 0.9032258064516129
+      },
+      "best_autoscalers": [
+       "k1"
+      ]
+     },
+     "spike": {
+      "medians": {
+       "b1": 420.0,
+       "b2": 30.0,
+       "h1": 200.0,
+       "h2": 130.0,
+       "h3": 100.0,
+       "k1": 110.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -30.0,
+        "A12_a_gt_b": 0.68,
+        "p": 0.4365079365079365,
+        "p_holm": 0.873015873015873,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 10.0,
+        "A12_a_gt_b": 0.34,
+        "p": 0.47619047619047616,
+        "p_holm": 0.873015873015873,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -70.0,
+        "A12_a_gt_b": 1.0,
+        "p": 0.007936507936507936,
+        "p_holm": 0.023809523809523808,
+        "significant": true
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.5641025641025641,
+       "h2": 0.7435897435897436,
+       "h3": 0.8205128205128205,
+       "k1": 0.7948717948717948
+      },
+      "best_autoscalers": [
+       "h3"
+      ]
+     },
+     "oscillating": {
+      "medians": {
+       "b1": 260.0,
+       "b2": 10.0,
+       "h1": 180.0,
+       "h2": 210.0,
+       "h3": 250.0,
+       "k1": 230.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 40.0,
+        "A12_a_gt_b": 0.12,
+        "p": 0.05555555555555555,
+        "p_holm": 0.16666666666666666,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": -20.0,
+        "A12_a_gt_b": 0.58,
+        "p": 0.873015873015873,
+        "p_holm": 0.873015873015873,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": 30.0,
+        "A12_a_gt_b": 0.18,
+        "p": 0.1111111111111111,
+        "p_holm": 0.2222222222222222,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.32,
+       "h2": 0.2,
+       "h3": 0.04,
+       "k1": 0.12
+      },
+      "best_autoscalers": [
+       "h1"
+      ]
+     }
+    },
+    "significant": [
+     "spike|default vs tuned"
+    ]
+   }
+  ],
+  "shipping-rate-service": [
+   {
+    "slo_ms": 1000,
+    "analysis_slo": true,
+    "patterns": {
+     "gradual": {
+      "medians": {
+       "b1": 290.0,
+       "b2": 0.0,
+       "h1": 80.0,
+       "h2": 0.0,
+       "h3": 0.0,
+       "k1": 0.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.64,
+        "p": 0.4444444444444444,
+        "p_holm": 0.8888888888888888,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.5,
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -80.0,
+        "A12_a_gt_b": 1.0,
+        "p": 0.007936507936507936,
+        "p_holm": 0.023809523809523808,
+        "significant": true
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.7241379310344828,
+       "h2": 1.0,
+       "h3": 1.0,
+       "k1": 1.0
+      },
+      "best_autoscalers": [
+       "h2",
+       "h3",
+       "k1"
+      ]
+     },
+     "spike": {
+      "medians": {
+       "b1": 420.0,
+       "b2": 0.0,
+       "h1": 100.0,
+       "h2": 90.0,
+       "h3": 70.0,
+       "k1": 70.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -20.0,
+        "A12_a_gt_b": 1.0,
+        "p": 0.007936507936507936,
+        "p_holm": 0.023809523809523808,
+        "significant": true
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.42,
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -10.0,
+        "A12_a_gt_b": 0.76,
+        "p": 0.16666666666666666,
+        "p_holm": 0.3333333333333333,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.7619047619047619,
+       "h2": 0.7857142857142857,
+       "h3": 0.8333333333333334,
+       "k1": 0.8333333333333334
+      },
+      "best_autoscalers": [
+       "h3",
+       "k1"
+      ]
+     },
+     "oscillating": {
+      "medians": {
+       "b1": 260.0,
+       "b2": 0.0,
+       "h1": 100.0,
+       "h2": 160.0,
+       "h3": 200.0,
+       "k1": 200.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 40.0,
+        "A12_a_gt_b": 0.16,
+        "p": 0.11904761904761904,
+        "p_holm": 0.23809523809523808,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.56,
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": 60.0,
+        "A12_a_gt_b": 0.12,
+        "p": 0.05555555555555555,
+        "p_holm": 0.16666666666666666,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.6153846153846154,
+       "h2": 0.38461538461538464,
+       "h3": 0.23076923076923078,
+       "k1": 0.23076923076923078
+      },
+      "best_autoscalers": [
+       "h1"
+      ]
+     }
+    },
+    "significant": [
+     "gradual|default vs tuned",
+     "spike|metric"
+    ]
+   },
+   {
+    "slo_ms": 1200,
+    "analysis_slo": false,
+    "patterns": {
+     "gradual": {
+      "medians": {
+       "b1": 290.0,
+       "b2": 0.0,
+       "h1": 50.0,
+       "h2": 0.0,
+       "h3": 0.0,
+       "k1": 0.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.62,
+        "p": 0.7222222222222222,
+        "p_holm": 1.0,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.5,
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -50.0,
+        "A12_a_gt_b": 0.92,
+        "p": 0.03968253968253968,
+        "p_holm": 0.11904761904761904,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.8275862068965517,
+       "h2": 1.0,
+       "h3": 1.0,
+       "k1": 1.0
+      },
+      "best_autoscalers": [
+       "h2",
+       "h3",
+       "k1"
+      ]
+     },
+     "spike": {
+      "medians": {
+       "b1": 420.0,
+       "b2": 0.0,
+       "h1": 100.0,
+       "h2": 90.0,
+       "h3": 70.0,
+       "k1": 70.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": -20.0,
+        "A12_a_gt_b": 1.0,
+        "p": 0.007936507936507936,
+        "p_holm": 0.023809523809523808,
+        "significant": true
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.42,
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": -10.0,
+        "A12_a_gt_b": 0.76,
+        "p": 0.16666666666666666,
+        "p_holm": 0.3333333333333333,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.7619047619047619,
+       "h2": 0.7857142857142857,
+       "h3": 0.8333333333333334,
+       "k1": 0.8333333333333334
+      },
+      "best_autoscalers": [
+       "h3",
+       "k1"
+      ]
+     },
+     "oscillating": {
+      "medians": {
+       "b1": 260.0,
+       "b2": 0.0,
+       "h1": 100.0,
+       "h2": 150.0,
+       "h3": 200.0,
+       "k1": 200.0
+      },
+      "tests": [
+       {
+        "factor": "metric",
+        "contrast": "h2 vs h3",
+        "diff_b_minus_a": 50.0,
+        "A12_a_gt_b": 0.2,
+        "p": 0.16666666666666666,
+        "p_holm": 0.3333333333333333,
+        "significant": false
+       },
+       {
+        "factor": "engine",
+        "contrast": "h3 vs k1",
+        "diff_b_minus_a": 0.0,
+        "A12_a_gt_b": 0.7,
+        "p": 0.4444444444444444,
+        "p_holm": 0.4444444444444444,
+        "significant": false
+       },
+       {
+        "factor": "default vs tuned",
+        "contrast": "h1 vs h2",
+        "diff_b_minus_a": 50.0,
+        "A12_a_gt_b": 0.12,
+        "p": 0.06349206349206349,
+        "p_holm": 0.19047619047619047,
+        "significant": false
+       }
+      ],
+      "gap_closed": {
+       "h1": 0.6153846153846154,
+       "h2": 0.4230769230769231,
+       "h3": 0.23076923076923078,
+       "k1": 0.23076923076923078
+      },
+      "best_autoscalers": [
+       "h1"
+      ]
+     }
+    },
+    "significant": [
+     "spike|metric"
+    ]
+   }
+  ]
+ },
+ "original_slo": {
+  "slo_ms": {
+   "auth-service": 1500.0,
+   "shipping-rate-service": 1200.0
+  },
+  "A1_O1": {
+   "auth-service|gradual|b1": {
+    "values": [
+     350.0,
+     310.0,
+     320.0,
+     330.0,
+     300.0
+    ],
+    "median": 320.0,
+    "min": 300.0,
+    "max": 350.0,
+    "missing": 0
+   },
+   "auth-service|oscillating|b1": {
+    "values": [
+     270.0,
+     260.0,
+     260.0,
+     260.0,
+     260.0
+    ],
+    "median": 260.0,
+    "min": 260.0,
+    "max": 270.0,
+    "missing": 0
+   },
+   "auth-service|spike|b1": {
+    "values": [
+     420.0,
+     420.0,
+     420.0,
+     420.0,
+     420.0
+    ],
+    "median": 420.0,
+    "min": 420.0,
+    "max": 420.0,
+    "missing": 0
+   },
+   "auth-service|gradual|b2": {
+    "values": [
+     10.0,
+     10.0,
+     0.0,
+     0.0,
+     20.0
+    ],
+    "median": 10.0,
+    "min": 0.0,
+    "max": 20.0,
+    "missing": 0
+   },
+   "auth-service|oscillating|b2": {
+    "values": [
+     10.0,
+     0.0,
+     20.0,
+     20.0,
+     0.0
+    ],
+    "median": 10.0,
+    "min": 0.0,
+    "max": 20.0,
+    "missing": 0
+   },
+   "auth-service|spike|b2": {
+    "values": [
+     30.0,
+     30.0,
+     0.0,
+     10.0,
+     40.0
+    ],
+    "median": 30.0,
+    "min": 0.0,
+    "max": 40.0,
+    "missing": 0
+   },
+   "auth-service|gradual|h1": {
+    "values": [
+     140.0,
+     70.0,
+     140.0,
+     110.0,
+     120.0
+    ],
+    "median": 120.0,
+    "min": 70.0,
+    "max": 140.0,
+    "missing": 0
+   },
+   "auth-service|oscillating|h1": {
+    "values": [
+     180.0,
+     160.0,
+     150.0,
+     180.0,
+     200.0
+    ],
+    "median": 180.0,
+    "min": 150.0,
+    "max": 200.0,
+    "missing": 0
+   },
+   "auth-service|spike|h1": {
+    "values": [
+     240.0,
+     210.0,
+     170.0,
+     200.0,
+     200.0
+    ],
+    "median": 200.0,
+    "min": 170.0,
+    "max": 240.0,
+    "missing": 0
+   },
+   "auth-service|gradual|h2": {
+    "values": [
+     100.0,
+     70.0,
+     40.0,
+     90.0,
+     60.0
+    ],
+    "median": 70.0,
+    "min": 40.0,
+    "max": 100.0,
+    "missing": 0
+   },
+   "auth-service|oscillating|h2": {
+    "values": [
+     210.0,
+     160.0,
+     240.0,
+     190.0,
+     230.0
+    ],
+    "median": 210.0,
+    "min": 160.0,
+    "max": 240.0,
+    "missing": 0
+   },
+   "auth-service|spike|h2": {
+    "values": [
+     100.0,
+     130.0,
+     150.0,
+     120.0,
+     130.0
+    ],
+    "median": 130.0,
+    "min": 100.0,
+    "max": 150.0,
+    "missing": 0
+   },
+   "auth-service|gradual|h3": {
+    "values": [
+     50.0,
+     50.0,
+     10.0,
+     30.0,
+     50.0
+    ],
+    "median": 50.0,
+    "min": 10.0,
+    "max": 50.0,
+    "missing": 0
+   },
+   "auth-service|oscillating|h3": {
+    "values": [
+     250.0,
+     250.0,
+     230.0,
+     230.0,
+     250.0
+    ],
+    "median": 250.0,
+    "min": 230.0,
+    "max": 250.0,
+    "missing": 0
+   },
+   "auth-service|spike|h3": {
+    "values": [
+     130.0,
+     140.0,
+     100.0,
+     90.0,
+     100.0
+    ],
+    "median": 100.0,
+    "min": 90.0,
+    "max": 140.0,
+    "missing": 0
+   },
+   "auth-service|gradual|k1": {
+    "values": [
+     40.0,
+     40.0,
+     40.0,
+     30.0,
+     40.0
+    ],
+    "median": 40.0,
+    "min": 30.0,
+    "max": 40.0,
+    "missing": 0
+   },
+   "auth-service|oscillating|k1": {
+    "values": [
+     250.0,
+     230.0,
+     260.0,
+     230.0,
+     210.0
+    ],
+    "median": 230.0,
+    "min": 210.0,
+    "max": 260.0,
+    "missing": 0
+   },
+   "auth-service|spike|k1": {
+    "values": [
+     110.0,
+     140.0,
+     110.0,
+     110.0,
+     120.0
+    ],
+    "median": 110.0,
+    "min": 110.0,
+    "max": 140.0,
+    "missing": 0
+   },
+   "shipping-rate-service|gradual|b1": {
+    "values": [
+     290.0,
+     280.0,
+     290.0,
+     290.0,
+     290.0
+    ],
+    "median": 290.0,
+    "min": 280.0,
+    "max": 290.0,
+    "missing": 0
+   },
+   "shipping-rate-service|oscillating|b1": {
+    "values": [
+     260.0,
+     260.0,
+     260.0,
+     260.0,
+     260.0
+    ],
+    "median": 260.0,
+    "min": 260.0,
+    "max": 260.0,
+    "missing": 0
+   },
+   "shipping-rate-service|spike|b1": {
+    "values": [
+     420.0,
+     420.0,
+     420.0,
+     420.0,
+     420.0
+    ],
+    "median": 420.0,
+    "min": 420.0,
+    "max": 420.0,
+    "missing": 0
+   },
+   "shipping-rate-service|gradual|b2": {
+    "values": [
+     0.0,
+     10.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "median": 0.0,
+    "min": 0.0,
+    "max": 10.0,
+    "missing": 0
+   },
+   "shipping-rate-service|oscillating|b2": {
+    "values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "missing": 0
+   },
+   "shipping-rate-service|spike|b2": {
+    "values": [
+     0.0,
+     0.0,
+     10.0,
+     0.0,
+     10.0
+    ],
+    "median": 0.0,
+    "min": 0.0,
+    "max": 10.0,
+    "missing": 0
+   },
+   "shipping-rate-service|gradual|h1": {
+    "values": [
+     70.0,
+     60.0,
+     20.0,
+     10.0,
+     50.0
+    ],
+    "median": 50.0,
+    "min": 10.0,
+    "max": 70.0,
+    "missing": 0
+   },
+   "shipping-rate-service|oscillating|h1": {
+    "values": [
+     170.0,
+     90.0,
+     90.0,
+     100.0,
+     100.0
+    ],
+    "median": 100.0,
+    "min": 90.0,
+    "max": 170.0,
+    "missing": 0
+   },
+   "shipping-rate-service|spike|h1": {
+    "values": [
+     140.0,
+     100.0,
+     100.0,
+     100.0,
+     90.0
+    ],
+    "median": 100.0,
+    "min": 90.0,
+    "max": 140.0,
+    "missing": 0
+   },
+   "shipping-rate-service|gradual|h2": {
+    "values": [
+     20.0,
+     0.0,
+     10.0,
+     0.0,
+     0.0
+    ],
+    "median": 0.0,
+    "min": 0.0,
+    "max": 20.0,
+    "missing": 0
+   },
+   "shipping-rate-service|oscillating|h2": {
+    "values": [
+     200.0,
+     200.0,
+     130.0,
+     150.0,
+     150.0
+    ],
+    "median": 150.0,
+    "min": 130.0,
+    "max": 200.0,
+    "missing": 0
+   },
+   "shipping-rate-service|spike|h2": {
+    "values": [
+     110.0,
+     90.0,
+     90.0,
+     90.0,
+     90.0
+    ],
+    "median": 90.0,
+    "min": 90.0,
+    "max": 110.0,
+    "missing": 0
+   },
+   "shipping-rate-service|gradual|h3": {
+    "values": [
+     0.0,
+     0.0,
+     0.0,
+     10.0,
+     0.0
+    ],
+    "median": 0.0,
+    "min": 0.0,
+    "max": 10.0,
+    "missing": 0
+   },
+   "shipping-rate-service|oscillating|h3": {
+    "values": [
+     200.0,
+     200.0,
+     200.0,
+     200.0,
+     200.0
+    ],
+    "median": 200.0,
+    "min": 200.0,
+    "max": 200.0,
+    "missing": 0
+   },
+   "shipping-rate-service|spike|h3": {
+    "values": [
+     80.0,
+     70.0,
+     50.0,
+     70.0,
+     70.0
+    ],
+    "median": 70.0,
+    "min": 50.0,
+    "max": 80.0,
+    "missing": 0
+   },
+   "shipping-rate-service|gradual|k1": {
+    "values": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     10.0
+    ],
+    "median": 0.0,
+    "min": 0.0,
+    "max": 10.0,
+    "missing": 0
+   },
+   "shipping-rate-service|oscillating|k1": {
+    "values": [
+     180.0,
+     200.0,
+     180.0,
+     200.0,
+     200.0
+    ],
+    "median": 200.0,
+    "min": 180.0,
+    "max": 200.0,
+    "missing": 0
+   },
+   "shipping-rate-service|spike|k1": {
+    "values": [
+     70.0,
+     70.0,
+     70.0,
+     70.0,
+     80.0
+    ],
+    "median": 70.0,
+    "min": 70.0,
+    "max": 80.0,
+    "missing": 0
+   }
+  },
+  "A2_O1": [
+   {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O1_slo_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 70.0,
+    "median_b": 50.0,
+    "U_a": 22.0,
+    "p": 0.05555555555555555,
+    "A12_a_gt_b": 0.88,
+    "p_holm": 0.11904761904761904,
+    "significant_0.05": false
+   },
+   {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O1_slo_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 50.0,
+    "median_b": 40.0,
+    "U_a": 15.5,
+    "p": 0.5714285714285714,
+    "A12_a_gt_b": 0.62,
+    "p_holm": 0.5714285714285714,
+    "significant_0.05": false
+   },
+   {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O1_slo_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 120.0,
+    "median_b": 70.0,
+    "U_a": 22.5,
+    "p": 0.03968253968253968,
+    "A12_a_gt_b": 0.9,
+    "p_holm": 0.11904761904761904,
+    "significant_0.05": false
+   },
+   {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O1_slo_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 130.0,
+    "median_b": 100.0,
+    "U_a": 17.0,
+    "p": 0.4365079365079365,
+    "A12_a_gt_b": 0.68,
+    "p_holm": 0.873015873015873,
+    "significant_0.05": false
+   },
+   {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O1_slo_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 100.0,
+    "median_b": 110.0,
+    "U_a": 8.5,
+    "p": 0.47619047619047616,
+    "A12_a_gt_b": 0.34,
+    "p_holm": 0.873015873015873,
+    "significant_0.05": false
+   },
+   {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O1_slo_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 200.0,
+    "median_b": 130.0,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O1_slo_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 210.0,
+    "median_b": 250.0,
+    "U_a": 3.0,
+    "p": 0.05555555555555555,
+    "A12_a_gt_b": 0.12,
+    "p_holm": 0.16666666666666666,
+    "significant_0.05": false
+   },
+   {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O1_slo_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 250.0,
+    "median_b": 230.0,
+    "U_a": 14.5,
+    "p": 0.873015873015873,
+    "A12_a_gt_b": 0.58,
+    "p_holm": 0.873015873015873,
+    "significant_0.05": false
+   },
+   {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O1_slo_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 180.0,
+    "median_b": 210.0,
+    "U_a": 4.5,
+    "p": 0.1111111111111111,
+    "A12_a_gt_b": 0.18,
+    "p_holm": 0.2222222222222222,
+    "significant_0.05": false
+   },
+   {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O1_slo_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 0.0,
+    "median_b": 0.0,
+    "U_a": 15.5,
+    "p": 0.7222222222222222,
+    "A12_a_gt_b": 0.62,
+    "p_holm": 1.0,
+    "significant_0.05": false
+   },
+   {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O1_slo_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 0.0,
+    "median_b": 0.0,
+    "U_a": 12.5,
+    "p": 1.0,
+    "A12_a_gt_b": 0.5,
+    "p_holm": 1.0,
+    "significant_0.05": false
+   },
+   {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O1_slo_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 50.0,
+    "median_b": 0.0,
+    "U_a": 23.0,
+    "p": 0.03968253968253968,
+    "A12_a_gt_b": 0.92,
+    "p_holm": 0.11904761904761904,
+    "significant_0.05": false
+   },
+   {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O1_slo_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 90.0,
+    "median_b": 70.0,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O1_slo_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 70.0,
+    "median_b": 70.0,
+    "U_a": 10.5,
+    "p": 1.0,
+    "A12_a_gt_b": 0.42,
+    "p_holm": 1.0,
+    "significant_0.05": false
+   },
+   {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O1_slo_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 100.0,
+    "median_b": 90.0,
+    "U_a": 19.0,
+    "p": 0.16666666666666666,
+    "A12_a_gt_b": 0.76,
+    "p_holm": 0.3333333333333333,
+    "significant_0.05": false
+   },
+   {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O1_slo_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 150.0,
+    "median_b": 200.0,
+    "U_a": 5.0,
+    "p": 0.16666666666666666,
+    "A12_a_gt_b": 0.2,
+    "p_holm": 0.3333333333333333,
+    "significant_0.05": false
+   },
+   {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O1_slo_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 200.0,
+    "median_b": 200.0,
+    "U_a": 17.5,
+    "p": 0.4444444444444444,
+    "A12_a_gt_b": 0.7,
+    "p_holm": 0.4444444444444444,
+    "significant_0.05": false
+   },
+   {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O1_slo_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 100.0,
+    "median_b": 150.0,
+    "U_a": 3.0,
+    "p": 0.06349206349206349,
+    "A12_a_gt_b": 0.12,
+    "p_holm": 0.19047619047619047,
+    "significant_0.05": false
+   }
+  ]
+ },
+ "holm_family_sensitivity": {
+  "smallest_raw_p": 0.007936507936507936,
+  "family_of_3": {
+   "tests": 36,
+   "significant": 6,
+   "smallest_p_holm": 0.023809523809523808
+  },
+  "factor|default vs tuned": {
+   "tests": 12,
+   "significant": 0,
+   "smallest_p_holm": 0.09523809523809523
+  },
+  "factor|engine": {
+   "tests": 12,
+   "significant": 0,
+   "smallest_p_holm": 1.0
+  },
+  "factor|metric": {
+   "tests": 12,
+   "significant": 0,
+   "smallest_p_holm": 0.09523809523809523
+  },
+  "all_36": {
+   "tests": 36,
+   "significant": 0,
+   "smallest_p_holm": 0.2857142857142857
+  }
+ },
+ "session_metric_contrasts": {
+  "auth-service|gradual|O1": {
+   "session1": -35.0,
+   "session2": -30.0
+  },
+  "auth-service|gradual|O2": {
+   "session1": -1.005952380952381,
+   "session2": 0.08333333333333333
+  },
+  "auth-service|spike|O1": {
+   "session1": 20.0,
+   "session2": -30.0
+  },
+  "auth-service|spike|O2": {
+   "session1": -3.306581059390048,
+   "session2": -4.823434991974318
+  },
+  "auth-service|oscillating|O1": {
+   "session1": 65.0,
+   "session2": 0.0
+  },
+  "auth-service|oscillating|O2": {
+   "session1": 3.1401617250673866,
+   "session2": 4.191374663072779
+  },
+  "shipping-rate-service|gradual|O1": {
+   "session1": -10.0,
+   "session2": 0.0
+  },
+  "shipping-rate-service|gradual|O2": {
+   "session1": -0.09045545999739832,
+   "session2": 0.0
+  },
+  "shipping-rate-service|spike|O1": {
+   "session1": -25.0,
+   "session2": -20.0
+  },
+  "shipping-rate-service|spike|O2": {
+   "session1": -4.703446021731779,
+   "session2": -5.657321980975325
+  },
+  "shipping-rate-service|oscillating|O1": {
+   "session1": 0.0,
+   "session2": 50.0
+  },
+  "shipping-rate-service|oscillating|O2": {
+   "session1": -13.406006664493312,
+   "session2": 12.297688061510257
+  }
+ },
+ "outcome_overlap": {
+  "runs": 180,
+  "spearman_O1_O2": 0.960038587320455,
+  "O3_max_abs_dev_rps": 1.4210854715202004e-14,
+  "window_s": 420.0
+ },
+ "x_review": {
+  "X1": {
+   "auth-service|gradual|O4_first_up_s|metric": {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_up_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 95.76099991798401,
+    "median_b": 79.78399991989136,
+    "U_a": 20.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.8,
+    "hl_shift": -29.024999856948853,
+    "hl_low": -45.16100001335144,
+    "hl_high": 14.697999954223633,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.45238095238095233,
+    "significant_0.05": false
+   },
+   "auth-service|gradual|O4_first_up_s|engine": {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_up_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 79.78399991989136,
+    "median_b": 66.44199991226196,
+    "U_a": 15.0,
+    "p": 0.6904761904761905,
+    "A12_a_gt_b": 0.6,
+    "hl_shift": -9.28600001335144,
+    "hl_low": -14.3989999294281,
+    "hl_high": 1.9010000228881836,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.6904761904761905,
+    "significant_0.05": false
+   },
+   "auth-service|gradual|O4_first_up_s|default vs tuned": {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_up_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 109.79299998283386,
+    "median_b": 95.76099991798401,
+    "U_a": 18.0,
+    "p": 0.30952380952380953,
+    "A12_a_gt_b": 0.72,
+    "hl_shift": -14.312000036239624,
+    "hl_low": -45.08200001716614,
+    "hl_high": 15.151999950408936,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.6190476190476191,
+    "significant_0.05": false
+   },
+   "auth-service|gradual|O4_first_new_ready_s|metric": {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 112.76099991798401,
+    "median_b": 97.17300009727478,
+    "U_a": 20.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.8,
+    "hl_shift": -28.024999856948853,
+    "hl_low": -45.77199983596802,
+    "hl_high": 15.087000131607056,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.45238095238095233,
+    "significant_0.05": false
+   },
+   "auth-service|gradual|O4_first_new_ready_s|engine": {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 97.17300009727478,
+    "median_b": 83.95900011062622,
+    "U_a": 19.0,
+    "p": 0.2222222222222222,
+    "A12_a_gt_b": 0.76,
+    "hl_shift": -9.896999835968018,
+    "hl_low": -15.342000007629395,
+    "hl_high": 1.8840000629425049,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.45238095238095233,
+    "significant_0.05": false
+   },
+   "auth-service|gradual|O4_first_new_ready_s|default vs tuned": {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 126.79299998283386,
+    "median_b": 112.76099991798401,
+    "U_a": 18.0,
+    "p": 0.30952380952380953,
+    "A12_a_gt_b": 0.72,
+    "hl_shift": -14.413000106811523,
+    "hl_low": -44.70700001716614,
+    "hl_high": 16.151999950408936,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.45238095238095233,
+    "significant_0.05": false
+   },
+   "auth-service|gradual|O4_three_ready_s|metric": {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 142.08599996566772,
+    "median_b": 157.17300009727478,
+    "U_a": 7.0,
+    "p": 0.30952380952380953,
+    "A12_a_gt_b": 0.28,
+    "hl_shift": 15.222000122070312,
+    "hl_low": -15.001999855041504,
+    "hl_high": 43.41200017929077,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.6190476190476191,
+    "significant_0.05": false
+   },
+   "auth-service|gradual|O4_three_ready_s|engine": {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 157.17300009727478,
+    "median_b": 158.44199991226196,
+    "U_a": 7.0,
+    "p": 0.30952380952380953,
+    "A12_a_gt_b": 0.28,
+    "hl_shift": 0.7920000553131104,
+    "hl_low": -8.28600001335144,
+    "hl_high": 16.61299991607666,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.6190476190476191,
+    "significant_0.05": false
+   },
+   "auth-service|gradual|O4_three_ready_s|default vs tuned": {
+    "service": "auth-service",
+    "pattern": "gradual",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 233.34800004959106,
+    "median_b": 142.08599996566772,
+    "U_a": 22.0,
+    "p": 0.05555555555555555,
+    "A12_a_gt_b": 0.88,
+    "hl_shift": -90.49900007247925,
+    "hl_low": -120.03500008583069,
+    "hl_high": 0.10399985313415527,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.16666666666666666,
+    "significant_0.05": false
+   },
+   "auth-service|spike|O4_first_up_s|metric": {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O4_first_up_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 64.95300006866455,
+    "median_b": 35.157999992370605,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "hl_shift": -29.777999877929688,
+    "hl_low": -44.23900008201599,
+    "hl_high": -14.729000091552734,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   "auth-service|spike|O4_first_up_s|engine": {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O4_first_up_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 35.157999992370605,
+    "median_b": 35.54800009727478,
+    "U_a": 8.0,
+    "p": 0.42063492063492064,
+    "A12_a_gt_b": 0.32,
+    "hl_shift": 0.3900001049041748,
+    "hl_low": -7.272000074386597,
+    "hl_high": 1.6740000247955322,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.8412698412698413,
+    "significant_0.05": false
+   },
+   "auth-service|spike|O4_first_up_s|default vs tuned": {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O4_first_up_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 65.06200003623962,
+    "median_b": 64.95300006866455,
+    "U_a": 14.0,
+    "p": 0.8412698412698413,
+    "A12_a_gt_b": 0.56,
+    "hl_shift": -0.7579998970031738,
+    "hl_low": -30.26799988746643,
+    "hl_high": 16.98900008201599,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.8412698412698413,
+    "significant_0.05": false
+   },
+   "auth-service|spike|O4_first_new_ready_s|metric": {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 83.24900007247925,
+    "median_b": 52.41300010681152,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "hl_shift": -30.258000135421753,
+    "hl_low": -44.98399996757507,
+    "hl_high": -14.473999977111816,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   "auth-service|spike|O4_first_new_ready_s|engine": {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 52.41300010681152,
+    "median_b": 53.543999910354614,
+    "U_a": 9.0,
+    "p": 0.5476190476190477,
+    "A12_a_gt_b": 0.36,
+    "hl_shift": 0.19099998474121094,
+    "hl_low": -7.527000188827515,
+    "hl_high": 1.9549999237060547,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 1.0,
+    "significant_0.05": false
+   },
+   "auth-service|spike|O4_first_new_ready_s|default vs tuned": {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 83.06200003623962,
+    "median_b": 83.24900007247925,
+    "U_a": 13.0,
+    "p": 1.0,
+    "A12_a_gt_b": 0.52,
+    "hl_shift": -0.8949999809265137,
+    "hl_low": -30.26799988746643,
+    "hl_high": 17.28500008583069,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 1.0,
+    "significant_0.05": false
+   },
+   "auth-service|spike|O4_three_ready_s|metric": {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 83.24900007247925,
+    "median_b": 68.6949999332428,
+    "U_a": 20.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.8,
+    "hl_shift": -14.55400013923645,
+    "hl_low": -28.7020001411438,
+    "hl_high": 1.2220001220703125,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.30158730158730157,
+    "significant_0.05": false
+   },
+   "auth-service|spike|O4_three_ready_s|engine": {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 68.6949999332428,
+    "median_b": 68.83200001716614,
+    "U_a": 11.0,
+    "p": 0.8412698412698413,
+    "A12_a_gt_b": 0.44,
+    "hl_shift": 0.6740000247955322,
+    "hl_low": -13.581000089645386,
+    "hl_high": 30.390000104904175,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.8412698412698413,
+    "significant_0.05": false
+   },
+   "auth-service|spike|O4_three_ready_s|default vs tuned": {
+    "service": "auth-service",
+    "pattern": "spike",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 113.08400011062622,
+    "median_b": 83.24900007247925,
+    "U_a": 21.0,
+    "p": 0.09523809523809523,
+    "A12_a_gt_b": 0.84,
+    "hl_shift": -29.26799988746643,
+    "hl_low": -58.812999963760376,
+    "hl_high": 1.1630001068115234,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.2857142857142857,
+    "significant_0.05": false
+   },
+   "auth-service|oscillating|O4_first_up_s|metric": {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_up_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 49.75399994850159,
+    "median_b": 34.38800001144409,
+    "U_a": 19.0,
+    "p": 0.2222222222222222,
+    "A12_a_gt_b": 0.76,
+    "hl_shift": -15.365999937057495,
+    "hl_low": -46.093000173568726,
+    "hl_high": 14.427000045776367,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.6666666666666666,
+    "significant_0.05": false
+   },
+   "auth-service|oscillating|O4_first_up_s|engine": {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_up_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 34.38800001144409,
+    "median_b": 24.181999921798706,
+    "U_a": 10.0,
+    "p": 0.6904761904761905,
+    "A12_a_gt_b": 0.4,
+    "hl_shift": 0.7420001029968262,
+    "hl_low": -14.390000104904175,
+    "hl_high": 16.093000173568726,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.6904761904761905,
+    "significant_0.05": false
+   },
+   "auth-service|oscillating|O4_first_up_s|default vs tuned": {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_up_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 65.18799996376038,
+    "median_b": 49.75399994850159,
+    "U_a": 19.0,
+    "p": 0.2222222222222222,
+    "A12_a_gt_b": 0.76,
+    "hl_shift": -29.245999813079834,
+    "hl_low": -60.486000061035156,
+    "hl_high": 15.54800009727478,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.6666666666666666,
+    "significant_0.05": false
+   },
+   "auth-service|oscillating|O4_first_new_ready_s|metric": {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 67.75399994850159,
+    "median_b": 52.323999881744385,
+    "U_a": 17.0,
+    "p": 0.42063492063492064,
+    "A12_a_gt_b": 0.68,
+    "hl_shift": -15.430000066757202,
+    "hl_low": -44.836000204086304,
+    "hl_high": 15.36299991607666,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.8412698412698413,
+    "significant_0.05": false
+   },
+   "auth-service|oscillating|O4_first_new_ready_s|engine": {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 52.323999881744385,
+    "median_b": 42.181999921798706,
+    "U_a": 11.0,
+    "p": 0.8412698412698413,
+    "A12_a_gt_b": 0.44,
+    "hl_shift": 0.7420001029968262,
+    "hl_low": -15.325999975204468,
+    "hl_high": 15.456000089645386,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.8412698412698413,
+    "significant_0.05": false
+   },
+   "auth-service|oscillating|O4_first_new_ready_s|default vs tuned": {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 82.40899991989136,
+    "median_b": 67.75399994850159,
+    "U_a": 20.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.8,
+    "hl_shift": -29.621000051498413,
+    "hl_low": -61.486000061035156,
+    "hl_high": 14.972000122070312,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.45238095238095233,
+    "significant_0.05": false
+   },
+   "auth-service|oscillating|O4_three_ready_s|metric": {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 96.96099996566772,
+    "median_b": 67.03699994087219,
+    "U_a": 23.0,
+    "p": 0.031746031746031744,
+    "A12_a_gt_b": 0.92,
+    "hl_shift": -28.920000076293945,
+    "hl_low": -44.20700001716614,
+    "hl_high": -0.7170000076293945,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.09523809523809523,
+    "significant_0.05": false
+   },
+   "auth-service|oscillating|O4_three_ready_s|engine": {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 67.03699994087219,
+    "median_b": 71.1819999217987,
+    "U_a": 5.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.2,
+    "hl_shift": 3.071000099182129,
+    "hl_low": -11.141999959945679,
+    "hl_high": 17.093000173568726,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.19047619047619047,
+    "significant_0.05": false
+   },
+   "auth-service|oscillating|O4_three_ready_s|default vs tuned": {
+    "service": "auth-service",
+    "pattern": "oscillating",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 112.73000001907349,
+    "median_b": 96.96099996566772,
+    "U_a": 21.0,
+    "p": 0.09523809523809523,
+    "A12_a_gt_b": 0.84,
+    "hl_shift": -29.245999813079834,
+    "hl_low": -165.22699999809265,
+    "hl_high": 14.552000045776367,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.19047619047619047,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|gradual|O4_first_up_s|metric": {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_up_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 109.32999992370605,
+    "median_b": 64.36100006103516,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "hl_shift": -44.9689998626709,
+    "hl_low": -74.375,
+    "hl_high": -14.425999879837036,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   "shipping-rate-service|gradual|O4_first_up_s|engine": {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_up_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 64.36100006103516,
+    "median_b": 66.73699998855591,
+    "U_a": 6.0,
+    "p": 0.2222222222222222,
+    "A12_a_gt_b": 0.24,
+    "hl_shift": 2.9600000381469727,
+    "hl_low": -13.600000143051147,
+    "hl_high": 17.229000091552734,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.2222222222222222,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|gradual|O4_first_up_s|default vs tuned": {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_up_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 153.1670000553131,
+    "median_b": 109.32999992370605,
+    "U_a": 23.0,
+    "p": 0.031746031746031744,
+    "A12_a_gt_b": 0.92,
+    "hl_shift": -30.313999891281128,
+    "hl_low": -74.38000011444092,
+    "hl_high": -13.86299991607666,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.06349206349206349,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|gradual|O4_first_new_ready_s|metric": {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 127.32999992370605,
+    "median_b": 82.24600005149841,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "hl_shift": -45.39900016784668,
+    "hl_low": -74.375,
+    "hl_high": -13.54099988937378,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   "shipping-rate-service|gradual|O4_first_new_ready_s|engine": {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 82.24600005149841,
+    "median_b": 83.73699998855591,
+    "U_a": 5.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.2,
+    "hl_shift": 1.9649999141693115,
+    "hl_low": -13.485000133514404,
+    "hl_high": 17.229000091552734,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.15079365079365079,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|gradual|O4_first_new_ready_s|default vs tuned": {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 171.1670000553131,
+    "median_b": 127.32999992370605,
+    "U_a": 23.0,
+    "p": 0.031746031746031744,
+    "A12_a_gt_b": 0.92,
+    "hl_shift": -31.313999891281128,
+    "hl_low": -75.38000011444092,
+    "hl_high": -13.86299991607666,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.06349206349206349,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|gradual|O4_three_ready_s|metric": {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 215.7869999408722,
+    "median_b": 127.3659999370575,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "hl_shift": -88.4210000038147,
+    "hl_low": -119.96399998664856,
+    "hl_high": -15.241000175476074,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   "shipping-rate-service|gradual|O4_three_ready_s|engine": {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 127.3659999370575,
+    "median_b": 129.32599997520447,
+    "U_a": 6.0,
+    "p": 0.2222222222222222,
+    "A12_a_gt_b": 0.24,
+    "hl_shift": 1.1710000038146973,
+    "hl_low": -0.8050000667572021,
+    "hl_high": 3.8430001735687256,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.2222222222222222,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|gradual|O4_three_ready_s|default vs tuned": {
+    "service": "shipping-rate-service",
+    "pattern": "gradual",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 291.58200001716614,
+    "median_b": 215.7869999408722,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "hl_shift": -61.01699995994568,
+    "hl_low": -148.97499990463257,
+    "hl_high": -29.473999977111816,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   "shipping-rate-service|spike|O4_first_up_s|metric": {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O4_first_up_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 64.79800009727478,
+    "median_b": 19.651999950408936,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "hl_shift": -44.704999923706055,
+    "hl_low": -59.88100004196167,
+    "hl_high": -28.95799994468689,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   "shipping-rate-service|spike|O4_first_up_s|engine": {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O4_first_up_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 19.651999950408936,
+    "median_b": 35.043999910354614,
+    "U_a": 5.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.2,
+    "hl_shift": 15.199999809265137,
+    "hl_low": -0.14599990844726562,
+    "hl_high": 16.844000101089478,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.30158730158730157,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|spike|O4_first_up_s|default vs tuned": {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O4_first_up_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 65.06699991226196,
+    "median_b": 64.79800009727478,
+    "U_a": 16.0,
+    "p": 0.5476190476190477,
+    "A12_a_gt_b": 0.64,
+    "hl_shift": -14.093999862670898,
+    "hl_low": -30.06500005722046,
+    "hl_high": 14.466000080108643,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.5476190476190477,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|spike|O4_first_new_ready_s|metric": {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 81.79800009727478,
+    "median_b": 37.86899995803833,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "hl_shift": -43.19099998474121,
+    "hl_low": -59.664000034332275,
+    "hl_high": -28.21999979019165,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   "shipping-rate-service|spike|O4_first_new_ready_s|engine": {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 37.86899995803833,
+    "median_b": 52.043999910354614,
+    "U_a": 7.0,
+    "p": 0.30952380952380953,
+    "A12_a_gt_b": 0.28,
+    "hl_shift": 14.15499997138977,
+    "hl_low": -1.3629999160766602,
+    "hl_high": 16.627000093460083,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.30952380952380953,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|spike|O4_first_new_ready_s|default vs tuned": {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 83.62700009346008,
+    "median_b": 81.79800009727478,
+    "U_a": 20.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.8,
+    "hl_shift": -15.093999862670898,
+    "hl_low": -30.06500005722046,
+    "hl_high": 13.905999898910522,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.30158730158730157,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|spike|O4_three_ready_s|metric": {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 81.88199996948242,
+    "median_b": 66.82800006866455,
+    "U_a": 20.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.8,
+    "hl_shift": -14.474999904632568,
+    "hl_low": -32.704999923706055,
+    "hl_high": 0.5800001621246338,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.45238095238095233,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|spike|O4_three_ready_s|engine": {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 66.82800006866455,
+    "median_b": 67.04399991035461,
+    "U_a": 10.0,
+    "p": 0.6904761904761905,
+    "A12_a_gt_b": 0.4,
+    "hl_shift": 0.3919999599456787,
+    "hl_low": -1.8250000476837158,
+    "hl_high": 14.436999797821045,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.6904761904761905,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|spike|O4_three_ready_s|default vs tuned": {
+    "service": "shipping-rate-service",
+    "pattern": "spike",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 96.89199995994568,
+    "median_b": 81.88199996948242,
+    "U_a": 20.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.8,
+    "hl_shift": -15.55400013923645,
+    "hl_low": -60.74500012397766,
+    "hl_high": 2.6410000324249268,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.45238095238095233,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|oscillating|O4_first_up_s|metric": {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_up_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 34.704999923706055,
+    "median_b": 19.841000080108643,
+    "U_a": 22.0,
+    "p": 0.05555555555555555,
+    "A12_a_gt_b": 0.88,
+    "hl_shift": -15.069999933242798,
+    "hl_low": -45.28499984741211,
+    "hl_high": 0.7760000228881836,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.16666666666666666,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|oscillating|O4_first_up_s|engine": {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_up_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 19.841000080108643,
+    "median_b": 22.786999940872192,
+    "U_a": 5.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.2,
+    "hl_shift": 2.6090002059936523,
+    "hl_low": -12.694000005722046,
+    "hl_high": 7.664999961853027,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.30158730158730157,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|oscillating|O4_first_up_s|default vs tuned": {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_up_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 50.00600004196167,
+    "median_b": 34.704999923706055,
+    "U_a": 17.0,
+    "p": 0.42063492063492064,
+    "A12_a_gt_b": 0.68,
+    "hl_shift": -14.587999820709229,
+    "hl_low": -29.996999979019165,
+    "hl_high": 15.119999885559082,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.42063492063492064,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|oscillating|O4_first_new_ready_s|metric": {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 52.88199996948242,
+    "median_b": 37.37299990653992,
+    "U_a": 24.0,
+    "p": 0.015873015873015872,
+    "A12_a_gt_b": 0.96,
+    "hl_shift": -15.996999979019165,
+    "hl_low": -45.20099997520447,
+    "hl_high": -0.4010000228881836,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.047619047619047616,
+    "significant_0.05": true
+   },
+   "shipping-rate-service|oscillating|O4_first_new_ready_s|engine": {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 37.37299990653992,
+    "median_b": 39.98200011253357,
+    "U_a": 5.0,
+    "p": 0.15079365079365079,
+    "A12_a_gt_b": 0.2,
+    "hl_shift": 2.7300000190734863,
+    "hl_low": -12.498999834060669,
+    "hl_high": 9.133000135421753,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.30158730158730157,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|oscillating|O4_first_new_ready_s|default vs tuned": {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O4_first_new_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 68.26699995994568,
+    "median_b": 52.88199996948242,
+    "U_a": 18.0,
+    "p": 0.30952380952380953,
+    "A12_a_gt_b": 0.72,
+    "hl_shift": -14.378999948501587,
+    "hl_low": -29.96500015258789,
+    "hl_high": 14.829999923706055,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.30952380952380953,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|oscillating|O4_three_ready_s|metric": {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h2 vs h3",
+    "factor": "metric",
+    "median_a": 111.67300009727478,
+    "median_b": 66.88499999046326,
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "hl_shift": -44.30000019073486,
+    "hl_low": -45.04099988937378,
+    "hl_high": -15.240999937057495,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
+   },
+   "shipping-rate-service|oscillating|O4_three_ready_s|engine": {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h3 vs k1",
+    "factor": "engine",
+    "median_a": 66.88499999046326,
+    "median_b": 69.78699994087219,
+    "U_a": 10.0,
+    "p": 0.6904761904761905,
+    "A12_a_gt_b": 0.4,
+    "hl_shift": 2.884000062942505,
+    "hl_low": -9.3510000705719,
+    "hl_high": 4.0970001220703125,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.6904761904761905,
+    "significant_0.05": false
+   },
+   "shipping-rate-service|oscillating|O4_three_ready_s|default vs tuned": {
+    "service": "shipping-rate-service",
+    "pattern": "oscillating",
+    "outcome": "O4_three_ready_s",
+    "contrast": "h1 vs h2",
+    "factor": "default vs tuned",
+    "median_a": 127.00600004196167,
+    "median_b": 111.67300009727478,
+    "U_a": 21.0,
+    "p": 0.09523809523809523,
+    "A12_a_gt_b": 0.84,
+    "hl_shift": -15.562000036239624,
+    "hl_low": -150.37599992752075,
+    "hl_high": 29.003000020980835,
+    "hl_coverage": 0.9682539682539683,
+    "p_holm": 0.19047619047619047,
+    "significant_0.05": false
+   }
+  },
+  "engine_hl_bounds": {
+   "all|O1": [
+    -40.0,
+    40.0
+   ],
+   "all|O2": [
+    -8.584905660377363,
+    8.39622641509434
+   ],
+   "shipping-rate-service|O1": [
+    -20.0,
+    10.0
+   ],
+   "shipping-rate-service|O2": [
+    -4.195211176536922,
+    2.2166697230882084
+   ]
+  },
+  "hl_coverage": 0.9682539682539683,
+  "session_agreement": {
+   "default vs tuned": {
+    "contrasts": 12,
+    "same_direction": 12,
+    "opposite": 0,
+    "zero_in_a_session": 0
+   },
+   "engine": {
+    "contrasts": 12,
+    "same_direction": 2,
+    "opposite": 5,
+    "zero_in_a_session": 5
+   },
+   "metric": {
+    "contrasts": 12,
+    "same_direction": 5,
+    "opposite": 3,
+    "zero_in_a_session": 4
+   }
+  },
+  "placement": {
+   "runs_with_new_pods": 120,
+   "sessions": {
+    "session1": {
+     "runs": 48,
+     "new_pods": 268,
+     "new_pods_on_k6_node": 268,
+     "share_min": 1.0,
+     "share_median": 1.0,
+     "share_max": 1.0,
+     "runs_all_on_k6_node": 48,
+     "k6_nodes": [
+      "aks-userpool-16719200-vmss00002n"
+     ],
+     "base_nodes": {
+      "auth-service": [
+       "aks-userpool-16719200-vmss00002l"
+      ],
+      "shipping-rate-service": [
+       "aks-userpool-16719200-vmss00002l"
+      ]
+     }
+    },
+    "session2": {
+     "runs": 72,
+     "new_pods": 396,
+     "new_pods_on_k6_node": 288,
+     "share_min": 0.5,
+     "share_median": 0.75,
+     "share_max": 1.0,
+     "runs_all_on_k6_node": 1,
+     "k6_nodes": [
+      "aks-userpool-16719200-vmss00002q"
+     ],
+     "base_nodes": {
+      "auth-service": [
+       "aks-userpool-16719200-vmss00002p"
+      ],
+      "shipping-rate-service": [
+       "aks-userpool-16719200-vmss00002o",
+       "aks-userpool-16719200-vmss00002q"
+      ]
+     }
+    }
+   },
+   "tests": {
+    "session2|O1_slo_s": {
+     "spearman": -0.05014345579255474,
+     "p_permutation": 0.7142142892855358,
+     "runs": 72
+    },
+    "session2|O2_error_pct": {
+     "spearman": 0.05608681258547188,
+     "p_permutation": 0.5543722813859308,
+     "runs": 72
+    },
+    "both|O1_slo_s": {
+     "spearman": 0.1843473886866419,
+     "p_permutation": 0.04469776511174441,
+     "runs": 120
+    },
+    "both|O2_error_pct": {
+     "spearman": 0.2600763555989418,
+     "p_permutation": 0.006349682515874206,
+     "runs": 120
+    }
+   }
+  },
+  "cpu_curve": {
+   "auth-service": {
+    "points": [
+     {
+      "source": "ladder b1",
+      "rate_per_pod": 6.0,
+      "cpu_m_per_pod": 257.0
+     },
+     {
+      "source": "ladder b1",
+      "rate_per_pod": 8.0,
+      "cpu_m_per_pod": 314.0
+     },
+     {
+      "source": "ladder b2",
+      "rate_per_pod": 6.0,
+      "cpu_m_per_pod": 235.6
+     },
+     {
+      "source": "ladder b2",
+      "rate_per_pod": 7.94888888888889,
+      "cpu_m_per_pod": 317.4
+     },
+     {
+      "source": "base phase, 1 pod",
+      "runs": 75,
+      "rate_per_pod": 2.0,
+      "cpu_m_per_pod": 73.35103921069552
+     },
+     {
+      "source": "base phase, B2",
+      "runs": 15,
+      "rate_per_pod": 0.4,
+      "cpu_m_per_pod": 15.788749624376411
+     }
+    ],
+    "cpu_request_m": 250,
+    "rate_at_target": {
+     "h2": 3.273326141210248,
+     "h1": 5.122336443282865
+    }
+   },
+   "shipping-rate-service": {
+    "points": [
+     {
+      "source": "ladder b1",
+      "rate_per_pod": 40.0,
+      "cpu_m_per_pod": 266.0
+     },
+     {
+      "source": "ladder b1",
+      "rate_per_pod": 50.0,
+      "cpu_m_per_pod": 377.0
+     },
+     {
+      "source": "ladder b1",
+      "rate_per_pod": 49.577777777777776,
+      "cpu_m_per_pod": 405.0
+     },
+     {
+      "source": "ladder b2",
+      "rate_per_pod": 24.0,
+      "cpu_m_per_pod": 176.6
+     },
+     {
+      "source": "ladder b2",
+      "rate_per_pod": 39.964444444444446,
+      "cpu_m_per_pod": 337.0
+     },
+     {
+      "source": "base phase, 1 pod",
+      "runs": 75,
+      "rate_per_pod": 10.0,
+      "cpu_m_per_pod": 58.985559289417736
+     },
+     {
+      "source": "base phase, B2",
+      "runs": 15,
+      "rate_per_pod": 2.0,
+      "cpu_m_per_pod": 14.02049887158048
+     }
+    ],
+    "cpu_request_m": 250,
+    "rate_at_target": {
+     "h2": 17.857897077641738,
+     "h1": 26.328977556109727
+    }
+   }
+  }
+ },
+ "tables": {
+  "gate_o1": [
+   [
+    "B1",
+    "350/310",
+    "420/420",
+    "270/260",
+    "290/290",
+    "420/420",
+    "260/260"
+   ],
+   [
+    "B2",
+    "10/10",
+    "30/30",
+    "10/0",
+    "0/10",
+    "0/0",
+    "0/0"
+   ],
+   [
+    "H1",
+    "140/70",
+    "240/210",
+    "180/160",
+    "80/90",
+    "150/100",
+    "180/90"
+   ],
+   [
+    "H2",
+    "100/70",
+    "100/130",
+    "210/160",
+    "20/0",
+    "110/90",
+    "200/200"
+   ],
+   [
+    "H3",
+    "50/50",
+    "130/140",
+    "250/250",
+    "0/0",
+    "80/70",
+    "200/200"
+   ],
+   [
+    "K1",
+    "40/40",
+    "110/140",
+    "250/230",
+    "0/0",
+    "70/70",
+    "180/210"
+   ]
+  ],
+  "O1_slo_s|auth-service": [
+   [
+    "B1",
+    "320 [300–350]",
+    "420 [420–420]",
+    "260 [260–270]"
+   ],
+   [
+    "B2",
+    "10 [0–20]",
+    "30 [0–40]",
+    "10 [0–20]"
+   ],
+   [
+    "H1",
+    "120 [70–140]",
+    "200 [170–240]",
+    "180 [150–200]"
+   ],
+   [
+    "H2",
+    "70 [40–100]",
+    "130 [100–150]",
+    "210 [160–240]"
+   ],
+   [
+    "H3",
+    "50 [10–50]",
+    "100 [90–140]",
+    "250 [230–250]"
+   ],
+   [
+    "K1",
+    "40 [30–40]",
+    "110 [110–140]",
+    "230 [210–260]"
+   ]
+  ],
+  "O1_slo_s|shipping-rate-service": [
+   [
+    "B1",
+    "290 [290–290]",
+    "420 [420–420]",
+    "260 [260–260]"
+   ],
+   [
+    "B2",
+    "0 [0–10]",
+    "0 [0–10]",
+    "0 [0–0]"
+   ],
+   [
+    "H1",
+    "80 [30–90]",
+    "100 [90–150]",
+    "100 [90–180]"
+   ],
+   [
+    "H2",
+    "0 [0–20]",
+    "90 [90–110]",
+    "160 [140–200]"
+   ],
+   [
+    "H3",
+    "0 [0–10]",
+    "70 [60–80]",
+    "200 [200–210]"
+   ],
+   [
+    "K1",
+    "0 [0–10]",
+    "70 [70–80]",
+    "200 [180–210]"
+   ]
+  ],
+  "O2_error_pct|auth-service": [
+   [
+    "B1",
+    "49,86 [48,38–53,32]",
+    "65,25 [61,00–68,93]",
+    "56,74 [56,28–60,90]"
+   ],
+   [
+    "B2",
+    "0,00 [0,00–0,06]",
+    "0,01 [0,00–0,10]",
+    "0,03 [0,00–0,13]"
+   ],
+   [
+    "H1",
+    "1,06 [0,62–3,06]",
+    "15,14 [12,26–16,98]",
+    "22,05 [19,82–26,06]"
+   ],
+   [
+    "H2",
+    "0,32 [0,00–1,69]",
+    "12,50 [8,77–13,73]",
+    "34,29 [16,28–46,09]"
+   ],
+   [
+    "H3",
+    "0,00 [0,00–0,67]",
+    "7,73 [6,14–10,53]",
+    "36,51 [31,00–42,16]"
+   ],
+   [
+    "K1",
+    "0,01 [0,00–0,07]",
+    "8,68 [5,67–11,20]",
+    "34,03 [27,92–40,54]"
+   ]
+  ],
+  "O2_error_pct|shipping-rate-service": [
+   [
+    "B1",
+    "43,78 [43,57–44,39]",
+    "58,25 [57,95–60,12]",
+    "52,04 [51,47–52,21]"
+   ],
+   [
+    "B2",
+    "0,00 [0,00–0,03]",
+    "0,00 [0,00–0,18]",
+    "0,00 [0,00–0,02]"
+   ],
+   [
+    "H1",
+    "1,94 [0,29–2,37]",
+    "12,27 [10,71–12,90]",
+    "15,30 [14,90–20,90]"
+   ],
+   [
+    "H2",
+    "0,01 [0,00–0,20]",
+    "10,64 [8,90–13,16]",
+    "16,65 [13,93–41,53]"
+   ],
+   [
+    "H3",
+    "0,00 [0,00–0,30]",
+    "5,19 [4,80–7,35]",
+    "28,42 [24,70–30,41]"
+   ],
+   [
+    "K1",
+    "0,00 [0,00–0,11]",
+    "6,90 [4,97–7,40]",
+    "26,61 [25,95–29,05]"
+   ]
+  ],
+  "O3_goodput_rps|auth-service": [
+   [
+    "B1",
+    "10,03 [9,34–10,32]",
+    "10,31 [9,22–11,57]",
+    "7,64 [6,91–7,72]"
+   ],
+   [
+    "B2",
+    "20,00 [19,99–20,00]",
+    "29,66 [29,64–29,67]",
+    "17,66 [17,64–17,67]"
+   ],
+   [
+    "H1",
+    "19,79 [19,39–19,88]",
+    "25,17 [24,63–26,03]",
+    "13,77 [13,06–14,16]"
+   ],
+   [
+    "H2",
+    "19,94 [19,66–20,00]",
+    "25,96 [25,59–27,06]",
+    "11,61 [9,52–14,79]"
+   ],
+   [
+    "H3",
+    "20,00 [19,87–20,00]",
+    "27,37 [26,54–27,85]",
+    "11,22 [10,22–12,19]"
+   ],
+   [
+    "K1",
+    "20,00 [19,99–20,00]",
+    "27,09 [26,35–27,99]",
+    "11,65 [10,50–12,73]"
+   ]
+  ],
+  "O3_goodput_rps|shipping-rate-service": [
+   [
+    "B1",
+    "39,95 [39,52–40,10]",
+    "43,36 [41,42–43,67]",
+    "30,29 [30,18–30,65]"
+   ],
+   [
+    "B2",
+    "71,05 [71,03–71,07]",
+    "103,86 [103,67–103,86]",
+    "63,15 [63,14–63,15]"
+   ],
+   [
+    "H1",
+    "69,69 [69,38–70,85]",
+    "91,12 [90,45–92,74]",
+    "53,48 [49,95–53,74]"
+   ],
+   [
+    "H2",
+    "71,06 [70,92–71,07]",
+    "92,81 [90,19–94,62]",
+    "52,64 [36,93–54,34]"
+   ],
+   [
+    "H3",
+    "71,07 [70,86–71,07]",
+    "98,48 [96,23–98,87]",
+    "45,20 [43,95–47,55]"
+   ],
+   [
+    "K1",
+    "71,07 [70,98–71,07]",
+    "96,70 [96,18–98,70]",
+    "46,35 [44,80–46,76]"
+   ]
+  ],
+  "O4_first_up_s": [
+   [
+    "auth-service",
+    "gradual",
+    "109,8 [95,3–139,3]",
+    "95,8 [65,1–124,9]",
+    "79,8 [65,2–80,2]",
+    "66,4 [65,4–70,9]"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "65,1 [48,0–95,1]",
+    "65,0 [49,9–79,4]",
+    "35,2 [34,4–35,7]",
+    "35,5 [27,9–36,8]"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "65,2 [49,6–94,7]",
+    "49,8 [20,0–80,2]",
+    "34,4 [19,0–35,3]",
+    "24,2 [20,0–36,2]"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "153,2 [124,5–154,9]",
+    "109,3 [78,8–124,9]",
+    "64,4 [50,1–65,2]",
+    "66,7 [50,8–69,2]"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "65,1 [64,5–79,4]",
+    "64,8 [48,8–79,5]",
+    "19,7 [19,4–34,8]",
+    "35,0 [19,5–36,5]"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "50,0 [49,3–64,7]",
+    "34,7 [33,9–65,1]",
+    "19,8 [19,4–35,5]",
+    "22,8 [21,4–27,5]"
+   ]
+  ],
+  "O5_replica_s": [
+   [
+    "auth-service",
+    "gradual",
+    "420",
+    "2.100",
+    "1.167",
+    "1.353",
+    "1.392",
+    "1.389"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "420",
+    "2.100",
+    "1.471",
+    "1.594",
+    "1.758",
+    "1.752"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "420",
+    "2.100",
+    "1.289",
+    "1.128",
+    "1.031",
+    "1.017"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "420",
+    "2.100",
+    "863",
+    "1.183",
+    "1.485",
+    "1.477"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "420",
+    "2.100",
+    "1.310",
+    "1.593",
+    "1.828",
+    "1.783"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "420",
+    "2.100",
+    "1.177",
+    "1.101",
+    "1.113",
+    "1.137"
+   ]
+  ],
+  "O5_cpu_core_s": [
+   [
+    "auth-service",
+    "gradual",
+    "178,0",
+    "314,4",
+    "319,6",
+    "323,3",
+    "318,5",
+    "323,0"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "200,7",
+    "460,6",
+    "418,5",
+    "419,6",
+    "428,2",
+    "447,6"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "134,7",
+    "280,3",
+    "234,7",
+    "180,1",
+    "180,6",
+    "191,8"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "165,4",
+    "222,9",
+    "215,4",
+    "210,2",
+    "213,9",
+    "215,9"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "202,2",
+    "320,1",
+    "281,1",
+    "296,5",
+    "309,3",
+    "305,7"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "127,7",
+    "190,1",
+    "175,2",
+    "177,8",
+    "178,7",
+    "178,0"
+   ]
+  ],
+  "gap_closed": [
+   [
+    "auth-service",
+    "gradual",
+    "320",
+    "10",
+    "64,5%",
+    "80,6%",
+    "87,1%",
+    "90,3%"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "420",
+    "30",
+    "56,4%",
+    "74,4%",
+    "82,1%",
+    "79,5%"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "260",
+    "10",
+    "32,0%",
+    "20,0%",
+    "4,0%",
+    "12,0%"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "290",
+    "0",
+    "72,4%",
+    "100,0%",
+    "100,0%",
+    "100,0%"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "420",
+    "0",
+    "76,2%",
+    "78,6%",
+    "83,3%",
+    "83,3%"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "260",
+    "0",
+    "61,5%",
+    "38,5%",
+    "23,1%",
+    "23,1%"
+   ]
+  ],
+  "decomposition": [
+   [
+    "auth-service",
+    "gradual",
+    "O1",
+    "−20",
+    "0,88",
+    "0,1190",
+    "−10",
+    "0,62",
+    "0,5714"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O2",
+    "−0,32",
+    "0,64",
+    "1,0000",
+    "+0,01",
+    "0,52",
+    "1,0000"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O1",
+    "−30",
+    "0,68",
+    "0,8730",
+    "+10",
+    "0,34",
+    "0,8730"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O2",
+    "−4,77",
+    "0,96",
+    "0,0476*",
+    "+0,96",
+    "0,44",
+    "0,8413"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O1",
+    "+40",
+    "0,12",
+    "0,1667",
+    "−20",
+    "0,58",
+    "0,8730"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O2",
+    "+2,22",
+    "0,36",
+    "1,0000",
+    "−2,48",
+    "0,52",
+    "1,0000"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O1",
+    "0",
+    "0,64",
+    "0,8889",
+    "0",
+    "0,50",
+    "1,0000"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O2",
+    "−0,01",
+    "0,64",
+    "1,0000",
+    "0,00",
+    "0,52",
+    "1,0000"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O1",
+    "−20",
+    "1,00",
+    "0,0238*",
+    "0",
+    "0,42",
+    "1,0000"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O2",
+    "−5,46",
+    "1,00",
+    "0,0238*",
+    "+1,71",
+    "0,28",
+    "0,4444"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O1",
+    "+40",
+    "0,16",
+    "0,2381",
+    "0",
+    "0,56",
+    "1,0000"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O2",
+    "+11,77",
+    "0,40",
+    "1,0000",
+    "−1,81",
+    "0,56",
+    "1,0000"
+   ]
+  ],
+  "tuning": [
+   [
+    "auth-service",
+    "gradual",
+    "O1",
+    "120",
+    "70",
+    "0,90",
+    "0,1190"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O2",
+    "1,06",
+    "0,32",
+    "0,84",
+    "0,2619"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O1",
+    "200",
+    "130",
+    "1,00",
+    "0,0238*"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O2",
+    "15,14",
+    "12,50",
+    "0,88",
+    "0,1111"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O1",
+    "180",
+    "210",
+    "0,18",
+    "0,2222"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O2",
+    "22,05",
+    "34,29",
+    "0,24",
+    "0,6667"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O1",
+    "80",
+    "0",
+    "1,00",
+    "0,0238*"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O2",
+    "1,94",
+    "0,01",
+    "1,00",
+    "0,0238*"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O1",
+    "100",
+    "90",
+    "0,76",
+    "0,3333"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O2",
+    "12,27",
+    "10,64",
+    "0,76",
+    "0,4444"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O1",
+    "100",
+    "160",
+    "0,12",
+    "0,1667"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O2",
+    "15,30",
+    "16,65",
+    "0,36",
+    "1,0000"
+   ]
+  ],
+  "dispersion_tests": [
+   [
+    "O1",
+    "rentang",
+    "60",
+    "20",
+    "130,0",
+    "0,0003",
+    "0,90"
+   ],
+   [
+    "O1",
+    "MAD",
+    "10",
+    "0",
+    "111,0",
+    "0,0212",
+    "0,77"
+   ],
+   [
+    "O2",
+    "rentang",
+    "4,49",
+    "2,82",
+    "86,0",
+    "0,4428",
+    "0,60"
+   ],
+   [
+    "O2",
+    "MAD",
+    "0,69",
+    "0,30",
+    "88,0",
+    "0,3772",
+    "0,61"
+   ]
+  ],
+  "session": [
+   [
+    "B1/B2",
+    "O1",
+    "12",
+    "5",
+    "2",
+    "5",
+    "0,4531"
+   ],
+   [
+    "B1/B2",
+    "O2",
+    "12",
+    "7",
+    "5",
+    "0",
+    "0,7744"
+   ],
+   [
+    "autoscaler",
+    "O1",
+    "24",
+    "14",
+    "5",
+    "5",
+    "0,0636"
+   ],
+   [
+    "autoscaler",
+    "O2",
+    "24",
+    "16",
+    "6",
+    "2",
+    "0,0525"
+   ]
+  ],
+  "pareto_sets": [
+   [
+    "auth-service",
+    "gradual",
+    "B1, B2, H1, H2, K1",
+    "B1, B2"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B1, B2, H1, H2, H3, K1",
+    "B1, B2, H1, H2, H3"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B1, B2, H1, H2, K1",
+    "B1, B2, H1, H2"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B1, H1, H2",
+    "B1, H2"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B1, B2, H1, H2, K1",
+    "B1, B2, H1, H2, K1"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B1, B2, H1, H2",
+    "B1, B2, H1"
+   ]
+  ],
+  "runs": [
+   [
+    "auth-service",
+    "gradual",
+    "B1",
+    "1",
+    "350",
+    "49,86",
+    "10,03",
+    "–",
+    "–",
+    "420",
+    "181,9"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "B1",
+    "2",
+    "310",
+    "53,32",
+    "9,34",
+    "–",
+    "–",
+    "420",
+    "175,0"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "B1",
+    "3",
+    "320",
+    "48,93",
+    "10,21",
+    "–",
+    "–",
+    "420",
+    "178,0"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "B1",
+    "4",
+    "330",
+    "50,43",
+    "9,91",
+    "–",
+    "–",
+    "420",
+    "178,5"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "B1",
+    "5",
+    "300",
+    "48,38",
+    "10,32",
+    "–",
+    "–",
+    "420",
+    "172,6"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "B2",
+    "1",
+    "10",
+    "0,00",
+    "20,00",
+    "–",
+    "–",
+    "2.100",
+    "316,7"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "B2",
+    "2",
+    "10",
+    "0,06",
+    "19,99",
+    "–",
+    "–",
+    "2.100",
+    "310,1"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "B2",
+    "3",
+    "0",
+    "0,00",
+    "20,00",
+    "–",
+    "–",
+    "2.100",
+    "312,5"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "B2",
+    "4",
+    "0",
+    "0,00",
+    "20,00",
+    "–",
+    "–",
+    "2.100",
+    "314,4"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "B2",
+    "5",
+    "20",
+    "0,02",
+    "20,00",
+    "–",
+    "–",
+    "2.100",
+    "321,8"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H1",
+    "1",
+    "140",
+    "3,06",
+    "19,39",
+    "139,3",
+    "156,3",
+    "1.172",
+    "319,6"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H1",
+    "2",
+    "70",
+    "0,62",
+    "19,88",
+    "95,3",
+    "112,3",
+    "1.167",
+    "323,9"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H1",
+    "3",
+    "140",
+    "1,06",
+    "19,79",
+    "109,6",
+    "126,6",
+    "1.113",
+    "316,6"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H1",
+    "4",
+    "110",
+    "1,15",
+    "19,77",
+    "124,0",
+    "142,0",
+    "1.292",
+    "328,8"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H1",
+    "5",
+    "120",
+    "1,01",
+    "19,80",
+    "109,8",
+    "126,8",
+    "1.113",
+    "308,9"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H2",
+    "1",
+    "100",
+    "1,69",
+    "19,66",
+    "124,9",
+    "142,9",
+    "1.286",
+    "308,0"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H2",
+    "2",
+    "70",
+    "0,32",
+    "19,94",
+    "109,8",
+    "126,8",
+    "1.353",
+    "335,6"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H2",
+    "3",
+    "40",
+    "0,00",
+    "20,00",
+    "65,1",
+    "82,1",
+    "1.411",
+    "299,5"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H2",
+    "4",
+    "90",
+    "0,38",
+    "19,92",
+    "94,2",
+    "112,2",
+    "1.351",
+    "330,0"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H2",
+    "5",
+    "60",
+    "0,00",
+    "20,00",
+    "95,8",
+    "112,8",
+    "1.408",
+    "323,3"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H3",
+    "1",
+    "50",
+    "0,00",
+    "20,00",
+    "65,2",
+    "84,2",
+    "1.392",
+    "318,5"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H3",
+    "2",
+    "50",
+    "0,00",
+    "20,00",
+    "79,8",
+    "97,8",
+    "1.395",
+    "310,6"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H3",
+    "3",
+    "10",
+    "0,08",
+    "19,98",
+    "65,2",
+    "83,2",
+    "1.392",
+    "300,8"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H3",
+    "4",
+    "30",
+    "0,00",
+    "20,00",
+    "79,8",
+    "98,8",
+    "1.377",
+    "328,5"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H3",
+    "5",
+    "50",
+    "0,67",
+    "19,87",
+    "80,2",
+    "97,2",
+    "1.366",
+    "318,5"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "K1",
+    "1",
+    "40",
+    "0,00",
+    "20,00",
+    "66,4",
+    "83,4",
+    "1.390",
+    "334,5"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "K1",
+    "2",
+    "40",
+    "0,07",
+    "19,99",
+    "66,0",
+    "84,0",
+    "1.389",
+    "328,3"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "K1",
+    "3",
+    "40",
+    "0,00",
+    "20,00",
+    "70,9",
+    "88,9",
+    "1.383",
+    "323,0"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "K1",
+    "4",
+    "30",
+    "0,05",
+    "19,99",
+    "65,4",
+    "82,4",
+    "1.395",
+    "298,4"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "K1",
+    "5",
+    "40",
+    "0,01",
+    "20,00",
+    "67,1",
+    "85,1",
+    "1.388",
+    "294,6"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B1",
+    "1",
+    "420",
+    "66,90",
+    "9,82",
+    "–",
+    "–",
+    "420",
+    "203,7"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B1",
+    "2",
+    "420",
+    "68,93",
+    "9,22",
+    "–",
+    "–",
+    "420",
+    "203,7"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B1",
+    "3",
+    "420",
+    "61,00",
+    "11,57",
+    "–",
+    "–",
+    "420",
+    "200,7"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B1",
+    "4",
+    "420",
+    "62,89",
+    "11,01",
+    "–",
+    "–",
+    "420",
+    "196,8"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B1",
+    "5",
+    "420",
+    "65,25",
+    "10,31",
+    "–",
+    "–",
+    "420",
+    "197,9"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B2",
+    "1",
+    "30",
+    "0,02",
+    "29,66",
+    "–",
+    "–",
+    "2.100",
+    "474,3"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B2",
+    "2",
+    "30",
+    "0,00",
+    "29,67",
+    "–",
+    "–",
+    "2.100",
+    "460,6"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B2",
+    "3",
+    "0",
+    "0,00",
+    "29,67",
+    "–",
+    "–",
+    "2.100",
+    "455,9"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B2",
+    "4",
+    "10",
+    "0,01",
+    "29,66",
+    "–",
+    "–",
+    "2.100",
+    "457,1"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B2",
+    "5",
+    "40",
+    "0,10",
+    "29,64",
+    "–",
+    "–",
+    "2.100",
+    "480,2"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H1",
+    "1",
+    "240",
+    "16,98",
+    "24,63",
+    "65,1",
+    "83,1",
+    "1.470",
+    "433,0"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H1",
+    "2",
+    "210",
+    "16,53",
+    "24,76",
+    "80,2",
+    "97,2",
+    "1.471",
+    "418,5"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H1",
+    "3",
+    "170",
+    "14,01",
+    "25,51",
+    "48,0",
+    "66,0",
+    "1.536",
+    "418,3"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H1",
+    "4",
+    "200",
+    "12,26",
+    "26,03",
+    "64,1",
+    "82,1",
+    "1.533",
+    "433,9"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H1",
+    "5",
+    "200",
+    "15,14",
+    "25,17",
+    "95,1",
+    "113,1",
+    "1.409",
+    "395,8"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H2",
+    "1",
+    "100",
+    "11,74",
+    "26,18",
+    "65,2",
+    "83,2",
+    "1.646",
+    "396,4"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H2",
+    "2",
+    "130",
+    "13,73",
+    "25,59",
+    "65,0",
+    "84,0",
+    "1.588",
+    "419,6"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H2",
+    "3",
+    "150",
+    "12,50",
+    "25,96",
+    "64,2",
+    "81,2",
+    "1.594",
+    "424,5"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H2",
+    "4",
+    "120",
+    "13,10",
+    "25,78",
+    "79,4",
+    "97,4",
+    "1.590",
+    "391,2"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H2",
+    "5",
+    "130",
+    "8,77",
+    "27,06",
+    "49,9",
+    "66,9",
+    "1.650",
+    "440,5"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H3",
+    "1",
+    "130",
+    "10,53",
+    "26,54",
+    "34,4",
+    "52,4",
+    "1.725",
+    "434,7"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H3",
+    "2",
+    "140",
+    "8,33",
+    "27,20",
+    "35,2",
+    "52,2",
+    "1.752",
+    "428,2"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H3",
+    "3",
+    "100",
+    "7,67",
+    "27,39",
+    "34,6",
+    "51,6",
+    "1.758",
+    "439,3"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H3",
+    "4",
+    "90",
+    "6,14",
+    "27,85",
+    "35,7",
+    "53,7",
+    "1.778",
+    "417,4"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H3",
+    "5",
+    "100",
+    "7,73",
+    "27,37",
+    "35,4",
+    "53,4",
+    "1.766",
+    "424,8"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "K1",
+    "1",
+    "110",
+    "7,47",
+    "27,45",
+    "35,5",
+    "53,5",
+    "1.752",
+    "450,6"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "K1",
+    "2",
+    "140",
+    "8,68",
+    "27,09",
+    "36,8",
+    "53,8",
+    "1.765",
+    "450,3"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "K1",
+    "3",
+    "110",
+    "11,20",
+    "26,35",
+    "35,5",
+    "53,5",
+    "1.706",
+    "447,6"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "K1",
+    "4",
+    "110",
+    "5,67",
+    "27,99",
+    "27,9",
+    "44,9",
+    "1.813",
+    "434,2"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "K1",
+    "5",
+    "120",
+    "10,48",
+    "26,56",
+    "35,6",
+    "52,6",
+    "1.724",
+    "433,8"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B1",
+    "1",
+    "270",
+    "60,90",
+    "6,91",
+    "–",
+    "–",
+    "420",
+    "133,1"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B1",
+    "2",
+    "260",
+    "59,14",
+    "7,22",
+    "–",
+    "–",
+    "420",
+    "123,7"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B1",
+    "3",
+    "260",
+    "56,28",
+    "7,72",
+    "–",
+    "–",
+    "420",
+    "134,7"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B1",
+    "4",
+    "260",
+    "56,60",
+    "7,67",
+    "–",
+    "–",
+    "420",
+    "135,9"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B1",
+    "5",
+    "260",
+    "56,74",
+    "7,64",
+    "–",
+    "–",
+    "420",
+    "135,2"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B2",
+    "1",
+    "10",
+    "0,04",
+    "17,66",
+    "–",
+    "–",
+    "2.100",
+    "281,3"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B2",
+    "2",
+    "0",
+    "0,00",
+    "17,67",
+    "–",
+    "–",
+    "2.100",
+    "277,3"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B2",
+    "3",
+    "20",
+    "0,13",
+    "17,64",
+    "–",
+    "–",
+    "2.100",
+    "281,1"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B2",
+    "4",
+    "20",
+    "0,03",
+    "17,66",
+    "–",
+    "–",
+    "2.100",
+    "280,3"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B2",
+    "5",
+    "0",
+    "0,00",
+    "17,67",
+    "–",
+    "–",
+    "2.100",
+    "270,3"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H1",
+    "1",
+    "180",
+    "23,83",
+    "13,46",
+    "94,7",
+    "112,7",
+    "1.289",
+    "234,7"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H1",
+    "2",
+    "160",
+    "21,04",
+    "13,95",
+    "64,4",
+    "82,4",
+    "1.406",
+    "245,2"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H1",
+    "3",
+    "150",
+    "19,82",
+    "14,16",
+    "49,6",
+    "66,6",
+    "1.352",
+    "241,1"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H1",
+    "4",
+    "180",
+    "22,05",
+    "13,77",
+    "94,4",
+    "112,4",
+    "1.289",
+    "227,5"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H1",
+    "5",
+    "200",
+    "26,06",
+    "13,06",
+    "65,2",
+    "82,2",
+    "1.073",
+    "212,7"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H2",
+    "1",
+    "210",
+    "46,09",
+    "9,52",
+    "65,1",
+    "82,1",
+    "1.128",
+    "138,4"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H2",
+    "2",
+    "160",
+    "16,28",
+    "14,79",
+    "34,2",
+    "51,2",
+    "1.411",
+    "235,9"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H2",
+    "3",
+    "240",
+    "34,29",
+    "11,61",
+    "80,2",
+    "97,2",
+    "1.043",
+    "179,3"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H2",
+    "4",
+    "190",
+    "24,41",
+    "13,35",
+    "20,0",
+    "37,0",
+    "1.254",
+    "204,2"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H2",
+    "5",
+    "230",
+    "35,81",
+    "11,34",
+    "49,8",
+    "67,8",
+    "1.007",
+    "180,1"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H3",
+    "1",
+    "250",
+    "36,51",
+    "11,22",
+    "35,3",
+    "52,3",
+    "987",
+    "178,4"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H3",
+    "2",
+    "250",
+    "32,14",
+    "11,99",
+    "19,0",
+    "38,0",
+    "1.060",
+    "202,4"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H3",
+    "3",
+    "230",
+    "38,48",
+    "10,87",
+    "34,9",
+    "52,9",
+    "1.050",
+    "180,6"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H3",
+    "4",
+    "230",
+    "31,00",
+    "12,19",
+    "19,7",
+    "37,7",
+    "1.031",
+    "211,4"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H3",
+    "5",
+    "250",
+    "42,16",
+    "10,22",
+    "34,4",
+    "52,4",
+    "1.011",
+    "175,3"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "K1",
+    "1",
+    "250",
+    "40,54",
+    "10,50",
+    "35,1",
+    "53,1",
+    "934",
+    "191,8"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "K1",
+    "2",
+    "230",
+    "39,97",
+    "10,60",
+    "36,2",
+    "54,2",
+    "988",
+    "184,1"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "K1",
+    "3",
+    "260",
+    "34,03",
+    "11,65",
+    "24,2",
+    "42,2",
+    "1.017",
+    "200,7"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "K1",
+    "4",
+    "230",
+    "33,85",
+    "11,69",
+    "22,5",
+    "40,5",
+    "1.018",
+    "184,9"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "K1",
+    "5",
+    "210",
+    "27,92",
+    "12,73",
+    "20,0",
+    "37,0",
+    "1.051",
+    "205,4"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B1",
+    "1",
+    "290",
+    "43,70",
+    "40,01",
+    "–",
+    "–",
+    "420",
+    "171,5"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B1",
+    "2",
+    "290",
+    "43,57",
+    "40,10",
+    "–",
+    "–",
+    "420",
+    "172,3"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B1",
+    "3",
+    "290",
+    "44,39",
+    "39,52",
+    "–",
+    "–",
+    "420",
+    "160,9"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B1",
+    "4",
+    "290",
+    "43,78",
+    "39,95",
+    "–",
+    "–",
+    "420",
+    "165,4"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B1",
+    "5",
+    "290",
+    "43,84",
+    "39,91",
+    "–",
+    "–",
+    "420",
+    "157,7"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B2",
+    "1",
+    "0",
+    "0,00",
+    "71,05",
+    "–",
+    "–",
+    "2.100",
+    "229,0"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B2",
+    "2",
+    "10",
+    "0,03",
+    "71,03",
+    "–",
+    "–",
+    "2.100",
+    "232,1"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B2",
+    "3",
+    "0",
+    "0,00",
+    "71,07",
+    "–",
+    "–",
+    "2.100",
+    "218,9"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B2",
+    "4",
+    "0",
+    "0,00",
+    "71,05",
+    "–",
+    "–",
+    "2.100",
+    "222,9"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B2",
+    "5",
+    "0",
+    "0,00",
+    "71,07",
+    "–",
+    "–",
+    "2.100",
+    "222,6"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H1",
+    "1",
+    "80",
+    "2,37",
+    "69,38",
+    "153,2",
+    "171,2",
+    "924",
+    "227,4"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H1",
+    "2",
+    "90",
+    "2,15",
+    "69,54",
+    "154,9",
+    "172,9",
+    "863",
+    "220,9"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H1",
+    "3",
+    "30",
+    "0,73",
+    "70,55",
+    "138,8",
+    "156,8",
+    "850",
+    "205,4"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H1",
+    "4",
+    "30",
+    "0,29",
+    "70,85",
+    "124,5",
+    "141,5",
+    "895",
+    "205,4"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H1",
+    "5",
+    "90",
+    "1,94",
+    "69,69",
+    "154,6",
+    "171,6",
+    "863",
+    "215,4"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H2",
+    "1",
+    "20",
+    "0,17",
+    "70,95",
+    "124,9",
+    "142,9",
+    "1.168",
+    "210,8"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H2",
+    "2",
+    "0",
+    "0,01",
+    "71,06",
+    "109,3",
+    "127,3",
+    "1.110",
+    "222,3"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H2",
+    "3",
+    "20",
+    "0,20",
+    "70,92",
+    "124,6",
+    "141,6",
+    "1.291",
+    "210,2"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H2",
+    "4",
+    "0",
+    "0,00",
+    "71,07",
+    "78,8",
+    "95,8",
+    "1.234",
+    "207,9"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H2",
+    "5",
+    "0",
+    "0,00",
+    "71,07",
+    "94,5",
+    "112,5",
+    "1.183",
+    "202,4"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H3",
+    "1",
+    "0",
+    "0,00",
+    "71,07",
+    "64,4",
+    "82,4",
+    "1.483",
+    "221,3"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H3",
+    "2",
+    "0",
+    "0,00",
+    "71,05",
+    "65,2",
+    "82,2",
+    "1.485",
+    "225,9"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H3",
+    "3",
+    "0",
+    "0,00",
+    "71,07",
+    "50,1",
+    "67,1",
+    "1.501",
+    "213,9"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H3",
+    "4",
+    "10",
+    "0,30",
+    "70,86",
+    "64,4",
+    "82,4",
+    "1.470",
+    "209,1"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H3",
+    "5",
+    "0",
+    "0,00",
+    "71,07",
+    "50,6",
+    "68,6",
+    "1.497",
+    "212,6"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "K1",
+    "1",
+    "0",
+    "0,00",
+    "71,05",
+    "67,3",
+    "84,3",
+    "1.461",
+    "224,0"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "K1",
+    "2",
+    "0",
+    "0,00",
+    "71,07",
+    "66,7",
+    "83,7",
+    "1.477",
+    "228,9"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "K1",
+    "3",
+    "0",
+    "0,00",
+    "71,07",
+    "64,3",
+    "82,3",
+    "1.485",
+    "215,9"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "K1",
+    "4",
+    "0",
+    "0,00",
+    "71,07",
+    "69,2",
+    "87,2",
+    "1.468",
+    "213,3"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "K1",
+    "5",
+    "10",
+    "0,11",
+    "70,98",
+    "50,8",
+    "68,8",
+    "1.496",
+    "209,9"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B1",
+    "1",
+    "420",
+    "58,25",
+    "43,36",
+    "–",
+    "–",
+    "420",
+    "202,2"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B1",
+    "2",
+    "420",
+    "58,54",
+    "43,06",
+    "–",
+    "–",
+    "420",
+    "202,4"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B1",
+    "3",
+    "420",
+    "57,95",
+    "43,67",
+    "–",
+    "–",
+    "420",
+    "202,8"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B1",
+    "4",
+    "420",
+    "60,12",
+    "41,42",
+    "–",
+    "–",
+    "420",
+    "197,5"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B1",
+    "5",
+    "420",
+    "58,16",
+    "43,46",
+    "–",
+    "–",
+    "420",
+    "197,8"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B2",
+    "1",
+    "0",
+    "0,00",
+    "103,86",
+    "–",
+    "–",
+    "2.100",
+    "320,1"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B2",
+    "2",
+    "0",
+    "0,00",
+    "103,86",
+    "–",
+    "–",
+    "2.100",
+    "322,6"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B2",
+    "3",
+    "10",
+    "0,18",
+    "103,67",
+    "–",
+    "–",
+    "2.100",
+    "319,3"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B2",
+    "4",
+    "0",
+    "0,00",
+    "103,86",
+    "–",
+    "–",
+    "2.100",
+    "311,3"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B2",
+    "5",
+    "10",
+    "0,16",
+    "103,70",
+    "–",
+    "–",
+    "2.100",
+    "323,2"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H1",
+    "1",
+    "150",
+    "12,27",
+    "91,12",
+    "64,6",
+    "83,6",
+    "1.467",
+    "314,4"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H1",
+    "2",
+    "100",
+    "12,90",
+    "90,45",
+    "79,4",
+    "97,4",
+    "1.268",
+    "290,6"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H1",
+    "3",
+    "100",
+    "12,62",
+    "90,75",
+    "78,9",
+    "96,9",
+    "1.269",
+    "279,0"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H1",
+    "4",
+    "100",
+    "11,17",
+    "92,26",
+    "65,1",
+    "83,1",
+    "1.310",
+    "277,8"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H1",
+    "5",
+    "90",
+    "10,71",
+    "92,74",
+    "64,5",
+    "82,5",
+    "1.312",
+    "281,1"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H2",
+    "1",
+    "110",
+    "13,16",
+    "90,19",
+    "79,5",
+    "97,5",
+    "1.586",
+    "297,0"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H2",
+    "2",
+    "90",
+    "8,94",
+    "94,59",
+    "48,8",
+    "66,8",
+    "1.593",
+    "305,7"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H2",
+    "3",
+    "90",
+    "10,64",
+    "92,81",
+    "64,8",
+    "81,8",
+    "1.649",
+    "288,8"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H2",
+    "4",
+    "90",
+    "10,90",
+    "92,55",
+    "64,9",
+    "81,9",
+    "1.650",
+    "292,6"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H2",
+    "5",
+    "90",
+    "8,90",
+    "94,62",
+    "49,0",
+    "67,0",
+    "1.592",
+    "296,5"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H3",
+    "1",
+    "80",
+    "7,35",
+    "96,23",
+    "34,8",
+    "52,8",
+    "1.787",
+    "311,5"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H3",
+    "2",
+    "70",
+    "5,33",
+    "98,32",
+    "19,9",
+    "37,9",
+    "1.828",
+    "319,4"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H3",
+    "3",
+    "60",
+    "4,80",
+    "98,87",
+    "19,6",
+    "38,6",
+    "1.844",
+    "300,4"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H3",
+    "4",
+    "70",
+    "5,19",
+    "98,48",
+    "19,7",
+    "37,7",
+    "1.800",
+    "302,3"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H3",
+    "5",
+    "70",
+    "4,99",
+    "98,69",
+    "19,4",
+    "37,4",
+    "1.830",
+    "309,3"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "K1",
+    "1",
+    "70",
+    "6,90",
+    "96,70",
+    "35,0",
+    "52,0",
+    "1.787",
+    "323,7"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "K1",
+    "2",
+    "70",
+    "7,02",
+    "96,57",
+    "36,0",
+    "53,0",
+    "1.783",
+    "317,0"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "K1",
+    "3",
+    "70",
+    "6,83",
+    "96,78",
+    "34,8",
+    "51,8",
+    "1.758",
+    "305,7"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "K1",
+    "4",
+    "70",
+    "4,97",
+    "98,70",
+    "19,5",
+    "36,5",
+    "1.834",
+    "304,3"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "K1",
+    "5",
+    "80",
+    "7,40",
+    "96,18",
+    "36,5",
+    "54,5",
+    "1.777",
+    "288,7"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B1",
+    "1",
+    "260",
+    "52,00",
+    "30,31",
+    "–",
+    "–",
+    "420",
+    "130,2"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B1",
+    "2",
+    "260",
+    "52,04",
+    "30,29",
+    "–",
+    "–",
+    "420",
+    "123,2"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B1",
+    "3",
+    "260",
+    "51,47",
+    "30,65",
+    "–",
+    "–",
+    "420",
+    "127,1"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B1",
+    "4",
+    "260",
+    "52,21",
+    "30,18",
+    "–",
+    "–",
+    "420",
+    "127,7"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B1",
+    "5",
+    "260",
+    "52,16",
+    "30,21",
+    "–",
+    "–",
+    "420",
+    "129,3"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B2",
+    "1",
+    "0",
+    "0,01",
+    "63,15",
+    "–",
+    "–",
+    "2.100",
+    "201,2"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B2",
+    "2",
+    "0",
+    "0,00",
+    "63,14",
+    "–",
+    "–",
+    "2.100",
+    "194,6"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B2",
+    "3",
+    "0",
+    "0,02",
+    "63,14",
+    "–",
+    "–",
+    "2.100",
+    "183,6"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B2",
+    "4",
+    "0",
+    "0,00",
+    "63,15",
+    "–",
+    "–",
+    "2.100",
+    "188,3"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B2",
+    "5",
+    "0",
+    "0,00",
+    "63,15",
+    "–",
+    "–",
+    "2.100",
+    "190,1"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H1",
+    "1",
+    "180",
+    "20,90",
+    "49,95",
+    "64,0",
+    "82,0",
+    "1.074",
+    "181,6"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H1",
+    "2",
+    "90",
+    "15,20",
+    "53,55",
+    "49,3",
+    "68,3",
+    "1.177",
+    "173,3"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H1",
+    "3",
+    "90",
+    "17,68",
+    "51,98",
+    "64,7",
+    "82,7",
+    "1.095",
+    "160,3"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H1",
+    "4",
+    "100",
+    "14,90",
+    "53,74",
+    "50,0",
+    "67,0",
+    "1.177",
+    "177,3"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H1",
+    "5",
+    "110",
+    "15,30",
+    "53,48",
+    "49,3",
+    "67,3",
+    "1.179",
+    "175,2"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H2",
+    "1",
+    "200",
+    "41,53",
+    "36,93",
+    "63,8",
+    "81,8",
+    "994",
+    "134,0"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H2",
+    "2",
+    "200",
+    "41,03",
+    "37,23",
+    "65,1",
+    "82,1",
+    "887",
+    "133,8"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H2",
+    "3",
+    "140",
+    "13,93",
+    "54,34",
+    "34,7",
+    "51,7",
+    "1.278",
+    "192,8"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H2",
+    "4",
+    "150",
+    "16,65",
+    "52,64",
+    "33,9",
+    "52,9",
+    "1.106",
+    "184,8"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H2",
+    "5",
+    "160",
+    "16,12",
+    "52,97",
+    "34,7",
+    "52,7",
+    "1.101",
+    "177,8"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H3",
+    "1",
+    "200",
+    "30,40",
+    "43,95",
+    "19,6",
+    "36,6",
+    "1.066",
+    "171,1"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H3",
+    "2",
+    "200",
+    "25,34",
+    "47,15",
+    "19,8",
+    "37,8",
+    "1.113",
+    "185,1"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H3",
+    "3",
+    "210",
+    "30,41",
+    "43,95",
+    "19,9",
+    "36,9",
+    "1.156",
+    "190,0"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H3",
+    "4",
+    "200",
+    "28,42",
+    "45,20",
+    "35,5",
+    "52,5",
+    "1.113",
+    "171,1"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H3",
+    "5",
+    "200",
+    "24,70",
+    "47,55",
+    "19,4",
+    "37,4",
+    "1.136",
+    "178,7"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "K1",
+    "1",
+    "180",
+    "26,78",
+    "46,24",
+    "24,5",
+    "42,5",
+    "1.086",
+    "174,2"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "K1",
+    "2",
+    "210",
+    "25,95",
+    "46,76",
+    "21,4",
+    "39,4",
+    "1.193",
+    "181,3"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "K1",
+    "3",
+    "180",
+    "29,05",
+    "44,80",
+    "27,5",
+    "46,5",
+    "1.118",
+    "165,2"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "K1",
+    "4",
+    "210",
+    "26,22",
+    "46,59",
+    "22,0",
+    "40,0",
+    "1.162",
+    "179,2"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "K1",
+    "5",
+    "200",
+    "26,61",
+    "46,35",
+    "22,8",
+    "39,8",
+    "1.137",
+    "178,0"
+   ]
+  ],
+  "a2_full": [
+   [
+    "auth-service",
+    "gradual",
+    "O1",
+    "H2 vs H3",
+    "70 vs 50",
+    "22,0",
+    "0,0556",
+    "0,1190",
+    "0,88"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O1",
+    "H3 vs K1",
+    "50 vs 40",
+    "15,5",
+    "0,5714",
+    "0,5714",
+    "0,62"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O1",
+    "H1 vs H2",
+    "120 vs 70",
+    "22,5",
+    "0,0397",
+    "0,1190",
+    "0,90"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O2",
+    "H2 vs H3",
+    "0,32 vs 0,00",
+    "16,0",
+    "0,5238",
+    "1,0000",
+    "0,64"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O2",
+    "H3 vs K1",
+    "0,00 vs 0,01",
+    "13,0",
+    "1,0000",
+    "1,0000",
+    "0,52"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O2",
+    "H1 vs H2",
+    "1,06 vs 0,32",
+    "21,0",
+    "0,0873",
+    "0,2619",
+    "0,84"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O1",
+    "H2 vs H3",
+    "130 vs 100",
+    "17,0",
+    "0,4365",
+    "0,8730",
+    "0,68"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O1",
+    "H3 vs K1",
+    "100 vs 110",
+    "8,5",
+    "0,4762",
+    "0,8730",
+    "0,34"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O1",
+    "H1 vs H2",
+    "200 vs 130",
+    "25,0",
+    "0,0079",
+    "0,0238*",
+    "1,00"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O2",
+    "H2 vs H3",
+    "12,50 vs 7,73",
+    "24,0",
+    "0,0159",
+    "0,0476*",
+    "0,96"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O2",
+    "H3 vs K1",
+    "7,73 vs 8,68",
+    "11,0",
+    "0,8413",
+    "0,8413",
+    "0,44"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O2",
+    "H1 vs H2",
+    "15,14 vs 12,50",
+    "22,0",
+    "0,0556",
+    "0,1111",
+    "0,88"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O1",
+    "H2 vs H3",
+    "210 vs 250",
+    "3,0",
+    "0,0556",
+    "0,1667",
+    "0,12"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O1",
+    "H3 vs K1",
+    "250 vs 230",
+    "14,5",
+    "0,8730",
+    "0,8730",
+    "0,58"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O1",
+    "H1 vs H2",
+    "180 vs 210",
+    "4,5",
+    "0,1111",
+    "0,2222",
+    "0,18"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O2",
+    "H2 vs H3",
+    "34,29 vs 36,51",
+    "9,0",
+    "0,5476",
+    "1,0000",
+    "0,36"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O2",
+    "H3 vs K1",
+    "36,51 vs 34,03",
+    "13,0",
+    "1,0000",
+    "1,0000",
+    "0,52"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O2",
+    "H1 vs H2",
+    "22,05 vs 34,29",
+    "6,0",
+    "0,2222",
+    "0,6667",
+    "0,24"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O1",
+    "H2 vs H3",
+    "0 vs 0",
+    "16,0",
+    "0,4444",
+    "0,8889",
+    "0,64"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O1",
+    "H3 vs K1",
+    "0 vs 0",
+    "12,5",
+    "1,0000",
+    "1,0000",
+    "0,50"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O1",
+    "H1 vs H2",
+    "80 vs 0",
+    "25,0",
+    "0,0079",
+    "0,0238*",
+    "1,00"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O2",
+    "H2 vs H3",
+    "0,01 vs 0,00",
+    "16,0",
+    "0,5238",
+    "1,0000",
+    "0,64"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O2",
+    "H3 vs K1",
+    "0,00 vs 0,00",
+    "13,0",
+    "1,0000",
+    "1,0000",
+    "0,52"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O2",
+    "H1 vs H2",
+    "1,94 vs 0,01",
+    "25,0",
+    "0,0079",
+    "0,0238*",
+    "1,00"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O1",
+    "H2 vs H3",
+    "90 vs 70",
+    "25,0",
+    "0,0079",
+    "0,0238*",
+    "1,00"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O1",
+    "H3 vs K1",
+    "70 vs 70",
+    "10,5",
+    "1,0000",
+    "1,0000",
+    "0,42"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O1",
+    "H1 vs H2",
+    "100 vs 90",
+    "19,0",
+    "0,1667",
+    "0,3333",
+    "0,76"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O2",
+    "H2 vs H3",
+    "10,64 vs 5,19",
+    "25,0",
+    "0,0079",
+    "0,0238*",
+    "1,00"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O2",
+    "H3 vs K1",
+    "5,19 vs 6,90",
+    "7,0",
+    "0,3095",
+    "0,4444",
+    "0,28"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O2",
+    "H1 vs H2",
+    "12,27 vs 10,64",
+    "19,0",
+    "0,2222",
+    "0,4444",
+    "0,76"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O1",
+    "H2 vs H3",
+    "160 vs 200",
+    "4,0",
+    "0,1190",
+    "0,2381",
+    "0,16"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O1",
+    "H3 vs K1",
+    "200 vs 200",
+    "14,0",
+    "1,0000",
+    "1,0000",
+    "0,56"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O1",
+    "H1 vs H2",
+    "100 vs 160",
+    "3,0",
+    "0,0556",
+    "0,1667",
+    "0,12"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O2",
+    "H2 vs H3",
+    "16,65 vs 28,42",
+    "10,0",
+    "0,6905",
+    "1,0000",
+    "0,40"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O2",
+    "H3 vs K1",
+    "28,42 vs 26,61",
+    "14,0",
+    "0,8413",
+    "1,0000",
+    "0,56"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O2",
+    "H1 vs H2",
+    "15,30 vs 16,65",
+    "9,0",
+    "0,5476",
+    "1,0000",
+    "0,36"
+   ]
+  ],
+  "dispersion_cells": [
+   [
+    "auth-service",
+    "gradual",
+    "H1",
+    "70",
+    "20",
+    "2,44",
+    "0,10",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H2",
+    "60",
+    "20",
+    "1,69",
+    "0,32",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H3",
+    "40",
+    "0",
+    "0,67",
+    "0,00",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "K1",
+    "10",
+    "0",
+    "0,07",
+    "0,01",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H1",
+    "70",
+    "10",
+    "4,72",
+    "1,39",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H2",
+    "50",
+    "10",
+    "4,96",
+    "0,75",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H3",
+    "50",
+    "10",
+    "4,39",
+    "0,60",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "K1",
+    "30",
+    "0",
+    "5,53",
+    "1,80",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H1",
+    "50",
+    "20",
+    "6,24",
+    "1,78",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H2",
+    "80",
+    "20",
+    "29,81",
+    "9,88",
+    "2, 3, 2, 3, 2"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H3",
+    "20",
+    "0",
+    "11,16",
+    "4,37",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "K1",
+    "50",
+    "20",
+    "12,61",
+    "5,94",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H1",
+    "60",
+    "10",
+    "2,08",
+    "0,44",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H2",
+    "20",
+    "0",
+    "0,20",
+    "0,01",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H3",
+    "10",
+    "0",
+    "0,30",
+    "0,00",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "K1",
+    "10",
+    "0",
+    "0,11",
+    "0,00",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H1",
+    "60",
+    "0",
+    "2,19",
+    "0,63",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H2",
+    "20",
+    "0",
+    "4,26",
+    "1,71",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H3",
+    "20",
+    "0",
+    "2,55",
+    "0,20",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "K1",
+    "10",
+    "0",
+    "2,43",
+    "0,12",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H1",
+    "90",
+    "10",
+    "6,00",
+    "0,39",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H2",
+    "60",
+    "20",
+    "27,60",
+    "2,72",
+    "2, 2, 1, 3, 3"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H3",
+    "10",
+    "0",
+    "5,71",
+    "1,99",
+    "0, 0, 0, 0, 0"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "K1",
+    "30",
+    "10",
+    "3,10",
+    "0,39",
+    "0, 0, 0, 0, 0"
+   ]
+  ],
+  "session_cells": [
+   [
+    "auth-service",
+    "gradual",
+    "B1",
+    "330 / 320",
+    "51,59 / 48,93"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "B2",
+    "10 / 0",
+    "0,03 / 0,00"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H1",
+    "105 / 120",
+    "1,84 / 1,06"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H2",
+    "85 / 60",
+    "1,01 / 0,00"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "H3",
+    "50 / 30",
+    "0,00 / 0,08"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "K1",
+    "40 / 40",
+    "0,04 / 0,01"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B1",
+    "420 / 420",
+    "67,92 / 62,89"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "B2",
+    "30 / 10",
+    "0,01 / 0,01"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H1",
+    "225 / 200",
+    "16,76 / 14,01"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H2",
+    "115 / 130",
+    "12,74 / 12,50"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "H3",
+    "135 / 100",
+    "9,43 / 7,67"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "K1",
+    "125 / 110",
+    "8,08 / 10,48"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B1",
+    "265 / 260",
+    "60,02 / 56,60"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "B2",
+    "5 / 20",
+    "0,02 / 0,03"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H1",
+    "170 / 180",
+    "22,43 / 22,05"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H2",
+    "185 / 230",
+    "31,19 / 34,29"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "H3",
+    "250 / 230",
+    "34,33 / 38,48"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "K1",
+    "240 / 230",
+    "40,26 / 33,85"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B1",
+    "290 / 290",
+    "43,63 / 43,84"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "B2",
+    "5 / 0",
+    "0,02 / 0,00"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H1",
+    "85 / 30",
+    "2,26 / 0,73"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H2",
+    "10 / 0",
+    "0,09 / 0,00"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "H3",
+    "0 / 0",
+    "0,00 / 0,00"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "K1",
+    "0 / 0",
+    "0,00 / 0,00"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B1",
+    "420 / 420",
+    "58,40 / 58,16"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "B2",
+    "0 / 10",
+    "0,00 / 0,16"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H1",
+    "125 / 100",
+    "12,59 / 11,17"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H2",
+    "100 / 90",
+    "11,05 / 10,64"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "H3",
+    "75 / 70",
+    "6,34 / 4,99"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "K1",
+    "70 / 70",
+    "6,96 / 6,83"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B1",
+    "260 / 260",
+    "52,02 / 52,16"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "B2",
+    "0 / 0",
+    "0,00 / 0,00"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H1",
+    "135 / 100",
+    "18,05 / 15,30"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H2",
+    "200 / 150",
+    "41,28 / 16,12"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "H3",
+    "200 / 200",
+    "27,87 / 28,42"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "K1",
+    "195 / 200",
+    "26,37 / 26,61"
+   ]
+  ],
+  "x1": [
+   [
+    "auth-service",
+    "gradual",
+    "O4_first_up_s",
+    "metric",
+    "−29,0",
+    "0,4524"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O4_first_up_s",
+    "engine",
+    "−9,3",
+    "0,6905"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O4_first_up_s",
+    "default vs tuned",
+    "−14,3",
+    "0,6190"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O4_first_new_ready_s",
+    "metric",
+    "−28,0",
+    "0,4524"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O4_first_new_ready_s",
+    "engine",
+    "−9,9",
+    "0,4524"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O4_first_new_ready_s",
+    "default vs tuned",
+    "−14,4",
+    "0,4524"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O4_three_ready_s",
+    "metric",
+    "+15,2",
+    "0,6190"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O4_three_ready_s",
+    "engine",
+    "+0,8",
+    "0,6190"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O4_three_ready_s",
+    "default vs tuned",
+    "−90,5",
+    "0,1667"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O4_first_up_s",
+    "metric",
+    "−29,8",
+    "0,0238*"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O4_first_up_s",
+    "engine",
+    "+0,4",
+    "0,8413"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O4_first_up_s",
+    "default vs tuned",
+    "−0,8",
+    "0,8413"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O4_first_new_ready_s",
+    "metric",
+    "−30,3",
+    "0,0238*"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O4_first_new_ready_s",
+    "engine",
+    "+0,2",
+    "1,0000"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O4_first_new_ready_s",
+    "default vs tuned",
+    "−0,9",
+    "1,0000"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O4_three_ready_s",
+    "metric",
+    "−14,6",
+    "0,3016"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O4_three_ready_s",
+    "engine",
+    "+0,7",
+    "0,8413"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O4_three_ready_s",
+    "default vs tuned",
+    "−29,3",
+    "0,2857"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O4_first_up_s",
+    "metric",
+    "−15,4",
+    "0,6667"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O4_first_up_s",
+    "engine",
+    "+0,7",
+    "0,6905"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O4_first_up_s",
+    "default vs tuned",
+    "−29,2",
+    "0,6667"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O4_first_new_ready_s",
+    "metric",
+    "−15,4",
+    "0,8413"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O4_first_new_ready_s",
+    "engine",
+    "+0,7",
+    "0,8413"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O4_first_new_ready_s",
+    "default vs tuned",
+    "−29,6",
+    "0,4524"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O4_three_ready_s",
+    "metric",
+    "−28,9",
+    "0,0952"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O4_three_ready_s",
+    "engine",
+    "+3,1",
+    "0,1905"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O4_three_ready_s",
+    "default vs tuned",
+    "−29,2",
+    "0,1905"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O4_first_up_s",
+    "metric",
+    "−45,0",
+    "0,0238*"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O4_first_up_s",
+    "engine",
+    "+3,0",
+    "0,2222"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O4_first_up_s",
+    "default vs tuned",
+    "−30,3",
+    "0,0635"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O4_first_new_ready_s",
+    "metric",
+    "−45,4",
+    "0,0238*"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O4_first_new_ready_s",
+    "engine",
+    "+2,0",
+    "0,1508"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O4_first_new_ready_s",
+    "default vs tuned",
+    "−31,3",
+    "0,0635"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O4_three_ready_s",
+    "metric",
+    "−88,4",
+    "0,0238*"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O4_three_ready_s",
+    "engine",
+    "+1,2",
+    "0,2222"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O4_three_ready_s",
+    "default vs tuned",
+    "−61,0",
+    "0,0238*"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O4_first_up_s",
+    "metric",
+    "−44,7",
+    "0,0238*"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O4_first_up_s",
+    "engine",
+    "+15,2",
+    "0,3016"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O4_first_up_s",
+    "default vs tuned",
+    "−14,1",
+    "0,5476"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O4_first_new_ready_s",
+    "metric",
+    "−43,2",
+    "0,0238*"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O4_first_new_ready_s",
+    "engine",
+    "+14,2",
+    "0,3095"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O4_first_new_ready_s",
+    "default vs tuned",
+    "−15,1",
+    "0,3016"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O4_three_ready_s",
+    "metric",
+    "−14,5",
+    "0,4524"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O4_three_ready_s",
+    "engine",
+    "+0,4",
+    "0,6905"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O4_three_ready_s",
+    "default vs tuned",
+    "−15,6",
+    "0,4524"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O4_first_up_s",
+    "metric",
+    "−15,1",
+    "0,1667"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O4_first_up_s",
+    "engine",
+    "+2,6",
+    "0,3016"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O4_first_up_s",
+    "default vs tuned",
+    "−14,6",
+    "0,4206"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O4_first_new_ready_s",
+    "metric",
+    "−16,0",
+    "0,0476*"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O4_first_new_ready_s",
+    "engine",
+    "+2,7",
+    "0,3016"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O4_first_new_ready_s",
+    "default vs tuned",
+    "−14,4",
+    "0,3095"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O4_three_ready_s",
+    "metric",
+    "−44,3",
+    "0,0238*"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O4_three_ready_s",
+    "engine",
+    "+2,9",
+    "0,6905"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O4_three_ready_s",
+    "default vs tuned",
+    "−15,6",
+    "0,1905"
+   ]
+  ],
+  "x2": [
+   [
+    "auth-service",
+    "gradual",
+    "O1",
+    "H2 → H3",
+    "−40 [−70; +10]",
+    "−35",
+    "−30"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O1",
+    "H3 → K1",
+    "−10 [−20; +30]",
+    "−10",
+    "+10"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O1",
+    "H1 → H2",
+    "−50 [−80; 0]",
+    "−20",
+    "−60"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O2",
+    "H2 → H3",
+    "−0,24 [−1,69; +0,35]",
+    "−1,01",
+    "+0,08"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O2",
+    "H3 → K1",
+    "0,00 [−0,65; +0,07]",
+    "+0,04",
+    "−0,07"
+   ],
+   [
+    "auth-service",
+    "gradual",
+    "O2",
+    "H1 → H2",
+    "−0,77 [−2,74; +0,63]",
+    "−0,83",
+    "−1,06"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O1",
+    "H2 → H3",
+    "−20 [−50; +20]",
+    "+20",
+    "−30"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O1",
+    "H3 → K1",
+    "+10 [−30; +40]",
+    "−10",
+    "+10"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O1",
+    "H1 → H2",
+    "−80 [−110; −40]",
+    "−110",
+    "−70"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O2",
+    "H2 → H3",
+    "−4,17 [−6,36; −1,04]",
+    "−3,31",
+    "−4,82"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O2",
+    "H3 → K1",
+    "+0,67 [−2,66; +3,52]",
+    "−1,35",
+    "+2,81"
+   ],
+   [
+    "auth-service",
+    "spike",
+    "O2",
+    "H1 → H2",
+    "−3,25 [−6,37; +0,23]",
+    "−4,02",
+    "−1,52"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O1",
+    "H2 → H3",
+    "+40 [0; +90]",
+    "+65",
+    "0"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O1",
+    "H3 → K1",
+    "0 [−40; +20]",
+    "−10",
+    "0"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O1",
+    "H1 → H2",
+    "+30 [−20; +80]",
+    "+15",
+    "+50"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O2",
+    "H2 → H3",
+    "+4,19 [−9,58; +20,23]",
+    "+3,14",
+    "+4,19"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O2",
+    "H3 → K1",
+    "−1,62 [−8,58; +8,40]",
+    "+5,93",
+    "−4,62"
+   ],
+   [
+    "auth-service",
+    "oscillating",
+    "O2",
+    "H1 → H2",
+    "+10,46 [−5,77; +24,04]",
+    "+8,75",
+    "+12,24"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O1",
+    "H2 → H3",
+    "0 [−20; +10]",
+    "−10",
+    "0"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O1",
+    "H3 → K1",
+    "0 [−10; +10]",
+    "0",
+    "0"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O1",
+    "H1 → H2",
+    "−70 [−90; −10]",
+    "−75",
+    "−30"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O2",
+    "H2 → H3",
+    "0,00 [−0,20; +0,29]",
+    "−0,09",
+    "0,00"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O2",
+    "H3 → K1",
+    "0,00 [−0,30; +0,11]",
+    "0,00",
+    "0,00"
+   ],
+   [
+    "shipping-rate-service",
+    "gradual",
+    "O2",
+    "H1 → H2",
+    "−1,93 [−2,36; −0,28]",
+    "−2,17",
+    "−0,73"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O1",
+    "H2 → H3",
+    "−20 [−40; −10]",
+    "−25",
+    "−20"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O1",
+    "H3 → K1",
+    "0 [−10; +10]",
+    "−5",
+    "0"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O1",
+    "H1 → H2",
+    "−10 [−60; +10]",
+    "−25",
+    "−10"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O2",
+    "H2 → H3",
+    "−5,31 [−7,97; −3,29]",
+    "−4,70",
+    "−5,66"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O2",
+    "H3 → K1",
+    "+1,69 [−0,45; +2,22]",
+    "+0,62",
+    "+1,84"
+   ],
+   [
+    "shipping-rate-service",
+    "spike",
+    "O2",
+    "H1 → H2",
+    "−1,77 [−3,72; +0,89]",
+    "−1,54",
+    "−0,52"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O1",
+    "H2 → H3",
+    "+40 [0; +60]",
+    "0",
+    "+50"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O1",
+    "H3 → K1",
+    "0 [−20; +10]",
+    "−5",
+    "0"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O1",
+    "H1 → H2",
+    "+60 [−20; +110]",
+    "+65",
+    "+50"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O2",
+    "H2 → H3",
+    "+8,69 [−16,18; +14,49]",
+    "−13,41",
+    "+12,30"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O2",
+    "H3 → K1",
+    "−1,36 [−4,20; +2,07]",
+    "−1,51",
+    "−1,81"
+   ],
+   [
+    "shipping-rate-service",
+    "oscillating",
+    "O2",
+    "H1 → H2",
+    "+1,35 [−4,25; +26,23]",
+    "+23,23",
+    "+0,83"
+   ]
+  ],
+  "x5": [
+   [
+    "auth-service",
+    "base phase, B2",
+    "0,40",
+    "16",
+    "6%"
+   ],
+   [
+    "auth-service",
+    "base phase, 1 pod",
+    "2,00",
+    "73",
+    "29%"
+   ],
+   [
+    "auth-service",
+    "ladder b1",
+    "6,00",
+    "257",
+    "103%"
+   ],
+   [
+    "auth-service",
+    "ladder b2",
+    "6,00",
+    "236",
+    "94%"
+   ],
+   [
+    "auth-service",
+    "ladder b2",
+    "7,95",
+    "317",
+    "127%"
+   ],
+   [
+    "auth-service",
+    "ladder b1",
+    "8,00",
+    "314",
+    "126%"
+   ],
+   [
+    "shipping-rate-service",
+    "base phase, B2",
+    "2,00",
+    "14",
+    "6%"
+   ],
+   [
+    "shipping-rate-service",
+    "base phase, 1 pod",
+    "10,00",
+    "59",
+    "24%"
+   ],
+   [
+    "shipping-rate-service",
+    "ladder b2",
+    "24,00",
+    "177",
+    "71%"
+   ],
+   [
+    "shipping-rate-service",
+    "ladder b2",
+    "39,96",
+    "337",
+    "135%"
+   ],
+   [
+    "shipping-rate-service",
+    "ladder b1",
+    "40,00",
+    "266",
+    "106%"
+   ],
+   [
+    "shipping-rate-service",
+    "ladder b1",
+    "49,58",
+    "405",
+    "162%"
+   ],
+   [
+    "shipping-rate-service",
+    "ladder b1",
+    "50,00",
+    "377",
+    "151%"
+   ]
+  ]
+ }
+}

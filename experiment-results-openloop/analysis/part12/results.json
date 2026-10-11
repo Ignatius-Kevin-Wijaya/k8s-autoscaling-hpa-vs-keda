@@ -8,7 +8,7 @@
    "plan_position": 7,
    "run_dir": "auth-service/b1/gradual/rep1",
    "t_start": 1791297914.949,
-   "O1_slo_s": 340.0,
+   "O1_slo_s": 350.0,
    "O2_error_pct": 49.857142857142854,
    "O3_goodput_rps": 10.028571428571428,
    "timeout_pct": 6.083333333333333,
@@ -32,7 +32,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 73.35103921069552,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -42,7 +49,7 @@
    "plan_position": 45,
    "run_dir": "auth-service/b1/gradual/rep2",
    "t_start": 1791343762.734,
-   "O1_slo_s": 300.0,
+   "O1_slo_s": 310.0,
    "O2_error_pct": 53.32142857142857,
    "O3_goodput_rps": 9.335714285714285,
    "timeout_pct": 6.5,
@@ -66,7 +73,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 54.044072913726815,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -76,7 +90,7 @@
    "plan_position": 102,
    "run_dir": "auth-service/b1/gradual/rep3",
    "t_start": 1791418891.946,
-   "O1_slo_s": 310.0,
+   "O1_slo_s": 320.0,
    "O2_error_pct": 48.92857142857143,
    "O3_goodput_rps": 10.214285714285714,
    "timeout_pct": 4.607142857142857,
@@ -100,7 +114,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 79.72956925406147,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -110,7 +131,7 @@
    "plan_position": 114,
    "run_dir": "auth-service/b1/gradual/rep4",
    "t_start": 1791433463.718,
-   "O1_slo_s": 320.0,
+   "O1_slo_s": 330.0,
    "O2_error_pct": 50.42857142857143,
    "O3_goodput_rps": 9.914285714285715,
    "timeout_pct": 5.095238095238095,
@@ -134,7 +155,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 109.08074471499643,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -144,7 +172,7 @@
    "plan_position": 172,
    "run_dir": "auth-service/b1/gradual/rep5",
    "t_start": 1791503348.305,
-   "O1_slo_s": 290.0,
+   "O1_slo_s": 300.0,
    "O2_error_pct": 48.38095238095238,
    "O3_goodput_rps": 10.323809523809524,
    "timeout_pct": 4.5476190476190474,
@@ -168,7 +196,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 43.32380608814315,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -178,7 +213,7 @@
    "plan_position": 35,
    "run_dir": "auth-service/b1/oscillating/rep1",
    "t_start": 1791331721.558,
-   "O1_slo_s": 260.0,
+   "O1_slo_s": 270.0,
    "O2_error_pct": 60.902964959568735,
    "O3_goodput_rps": 6.9071428571428575,
    "timeout_pct": 12.61455525606469,
@@ -202,7 +237,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 75.59222850194683,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -212,7 +254,7 @@
    "plan_position": 48,
    "run_dir": "auth-service/b1/oscillating/rep2",
    "t_start": 1791347389.461,
-   "O1_slo_s": 250.0,
+   "O1_slo_s": 260.0,
    "O2_error_pct": 59.13746630727763,
    "O3_goodput_rps": 7.219047619047619,
    "timeout_pct": 9.946091644204852,
@@ -236,7 +278,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 68.48986529164631,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -246,7 +295,7 @@
    "plan_position": 107,
    "run_dir": "auth-service/b1/oscillating/rep3",
    "t_start": 1791424894.919,
-   "O1_slo_s": 250.0,
+   "O1_slo_s": 260.0,
    "O2_error_pct": 56.28032345013477,
    "O3_goodput_rps": 7.723809523809524,
    "timeout_pct": 4.218328840970351,
@@ -270,7 +319,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 92.48641749280365,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -280,7 +336,7 @@
    "plan_position": 120,
    "run_dir": "auth-service/b1/oscillating/rep4",
    "t_start": 1791440663.8,
-   "O1_slo_s": 250.0,
+   "O1_slo_s": 260.0,
    "O2_error_pct": 56.60377358490566,
    "O3_goodput_rps": 7.666666666666667,
    "timeout_pct": 4.54177897574124,
@@ -304,7 +360,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 72.5814802267652,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -314,7 +377,7 @@
    "plan_position": 159,
    "run_dir": "auth-service/b1/oscillating/rep5",
    "t_start": 1791487653.12,
-   "O1_slo_s": 250.0,
+   "O1_slo_s": 260.0,
    "O2_error_pct": 56.73854447439353,
    "O3_goodput_rps": 7.642857142857143,
    "timeout_pct": 4.501347708894879,
@@ -338,7 +401,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 73.33387372897944,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -348,7 +418,7 @@
    "plan_position": 2,
    "run_dir": "auth-service/b1/spike/rep1",
    "t_start": 1791291821.152,
-   "O1_slo_s": 410.0,
+   "O1_slo_s": 420.0,
    "O2_error_pct": 66.90208667736758,
    "O3_goodput_rps": 9.81904761904762,
    "timeout_pct": 11.869983948635634,
@@ -372,7 +442,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 79.6244368675287,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -382,7 +459,7 @@
    "plan_position": 54,
    "run_dir": "auth-service/b1/spike/rep2",
    "t_start": 1791354690.864,
-   "O1_slo_s": 410.0,
+   "O1_slo_s": 420.0,
    "O2_error_pct": 68.93258426966293,
    "O3_goodput_rps": 9.216666666666667,
    "timeout_pct": 15.353130016051365,
@@ -406,7 +483,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 55.61834367858288,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -416,7 +500,7 @@
    "plan_position": 79,
    "run_dir": "auth-service/b1/spike/rep3",
    "t_start": 1791391091.402,
-   "O1_slo_s": 410.0,
+   "O1_slo_s": 420.0,
    "O2_error_pct": 61.0032102728732,
    "O3_goodput_rps": 11.56904761904762,
    "timeout_pct": 4.558587479935794,
@@ -440,7 +524,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 65.60506383994732,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -450,7 +541,7 @@
    "plan_position": 136,
    "run_dir": "auth-service/b1/spike/rep4",
    "t_start": 1791459964.115,
-   "O1_slo_s": 410.0,
+   "O1_slo_s": 420.0,
    "O2_error_pct": 62.8892455858748,
    "O3_goodput_rps": 11.00952380952381,
    "timeout_pct": 4.78330658105939,
@@ -474,7 +565,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 97.19834093373164,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -484,7 +582,7 @@
    "plan_position": 173,
    "run_dir": "auth-service/b1/spike/rep5",
    "t_start": 1791504553.642,
-   "O1_slo_s": 410.0,
+   "O1_slo_s": 420.0,
    "O2_error_pct": 65.24879614767255,
    "O3_goodput_rps": 10.30952380952381,
    "timeout_pct": 5.07223113964687,
@@ -508,7 +606,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 72.30485166279243,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -558,7 +663,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 18.642133594661466,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -608,7 +720,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 15.408102690372711,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -658,7 +777,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 17.552941198351593,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -708,7 +834,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 11.239874637544933,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -758,7 +891,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 16.590871456555313,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -808,7 +948,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 11.557973503649215,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -858,7 +1005,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 13.0294719405834,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -908,7 +1062,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 16.486127370552083,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -958,7 +1119,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 11.612928728708363,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -1008,7 +1176,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 20.17423940819745,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -1058,7 +1233,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 17.912817672299102,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -1108,7 +1290,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.828005477203476,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -1158,7 +1347,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 18.039339598808688,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -1208,7 +1404,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.953583323302302,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -1218,7 +1421,7 @@
    "plan_position": 176,
    "run_dir": "auth-service/b2/spike/rep5",
    "t_start": 1791508179.512,
-   "O1_slo_s": 30.0,
+   "O1_slo_s": 40.0,
    "O2_error_pct": 0.1043338683788122,
    "O3_goodput_rps": 29.635714285714286,
    "timeout_pct": 0.048154093097913325,
@@ -1258,7 +1461,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 15.788749624376411,
+   "base_rate_per_pod": 0.4
   },
   {
    "service": "auth-service",
@@ -1308,7 +1518,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 217.25699996948242,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 71.13642619123158,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1358,7 +1575,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 233.34800004959106,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 62.27510389310525,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1408,7 +1632,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 246.5880000591278,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 59.07272220986416,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1453,7 +1684,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 141.98200011253357,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 94.1622154347206,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1503,7 +1741,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 246.79299998283386,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 87.77361835155892,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1548,7 +1793,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 112.73000001907349,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 65.4545929397773,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1593,7 +1845,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 82.40899991989136,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 65.4003414815901,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1648,7 +1907,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 126.58200001716614,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 76.69715871610838,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1693,7 +1959,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 112.37599992752075,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 98.61747403521298,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1743,7 +2016,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 262.1879999637604,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 75.25523665167151,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1753,7 +2033,7 @@
    "plan_position": 13,
    "run_dir": "auth-service/h1/spike/rep1",
    "t_start": 1791305064.938,
-   "O1_slo_s": 230.0,
+   "O1_slo_s": 240.0,
    "O2_error_pct": 16.98234349919743,
    "O3_goodput_rps": 24.62857142857143,
    "timeout_pct": 2.6886035313001604,
@@ -1793,7 +2073,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 142.06200003623962,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 72.7458246922433,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1838,7 +2125,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 97.15499997138977,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 85.91568275335894,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1888,7 +2182,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 125.96399998664856,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 47.92333320013828,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1933,7 +2234,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 82.08599996566772,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 76.48552116672097,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -1978,7 +2286,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 113.08400011062622,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 73.98416791201579,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2033,7 +2348,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 142.9449999332428,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 93.19800803627439,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2093,7 +2415,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 126.75799989700317,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 83.5326618549,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2158,7 +2487,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 142.08599996566772,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 68.39671466045071,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2223,7 +2559,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 172.17499995231628,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 54.7922734427826,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2283,7 +2626,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 113.76099991798401,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 72.97103147214897,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2293,7 +2643,7 @@
    "plan_position": 4,
    "run_dir": "auth-service/h2/oscillating/rep1",
    "t_start": 1791294313.87,
-   "O1_slo_s": 200.0,
+   "O1_slo_s": 210.0,
    "O2_error_pct": 46.091644204851754,
    "O3_goodput_rps": 9.523809523809524,
    "timeout_pct": 9.097035040431267,
@@ -2361,7 +2711,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 83.13000011444092,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 10,
+   "new_pods_on_k6_node": 10,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 89.48895988152873,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2371,7 +2728,7 @@
    "plan_position": 66,
    "run_dir": "auth-service/h2/oscillating/rep2",
    "t_start": 1791369109.756,
-   "O1_slo_s": 150.0,
+   "O1_slo_s": 160.0,
    "O2_error_pct": 16.28032345013477,
    "O3_goodput_rps": 14.790476190476191,
    "timeout_pct": 2.1563342318059298,
@@ -2455,7 +2812,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 111.24399995803833,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 9,
+   "new_pods_on_k6_node": 9,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 73.3330411576051,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2465,7 +2829,7 @@
    "plan_position": 95,
    "run_dir": "auth-service/h2/oscillating/rep3",
    "t_start": 1791410421.84,
-   "O1_slo_s": 230.0,
+   "O1_slo_s": 240.0,
    "O2_error_pct": 34.285714285714285,
    "O3_goodput_rps": 11.60952380952381,
    "timeout_pct": 3.1940700808625335,
@@ -2533,7 +2897,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 97.16000008583069,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 8,
+   "new_pods_on_k6_node": 6,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 53.511404624817835,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2543,7 +2914,7 @@
    "plan_position": 134,
    "run_dir": "auth-service/h2/oscillating/rep4",
    "t_start": 1791457514.039,
-   "O1_slo_s": 180.0,
+   "O1_slo_s": 190.0,
    "O2_error_pct": 24.40700808625337,
    "O3_goodput_rps": 13.354761904761904,
    "timeout_pct": 3.0862533692722374,
@@ -2627,7 +2998,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 96.96099996566772,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 9,
+   "new_pods_on_k6_node": 6,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 66.57713127197289,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2637,7 +3015,7 @@
    "plan_position": 171,
    "run_dir": "auth-service/h2/oscillating/rep5",
    "t_start": 1791502129.246,
-   "O1_slo_s": 220.0,
+   "O1_slo_s": 230.0,
    "O2_error_pct": 35.80862533692722,
    "O3_goodput_rps": 11.34047619047619,
    "timeout_pct": 3.6253369272237195,
@@ -2730,7 +3108,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 67.75399994850159,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 10,
+   "new_pods_on_k6_node": 7,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 61.25540340077993,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2785,7 +3170,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 83.24900007247925,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 50.4198028125666,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2850,7 +3242,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 83.95300006866455,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 85.53431036115032,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2910,7 +3309,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 81.19099998474121,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 88.17443246256337,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -2970,7 +3376,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 97.3970000743866,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 62.19857026358806,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3030,7 +3443,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 67.88700008392334,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 64.94646537002498,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3105,7 +3525,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 157.15000009536743,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 87.51581180929195,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3180,7 +3607,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 141.8289999961853,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 88.65624784175151,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3255,7 +3689,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 158.1670000553131,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 78.69361648552783,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3330,7 +3771,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 158.78399991989136,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 70.83961800499905,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3405,7 +3853,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 157.17300009727478,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 60.695679741921786,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3415,7 +3870,7 @@
    "plan_position": 24,
    "run_dir": "auth-service/h3/oscillating/rep1",
    "t_start": 1791318352.676,
-   "O1_slo_s": 240.0,
+   "O1_slo_s": 250.0,
    "O2_error_pct": 36.509433962264154,
    "O3_goodput_rps": 11.216666666666667,
    "timeout_pct": 3.3692722371967654,
@@ -3525,7 +3980,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 82.32399988174438,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 12,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.47640717294227,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3535,7 +3997,7 @@
    "plan_position": 47,
    "run_dir": "auth-service/h3/oscillating/rep2",
    "t_start": 1791346181.963,
-   "O1_slo_s": 240.0,
+   "O1_slo_s": 250.0,
    "O2_error_pct": 32.142857142857146,
    "O3_goodput_rps": 11.988095238095237,
    "timeout_pct": 3.1401617250673852,
@@ -3655,7 +4117,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 67.03699994087219,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 12,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 70.21746755397817,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3665,7 +4134,7 @@
    "plan_position": 91,
    "run_dir": "auth-service/h3/oscillating/rep3",
    "t_start": 1791405645.131,
-   "O1_slo_s": 220.0,
+   "O1_slo_s": 230.0,
    "O2_error_pct": 38.47708894878706,
    "O3_goodput_rps": 10.869047619047619,
    "timeout_pct": 3.3557951482479784,
@@ -3790,7 +4259,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 67.86899995803833,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 9,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 86.565176367924,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3800,7 +4276,7 @@
    "plan_position": 109,
    "run_dir": "auth-service/h3/oscillating/rep4",
    "t_start": 1791427311.326,
-   "O1_slo_s": 220.0,
+   "O1_slo_s": 230.0,
    "O2_error_pct": 30.997304582210244,
    "O3_goodput_rps": 12.19047619047619,
    "timeout_pct": 3.98921832884097,
@@ -3930,7 +4406,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.67400002479553,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 11,
+   "new_pods_on_k6_node": 8,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 64.24215364079569,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -3940,7 +4423,7 @@
    "plan_position": 175,
    "run_dir": "auth-service/h3/oscillating/rep5",
    "t_start": 1791506943.612,
-   "O1_slo_s": 240.0,
+   "O1_slo_s": 250.0,
    "O2_error_pct": 42.15633423180593,
    "O3_goodput_rps": 10.219047619047618,
    "timeout_pct": 4.177897574123989,
@@ -4050,7 +4533,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.38800001144409,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 11,
+   "new_pods_on_k6_node": 8,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 84.23983383212855,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4125,7 +4615,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 82.41300010681152,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 57.829886875866436,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4195,7 +4692,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 68.1579999923706,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 80.9941899681846,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4265,7 +4769,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.58899998664856,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 77.27904524659718,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4335,7 +4846,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 68.6949999332428,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 76.2524143275782,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4410,7 +4928,14 @@
     ]
    ],
    "hpa_name": "auth-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 69.35700011253357,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 80.1896862803093,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4485,7 +5010,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 158.44199991226196,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 74.08581997733567,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4560,7 +5092,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 158.95900011062622,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 89.44946798487871,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4635,7 +5174,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 148.88700008392334,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 115.4405808163531,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4710,7 +5256,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 157.38499999046326,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 60.83171883265403,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4785,7 +5338,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 159.05100011825562,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 73.77784617265361,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4795,7 +5355,7 @@
    "plan_position": 16,
    "run_dir": "auth-service/k1/oscillating/rep1",
    "t_start": 1791308660.87,
-   "O1_slo_s": 240.0,
+   "O1_slo_s": 250.0,
    "O2_error_pct": 40.539083557951486,
    "O3_goodput_rps": 10.504761904761905,
    "timeout_pct": 4.083557951482479,
@@ -4915,7 +5475,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 84.13000011444092,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 11,
+   "new_pods_on_k6_node": 11,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 76.87378589049813,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -4925,7 +5492,7 @@
    "plan_position": 38,
    "run_dir": "auth-service/k1/oscillating/rep2",
    "t_start": 1791335298.755,
-   "O1_slo_s": 220.0,
+   "O1_slo_s": 230.0,
    "O2_error_pct": 39.97304582210243,
    "O3_goodput_rps": 10.604761904761904,
    "timeout_pct": 3.7735849056603774,
@@ -5050,7 +5617,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 83.24499988555908,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 12,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 76.24213341057585,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -5060,7 +5634,7 @@
    "plan_position": 75,
    "run_dir": "auth-service/k1/oscillating/rep3",
    "t_start": 1791386238.818,
-   "O1_slo_s": 250.0,
+   "O1_slo_s": 260.0,
    "O2_error_pct": 34.02964959568733,
    "O3_goodput_rps": 11.654761904761905,
    "timeout_pct": 3.6118598382749325,
@@ -5185,7 +5759,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 71.1819999217987,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 9,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 68.95213441609029,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -5195,7 +5776,7 @@
    "plan_position": 124,
    "run_dir": "auth-service/k1/oscillating/rep4",
    "t_start": 1791445480.541,
-   "O1_slo_s": 220.0,
+   "O1_slo_s": 230.0,
    "O2_error_pct": 33.8544474393531,
    "O3_goodput_rps": 11.685714285714285,
    "timeout_pct": 3.5175202156334233,
@@ -5320,7 +5901,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 69.45900011062622,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 9,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 84.32266597948342,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -5330,7 +5918,7 @@
    "plan_position": 180,
    "run_dir": "auth-service/k1/oscillating/rep5",
    "t_start": 1791512994.002,
-   "O1_slo_s": 200.0,
+   "O1_slo_s": 210.0,
    "O2_error_pct": 27.92452830188679,
    "O3_goodput_rps": 12.733333333333333,
    "timeout_pct": 2.9380053908355794,
@@ -5460,7 +6048,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.99799990653992,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 11,
+   "new_pods_on_k6_node": 8,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 67.06875248214746,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -5535,7 +6130,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 67.54399991035461,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 101.99487926772655,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -5610,7 +6212,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 68.83200001716614,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 75.13944327601838,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -5685,7 +6294,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 98.54800009727478,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 60.32883462288905,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -5755,7 +6371,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 59.88599991798401,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 55.93457932999696,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "auth-service",
@@ -5825,7 +6448,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-auth-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 97.58800005912781,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 49.64340060396834,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -5835,7 +6465,7 @@
    "plan_position": 34,
    "run_dir": "shipping-rate-service/b1/gradual/rep1",
    "t_start": 1791330503.048,
-   "O1_slo_s": 280.0,
+   "O1_slo_s": 290.0,
    "O2_error_pct": 43.70142053068882,
    "O3_goodput_rps": 40.00952380952381,
    "timeout_pct": 0.003350308228357009,
@@ -5859,7 +6489,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 61.77672247525534,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -5869,7 +6506,7 @@
    "plan_position": 37,
    "run_dir": "shipping-rate-service/b1/gradual/rep2",
    "t_start": 1791334080.235,
-   "O1_slo_s": 270.0,
+   "O1_slo_s": 290.0,
    "O2_error_pct": 43.56551747244279,
    "O3_goodput_rps": 40.10476190476191,
    "timeout_pct": 0.00335042047776996,
@@ -5893,7 +6530,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 57.3107816897425,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -5903,7 +6547,7 @@
    "plan_position": 92,
    "run_dir": "shipping-rate-service/b1/gradual/rep3",
    "t_start": 1791406823.716,
-   "O1_slo_s": 280.0,
+   "O1_slo_s": 290.0,
    "O2_error_pct": 44.38674662467754,
    "O3_goodput_rps": 39.523809523809526,
    "timeout_pct": 0.16080940735033,
@@ -5927,7 +6571,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.41051107760494,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -5937,7 +6588,7 @@
    "plan_position": 110,
    "run_dir": "shipping-rate-service/b1/gradual/rep4",
    "t_start": 1791428489.836,
-   "O1_slo_s": 280.0,
+   "O1_slo_s": 290.0,
    "O2_error_pct": 43.78057770926882,
    "O3_goodput_rps": 39.945238095238096,
    "timeout_pct": 0.00335098183767844,
@@ -5961,7 +6612,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 50.51183320015561,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -5971,7 +6629,7 @@
    "plan_position": 162,
    "run_dir": "shipping-rate-service/b1/gradual/rep5",
    "t_start": 1791491307.342,
-   "O1_slo_s": 280.0,
+   "O1_slo_s": 290.0,
    "O2_error_pct": 43.83648852404088,
    "O3_goodput_rps": 39.90952380952381,
    "timeout_pct": 0.0,
@@ -5995,7 +6653,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 52.76338433710297,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6005,7 +6670,7 @@
    "plan_position": 12,
    "run_dir": "shipping-rate-service/b1/oscillating/rep1",
    "t_start": 1791303852.776,
-   "O1_slo_s": 250.0,
+   "O1_slo_s": 260.0,
    "O2_error_pct": 51.99683222083946,
    "O3_goodput_rps": 30.307142857142857,
    "timeout_pct": 0.0,
@@ -6029,7 +6694,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 54.29891354707887,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6039,7 +6711,7 @@
    "plan_position": 39,
    "run_dir": "shipping-rate-service/b1/oscillating/rep2",
    "t_start": 1791336536.477,
-   "O1_slo_s": 250.0,
+   "O1_slo_s": 260.0,
    "O2_error_pct": 52.039662192731114,
    "O3_goodput_rps": 30.288095238095238,
    "timeout_pct": 0.0,
@@ -6063,7 +6735,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 60.230894948608615,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6073,7 +6752,7 @@
    "plan_position": 97,
    "run_dir": "shipping-rate-service/b1/oscillating/rep3",
    "t_start": 1791412873.33,
-   "O1_slo_s": 250.0,
+   "O1_slo_s": 260.0,
    "O2_error_pct": 51.46659629015232,
    "O3_goodput_rps": 30.65,
    "timeout_pct": 0.0,
@@ -6097,7 +6776,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 56.505355893538905,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6107,7 +6793,7 @@
    "plan_position": 141,
    "run_dir": "shipping-rate-service/b1/oscillating/rep4",
    "t_start": 1791465942.614,
-   "O1_slo_s": 250.0,
+   "O1_slo_s": 260.0,
    "O2_error_pct": 52.21128831580138,
    "O3_goodput_rps": 30.178571428571427,
    "timeout_pct": 0.0,
@@ -6131,7 +6817,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 55.50399459893122,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6141,7 +6834,7 @@
    "plan_position": 152,
    "run_dir": "shipping-rate-service/b1/oscillating/rep5",
    "t_start": 1791479178.139,
-   "O1_slo_s": 250.0,
+   "O1_slo_s": 260.0,
    "O2_error_pct": 52.15702541669809,
    "O3_goodput_rps": 30.207142857142856,
    "timeout_pct": 0.0,
@@ -6165,7 +6858,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.5622608915887,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6175,7 +6875,7 @@
    "plan_position": 23,
    "run_dir": "shipping-rate-service/b1/spike/rep1",
    "t_start": 1791317134.274,
-   "O1_slo_s": 410.0,
+   "O1_slo_s": 420.0,
    "O2_error_pct": 58.25138115214451,
    "O3_goodput_rps": 43.36190476190476,
    "timeout_pct": 0.002292368704582445,
@@ -6199,7 +6899,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 61.725764264334735,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6209,7 +6916,7 @@
    "plan_position": 72,
    "run_dir": "shipping-rate-service/b1/spike/rep2",
    "t_start": 1791376394.261,
-   "O1_slo_s": 410.0,
+   "O1_slo_s": 420.0,
    "O2_error_pct": 58.5402196089219,
    "O3_goodput_rps": 43.06190476190476,
    "timeout_pct": 0.0,
@@ -6233,7 +6940,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 60.69446391875591,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6243,7 +6957,7 @@
    "plan_position": 84,
    "run_dir": "shipping-rate-service/b1/spike/rep3",
    "t_start": 1791397102.464,
-   "O1_slo_s": 410.0,
+   "O1_slo_s": 420.0,
    "O2_error_pct": 57.953737878544736,
    "O3_goodput_rps": 43.66904761904762,
    "timeout_pct": 0.0,
@@ -6267,7 +6981,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 56.727489178230115,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6277,7 +6998,7 @@
    "plan_position": 117,
    "run_dir": "shipping-rate-service/b1/spike/rep4",
    "t_start": 1791437033.416,
-   "O1_slo_s": 410.0,
+   "O1_slo_s": 420.0,
    "O2_error_pct": 60.12286814597469,
    "O3_goodput_rps": 41.41904761904762,
    "timeout_pct": 0.02292316156244269,
@@ -6301,7 +7022,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 75.85085798498072,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6311,7 +7039,7 @@
    "plan_position": 163,
    "run_dir": "shipping-rate-service/b1/spike/rep5",
    "t_start": 1791492484.302,
-   "O1_slo_s": 410.0,
+   "O1_slo_s": 420.0,
    "O2_error_pct": 58.15835320007336,
    "O3_goodput_rps": 43.45952380952381,
    "timeout_pct": 0.0,
@@ -6335,7 +7063,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": null,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.53542788991967,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -6385,7 +7120,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.115207465916484,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6435,7 +7177,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 13.962400091070913,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6485,7 +7234,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.02049887158048,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6535,7 +7291,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.431469098112345,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6585,7 +7348,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.25285344028658,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6635,7 +7405,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.146862715096457,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6685,7 +7462,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.741235164565031,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6735,7 +7519,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 13.530089097748606,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6785,7 +7576,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.01821042166217,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6835,7 +7633,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 13.905799536170653,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6885,7 +7690,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.421050996565537,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6935,7 +7747,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 14.785788569375422,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -6985,7 +7804,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 13.786087757678526,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -7035,7 +7861,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 13.932788072947295,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -7085,7 +7918,14 @@
     ]
    ],
    "hpa_name": null,
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 0.0,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 0,
+   "new_pods_on_k6_node": 0,
+   "base_ready_pods": 5,
+   "base_cpu_m_per_pod": 13.653603528430732,
+   "base_rate_per_pod": 2.0
   },
   {
    "service": "shipping-rate-service",
@@ -7095,7 +7935,7 @@
    "plan_position": 22,
    "run_dir": "shipping-rate-service/h1/gradual/rep1",
    "t_start": 1791315954.833,
-   "O1_slo_s": 70.0,
+   "O1_slo_s": 80.0,
    "O2_error_pct": 2.3720182256767623,
    "O3_goodput_rps": 69.38095238095238,
    "timeout_pct": 0.0,
@@ -7130,7 +7970,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 292.1670000553131,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 61.918986115690316,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7140,7 +7987,7 @@
    "plan_position": 43,
    "run_dir": "shipping-rate-service/h1/gradual/rep2",
    "t_start": 1791341333.079,
-   "O1_slo_s": 60.0,
+   "O1_slo_s": 90.0,
    "O2_error_pct": 2.1474756273241984,
    "O3_goodput_rps": 69.54285714285714,
    "timeout_pct": 0.0033501959864652084,
@@ -7185,7 +8032,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 291.9210000038147,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 61.296477233695754,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7195,7 +8049,7 @@
    "plan_position": 106,
    "run_dir": "shipping-rate-service/h1/gradual/rep3",
    "t_start": 1791423673.196,
-   "O1_slo_s": 20.0,
+   "O1_slo_s": 30.0,
    "O2_error_pct": 0.7336929210358806,
    "O3_goodput_rps": 70.54761904761905,
    "timeout_pct": 0.0,
@@ -7240,7 +8094,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 276.80399990081787,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.68749903745134,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7250,7 +8111,7 @@
    "plan_position": 127,
    "run_dir": "shipping-rate-service/h1/gradual/rep4",
    "t_start": 1791449079.547,
-   "O1_slo_s": 10.0,
+   "O1_slo_s": 30.0,
    "O2_error_pct": 0.2948567599262858,
    "O3_goodput_rps": 70.85,
    "timeout_pct": 0.0,
@@ -7290,7 +8151,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 261.45300006866455,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.01173127610089,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7300,7 +8168,7 @@
    "plan_position": 177,
    "run_dir": "shipping-rate-service/h1/gradual/rep5",
    "t_start": 1791509347.418,
-   "O1_slo_s": 50.0,
+   "O1_slo_s": 90.0,
    "O2_error_pct": 1.9364132801768903,
    "O3_goodput_rps": 69.69285714285714,
    "timeout_pct": 0.0,
@@ -7340,7 +8208,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 291.58200001716614,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 59.59417724098525,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7350,7 +8225,7 @@
    "plan_position": 9,
    "run_dir": "shipping-rate-service/h1/oscillating/rep1",
    "t_start": 1791378864.951,
-   "O1_slo_s": 170.0,
+   "O1_slo_s": 180.0,
    "O2_error_pct": 20.901824762479265,
    "O3_goodput_rps": 49.95238095238095,
    "timeout_pct": 0.0,
@@ -7385,7 +8260,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 262.04900002479553,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 61.15231038417355,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7435,7 +8317,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 127.26699995994568,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 60.10400677185773,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7475,7 +8364,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 82.67000007629395,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 2,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 56.41559940365724,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7525,7 +8421,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 127.00600004196167,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 59.21053853112894,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7535,7 +8438,7 @@
    "plan_position": 178,
    "run_dir": "shipping-rate-service/h1/oscillating/rep5",
    "t_start": 1791510526.739,
-   "O1_slo_s": 100.0,
+   "O1_slo_s": 110.0,
    "O2_error_pct": 15.29527113658647,
    "O3_goodput_rps": 53.48095238095238,
    "timeout_pct": 0.011313070367297685,
@@ -7575,7 +8478,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 126.26099991798401,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 55.489021245535525,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7585,7 +8495,7 @@
    "plan_position": 18,
    "run_dir": "shipping-rate-service/h1/spike/rep1",
    "t_start": 1791311125.373,
-   "O1_slo_s": 140.0,
+   "O1_slo_s": 150.0,
    "O2_error_pct": 12.268476068219329,
    "O3_goodput_rps": 91.12380952380953,
    "timeout_pct": 0.0022923161562442692,
@@ -7630,7 +8540,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 142.62700009346008,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 57.857250918883594,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7675,7 +8592,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 97.43600010871887,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 62.47207722524875,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7720,7 +8644,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 96.89199995994568,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.11759295681487,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7765,7 +8696,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 83.06699991226196,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.84358280677618,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7810,7 +8748,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-default",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 82.50699996948242,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 3,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.56784521050081,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7880,7 +8825,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 202.9409999847412,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 61.523207715821506,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7940,7 +8892,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 247.32999992370605,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 64.04224232934635,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -7950,7 +8909,7 @@
    "plan_position": 90,
    "run_dir": "shipping-rate-service/h2/gradual/rep3",
    "t_start": 1791404427.393,
-   "O1_slo_s": 10.0,
+   "O1_slo_s": 20.0,
    "O2_error_pct": 0.20101849370142053,
    "O3_goodput_rps": 70.92380952380952,
    "timeout_pct": 0.0,
@@ -8000,7 +8959,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 142.60700011253357,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.620022009959584,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8065,7 +9031,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 215.7869999408722,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 59.79597172557795,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8130,7 +9103,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 232.4960000514984,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 55.690769305380904,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8140,7 +9120,7 @@
    "plan_position": 36,
    "run_dir": "shipping-rate-service/h2/oscillating/rep1",
    "t_start": 1791332899.164,
-   "O1_slo_s": 190.0,
+   "O1_slo_s": 200.0,
    "O2_error_pct": 41.52842708490424,
    "O3_goodput_rps": 36.92619047619048,
    "timeout_pct": 0.0,
@@ -8208,7 +9188,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 82.83599996566772,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 8,
+   "new_pods_on_k6_node": 8,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 63.748420737747864,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8218,7 +9205,7 @@
    "plan_position": 49,
    "run_dir": "shipping-rate-service/h2/oscillating/rep2",
    "t_start": 1791348566.874,
-   "O1_slo_s": 190.0,
+   "O1_slo_s": 200.0,
    "O2_error_pct": 41.026511294641175,
    "O3_goodput_rps": 37.233333333333334,
    "timeout_pct": 0.0,
@@ -8291,7 +9278,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 82.12599992752075,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 7,
+   "new_pods_on_k6_node": 7,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 61.40258943683571,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8301,7 +9295,7 @@
    "plan_position": 103,
    "run_dir": "shipping-rate-service/h2/oscillating/rep3",
    "t_start": 1791420059.327,
-   "O1_slo_s": 130.0,
+   "O1_slo_s": 140.0,
    "O2_error_pct": 13.930685975034883,
    "O3_goodput_rps": 54.34047619047619,
    "timeout_pct": 0.0,
@@ -8378,7 +9372,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 111.67300009727478,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 8,
+   "new_pods_on_k6_node": 7,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 57.96669802942234,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8388,7 +9389,7 @@
    "plan_position": 125,
    "run_dir": "shipping-rate-service/h2/oscillating/rep4",
    "t_start": 1791446709.118,
-   "O1_slo_s": 140.0,
+   "O1_slo_s": 150.0,
    "O2_error_pct": 16.64907253807872,
    "O3_goodput_rps": 52.63809523809524,
    "timeout_pct": 0.0,
@@ -8462,7 +9463,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 111.88199996948242,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 7,
+   "new_pods_on_k6_node": 6,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 53.59453424539433,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8472,7 +9480,7 @@
    "plan_position": 150,
    "run_dir": "shipping-rate-service/h2/oscillating/rep5",
    "t_start": 1791476828.295,
-   "O1_slo_s": 140.0,
+   "O1_slo_s": 160.0,
    "O2_error_pct": 16.12185650190401,
    "O3_goodput_rps": 52.96904761904762,
    "timeout_pct": 0.0,
@@ -8546,7 +9554,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 111.70499992370605,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 7,
+   "new_pods_on_k6_node": 6,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.6734003975658,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8606,7 +9621,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 99.5329999923706,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 57.196141078551015,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8661,7 +9683,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.82699990272522,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 62.21998368846117,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8721,7 +9750,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 82.79800009727478,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 53.102188145901664,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8781,7 +9817,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 81.88199996948242,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 60.39255916746566,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8836,7 +9879,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-tuned",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.97699999809265,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 55.678417173261884,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8911,7 +9961,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 127.36100006103516,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 59.33513412274531,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -8986,7 +10043,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 128.2460000514984,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 60.951461025514575,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -9061,7 +10125,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 127.09699988365173,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 55.26705840155042,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -9136,7 +10207,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 127.3659999370575,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 61.987359384569075,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -9211,7 +10289,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 128.5659999847412,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 59.227111635773305,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -9221,7 +10306,7 @@
    "plan_position": 26,
    "run_dir": "shipping-rate-service/h3/oscillating/rep1",
    "t_start": 1791320737.365,
-   "O1_slo_s": 190.0,
+   "O1_slo_s": 200.0,
    "O2_error_pct": 30.398884029558136,
    "O3_goodput_rps": 43.9547619047619,
    "timeout_pct": 0.007540340823405218,
@@ -9336,7 +10421,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.63499999046326,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 12,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 60.745687922099734,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -9346,7 +10438,7 @@
    "plan_position": 59,
    "run_dir": "shipping-rate-service/h3/oscillating/rep2",
    "t_start": 1791360647.159,
-   "O1_slo_s": 190.0,
+   "O1_slo_s": 200.0,
    "O2_error_pct": 25.344041021000642,
    "O3_goodput_rps": 47.14523809523809,
    "timeout_pct": 0.0,
@@ -9466,7 +10558,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.84100008010864,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 12,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 63.557477585622564,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -9476,7 +10575,7 @@
    "plan_position": 94,
    "run_dir": "shipping-rate-service/h3/oscillating/rep3",
    "t_start": 1791409214.115,
-   "O1_slo_s": 190.0,
+   "O1_slo_s": 210.0,
    "O2_error_pct": 30.413964711204947,
    "O3_goodput_rps": 43.945238095238096,
    "timeout_pct": 4.987935454682551,
@@ -9596,7 +10695,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.88499999046326,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 9,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 87.94190664755915,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -9606,7 +10712,7 @@
    "plan_position": 132,
    "run_dir": "shipping-rate-service/h3/oscillating/rep4",
    "t_start": 1791455082.519,
-   "O1_slo_s": 190.0,
+   "O1_slo_s": 200.0,
    "O2_error_pct": 28.419544563414266,
    "O3_goodput_rps": 45.2047619047619,
    "timeout_pct": 0.0,
@@ -9721,7 +10827,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 67.48099994659424,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 8,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 61.014786106961424,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -9731,7 +10844,7 @@
    "plan_position": 149,
    "run_dir": "shipping-rate-service/h3/oscillating/rep5",
    "t_start": 1791475647.627,
-   "O1_slo_s": 190.0,
+   "O1_slo_s": 200.0,
    "O2_error_pct": 24.702156537475496,
    "O3_goodput_rps": 47.55238095238095,
    "timeout_pct": 0.0,
@@ -9851,7 +10964,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 67.37299990653992,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 9,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 52.122381436756875,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -9921,7 +11041,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.82800006866455,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 63.442499240695035,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -9991,7 +11118,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 68.86899995803833,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 63.321820252333374,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10001,7 +11135,7 @@
    "plan_position": 74,
    "run_dir": "shipping-rate-service/h3/spike/rep3",
    "t_start": 1791385029.393,
-   "O1_slo_s": 50.0,
+   "O1_slo_s": 60.0,
    "O2_error_pct": 4.804804804804805,
    "O3_goodput_rps": 98.87380952380953,
    "timeout_pct": 0.0,
@@ -10061,7 +11195,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 52.60700011253357,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 57.41531764002293,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10131,7 +11272,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.65199995040894,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 59.23871368027074,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10201,7 +11349,14 @@
     ]
    ],
    "hpa_name": "shipping-rate-service-hpa-custom",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 67.40700006484985,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.985559289417736,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10276,7 +11431,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 129.32599997520447,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 62.304283370187996,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10351,7 +11513,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 129.7369999885559,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 58.91961241510435,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10426,7 +11595,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 127.29800009727478,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 51.96694490529083,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10501,7 +11677,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 131.20900011062622,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 57.2530452036592,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10576,7 +11759,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 127.76099991798401,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 55.12888022395436,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10586,7 +11776,7 @@
    "plan_position": 31,
    "run_dir": "shipping-rate-service/k1/oscillating/rep1",
    "t_start": 1791326815.466,
-   "O1_slo_s": 170.0,
+   "O1_slo_s": 180.0,
    "O2_error_pct": 26.776759793386873,
    "O3_goodput_rps": 46.24047619047619,
    "timeout_pct": 0.0037703125589111336,
@@ -10706,7 +11896,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 57.53399991989136,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 12,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 53.975021815641206,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10716,7 +11913,7 @@
    "plan_position": 41,
    "run_dir": "shipping-rate-service/k1/oscillating/rep2",
    "t_start": 1791338883.635,
-   "O1_slo_s": 190.0,
+   "O1_slo_s": 210.0,
    "O2_error_pct": 25.95385311416076,
    "O3_goodput_rps": 46.76190476190476,
    "timeout_pct": 0.007540340823405218,
@@ -10831,7 +12028,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 70.36500000953674,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 12,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 60.939975229426025,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10841,7 +12045,7 @@
    "plan_position": 87,
    "run_dir": "shipping-rate-service/k1/oscillating/rep3",
    "t_start": 1791400702.494,
-   "O1_slo_s": 170.0,
+   "O1_slo_s": 180.0,
    "O2_error_pct": 29.054028578969195,
    "O3_goodput_rps": 44.80238095238095,
    "timeout_pct": 0.0,
@@ -10951,7 +12155,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 59.50600004196167,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 8,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 53.41560495844253,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -10961,7 +12172,7 @@
    "plan_position": 135,
    "run_dir": "shipping-rate-service/k1/oscillating/rep4",
    "t_start": 1791458683.018,
-   "O1_slo_s": 190.0,
+   "O1_slo_s": 210.0,
    "O2_error_pct": 26.218753534668025,
    "O3_goodput_rps": 46.59285714285714,
    "timeout_pct": 0.0,
@@ -11081,7 +12292,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 70.98200011253357,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 9,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 62.95330727266082,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -11091,7 +12309,7 @@
    "plan_position": 155,
    "run_dir": "shipping-rate-service/k1/oscillating/rep5",
    "t_start": 1791482789.213,
-   "O1_slo_s": 190.0,
+   "O1_slo_s": 200.0,
    "O2_error_pct": 26.610866040794782,
    "O3_goodput_rps": 46.345238095238095,
    "timeout_pct": 0.0,
@@ -11211,7 +12429,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 69.78699994087219,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 12,
+   "new_pods_on_k6_node": 9,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 51.31670064917492,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -11281,7 +12506,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 67.04399991035461,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 68.15497605279782,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -11351,7 +12583,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 68.04699993133545,
+   "k6_node": "aks-userpool-16719200-vmss00002n",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 4,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 59.44316276893794,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -11421,7 +12660,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.8069999217987,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 62.39260780144629,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -11491,7 +12737,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 66.50600004196167,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 2,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 59.56710993809486,
+   "base_rate_per_pod": 10.0
   },
   {
    "service": "shipping-rate-service",
@@ -11561,7 +12814,14 @@
     ]
    ],
    "hpa_name": "keda-hpa-shipping-rate-service-keda",
-   "raw_md5_verified": true
+   "raw_md5_verified": true,
+   "O4_three_ready_s": 69.49600005149841,
+   "k6_node": "aks-userpool-16719200-vmss00002q",
+   "new_pods": 4,
+   "new_pods_on_k6_node": 3,
+   "base_ready_pods": 1,
+   "base_cpu_m_per_pod": 57.88073942009993,
+   "base_rate_per_pod": 10.0
   }
  ],
  "analyses": {
@@ -11569,15 +12829,15 @@
    "auth-service|gradual|b1": {
     "O1_slo_s": {
      "values": [
-      340.0,
-      300.0,
+      350.0,
       310.0,
       320.0,
-      290.0
+      330.0,
+      300.0
      ],
-     "median": 310.0,
-     "min": 290.0,
-     "max": 340.0,
+     "median": 320.0,
+     "min": 300.0,
+     "max": 350.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -11662,15 +12922,15 @@
    "auth-service|oscillating|b1": {
     "O1_slo_s": {
      "values": [
+      270.0,
       260.0,
-      250.0,
-      250.0,
-      250.0,
-      250.0
+      260.0,
+      260.0,
+      260.0
      ],
-     "median": 250.0,
-     "min": 250.0,
-     "max": 260.0,
+     "median": 260.0,
+     "min": 260.0,
+     "max": 270.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -11755,15 +13015,15 @@
    "auth-service|spike|b1": {
     "O1_slo_s": {
      "values": [
-      410.0,
-      410.0,
-      410.0,
-      410.0,
-      410.0
+      420.0,
+      420.0,
+      420.0,
+      420.0,
+      420.0
      ],
-     "median": 410.0,
-     "min": 410.0,
-     "max": 410.0,
+     "median": 420.0,
+     "min": 420.0,
+     "max": 420.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -12038,11 +13298,11 @@
       30.0,
       0.0,
       10.0,
-      30.0
+      40.0
      ],
      "median": 30.0,
      "min": 0.0,
-     "max": 30.0,
+     "max": 40.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -12313,7 +13573,7 @@
    "auth-service|spike|h1": {
     "O1_slo_s": {
      "values": [
-      230.0,
+      240.0,
       210.0,
       170.0,
       200.0,
@@ -12321,7 +13581,7 @@
      ],
      "median": 200.0,
      "min": 170.0,
-     "max": 230.0,
+     "max": 240.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -12499,15 +13759,15 @@
    "auth-service|oscillating|h2": {
     "O1_slo_s": {
      "values": [
-      200.0,
-      150.0,
-      230.0,
-      180.0,
-      220.0
+      210.0,
+      160.0,
+      240.0,
+      190.0,
+      230.0
      ],
-     "median": 200.0,
-     "min": 150.0,
-     "max": 230.0,
+     "median": 210.0,
+     "min": 160.0,
+     "max": 240.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -12778,15 +14038,15 @@
    "auth-service|oscillating|h3": {
     "O1_slo_s": {
      "values": [
-      240.0,
-      240.0,
-      220.0,
-      220.0,
-      240.0
+      250.0,
+      250.0,
+      230.0,
+      230.0,
+      250.0
      ],
-     "median": 240.0,
-     "min": 220.0,
-     "max": 240.0,
+     "median": 250.0,
+     "min": 230.0,
+     "max": 250.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -13057,15 +14317,15 @@
    "auth-service|oscillating|k1": {
     "O1_slo_s": {
      "values": [
-      240.0,
-      220.0,
       250.0,
-      220.0,
-      200.0
+      230.0,
+      260.0,
+      230.0,
+      210.0
      ],
-     "median": 220.0,
-     "min": 200.0,
-     "max": 250.0,
+     "median": 230.0,
+     "min": 210.0,
+     "max": 260.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -13243,15 +14503,15 @@
    "shipping-rate-service|gradual|b1": {
     "O1_slo_s": {
      "values": [
-      280.0,
-      270.0,
-      280.0,
-      280.0,
-      280.0
+      290.0,
+      290.0,
+      290.0,
+      290.0,
+      290.0
      ],
-     "median": 280.0,
-     "min": 270.0,
-     "max": 280.0,
+     "median": 290.0,
+     "min": 290.0,
+     "max": 290.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -13336,15 +14596,15 @@
    "shipping-rate-service|oscillating|b1": {
     "O1_slo_s": {
      "values": [
-      250.0,
-      250.0,
-      250.0,
-      250.0,
-      250.0
+      260.0,
+      260.0,
+      260.0,
+      260.0,
+      260.0
      ],
-     "median": 250.0,
-     "min": 250.0,
-     "max": 250.0,
+     "median": 260.0,
+     "min": 260.0,
+     "max": 260.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -13429,15 +14689,15 @@
    "shipping-rate-service|spike|b1": {
     "O1_slo_s": {
      "values": [
-      410.0,
-      410.0,
-      410.0,
-      410.0,
-      410.0
+      420.0,
+      420.0,
+      420.0,
+      420.0,
+      420.0
      ],
-     "median": 410.0,
-     "min": 410.0,
-     "max": 410.0,
+     "median": 420.0,
+     "min": 420.0,
+     "max": 420.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -13801,15 +15061,15 @@
    "shipping-rate-service|gradual|h1": {
     "O1_slo_s": {
      "values": [
-      70.0,
-      60.0,
-      20.0,
-      10.0,
-      50.0
+      80.0,
+      90.0,
+      30.0,
+      30.0,
+      90.0
      ],
-     "median": 50.0,
-     "min": 10.0,
-     "max": 70.0,
+     "median": 80.0,
+     "min": 30.0,
+     "max": 90.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -13894,15 +15154,15 @@
    "shipping-rate-service|oscillating|h1": {
     "O1_slo_s": {
      "values": [
-      170.0,
+      180.0,
       90.0,
       90.0,
       100.0,
-      100.0
+      110.0
      ],
      "median": 100.0,
      "min": 90.0,
-     "max": 170.0,
+     "max": 180.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -13987,7 +15247,7 @@
    "shipping-rate-service|spike|h1": {
     "O1_slo_s": {
      "values": [
-      140.0,
+      150.0,
       100.0,
       100.0,
       100.0,
@@ -13995,7 +15255,7 @@
      ],
      "median": 100.0,
      "min": 90.0,
-     "max": 140.0,
+     "max": 150.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -14082,7 +15342,7 @@
      "values": [
       20.0,
       0.0,
-      10.0,
+      20.0,
       0.0,
       0.0
      ],
@@ -14173,15 +15433,15 @@
    "shipping-rate-service|oscillating|h2": {
     "O1_slo_s": {
      "values": [
-      190.0,
-      190.0,
-      130.0,
+      200.0,
+      200.0,
       140.0,
-      140.0
+      150.0,
+      160.0
      ],
-     "median": 140.0,
-     "min": 130.0,
-     "max": 190.0,
+     "median": 160.0,
+     "min": 140.0,
+     "max": 200.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -14452,15 +15712,15 @@
    "shipping-rate-service|oscillating|h3": {
     "O1_slo_s": {
      "values": [
-      190.0,
-      190.0,
-      190.0,
-      190.0,
-      190.0
+      200.0,
+      200.0,
+      210.0,
+      200.0,
+      200.0
      ],
-     "median": 190.0,
-     "min": 190.0,
-     "max": 190.0,
+     "median": 200.0,
+     "min": 200.0,
+     "max": 210.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -14547,12 +15807,12 @@
      "values": [
       80.0,
       70.0,
-      50.0,
+      60.0,
       70.0,
       70.0
      ],
      "median": 70.0,
-     "min": 50.0,
+     "min": 60.0,
      "max": 80.0,
      "missing": 0
     },
@@ -14731,15 +15991,15 @@
    "shipping-rate-service|oscillating|k1": {
     "O1_slo_s": {
      "values": [
-      170.0,
-      190.0,
-      170.0,
-      190.0,
-      190.0
+      180.0,
+      210.0,
+      180.0,
+      210.0,
+      200.0
      ],
-     "median": 190.0,
-     "min": 170.0,
-     "max": 190.0,
+     "median": 200.0,
+     "min": 180.0,
+     "max": 210.0,
      "missing": 0
     },
     "O2_error_pct": {
@@ -15090,8 +16350,8 @@
     "outcome": "O1_slo_s",
     "contrast": "h2 vs h3",
     "factor": "metric",
-    "median_a": 200.0,
-    "median_b": 240.0,
+    "median_a": 210.0,
+    "median_b": 250.0,
     "U_a": 3.0,
     "p": 0.05555555555555555,
     "A12_a_gt_b": 0.12,
@@ -15104,8 +16364,8 @@
     "outcome": "O1_slo_s",
     "contrast": "h3 vs k1",
     "factor": "engine",
-    "median_a": 240.0,
-    "median_b": 220.0,
+    "median_a": 250.0,
+    "median_b": 230.0,
     "U_a": 14.5,
     "p": 0.873015873015873,
     "A12_a_gt_b": 0.58,
@@ -15119,11 +16379,11 @@
     "contrast": "h1 vs h2",
     "factor": "default vs tuned",
     "median_a": 180.0,
-    "median_b": 200.0,
-    "U_a": 7.0,
-    "p": 0.31746031746031744,
-    "A12_a_gt_b": 0.28,
-    "p_holm": 0.6349206349206349,
+    "median_b": 210.0,
+    "U_a": 4.5,
+    "p": 0.1111111111111111,
+    "A12_a_gt_b": 0.18,
+    "p_holm": 0.2222222222222222,
     "significant_0.05": false
    },
    {
@@ -15176,10 +16436,10 @@
     "factor": "metric",
     "median_a": 0.0,
     "median_b": 0.0,
-    "U_a": 15.5,
-    "p": 0.7222222222222222,
-    "A12_a_gt_b": 0.62,
-    "p_holm": 1.0,
+    "U_a": 16.0,
+    "p": 0.4444444444444444,
+    "A12_a_gt_b": 0.64,
+    "p_holm": 0.8888888888888888,
     "significant_0.05": false
    },
    {
@@ -15202,13 +16462,13 @@
     "outcome": "O1_slo_s",
     "contrast": "h1 vs h2",
     "factor": "default vs tuned",
-    "median_a": 50.0,
+    "median_a": 80.0,
     "median_b": 0.0,
-    "U_a": 23.0,
-    "p": 0.03968253968253968,
-    "A12_a_gt_b": 0.92,
-    "p_holm": 0.11904761904761904,
-    "significant_0.05": false
+    "U_a": 25.0,
+    "p": 0.007936507936507936,
+    "A12_a_gt_b": 1.0,
+    "p_holm": 0.023809523809523808,
+    "significant_0.05": true
    },
    {
     "service": "shipping-rate-service",
@@ -15342,12 +16602,12 @@
     "outcome": "O1_slo_s",
     "contrast": "h2 vs h3",
     "factor": "metric",
-    "median_a": 140.0,
-    "median_b": 190.0,
-    "U_a": 5.0,
-    "p": 0.16666666666666666,
-    "A12_a_gt_b": 0.2,
-    "p_holm": 0.3333333333333333,
+    "median_a": 160.0,
+    "median_b": 200.0,
+    "U_a": 4.0,
+    "p": 0.11904761904761904,
+    "A12_a_gt_b": 0.16,
+    "p_holm": 0.23809523809523808,
     "significant_0.05": false
    },
    {
@@ -15356,12 +16616,12 @@
     "outcome": "O1_slo_s",
     "contrast": "h3 vs k1",
     "factor": "engine",
-    "median_a": 190.0,
-    "median_b": 190.0,
-    "U_a": 17.5,
-    "p": 0.4444444444444444,
-    "A12_a_gt_b": 0.7,
-    "p_holm": 0.4444444444444444,
+    "median_a": 200.0,
+    "median_b": 200.0,
+    "U_a": 14.0,
+    "p": 1.0,
+    "A12_a_gt_b": 0.56,
+    "p_holm": 1.0,
     "significant_0.05": false
    },
    {
@@ -15371,11 +16631,11 @@
     "contrast": "h1 vs h2",
     "factor": "default vs tuned",
     "median_a": 100.0,
-    "median_b": 140.0,
+    "median_b": 160.0,
     "U_a": 3.0,
-    "p": 0.06349206349206349,
+    "p": 0.05555555555555555,
     "A12_a_gt_b": 0.12,
-    "p_holm": 0.19047619047619047,
+    "p_holm": 0.16666666666666666,
     "significant_0.05": false
    },
    {
@@ -15423,71 +16683,71 @@
   ],
   "A3": {
    "auth-service|gradual": {
-    "B1": 310.0,
+    "B1": 320.0,
     "B2": 10.0,
     "h1": {
      "median": 120.0,
-     "gap_closed": 0.6333333333333333
+     "gap_closed": 0.6451612903225806
     },
     "h2": {
      "median": 70.0,
-     "gap_closed": 0.8
+     "gap_closed": 0.8064516129032258
     },
     "h3": {
      "median": 50.0,
-     "gap_closed": 0.8666666666666667
+     "gap_closed": 0.8709677419354839
     },
     "k1": {
      "median": 40.0,
-     "gap_closed": 0.9
+     "gap_closed": 0.9032258064516129
     }
    },
    "auth-service|spike": {
-    "B1": 410.0,
+    "B1": 420.0,
     "B2": 30.0,
     "h1": {
      "median": 200.0,
-     "gap_closed": 0.5526315789473685
+     "gap_closed": 0.5641025641025641
     },
     "h2": {
      "median": 130.0,
-     "gap_closed": 0.7368421052631579
+     "gap_closed": 0.7435897435897436
     },
     "h3": {
      "median": 100.0,
-     "gap_closed": 0.8157894736842105
+     "gap_closed": 0.8205128205128205
     },
     "k1": {
      "median": 110.0,
-     "gap_closed": 0.7894736842105263
+     "gap_closed": 0.7948717948717948
     }
    },
    "auth-service|oscillating": {
-    "B1": 250.0,
+    "B1": 260.0,
     "B2": 10.0,
     "h1": {
      "median": 180.0,
-     "gap_closed": 0.2916666666666667
+     "gap_closed": 0.32
     },
     "h2": {
-     "median": 200.0,
-     "gap_closed": 0.20833333333333334
+     "median": 210.0,
+     "gap_closed": 0.2
     },
     "h3": {
-     "median": 240.0,
-     "gap_closed": 0.041666666666666664
+     "median": 250.0,
+     "gap_closed": 0.04
     },
     "k1": {
-     "median": 220.0,
-     "gap_closed": 0.125
+     "median": 230.0,
+     "gap_closed": 0.12
     }
    },
    "shipping-rate-service|gradual": {
-    "B1": 280.0,
+    "B1": 290.0,
     "B2": 0.0,
     "h1": {
-     "median": 50.0,
-     "gap_closed": 0.8214285714285714
+     "median": 80.0,
+     "gap_closed": 0.7241379310344828
     },
     "h2": {
      "median": 0.0,
@@ -15503,43 +16763,43 @@
     }
    },
    "shipping-rate-service|spike": {
-    "B1": 410.0,
+    "B1": 420.0,
     "B2": 0.0,
     "h1": {
      "median": 100.0,
-     "gap_closed": 0.7560975609756098
+     "gap_closed": 0.7619047619047619
     },
     "h2": {
      "median": 90.0,
-     "gap_closed": 0.7804878048780488
+     "gap_closed": 0.7857142857142857
     },
     "h3": {
      "median": 70.0,
-     "gap_closed": 0.8292682926829268
+     "gap_closed": 0.8333333333333334
     },
     "k1": {
      "median": 70.0,
-     "gap_closed": 0.8292682926829268
+     "gap_closed": 0.8333333333333334
     }
    },
    "shipping-rate-service|oscillating": {
-    "B1": 250.0,
+    "B1": 260.0,
     "B2": 0.0,
     "h1": {
      "median": 100.0,
-     "gap_closed": 0.6
+     "gap_closed": 0.6153846153846154
     },
     "h2": {
-     "median": 140.0,
-     "gap_closed": 0.44
+     "median": 160.0,
+     "gap_closed": 0.38461538461538464
     },
     "h3": {
-     "median": 190.0,
-     "gap_closed": 0.24
+     "median": 200.0,
+     "gap_closed": 0.23076923076923078
     },
     "k1": {
-     "median": 190.0,
-     "gap_closed": 0.24
+     "median": 200.0,
+     "gap_closed": 0.23076923076923078
     }
    }
   },
@@ -15567,7 +16827,7 @@
     },
     "auth-service|spike|h1": {
      "O1_slo_s": {
-      "range": 60.0,
+      "range": 70.0,
       "mad": 10.0
      },
      "O2_error_pct": {
@@ -15668,7 +16928,7 @@
     "shipping-rate-service|gradual|h1": {
      "O1_slo_s": {
       "range": 60.0,
-      "mad": 20.0
+      "mad": 10.0
      },
      "O2_error_pct": {
       "range": 2.0771614657504767,
@@ -15677,7 +16937,7 @@
     },
     "shipping-rate-service|oscillating|h1": {
      "O1_slo_s": {
-      "range": 80.0,
+      "range": 90.0,
       "mad": 10.0
      },
      "O2_error_pct": {
@@ -15687,7 +16947,7 @@
     },
     "shipping-rate-service|spike|h1": {
      "O1_slo_s": {
-      "range": 50.0,
+      "range": 60.0,
       "mad": 0.0
      },
      "O2_error_pct": {
@@ -15708,7 +16968,7 @@
     "shipping-rate-service|oscillating|h2": {
      "O1_slo_s": {
       "range": 60.0,
-      "mad": 10.0
+      "mad": 20.0
      },
      "O2_error_pct": {
       "range": 27.597741109869354,
@@ -15737,7 +16997,7 @@
     },
     "shipping-rate-service|oscillating|h3": {
      "O1_slo_s": {
-      "range": 0.0,
+      "range": 10.0,
       "mad": 0.0
      },
      "O2_error_pct": {
@@ -15747,7 +17007,7 @@
     },
     "shipping-rate-service|spike|h3": {
      "O1_slo_s": {
-      "range": 30.0,
+      "range": 20.0,
       "mad": 0.0
      },
      "O2_error_pct": {
@@ -15767,8 +17027,8 @@
     },
     "shipping-rate-service|oscillating|k1": {
      "O1_slo_s": {
-      "range": 20.0,
-      "mad": 0.0
+      "range": 30.0,
+      "mad": 10.0
      },
      "O2_error_pct": {
       "range": 3.1001754648084336,
@@ -15794,9 +17054,9 @@
      "n_rate": 12,
      "median_cpu": 60.0,
      "median_rate": 20.0,
-     "U_cpu": 129.0,
-     "p": 0.000437844562222002,
-     "A12_cpu_gt_rate": 0.8958333333333334
+     "U_cpu": 130.0,
+     "p": 0.00030841415953813316,
+     "A12_cpu_gt_rate": 0.9027777777777778
     },
     {
      "outcome": "O1_slo_s",
@@ -15805,9 +17065,9 @@
      "n_rate": 12,
      "median_cpu": 10.0,
      "median_rate": 0.0,
-     "U_cpu": 114.5,
-     "p": 0.00910524392823491,
-     "A12_cpu_gt_rate": 0.7951388888888888
+     "U_cpu": 111.0,
+     "p": 0.02122732564245554,
+     "A12_cpu_gt_rate": 0.7708333333333334
     },
     {
      "outcome": "O2_error_pct",
@@ -16007,8 +17267,8 @@
    "cells": {
     "auth-service|gradual|b1": {
      "O1_slo_s": {
-      "session1_median": 320.0,
-      "session2_median": 310.0,
+      "session1_median": 330.0,
+      "session2_median": 320.0,
       "difference": 10.0
      },
      "O2_error_pct": {
@@ -16019,8 +17279,8 @@
     },
     "auth-service|oscillating|b1": {
      "O1_slo_s": {
-      "session1_median": 255.0,
-      "session2_median": 250.0,
+      "session1_median": 265.0,
+      "session2_median": 260.0,
       "difference": 5.0
      },
      "O2_error_pct": {
@@ -16031,8 +17291,8 @@
     },
     "auth-service|spike|b1": {
      "O1_slo_s": {
-      "session1_median": 410.0,
-      "session2_median": 410.0,
+      "session1_median": 420.0,
+      "session2_median": 420.0,
       "difference": 0.0
      },
      "O2_error_pct": {
@@ -16103,9 +17363,9 @@
     },
     "auth-service|spike|h1": {
      "O1_slo_s": {
-      "session1_median": 220.0,
+      "session1_median": 225.0,
       "session2_median": 200.0,
-      "difference": 20.0
+      "difference": 25.0
      },
      "O2_error_pct": {
       "session1_median": 16.757624398073837,
@@ -16127,8 +17387,8 @@
     },
     "auth-service|oscillating|h2": {
      "O1_slo_s": {
-      "session1_median": 175.0,
-      "session2_median": 220.0,
+      "session1_median": 185.0,
+      "session2_median": 230.0,
       "difference": -45.0
      },
      "O2_error_pct": {
@@ -16163,8 +17423,8 @@
     },
     "auth-service|oscillating|h3": {
      "O1_slo_s": {
-      "session1_median": 240.0,
-      "session2_median": 220.0,
+      "session1_median": 250.0,
+      "session2_median": 230.0,
       "difference": 20.0
      },
      "O2_error_pct": {
@@ -16199,8 +17459,8 @@
     },
     "auth-service|oscillating|k1": {
      "O1_slo_s": {
-      "session1_median": 230.0,
-      "session2_median": 220.0,
+      "session1_median": 240.0,
+      "session2_median": 230.0,
       "difference": 10.0
      },
      "O2_error_pct": {
@@ -16223,9 +17483,9 @@
     },
     "shipping-rate-service|gradual|b1": {
      "O1_slo_s": {
-      "session1_median": 275.0,
-      "session2_median": 280.0,
-      "difference": -5.0
+      "session1_median": 290.0,
+      "session2_median": 290.0,
+      "difference": 0.0
      },
      "O2_error_pct": {
       "session1_median": 43.63346900156581,
@@ -16235,8 +17495,8 @@
     },
     "shipping-rate-service|oscillating|b1": {
      "O1_slo_s": {
-      "session1_median": 250.0,
-      "session2_median": 250.0,
+      "session1_median": 260.0,
+      "session2_median": 260.0,
       "difference": 0.0
      },
      "O2_error_pct": {
@@ -16247,8 +17507,8 @@
     },
     "shipping-rate-service|spike|b1": {
      "O1_slo_s": {
-      "session1_median": 410.0,
-      "session2_median": 410.0,
+      "session1_median": 420.0,
+      "session2_median": 420.0,
       "difference": 0.0
      },
      "O2_error_pct": {
@@ -16295,9 +17555,9 @@
     },
     "shipping-rate-service|gradual|h1": {
      "O1_slo_s": {
-      "session1_median": 65.0,
-      "session2_median": 20.0,
-      "difference": 45.0
+      "session1_median": 85.0,
+      "session2_median": 30.0,
+      "difference": 55.0
      },
      "O2_error_pct": {
       "session1_median": 2.2597469265004806,
@@ -16307,9 +17567,9 @@
     },
     "shipping-rate-service|oscillating|h1": {
      "O1_slo_s": {
-      "session1_median": 130.0,
+      "session1_median": 135.0,
       "session2_median": 100.0,
-      "difference": 30.0
+      "difference": 35.0
      },
      "O2_error_pct": {
       "session1_median": 18.049977343725022,
@@ -16319,9 +17579,9 @@
     },
     "shipping-rate-service|spike|h1": {
      "O1_slo_s": {
-      "session1_median": 120.0,
+      "session1_median": 125.0,
       "session2_median": 100.0,
-      "difference": 20.0
+      "difference": 25.0
      },
      "O2_error_pct": {
       "session1_median": 12.585703025626927,
@@ -16343,8 +17603,8 @@
     },
     "shipping-rate-service|oscillating|h2": {
      "O1_slo_s": {
-      "session1_median": 190.0,
-      "session2_median": 140.0,
+      "session1_median": 200.0,
+      "session2_median": 150.0,
       "difference": 50.0
      },
      "O2_error_pct": {
@@ -16379,8 +17639,8 @@
     },
     "shipping-rate-service|oscillating|h3": {
      "O1_slo_s": {
-      "session1_median": 190.0,
-      "session2_median": 190.0,
+      "session1_median": 200.0,
+      "session2_median": 200.0,
       "difference": 0.0
      },
      "O2_error_pct": {
@@ -16415,9 +17675,9 @@
     },
     "shipping-rate-service|oscillating|k1": {
      "O1_slo_s": {
-      "session1_median": 180.0,
-      "session2_median": 190.0,
-      "difference": -10.0
+      "session1_median": 195.0,
+      "session2_median": 200.0,
+      "difference": -5.0
      },
      "O2_error_pct": {
       "session1_median": 26.36530645377382,
@@ -16442,9 +17702,9 @@
     "B1/B2|O1_slo_s": {
      "cells": 12,
      "session1_worse": 5,
-     "session1_better": 3,
-     "ties": 4,
-     "p_two_sided": 0.7265625
+     "session1_better": 2,
+     "ties": 5,
+     "p_two_sided": 0.453125
     },
     "B1/B2|O2_error_pct": {
      "cells": 12,
@@ -16499,9 +17759,9 @@
     },
     "auth-service|spike|h1": {
      "O1_slo_s": {
-      "range_within": 40.0,
-      "mad_within": 10.0,
-      "range_all": 60.0,
+      "range_within": 45.0,
+      "mad_within": 15.0,
+      "range_all": 70.0,
       "mad_all": 10.0
      },
      "O2_error_pct": {
@@ -16639,10 +17899,10 @@
     },
     "shipping-rate-service|gradual|h1": {
      "O1_slo_s": {
-      "range_within": 40.0,
+      "range_within": 65.0,
       "mad_within": 5.0,
       "range_all": 60.0,
-      "mad_all": 20.0
+      "mad_all": 10.0
      },
      "O2_error_pct": {
       "range_within": 1.6415565202506044,
@@ -16653,9 +17913,9 @@
     },
     "shipping-rate-service|oscillating|h1": {
      "O1_slo_s": {
-      "range_within": 80.0,
+      "range_within": 90.0,
       "mad_within": 10.0,
-      "range_all": 80.0,
+      "range_all": 90.0,
       "mad_all": 10.0
      },
      "O2_error_pct": {
@@ -16667,9 +17927,9 @@
     },
     "shipping-rate-service|spike|h1": {
      "O1_slo_s": {
-      "range_within": 40.0,
+      "range_within": 50.0,
       "mad_within": 10.0,
-      "range_all": 50.0,
+      "range_all": 60.0,
       "mad_all": 0.0
      },
      "O2_error_pct": {
@@ -16681,7 +17941,7 @@
     },
     "shipping-rate-service|gradual|h2": {
      "O1_slo_s": {
-      "range_within": 20.0,
+      "range_within": 30.0,
       "mad_within": 10.0,
       "range_all": 20.0,
       "mad_all": 0.0
@@ -16695,10 +17955,10 @@
     },
     "shipping-rate-service|oscillating|h2": {
      "O1_slo_s": {
-      "range_within": 10.0,
+      "range_within": 20.0,
       "mad_within": 0.0,
       "range_all": 60.0,
-      "mad_all": 10.0
+      "mad_all": 20.0
      },
      "O2_error_pct": {
       "range_within": 2.718386563043836,
@@ -16737,9 +17997,9 @@
     },
     "shipping-rate-service|oscillating|h3": {
      "O1_slo_s": {
-      "range_within": 0.0,
+      "range_within": 10.0,
       "mad_within": 0.0,
-      "range_all": 0.0,
+      "range_all": 10.0,
       "mad_all": 0.0
      },
      "O2_error_pct": {
@@ -16751,9 +18011,9 @@
     },
     "shipping-rate-service|spike|h3": {
      "O1_slo_s": {
-      "range_within": 25.0,
+      "range_within": 15.0,
       "mad_within": 5.0,
-      "range_all": 30.0,
+      "range_all": 20.0,
       "mad_all": 0.0
      },
      "O2_error_pct": {
@@ -16779,10 +18039,10 @@
     },
     "shipping-rate-service|oscillating|k1": {
      "O1_slo_s": {
-      "range_within": 30.0,
-      "mad_within": 10.0,
-      "range_all": 20.0,
-      "mad_all": 0.0
+      "range_within": 35.0,
+      "mad_within": 15.0,
+      "range_all": 30.0,
+      "mad_all": 10.0
      },
      "O2_error_pct": {
       "range_within": 2.85461587778747,
@@ -16973,7 +18233,7 @@
    "auth-service|gradual": {
     "points": {
      "b1": {
-      "O1": 310.0,
+      "O1": 320.0,
       "replica_s": 420.0,
       "cpu_core_s": 177.994397034455
      },
@@ -17020,7 +18280,7 @@
    "auth-service|spike": {
     "points": {
      "b1": {
-      "O1": 410.0,
+      "O1": 420.0,
       "replica_s": 420.0,
       "cpu_core_s": 200.72660046544965
      },
@@ -17071,7 +18331,7 @@
    "auth-service|oscillating": {
     "points": {
      "b1": {
-      "O1": 250.0,
+      "O1": 260.0,
       "replica_s": 420.0,
       "cpu_core_s": 134.66282845332503
      },
@@ -17086,17 +18346,17 @@
       "cpu_core_s": 234.69827760921987
      },
      "h2": {
-      "O1": 200.0,
+      "O1": 210.0,
       "replica_s": 1128.4005002975464,
       "cpu_core_s": 180.13579438084585
      },
      "h3": {
-      "O1": 240.0,
+      "O1": 250.0,
       "replica_s": 1030.590000152588,
       "cpu_core_s": 180.5595035040213
      },
      "k1": {
-      "O1": 220.0,
+      "O1": 230.0,
       "replica_s": 1017.3034996986389,
       "cpu_core_s": 191.81746575802507
      }
@@ -17120,7 +18380,7 @@
    "shipping-rate-service|gradual": {
     "points": {
      "b1": {
-      "O1": 280.0,
+      "O1": 290.0,
       "replica_s": 420.0,
       "cpu_core_s": 165.383497582222
      },
@@ -17130,7 +18390,7 @@
       "cpu_core_s": 222.9173751003071
      },
      "h1": {
-      "O1": 50.0,
+      "O1": 80.0,
       "replica_s": 863.2539999485016,
       "cpu_core_s": 215.37716363458387
      },
@@ -17165,7 +18425,7 @@
    "shipping-rate-service|spike": {
     "points": {
      "b1": {
-      "O1": 410.0,
+      "O1": 420.0,
       "replica_s": 420.0,
       "cpu_core_s": 202.19911887528812
      },
@@ -17215,7 +18475,7 @@
    "shipping-rate-service|oscillating": {
     "points": {
      "b1": {
-      "O1": 250.0,
+      "O1": 260.0,
       "replica_s": 420.0,
       "cpu_core_s": 127.68927072529371
      },
@@ -17230,17 +18490,17 @@
       "cpu_core_s": 175.21449469742365
      },
      "h2": {
-      "O1": 140.0,
+      "O1": 160.0,
       "replica_s": 1101.448499917984,
       "cpu_core_s": 177.8026691382325
      },
      "h3": {
-      "O1": 190.0,
+      "O1": 200.0,
       "replica_s": 1113.4230003356934,
       "cpu_core_s": 178.65792150994952
      },
      "k1": {
-      "O1": 190.0,
+      "O1": 200.0,
       "replica_s": 1137.05499958992,
       "cpu_core_s": 177.97706482405152
      }
@@ -17259,6 +18519,1889 @@
      ]
     }
    }
+  },
+  "X": {
+   "X1": [
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_up_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 95.76099991798401,
+     "median_b": 79.78399991989136,
+     "U_a": 20.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.8,
+     "hl_shift": -29.024999856948853,
+     "hl_low": -45.16100001335144,
+     "hl_high": 14.697999954223633,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.45238095238095233,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_up_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 79.78399991989136,
+     "median_b": 66.44199991226196,
+     "U_a": 15.0,
+     "p": 0.6904761904761905,
+     "A12_a_gt_b": 0.6,
+     "hl_shift": -9.28600001335144,
+     "hl_low": -14.3989999294281,
+     "hl_high": 1.9010000228881836,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.6904761904761905,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_up_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 109.79299998283386,
+     "median_b": 95.76099991798401,
+     "U_a": 18.0,
+     "p": 0.30952380952380953,
+     "A12_a_gt_b": 0.72,
+     "hl_shift": -14.312000036239624,
+     "hl_low": -45.08200001716614,
+     "hl_high": 15.151999950408936,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.6190476190476191,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 112.76099991798401,
+     "median_b": 97.17300009727478,
+     "U_a": 20.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.8,
+     "hl_shift": -28.024999856948853,
+     "hl_low": -45.77199983596802,
+     "hl_high": 15.087000131607056,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.45238095238095233,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 97.17300009727478,
+     "median_b": 83.95900011062622,
+     "U_a": 19.0,
+     "p": 0.2222222222222222,
+     "A12_a_gt_b": 0.76,
+     "hl_shift": -9.896999835968018,
+     "hl_low": -15.342000007629395,
+     "hl_high": 1.8840000629425049,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.45238095238095233,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 126.79299998283386,
+     "median_b": 112.76099991798401,
+     "U_a": 18.0,
+     "p": 0.30952380952380953,
+     "A12_a_gt_b": 0.72,
+     "hl_shift": -14.413000106811523,
+     "hl_low": -44.70700001716614,
+     "hl_high": 16.151999950408936,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.45238095238095233,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 142.08599996566772,
+     "median_b": 157.17300009727478,
+     "U_a": 7.0,
+     "p": 0.30952380952380953,
+     "A12_a_gt_b": 0.28,
+     "hl_shift": 15.222000122070312,
+     "hl_low": -15.001999855041504,
+     "hl_high": 43.41200017929077,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.6190476190476191,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 157.17300009727478,
+     "median_b": 158.44199991226196,
+     "U_a": 7.0,
+     "p": 0.30952380952380953,
+     "A12_a_gt_b": 0.28,
+     "hl_shift": 0.7920000553131104,
+     "hl_low": -8.28600001335144,
+     "hl_high": 16.61299991607666,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.6190476190476191,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 233.34800004959106,
+     "median_b": 142.08599996566772,
+     "U_a": 22.0,
+     "p": 0.05555555555555555,
+     "A12_a_gt_b": 0.88,
+     "hl_shift": -90.49900007247925,
+     "hl_low": -120.03500008583069,
+     "hl_high": 0.10399985313415527,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.16666666666666666,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O4_first_up_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 64.95300006866455,
+     "median_b": 35.157999992370605,
+     "U_a": 25.0,
+     "p": 0.007936507936507936,
+     "A12_a_gt_b": 1.0,
+     "hl_shift": -29.777999877929688,
+     "hl_low": -44.23900008201599,
+     "hl_high": -14.729000091552734,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.023809523809523808,
+     "significant_0.05": true
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O4_first_up_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 35.157999992370605,
+     "median_b": 35.54800009727478,
+     "U_a": 8.0,
+     "p": 0.42063492063492064,
+     "A12_a_gt_b": 0.32,
+     "hl_shift": 0.3900001049041748,
+     "hl_low": -7.272000074386597,
+     "hl_high": 1.6740000247955322,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.8412698412698413,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O4_first_up_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 65.06200003623962,
+     "median_b": 64.95300006866455,
+     "U_a": 14.0,
+     "p": 0.8412698412698413,
+     "A12_a_gt_b": 0.56,
+     "hl_shift": -0.7579998970031738,
+     "hl_low": -30.26799988746643,
+     "hl_high": 16.98900008201599,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.8412698412698413,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 83.24900007247925,
+     "median_b": 52.41300010681152,
+     "U_a": 25.0,
+     "p": 0.007936507936507936,
+     "A12_a_gt_b": 1.0,
+     "hl_shift": -30.258000135421753,
+     "hl_low": -44.98399996757507,
+     "hl_high": -14.473999977111816,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.023809523809523808,
+     "significant_0.05": true
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 52.41300010681152,
+     "median_b": 53.543999910354614,
+     "U_a": 9.0,
+     "p": 0.5476190476190477,
+     "A12_a_gt_b": 0.36,
+     "hl_shift": 0.19099998474121094,
+     "hl_low": -7.527000188827515,
+     "hl_high": 1.9549999237060547,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 1.0,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 83.06200003623962,
+     "median_b": 83.24900007247925,
+     "U_a": 13.0,
+     "p": 1.0,
+     "A12_a_gt_b": 0.52,
+     "hl_shift": -0.8949999809265137,
+     "hl_low": -30.26799988746643,
+     "hl_high": 17.28500008583069,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 1.0,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 83.24900007247925,
+     "median_b": 68.6949999332428,
+     "U_a": 20.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.8,
+     "hl_shift": -14.55400013923645,
+     "hl_low": -28.7020001411438,
+     "hl_high": 1.2220001220703125,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.30158730158730157,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 68.6949999332428,
+     "median_b": 68.83200001716614,
+     "U_a": 11.0,
+     "p": 0.8412698412698413,
+     "A12_a_gt_b": 0.44,
+     "hl_shift": 0.6740000247955322,
+     "hl_low": -13.581000089645386,
+     "hl_high": 30.390000104904175,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.8412698412698413,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 113.08400011062622,
+     "median_b": 83.24900007247925,
+     "U_a": 21.0,
+     "p": 0.09523809523809523,
+     "A12_a_gt_b": 0.84,
+     "hl_shift": -29.26799988746643,
+     "hl_low": -58.812999963760376,
+     "hl_high": 1.1630001068115234,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.2857142857142857,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_up_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 49.75399994850159,
+     "median_b": 34.38800001144409,
+     "U_a": 19.0,
+     "p": 0.2222222222222222,
+     "A12_a_gt_b": 0.76,
+     "hl_shift": -15.365999937057495,
+     "hl_low": -46.093000173568726,
+     "hl_high": 14.427000045776367,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.6666666666666666,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_up_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 34.38800001144409,
+     "median_b": 24.181999921798706,
+     "U_a": 10.0,
+     "p": 0.6904761904761905,
+     "A12_a_gt_b": 0.4,
+     "hl_shift": 0.7420001029968262,
+     "hl_low": -14.390000104904175,
+     "hl_high": 16.093000173568726,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.6904761904761905,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_up_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 65.18799996376038,
+     "median_b": 49.75399994850159,
+     "U_a": 19.0,
+     "p": 0.2222222222222222,
+     "A12_a_gt_b": 0.76,
+     "hl_shift": -29.245999813079834,
+     "hl_low": -60.486000061035156,
+     "hl_high": 15.54800009727478,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.6666666666666666,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 67.75399994850159,
+     "median_b": 52.323999881744385,
+     "U_a": 17.0,
+     "p": 0.42063492063492064,
+     "A12_a_gt_b": 0.68,
+     "hl_shift": -15.430000066757202,
+     "hl_low": -44.836000204086304,
+     "hl_high": 15.36299991607666,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.8412698412698413,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 52.323999881744385,
+     "median_b": 42.181999921798706,
+     "U_a": 11.0,
+     "p": 0.8412698412698413,
+     "A12_a_gt_b": 0.44,
+     "hl_shift": 0.7420001029968262,
+     "hl_low": -15.325999975204468,
+     "hl_high": 15.456000089645386,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.8412698412698413,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 82.40899991989136,
+     "median_b": 67.75399994850159,
+     "U_a": 20.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.8,
+     "hl_shift": -29.621000051498413,
+     "hl_low": -61.486000061035156,
+     "hl_high": 14.972000122070312,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.45238095238095233,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 96.96099996566772,
+     "median_b": 67.03699994087219,
+     "U_a": 23.0,
+     "p": 0.031746031746031744,
+     "A12_a_gt_b": 0.92,
+     "hl_shift": -28.920000076293945,
+     "hl_low": -44.20700001716614,
+     "hl_high": -0.7170000076293945,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.09523809523809523,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 67.03699994087219,
+     "median_b": 71.1819999217987,
+     "U_a": 5.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.2,
+     "hl_shift": 3.071000099182129,
+     "hl_low": -11.141999959945679,
+     "hl_high": 17.093000173568726,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.19047619047619047,
+     "significant_0.05": false
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 112.73000001907349,
+     "median_b": 96.96099996566772,
+     "U_a": 21.0,
+     "p": 0.09523809523809523,
+     "A12_a_gt_b": 0.84,
+     "hl_shift": -29.245999813079834,
+     "hl_low": -165.22699999809265,
+     "hl_high": 14.552000045776367,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.19047619047619047,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_up_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 109.32999992370605,
+     "median_b": 64.36100006103516,
+     "U_a": 25.0,
+     "p": 0.007936507936507936,
+     "A12_a_gt_b": 1.0,
+     "hl_shift": -44.9689998626709,
+     "hl_low": -74.375,
+     "hl_high": -14.425999879837036,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.023809523809523808,
+     "significant_0.05": true
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_up_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 64.36100006103516,
+     "median_b": 66.73699998855591,
+     "U_a": 6.0,
+     "p": 0.2222222222222222,
+     "A12_a_gt_b": 0.24,
+     "hl_shift": 2.9600000381469727,
+     "hl_low": -13.600000143051147,
+     "hl_high": 17.229000091552734,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.2222222222222222,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_up_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 153.1670000553131,
+     "median_b": 109.32999992370605,
+     "U_a": 23.0,
+     "p": 0.031746031746031744,
+     "A12_a_gt_b": 0.92,
+     "hl_shift": -30.313999891281128,
+     "hl_low": -74.38000011444092,
+     "hl_high": -13.86299991607666,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.06349206349206349,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 127.32999992370605,
+     "median_b": 82.24600005149841,
+     "U_a": 25.0,
+     "p": 0.007936507936507936,
+     "A12_a_gt_b": 1.0,
+     "hl_shift": -45.39900016784668,
+     "hl_low": -74.375,
+     "hl_high": -13.54099988937378,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.023809523809523808,
+     "significant_0.05": true
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 82.24600005149841,
+     "median_b": 83.73699998855591,
+     "U_a": 5.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.2,
+     "hl_shift": 1.9649999141693115,
+     "hl_low": -13.485000133514404,
+     "hl_high": 17.229000091552734,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.15079365079365079,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 171.1670000553131,
+     "median_b": 127.32999992370605,
+     "U_a": 23.0,
+     "p": 0.031746031746031744,
+     "A12_a_gt_b": 0.92,
+     "hl_shift": -31.313999891281128,
+     "hl_low": -75.38000011444092,
+     "hl_high": -13.86299991607666,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.06349206349206349,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 215.7869999408722,
+     "median_b": 127.3659999370575,
+     "U_a": 25.0,
+     "p": 0.007936507936507936,
+     "A12_a_gt_b": 1.0,
+     "hl_shift": -88.4210000038147,
+     "hl_low": -119.96399998664856,
+     "hl_high": -15.241000175476074,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.023809523809523808,
+     "significant_0.05": true
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 127.3659999370575,
+     "median_b": 129.32599997520447,
+     "U_a": 6.0,
+     "p": 0.2222222222222222,
+     "A12_a_gt_b": 0.24,
+     "hl_shift": 1.1710000038146973,
+     "hl_low": -0.8050000667572021,
+     "hl_high": 3.8430001735687256,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.2222222222222222,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 291.58200001716614,
+     "median_b": 215.7869999408722,
+     "U_a": 25.0,
+     "p": 0.007936507936507936,
+     "A12_a_gt_b": 1.0,
+     "hl_shift": -61.01699995994568,
+     "hl_low": -148.97499990463257,
+     "hl_high": -29.473999977111816,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.023809523809523808,
+     "significant_0.05": true
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O4_first_up_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 64.79800009727478,
+     "median_b": 19.651999950408936,
+     "U_a": 25.0,
+     "p": 0.007936507936507936,
+     "A12_a_gt_b": 1.0,
+     "hl_shift": -44.704999923706055,
+     "hl_low": -59.88100004196167,
+     "hl_high": -28.95799994468689,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.023809523809523808,
+     "significant_0.05": true
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O4_first_up_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 19.651999950408936,
+     "median_b": 35.043999910354614,
+     "U_a": 5.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.2,
+     "hl_shift": 15.199999809265137,
+     "hl_low": -0.14599990844726562,
+     "hl_high": 16.844000101089478,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.30158730158730157,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O4_first_up_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 65.06699991226196,
+     "median_b": 64.79800009727478,
+     "U_a": 16.0,
+     "p": 0.5476190476190477,
+     "A12_a_gt_b": 0.64,
+     "hl_shift": -14.093999862670898,
+     "hl_low": -30.06500005722046,
+     "hl_high": 14.466000080108643,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.5476190476190477,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 81.79800009727478,
+     "median_b": 37.86899995803833,
+     "U_a": 25.0,
+     "p": 0.007936507936507936,
+     "A12_a_gt_b": 1.0,
+     "hl_shift": -43.19099998474121,
+     "hl_low": -59.664000034332275,
+     "hl_high": -28.21999979019165,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.023809523809523808,
+     "significant_0.05": true
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 37.86899995803833,
+     "median_b": 52.043999910354614,
+     "U_a": 7.0,
+     "p": 0.30952380952380953,
+     "A12_a_gt_b": 0.28,
+     "hl_shift": 14.15499997138977,
+     "hl_low": -1.3629999160766602,
+     "hl_high": 16.627000093460083,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.30952380952380953,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 83.62700009346008,
+     "median_b": 81.79800009727478,
+     "U_a": 20.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.8,
+     "hl_shift": -15.093999862670898,
+     "hl_low": -30.06500005722046,
+     "hl_high": 13.905999898910522,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.30158730158730157,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 81.88199996948242,
+     "median_b": 66.82800006866455,
+     "U_a": 20.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.8,
+     "hl_shift": -14.474999904632568,
+     "hl_low": -32.704999923706055,
+     "hl_high": 0.5800001621246338,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.45238095238095233,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 66.82800006866455,
+     "median_b": 67.04399991035461,
+     "U_a": 10.0,
+     "p": 0.6904761904761905,
+     "A12_a_gt_b": 0.4,
+     "hl_shift": 0.3919999599456787,
+     "hl_low": -1.8250000476837158,
+     "hl_high": 14.436999797821045,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.6904761904761905,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 96.89199995994568,
+     "median_b": 81.88199996948242,
+     "U_a": 20.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.8,
+     "hl_shift": -15.55400013923645,
+     "hl_low": -60.74500012397766,
+     "hl_high": 2.6410000324249268,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.45238095238095233,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_up_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 34.704999923706055,
+     "median_b": 19.841000080108643,
+     "U_a": 22.0,
+     "p": 0.05555555555555555,
+     "A12_a_gt_b": 0.88,
+     "hl_shift": -15.069999933242798,
+     "hl_low": -45.28499984741211,
+     "hl_high": 0.7760000228881836,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.16666666666666666,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_up_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 19.841000080108643,
+     "median_b": 22.786999940872192,
+     "U_a": 5.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.2,
+     "hl_shift": 2.6090002059936523,
+     "hl_low": -12.694000005722046,
+     "hl_high": 7.664999961853027,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.30158730158730157,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_up_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 50.00600004196167,
+     "median_b": 34.704999923706055,
+     "U_a": 17.0,
+     "p": 0.42063492063492064,
+     "A12_a_gt_b": 0.68,
+     "hl_shift": -14.587999820709229,
+     "hl_low": -29.996999979019165,
+     "hl_high": 15.119999885559082,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.42063492063492064,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 52.88199996948242,
+     "median_b": 37.37299990653992,
+     "U_a": 24.0,
+     "p": 0.015873015873015872,
+     "A12_a_gt_b": 0.96,
+     "hl_shift": -15.996999979019165,
+     "hl_low": -45.20099997520447,
+     "hl_high": -0.4010000228881836,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.047619047619047616,
+     "significant_0.05": true
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 37.37299990653992,
+     "median_b": 39.98200011253357,
+     "U_a": 5.0,
+     "p": 0.15079365079365079,
+     "A12_a_gt_b": 0.2,
+     "hl_shift": 2.7300000190734863,
+     "hl_low": -12.498999834060669,
+     "hl_high": 9.133000135421753,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.30158730158730157,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O4_first_new_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 68.26699995994568,
+     "median_b": 52.88199996948242,
+     "U_a": 18.0,
+     "p": 0.30952380952380953,
+     "A12_a_gt_b": 0.72,
+     "hl_shift": -14.378999948501587,
+     "hl_low": -29.96500015258789,
+     "hl_high": 14.829999923706055,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.30952380952380953,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "median_a": 111.67300009727478,
+     "median_b": 66.88499999046326,
+     "U_a": 25.0,
+     "p": 0.007936507936507936,
+     "A12_a_gt_b": 1.0,
+     "hl_shift": -44.30000019073486,
+     "hl_low": -45.04099988937378,
+     "hl_high": -15.240999937057495,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.023809523809523808,
+     "significant_0.05": true
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "median_a": 66.88499999046326,
+     "median_b": 69.78699994087219,
+     "U_a": 10.0,
+     "p": 0.6904761904761905,
+     "A12_a_gt_b": 0.4,
+     "hl_shift": 2.884000062942505,
+     "hl_low": -9.3510000705719,
+     "hl_high": 4.0970001220703125,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.6904761904761905,
+     "significant_0.05": false
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O4_three_ready_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "median_a": 127.00600004196167,
+     "median_b": 111.67300009727478,
+     "U_a": 21.0,
+     "p": 0.09523809523809523,
+     "A12_a_gt_b": 0.84,
+     "hl_shift": -15.562000036239624,
+     "hl_low": -150.37599992752075,
+     "hl_high": 29.003000020980835,
+     "hl_coverage": 0.9682539682539683,
+     "p_holm": 0.19047619047619047,
+     "significant_0.05": false
+    }
+   ],
+   "X2": [
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O1_slo_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": -40.0,
+     "hl_low": -70.0,
+     "hl_high": 10.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O1_slo_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": -10.0,
+     "hl_low": -20.0,
+     "hl_high": 30.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O1_slo_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": -50.0,
+     "hl_low": -80.0,
+     "hl_high": 0.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O2_error_pct",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": -0.23809523809523814,
+     "hl_low": -1.6904761904761905,
+     "hl_high": 0.3452380952380952,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O2_error_pct",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": 0.0,
+     "hl_low": -0.6547619047619048,
+     "hl_high": 0.07142857142857142,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "gradual",
+     "outcome": "O2_error_pct",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": -0.7738095238095237,
+     "hl_low": -2.7380952380952377,
+     "hl_high": 0.6309523809523809,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O1_slo_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": -20.0,
+     "hl_low": -50.0,
+     "hl_high": 20.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O1_slo_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": 10.0,
+     "hl_low": -30.0,
+     "hl_high": 40.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O1_slo_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": -80.0,
+     "hl_low": -110.0,
+     "hl_high": -40.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O2_error_pct",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": -4.165329052969502,
+     "hl_low": -6.356340288924558,
+     "hl_high": -1.0433386837881216,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O2_error_pct",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": 0.6661316211878017,
+     "hl_low": -2.664526484751204,
+     "hl_high": 3.5232744783306584,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "spike",
+     "outcome": "O2_error_pct",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": -3.250401284109147,
+     "hl_low": -6.37239165329053,
+     "hl_high": 0.23274478330658077,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O1_slo_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": 40.0,
+     "hl_low": 0.0,
+     "hl_high": 90.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O1_slo_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": 0.0,
+     "hl_low": -40.0,
+     "hl_high": 20.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O1_slo_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": 30.0,
+     "hl_low": -20.0,
+     "hl_high": 80.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O2_error_pct",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": 4.191374663072779,
+     "hl_low": -9.5822102425876,
+     "hl_high": 20.229110512129385,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O2_error_pct",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": -1.6172506738544428,
+     "hl_low": -8.584905660377363,
+     "hl_high": 8.39622641509434,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "auth-service",
+     "pattern": "oscillating",
+     "outcome": "O2_error_pct",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": 10.458221024258759,
+     "hl_low": -5.768194070080863,
+     "hl_high": 24.04312668463612,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O1_slo_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": 0.0,
+     "hl_low": -20.0,
+     "hl_high": 10.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O1_slo_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": 0.0,
+     "hl_low": -10.0,
+     "hl_high": 10.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O1_slo_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": -70.0,
+     "hl_low": -90.0,
+     "hl_high": -10.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O2_error_pct",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": 0.0,
+     "hl_low": -0.20101849370142053,
+     "hl_high": 0.2881165181103325,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O2_error_pct",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": 0.0,
+     "hl_low": -0.2981674427954035,
+     "hl_high": 0.11057498994772819,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "gradual",
+     "outcome": "O2_error_pct",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": -1.9263623554918192,
+     "hl_low": -2.3619673009916915,
+     "hl_high": -0.2848058352412148,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O1_slo_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": -20.0,
+     "hl_low": -40.0,
+     "hl_high": -10.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O1_slo_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": 0.0,
+     "hl_low": -10.0,
+     "hl_high": 10.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O1_slo_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": -10.0,
+     "hl_low": -60.0,
+     "hl_high": 10.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O2_error_pct",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": -5.308881937878793,
+     "hl_low": -7.969900616001867,
+     "hl_high": -3.291597477846241,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O2_error_pct",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": 1.6850519082567414,
+     "hl_low": -0.4540471214568953,
+     "hl_high": 2.2166697230882084,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "spike",
+     "outcome": "O2_error_pct",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": -1.7742527049330636,
+     "hl_low": -3.7228067762418906,
+     "hl_high": 0.8889360093633201,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O1_slo_s",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": 40.0,
+     "hl_low": 0.0,
+     "hl_high": 60.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O1_slo_s",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": 0.0,
+     "hl_low": -20.0,
+     "hl_high": 10.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O1_slo_s",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": 60.0,
+     "hl_low": -20.0,
+     "hl_high": 110.0,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O2_error_pct",
+     "contrast": "h2 vs h3",
+     "factor": "metric",
+     "hl_shift": 8.694968482921922,
+     "hl_low": -16.184386063903595,
+     "hl_high": 14.488858588379383,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O2_error_pct",
+     "contrast": "h3 vs k1",
+     "factor": "engine",
+     "hl_shift": -1.3599361322357524,
+     "hl_low": -4.195211176536922,
+     "hl_high": 2.074603255911377,
+     "hl_coverage": 0.9682539682539683
+    },
+    {
+     "service": "shipping-rate-service",
+     "pattern": "oscillating",
+     "outcome": "O2_error_pct",
+     "contrast": "h1 vs h2",
+     "factor": "default vs tuned",
+     "hl_shift": 1.35380140149225,
+     "hl_low": -4.252752224400545,
+     "hl_high": 26.233155948317766,
+     "hl_coverage": 0.9682539682539683
+    }
+   ],
+   "X3": {
+    "contrasts": [
+     {
+      "service": "auth-service",
+      "pattern": "gradual",
+      "outcome": "O1_slo_s",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": -35.0,
+      "session2": -30.0
+     },
+     {
+      "service": "auth-service",
+      "pattern": "gradual",
+      "outcome": "O1_slo_s",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": -10.0,
+      "session2": 10.0
+     },
+     {
+      "service": "auth-service",
+      "pattern": "gradual",
+      "outcome": "O1_slo_s",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": -20.0,
+      "session2": -60.0
+     },
+     {
+      "service": "auth-service",
+      "pattern": "gradual",
+      "outcome": "O2_error_pct",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": -1.005952380952381,
+      "session2": 0.08333333333333333
+     },
+     {
+      "service": "auth-service",
+      "pattern": "gradual",
+      "outcome": "O2_error_pct",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": 0.03571428571428571,
+      "session2": -0.07142857142857142
+     },
+     {
+      "service": "auth-service",
+      "pattern": "gradual",
+      "outcome": "O2_error_pct",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": -0.8333333333333333,
+      "session2": -1.0595238095238095
+     },
+     {
+      "service": "auth-service",
+      "pattern": "spike",
+      "outcome": "O1_slo_s",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": 20.0,
+      "session2": -30.0
+     },
+     {
+      "service": "auth-service",
+      "pattern": "spike",
+      "outcome": "O1_slo_s",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": -10.0,
+      "session2": 10.0
+     },
+     {
+      "service": "auth-service",
+      "pattern": "spike",
+      "outcome": "O1_slo_s",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": -110.0,
+      "session2": -70.0
+     },
+     {
+      "service": "auth-service",
+      "pattern": "spike",
+      "outcome": "O2_error_pct",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": -3.306581059390048,
+      "session2": -4.823434991974318
+     },
+     {
+      "service": "auth-service",
+      "pattern": "spike",
+      "outcome": "O2_error_pct",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": -1.3523274478330656,
+      "session2": 2.808988764044943
+     },
+     {
+      "service": "auth-service",
+      "pattern": "spike",
+      "outcome": "O2_error_pct",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": -4.020866773675763,
+      "session2": -1.5168539325842705
+     },
+     {
+      "service": "auth-service",
+      "pattern": "oscillating",
+      "outcome": "O1_slo_s",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": 65.0,
+      "session2": 0.0
+     },
+     {
+      "service": "auth-service",
+      "pattern": "oscillating",
+      "outcome": "O1_slo_s",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": -10.0,
+      "session2": 0.0
+     },
+     {
+      "service": "auth-service",
+      "pattern": "oscillating",
+      "outcome": "O1_slo_s",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": 15.0,
+      "session2": 50.0
+     },
+     {
+      "service": "auth-service",
+      "pattern": "oscillating",
+      "outcome": "O2_error_pct",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": 3.1401617250673866,
+      "session2": 4.191374663072779
+     },
+     {
+      "service": "auth-service",
+      "pattern": "oscillating",
+      "outcome": "O2_error_pct",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": 5.929919137466314,
+      "session2": -4.6226415094339615
+     },
+     {
+      "service": "auth-service",
+      "pattern": "oscillating",
+      "outcome": "O2_error_pct",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": 8.753369272237194,
+      "session2": 12.237196765498652
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "gradual",
+      "outcome": "O1_slo_s",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": -10.0,
+      "session2": 0.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "gradual",
+      "outcome": "O1_slo_s",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": 0.0,
+      "session2": 0.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "gradual",
+      "outcome": "O1_slo_s",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": -75.0,
+      "session2": -30.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "gradual",
+      "outcome": "O2_error_pct",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": -0.09045545999739832,
+      "session2": 0.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "gradual",
+      "outcome": "O2_error_pct",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": 0.0,
+      "session2": 0.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "gradual",
+      "outcome": "O2_error_pct",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": -2.1692914665030822,
+      "session2": -0.7336929210358806
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "spike",
+      "outcome": "O1_slo_s",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": -25.0,
+      "session2": -20.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "spike",
+      "outcome": "O1_slo_s",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": -5.0,
+      "session2": 0.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "spike",
+      "outcome": "O1_slo_s",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": -25.0,
+      "session2": -10.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "spike",
+      "outcome": "O2_error_pct",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": -4.703446021731779,
+      "session2": -5.657321980975325
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "spike",
+      "outcome": "O2_error_pct",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": 0.6155023933999226,
+      "session2": 1.840615580828616
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "spike",
+      "outcome": "O2_error_pct",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": -1.5392727983155226,
+      "session2": -0.5239280157630208
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "oscillating",
+      "outcome": "O1_slo_s",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": 0.0,
+      "session2": 50.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "oscillating",
+      "outcome": "O1_slo_s",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": -5.0,
+      "session2": 0.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "oscillating",
+      "outcome": "O1_slo_s",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": 65.0,
+      "session2": 50.0
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "oscillating",
+      "outcome": "O2_error_pct",
+      "contrast": "h2 vs h3",
+      "factor": "metric",
+      "session1": -13.406006664493312,
+      "session2": 12.297688061510257
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "oscillating",
+      "outcome": "O2_error_pct",
+      "contrast": "h3 vs k1",
+      "factor": "engine",
+      "session1": -1.506156071505572,
+      "session2": -1.8086785226194841
+     },
+     {
+      "service": "shipping-rate-service",
+      "pattern": "oscillating",
+      "outcome": "O2_error_pct",
+      "contrast": "h1 vs h2",
+      "factor": "default vs tuned",
+      "session1": 23.22749184604768,
+      "session2": 0.8265853653175395
+     }
+    ],
+    "agreement": {
+     "default vs tuned": {
+      "contrasts": 12,
+      "same_direction": 12,
+      "opposite": 0,
+      "zero_in_a_session": 0
+     },
+     "engine": {
+      "contrasts": 12,
+      "same_direction": 2,
+      "opposite": 5,
+      "zero_in_a_session": 5
+     },
+     "metric": {
+      "contrasts": 12,
+      "same_direction": 5,
+      "opposite": 3,
+      "zero_in_a_session": 4
+     }
+    }
+   },
+   "X4": {
+    "runs_with_new_pods": 120,
+    "sessions": {
+     "session1": {
+      "runs": 48,
+      "new_pods": 268,
+      "new_pods_on_k6_node": 268,
+      "share_min": 1.0,
+      "share_median": 1.0,
+      "share_max": 1.0,
+      "runs_all_on_k6_node": 48,
+      "k6_nodes": [
+       "aks-userpool-16719200-vmss00002n"
+      ],
+      "base_nodes": {
+       "auth-service": [
+        "aks-userpool-16719200-vmss00002l"
+       ],
+       "shipping-rate-service": [
+        "aks-userpool-16719200-vmss00002l"
+       ]
+      }
+     },
+     "session2": {
+      "runs": 72,
+      "new_pods": 396,
+      "new_pods_on_k6_node": 288,
+      "share_min": 0.5,
+      "share_median": 0.75,
+      "share_max": 1.0,
+      "runs_all_on_k6_node": 1,
+      "k6_nodes": [
+       "aks-userpool-16719200-vmss00002q"
+      ],
+      "base_nodes": {
+       "auth-service": [
+        "aks-userpool-16719200-vmss00002p"
+       ],
+       "shipping-rate-service": [
+        "aks-userpool-16719200-vmss00002o",
+        "aks-userpool-16719200-vmss00002q"
+       ]
+      }
+     }
+    },
+    "tests": {
+     "session2|O1_slo_s": {
+      "spearman": -0.05014345579255474,
+      "p_permutation": 0.7142142892855358,
+      "runs": 72
+     },
+     "session2|O2_error_pct": {
+      "spearman": 0.05608681258547188,
+      "p_permutation": 0.5543722813859308,
+      "runs": 72
+     },
+     "both|O1_slo_s": {
+      "spearman": 0.1843473886866419,
+      "p_permutation": 0.04469776511174441,
+      "runs": 120
+     },
+     "both|O2_error_pct": {
+      "spearman": 0.2600763555989418,
+      "p_permutation": 0.006349682515874206,
+      "runs": 120
+     }
+    }
+   },
+   "X5": {
+    "auth-service": {
+     "points": [
+      {
+       "source": "ladder b1",
+       "rate_per_pod": 6.0,
+       "cpu_m_per_pod": 257.0
+      },
+      {
+       "source": "ladder b1",
+       "rate_per_pod": 8.0,
+       "cpu_m_per_pod": 314.0
+      },
+      {
+       "source": "ladder b2",
+       "rate_per_pod": 6.0,
+       "cpu_m_per_pod": 235.6
+      },
+      {
+       "source": "ladder b2",
+       "rate_per_pod": 7.94888888888889,
+       "cpu_m_per_pod": 317.4
+      },
+      {
+       "source": "base phase, 1 pod",
+       "runs": 75,
+       "rate_per_pod": 2.0,
+       "cpu_m_per_pod": 73.35103921069552
+      },
+      {
+       "source": "base phase, B2",
+       "runs": 15,
+       "rate_per_pod": 0.4,
+       "cpu_m_per_pod": 15.788749624376411
+      }
+     ],
+     "cpu_request_m": 250,
+     "rate_at_target": {
+      "h2": 3.273326141210248,
+      "h1": 5.122336443282865
+     }
+    },
+    "shipping-rate-service": {
+     "points": [
+      {
+       "source": "ladder b1",
+       "rate_per_pod": 40.0,
+       "cpu_m_per_pod": 266.0
+      },
+      {
+       "source": "ladder b1",
+       "rate_per_pod": 50.0,
+       "cpu_m_per_pod": 377.0
+      },
+      {
+       "source": "ladder b1",
+       "rate_per_pod": 49.577777777777776,
+       "cpu_m_per_pod": 405.0
+      },
+      {
+       "source": "ladder b2",
+       "rate_per_pod": 24.0,
+       "cpu_m_per_pod": 176.6
+      },
+      {
+       "source": "ladder b2",
+       "rate_per_pod": 39.964444444444446,
+       "cpu_m_per_pod": 337.0
+      },
+      {
+       "source": "base phase, 1 pod",
+       "runs": 75,
+       "rate_per_pod": 10.0,
+       "cpu_m_per_pod": 58.985559289417736
+      },
+      {
+       "source": "base phase, B2",
+       "runs": 15,
+       "rate_per_pod": 2.0,
+       "cpu_m_per_pod": 14.02049887158048
+      }
+     ],
+     "cpu_request_m": 250,
+     "rate_at_target": {
+      "h2": 17.857897077641738,
+      "h1": 26.328977556109727
+     }
+    }
+   }
+  },
+  "slo_ms": {
+   "auth-service": 1500.0,
+   "shipping-rate-service": 1000.0
   }
  }
 }
