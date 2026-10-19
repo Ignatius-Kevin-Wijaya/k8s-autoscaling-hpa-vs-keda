@@ -1,4 +1,4 @@
-# Thesis Blueprint — Part 19: Eksperimen 2 "K1 diperbaiki" — Usulan v0.6
+# Thesis Blueprint — Part 19: Eksperimen 2 "K1 diperbaiki" — Usulan v0.6.1
 
 > Ditulis 2026-10-18 atas usulan pemilik: mengulang Kampanye 1 (K1) dengan perubahan sesedikit mungkin, sebagai
 > alternatif yang lebih ringan dari Kampanye 2-ringan (Part 17). **v0.1** menerapkan temuan tinjauan *red team* atas Part 17
@@ -12,7 +12,7 @@
 > klaster (hanya layanan uji dan dependensinya; 19.3.2, 19.3.8), langkah per *run* (19.3.10), serta aturan rancangan *shipping* baru (T_svc, C, W;
 > 19.3.5). **v0.6** (2026-10-19) menindaklanjuti semua temuan (Kritis, Mayor, dan Minor) tinjauan *red team*
 > atas v0.5 (status di 19.11; aturan mutu data baru di 19.3.11); catatan
-> perubahan di 19.10. **Status: usulan v0.6 —
+> perubahan di 19.10; **v0.6.1** (2026-10-19) memuat hasil pemeriksaan ulang menyeluruh. **Status: usulan v0.6.1 —
 > belum dibekukan, belum ada *run*, belum ada biaya.** Protokol eksperimen (`~/.claude/CLAUDE.md`) berlaku penuh;
 > catatan gerbang di 19.1. Varian mana yang dipakai (Part 17 atau bagian ini) adalah keputusan pembimbing dan pemilik.
 > Anggaran bukan batasan desain (pemilik, 2026-10-18; Part 17 §17.16).
@@ -37,7 +37,7 @@
 | B1 | 1 *pod* | 1 *pod* |
 | B2 | 5 *pod* | N terukur |
 | maxReplicas M | 5 (mengikat untuk H3 dan K1) | 100 untuk semua konfigurasi (bawaan KEDA, B-konv); `sut` 1 × D16as_v5 ≥ 2 × replika tertinggi pilot (19.3.2) |
-| Langkah per *run* | `RESET_WAIT` 120 s, `STABILIZE_WAIT` 90 s, `EXPORT_WAIT` 180 s, `:latest` + `Always` | sama, kecuali `EXPORT_WAIT` 30 s dan *pre-pull* dengan *digest* + `IfNotPresent` (19.3.10) |
+| Langkah per *run* | `RESET_WAIT` 120 s, `STABILIZE_WAIT` 90 s, `EXPORT_WAIT` 180 s, `:latest` + `Always`, *onset* pada jarak tetap dari pembuatan HPA | sama, kecuali `EXPORT_WAIT` 30 s, *pre-pull* dengan *digest* + `IfNotPresent`, dan penundaan acak U(0, 15) s sebelum Job k6 (19.3.10) |
 | Isi klaster | seluruh aplikasi e-commerce, 1 replika per layanan | layanan uji + *auth-db* + *carrier-mock* saja (19.3.8) |
 | *Pool node* | satu *pool* 3 × D4as_v5, tanpa *taint* | `sut` (*taint*, 1 × D16as_v5), `load` (*taint*, 1 × D2as_v5, k6), `deps` (*taint*, 1 × D4as_v5, *auth-db* + *carrier-mock*), `infra` (*pool* sistem, 2 × D4as_v5) (19.3.8) |
 | *shipping-rate-service* | asinkron tanpa batas konkurensi; ternyata dibatasi CPU | dibatasi slot menunggu (*bulkhead* W slot, C terbesar yang lolos D1-a dan D1-b′, jeda *carrier* disetarakan dengan *auth*), **bersyarat** (aturan D1, 19.3.5) |
@@ -119,6 +119,15 @@ dipetakan ke 19.11; itu juga bukan gerbang 6. Deviasi dari protokol: belum ada.
     *red team* v0.5 M-2): *pod* yang belum siap menjadi "tanpa metrik", dan HPA menghitung *pod* tanpa metrik sebagai 0%
     saat *scale-up* ("on a scale-up, treat missing pods as using 0% of the resource request", `calcPlainMetricReplicas`),
     sama dengan aturan *pod* belum siap untuk CPU Resource di H2 [F, kode `replica_calculator.go`, dicek 2026-10-19].
+    **Syarat Ready sepanjang satu jendela (diputuskan pemilik 2026-10-19 setelah pemeriksaan ulang):** untuk CPU Resource,
+    di dalam *CPU initialization period* (bawaan 5 menit) HPA juga menganggap *pod* belum siap selama jendela metriknya
+    masih mencakup waktu sebelum Ready (`unready = condition.Status == False || metric.Timestamp.Before(
+    condition.LastTransitionTime + metric.Window)`, `groupPods`) [F]. Agar setara, deret H2p hanya memuat *pod* yang sudah
+    Ready sepanjang satu jendela `rate` penuh (60 s): `min_over_time(kube_pod_status_ready{condition="true"}[1m]) == 1`
+    sebagai penyaring. **Asimetri yang tersisa (dicatat, bukan disamakan):** saat *scale-down*, *pod* tanpa metrik pada
+    metrik Pods dihitung memakai tepat nilai target ("on a scale-down, treat missing pods as using exactly the target
+    amount"), sedangkan pada CPU Resource *pod* belum siap dikeluarkan dari perhitungan [F]. *Scale-down* di jendela beban
+    jarang terjadi (stabilisasi 300 s), jadi dampaknya kecil; kejadiannya dicatat dari *watcher*.
     Deretnya dibuat dengan *recording rule* Prometheus yang dibatasi *namespace* dan *container*, sehingga *adapter* hanya
     melayani deret kecil (K1: memasukkan deret `container_*` membuat satu-satunya *pod adapter* OOM berulang dan memutus H3,
     `prometheus-adapter-values.yaml:77-80`); batas memori *adapter* diuji di klaster sebenarnya, dan *restart* = DQ5.
@@ -325,12 +334,16 @@ dipetakan ke 19.11; itu juga bukan gerbang 6. Deviasi dari protokol: belum ada.
   - urutan: P2 diputuskan → cek di kind → *ladder* singkat (cek parameter gerbang 1–2, boleh sebelum gerbang lain lolos
     dengan persetujuan biaya; datanya bukan data tesis);
   - versi dan konfigurasi dikunci: *digest image*, K final, penghitung kedatangan; dua putaran karena K bergantung pada C
-    (ukur C → tetapkan K → konfirmasi dengan K final);
+    (ukur C → tetapkan K → konfirmasi dengan K final). **Aturan konvergensi (diputuskan pemilik 2026-10-19 setelah pemeriksaan
+    ulang) [B-rumus]:** putaran diulang sampai C_SLO berubah kurang dari satu langkah *ladder* (≤ 10% C) antara dua putaran
+    berurutan, paling banyak 3 putaran; bila belum konvergen, K dari putaran terakhir dipakai dan dicatat sebagai deviasi
+    bertanggal. Pada setiap putaran, fraksi tolak pada C_SLO dilaporkan, karena K = C_SLO × SLO dapat mengubah sebagian
+    permintaan lambat menjadi penolakan;
   - langkah rapat di sekitar C_SLO (≤ 10% C) dengan ≥ 2–3 ulangan;
   - langkah kelebihan beban sampai runtuh untuk kedua layanan (19.3.5 d);
   - langkah N *pod* (N = 1, 2, 3, …, ⌈r / f⌉) pada laju per *pod* L\* dan C_SLO di tata letak final, untuk cek kesetaraan
     pemicu (19.3.1) dan C_SLO per *pod* pada N *pod* (kapasitas *auth* tidak linear);
-  - model CPU dan jumlah *thread* per inti (`lscpu`) setiap *node* dicatat per sesi (tinjauan *red team* v0.5 K-1, M-9);
+  - model CPU dan jumlah *thread* per inti (`lscpu`) setiap *node* dicatat **per *run*** (tinjauan *red team* v0.5 K-1, M-9; per *run* sejak 2026-10-19 karena klaster tidak dihentikan dan Dasv5 mendukung *live migration*);
   - kedua varian *shipping* (baru dan K1) diukur selama D1 belum diputuskan.
 
 ### 19.3.4 Penghitung laju: dilayani atau kedatangan
@@ -423,8 +436,8 @@ keputusan berasal dari platform terpilih.
   kode HPA menjalankan logika *pod* belum siap dan *CPU initialization period* hanya bila `resource == v1.ResourceCPU`
   (`groupPods`), sedangkan `GetMetricReplicas` untuk metrik Pods memberi nama sumber daya kosong [F, `replica_calculator.go`,
   cabang *master*; dicek ulang pada *tag* versi klaster di gerbang 1]. [BD] sebelumnya tertutup: perlakuannya berbeda bila
-  deret H2p memuat *pod* yang belum siap. Penyamaan lewat deret "hanya *pod* Ready" (19.3.1) diuji di kind dengan *scale-up*
-  nyata: jumlah replika yang diminta H2 dan H2p pada langkah yang sama, dengan *pod* baru yang belum siap, harus sama
+  deret H2p memuat *pod* yang belum siap. Penyamaan lewat deret "hanya *pod* yang Ready sepanjang 60 s" (19.3.1) diuji di kind dengan *scale-up*
+  nyata: jumlah replika yang diminta H2 dan H2p pada langkah yang sama, dengan *pod* baru yang belum siap atau baru Ready (< 60 s), harus sama
   (toleransi satu replika). Bila tidak sama, kontras H2 → H2p ditulis "jalur ukur + perlakuan *pod* baru" (paket; 19.4.6).
 
 **Aturan D1 — desain ulang *shipping* (bersyarat; ditulis 2026-10-18, sebelum cek dijalankan).**
@@ -550,6 +563,12 @@ keputusan berasal dari platform terpilih.
   0,031–0,035 / √2 [H, data K1 di atas]; pada σ itu efek terkecil yang terdeteksi dengan b = 10 ≈ 0,032–0,037. Efek
   terkecil itu kira-kira sebanding lurus dengan σ (≈ 0,044 × σ / 0,03 pada b = 10).
 
+  **Kontras Hipotesis 2 (dicek 2026-10-19) [H, simulasi, *signed-rank* satu sisi 0,025, b = 10, ρ = 0]:** D1 = H2p − K1
+  (varians 2σ²) dan D2 = H2p + K1 − 2 × H3 (varians 6σ², SD √3 × lebih besar). Efek terkecil yang terdeteksi: D1 0,031 /
+  0,036 / 0,043 dan **D2 0,054 / 0,063 / 0,074** pada σ 0,022 / 0,025 / 0,030. Jadi putusan S > |E| hanya dapat
+  disimpulkan bila S + E kira-kira ≥ 0,05–0,07; ini ditulis di muka sebagai batas daya Hipotesis 2, bukan prediksi efek.
+  Cek ulang tabel di atas dengan *seed* lain: 0,015 / 0,028 / 0,043 pada b = 10 (cocok dalam derau simulasi).
+
   Sebagai pembanding, δ_min 0,014–0,027: pada σ 0,03 tidak ada b ≤ 20 yang dapat mendeteksi efek sebesar δ_min, jadi efek
   di sekitar δ_min hanya terbaca sebagai estimasi, dan ini ditulis di muka. **b = 10** (diputuskan pemilik 2026-10-19, P23): 280 *run* kampanye (±84 jam mesin *(est.)*); efek terkecil yang terdeteksi ±0,032–0,037 pada σ K1 *spike*, 0,044 pada σ 0,03; dasar: pembenaran sumber daya + analisis sensitivitas daya (Lakens, 2022). Alternatif: b = 8 (sah, tetapi langkah Holm hanya tahan kehilangan satu pasangan), b = 15–20 (efek terkecil 0,029–0,034 pada σ 0,03).
 - **Aturan cadangan berbasis daya (P22): dihapus 2026-10-19** (tinjauan *red team* v0.5 K-2). Alasannya: σ pilot dari n = 2
@@ -607,11 +626,12 @@ keputusan berasal dari platform terpilih.
 | `infra` (*pool* sistem) | kube-system (termasuk *metrics-server*), Prometheus, Grafana, KEDA, *prometheus-adapter* | 2 × Standard_D4as_v5 (±7.700m *allocatable*; *request* ±1.500m setelah dependensi dipindah). Dasar [B]: *pool* sistem AKS wajib ≥ 2 *node* dengan VM ≥ 4 vCPU dan 4 GB, tanpa seri B ("System pools must contain at least two nodes but the recommendation is three nodes", Microsoft Learn *Use system node pools*, dicek 2026-10-19); bebannya sendiri muat di satu *node* |
 | `deps` (*taint*; diputuskan pemilik 2026-10-19, tinjauan *red team* v0.5 M-10) | *auth-db*, *carrier-mock* (5 replika) | 1 × Standard_D4as_v5 (*request* ±1.500m). Dasar [B]: keduanya berada di jalur permintaan layanan uji (SUT dalam arti fungsi), jadi diisolasi oleh desain dari *monitoring*, KEDA, dan *adapter*, alasan yang sama dengan `load` (P21); *pool user* boleh 1 *node* |
 
-  - **Kenapa k6 terpisah dari `infra`:** *auth-db* dan *carrier-mock* berada di jalur permintaan layanan uji, jadi
-    latensinya bagian dari yang diukur (SUT dalam arti fungsi); jalur metrik Prometheus, *adapter*, dan KEDA adalah bagian
+  - **Kenapa k6 terpisah dari `infra` dan `deps`:** jalur metrik Prometheus, *adapter*, dan KEDA (di `infra`) adalah bagian
     dari perlakuan H2p, H3, dan K1 tetapi tidak H1 dan H2 (*metrics-server*), sehingga gangguan k6 di sana bisa membiaskan
-    kontras H2 → H2p secara sistematis; isolasi oleh desain lebih kuat daripada "diukur dan kecil". Alternatif (berbagi
-    `infra`, Part 17 R10) dapat dibela dengan CPU k6 K1 yang kecil, tetapi bergantung pada pengukuran ulang.
+    kontras H2 → H2p secara sistematis; *auth-db* dan *carrier-mock* (di `deps` sejak v0.6, M-10) berada di jalur permintaan
+    layanan uji, jadi latensinya bagian dari yang diukur (SUT dalam arti fungsi). Isolasi oleh desain lebih kuat daripada
+    "diukur dan kecil". Alternatif (berbagi `infra`, Part 17 R10) dapat dibela dengan CPU k6 K1 yang kecil, tetapi
+    bergantung pada pengukuran ulang.
   - **Kenapa D2as_v5 cukup untuk `load` [B, ukur K1]:** CPU k6 maksimum 0,135 core (*limit* 2) di 180 *run* (*red team*
     M-8); memori ±0,6 GiB untuk ±1.050 VU, sedangkan VU terbanyak K1 788 (Part 08). Keluarga Dasv5 sama (*non-burstable*);
     seri B (*burstable*) tidak dipakai karena kredit CPU membuat kecepatan generator tidak konstan (Part 04). *Allocatable*
@@ -622,13 +642,15 @@ keputusan berasal dari platform terpilih.
   - **Disk OS (diputuskan pemilik 2026-10-19; tinjauan *red team* v0.5 N-3) [B]:** `--node-osdisk-type Managed` eksplisit
     untuk ketiga *pool*, karena seri Dasv5 tidak mendukung *Ephemeral OS Disk* dan tidak punya penyimpanan lokal
     (Microsoft Learn *Dasv5 size series*, dicek 2026-10-19). Jenis disk OS dicatat per *run* bersama versi. Perintah K1 di
-    Part 05 menulis `Ephemeral`, jadi jenis disk OS K1 yang sebenarnya tidak pasti; ini dicatat sebagai catatan K1 tanpa
-    mengubah datanya.
+    Part 05 menulis `Ephemeral`, tetapi label *node* yang terekam di ekspor K1 menunjukkan disk OS K1 sebenarnya *Managed*
+    Premium SSD (`kubernetes_azure_com_storageprofile="managed"`, `storagetier="Premium_LRS"`, mis.
+    `experiment-results-openloop/auth-service/b1/gradual/rep1/prom_cpu_usage.json`) [F, dicek 2026-10-19]. Jadi `Managed`
+    sama dengan K1; naskah Thesis-2.3 yang menyebut *Ephemeral OS disk* perlu dikoreksi (Part 20).
 - **Perangkat keras antar-sesi (diputuskan pemilik 2026-10-19; tinjauan *red team* v0.5 M-9) [B].** Seri Dasv5 memakai dua
   generasi CPU (EPYC 7763v dan EPYC 9004; Microsoft Learn *Dasv5 size series*, dicek 2026-10-19), dan setiap kali AKS
   dihentikan lalu dijalankan, VM baru bisa jatuh di generasi lain. Karena itu klaster **tidak dihentikan** sejak *ladder*
   baru sampai kampanye selesai, sehingga VM `sut` tetap sama; jam *idle* bukan batasan (anggaran bukan batasan desain).
-  `lscpu` (model CPU, *thread* per inti) dicatat setiap *node* per sesi; bila berbeda dari sesi *ladder* (mis. setelah
+  `lscpu` (model CPU, *thread* per inti) dicatat setiap *node* **per *run*** (bukan per sesi; Dasv5 mendukung *live migration*, Microsoft Learn *Dasv5 size series*); bila berbeda dari *run ladder* (mis. setelah
   *live migration* atau pemeliharaan), berlaku aturan henti sesi di 19.3.11.
 - **Isi klaster (pemilik 2026-10-19):** hanya layanan uji dan dependensinya, sesuai *manifest*: *auth-service* →
   *auth-db* (PostgreSQL, `DATABASE_URL`); *shipping-rate-service* → *carrier-mock* (`CARRIER_SERVICE_URL`; tetap 5 replika
@@ -687,7 +709,7 @@ keputusan berasal dari platform terpilih.
   (median *auth* / *shipping*): *cleanup* + *pre-auth* 50 / 9 s, `RESET_WAIT` 122 s, pasang konfigurasi 5 / 4 s, `STABILIZE_WAIT`
   92 s, Job k6 735 / 745 s, `EXPORT_WAIT` 181 s, ekspor 13 s, metadata ±10 s [F]. Dengan langkah per *run* di bawah dan
   *Deployment* baru setiap *run* (+±15–45 s untuk hapus *pod* lama dan *pod* baru siap),
-  ±1.050–1.110 s (±17,5–18,5 menit) *(est.)*.
+  ±1.050–1.110 s (±17,5–18,5 menit) *(est.)*, ditambah rata-rata 7,5 s penundaan acak (N-1).
 - **Alternatif yang ditolak:** (a) aturan *ramp* aman Part 17 D-R9(a), T_ramp 300–1.100 s (contoh kasar *auth* ±1.300 s),
   25–38,5 menit per *run*: terlalu lama dan tidak sama dengan *spike* (pemilik); tinjauan *red team* Part 17 juga menilai
   *ramp* aman menghasilkan efek lantai (K-2) dan T_ramp sebagai penggerak biaya terbesar. (b) Ekor ≥ 450 s (Part 17 R37,
@@ -787,10 +809,19 @@ berdasar, kecuali pergeseran B2 (3σ, B-konv).
 
 - **Pengulangan:** *run* yang gagal DQ diulang sekali di akhir blok yang sama, dan posisinya dicatat. Bila gagal lagi,
   sel itu hilang dari blok dan kontras yang memakainya mengikuti aturan jumlah pasangan P8 (19.4.8).
+- **Pelaporan pengulangan (diputuskan pemilik 2026-10-19 setelah pemeriksaan ulang):** beberapa DQ bisa berkorelasi
+  dengan perlakuan, terutama DQ5 (*restart prometheus-adapter* hanya menyangkut H2p dan H3; *restart* KEDA hanya K1) dan
+  DQ3 (penskalaan sebelum *onset* lebih mungkin pada konfigurasi CPU). Karena itu jumlah *run* ulang per konfigurasi, per
+  strata, dan per DQ dilaporkan, dan analisis sensitivitas eksploratori mengulang uji utama dengan **percobaan pertama**
+  setiap sel yang diulang (bila data mentahnya lengkap), di samping hasil konfirmatori dari percobaan ulang. Bila
+  kesimpulan berbeda, keduanya dilaporkan.
 - **Penghentian sesi:** (1) DQ yang sama gagal dua kali berturut-turut; (2) model CPU atau jumlah *thread* per inti
-  (`lscpu`) berbeda dari sesi *ladder* → sesi dihentikan sebelum blok dimulai, lalu *ladder* ringkas (C_SLO satu langkah)
-  diulang (tinjauan *red team* v0.5 M-9); (3) fraksi buruk B2 suatu blok bergeser lebih dari 3 × SD B2 K1 untuk strata
-  yang sama [B-konv 3σ] → sesi ditandai, `lscpu` dicek, *ladder* ringkas diulang. Setiap penghentian dicatat sebagai
+  (`lscpu`, dicatat per *run*) berbeda dari *run ladder* → sesi dihentikan sebelum blok berikutnya, lalu *ladder* ringkas
+  (C_SLO satu langkah) diulang (tinjauan *red team* v0.5 M-9); (3) **pergeseran B2 (acuan diperbaiki 2026-10-19):** fraksi
+  buruk B2 suatu blok berbeda dari **median B2 pilot untuk strata yang sama** lebih dari 3 × σ_B2, dengan σ_B2 =
+  max(SD B2 K1, SD B2 pilot) untuk strata itu [B-konv 3σ; SD B2 K1 dari 5 *run* per strata, `analysis/cache`] → sesi
+  ditandai, `lscpu` dicek, *ladder* ringkas diulang. Catatan: B2 K1 berisi 5 *pod*, sedangkan B2 di sini N *pod* terukur,
+  jadi SD K1 hanya batas bawah sebaran; karena itu dipakai maksimum dengan SD pilot. Setiap penghentian dicatat sebagai
   deviasi bertanggal; desain tidak diubah selama kampanye kecuali pengulangan mutu data yang sudah dipra-registrasi.
 - **Kovariat yang dicatat (bukan eksklusi):** CPU dan *throttling* *auth-db*, *carrier-mock*, dan k6 per *run*; umur *pod*
   saat *onset*; fase penundaan acak (19.3.10); urutan di dalam blok dan konfigurasi *run* sebelumnya.
@@ -1119,6 +1150,7 @@ dokumentasi.
 | 2026-10-18 | v0.4 | f = 0,8 usulan pemilik dengan dasar, alternatif, dan sensitivitas (19.3.1; contoh maxReplicas 19.3.2 disesuaikan); bentuk dan durasi *run* K1 untuk kedua pola, ekor 180 s, replika-detik hanya di jendela beban, cek *scale-down* di pilot (19.3.10); estimasi pilot ±19 jam mesin (19.3.6); posisi pemilik tentang CPU 50% dan sensitivitas K (19.4.7); P4 diputuskan pemilik (f = 0,8, B-konv; alasan: nilai bawaan HPA, angka *auth* hanya akibat), P17 diperbarui, P19 (level sensitivitas f) dan P20 (diputuskan) ditambahkan; P6 diputuskan: SLO 1.000 ms untuk kedua layanan (Nielsen, B-konv), lantai *auth* dan sensitivitas 1.500 ms eksploratori (19.3.3); λ0 = 0,2 × C_SLO untuk kedua layanan (B-konv), cek pilot tanpa penskalaan sebelum t = 120 s, perbaikan `setup()` *auth* (19.3.3); P5 diputuskan: r = min(0,8 × λ_runtuh / C_SLO) antar-layanan (B-rumus), *ladder* kelebihan beban sampai runtuh (19.3.5 d), *ladder* baru sebagai sumber angka beserta syaratnya (19.3.3); paket D1 diputuskan: c_D1 = rata-rata + 2 SD < 200m, model D1-b = model fluida *red team* dengan *back-test* K1 dan b ≤ 10, ambang *auth* = uji naik *limit* rasio ≥ 1,5 dengan *shipping* baru sebagai kontrol negatif (19.3.5); P12 diperbarui | keputusan pemilik dalam diskusi f, durasi *gradual*, ekor, SLO, λ0, r, dan paket D1 |
 | 2026-10-19 | v0.5 | maxReplicas M = 100 untuk semua konfigurasi (bawaan KEDA, B-konv); *pool* `sut` D4as_v5, pilot 4 *node*, kapasitas ≥ 2 × replika tertinggi pilot, `--max-pods` eksplisit, cek `ScalingLimited` dan *Pending* per *run* (19.3.2); isi klaster hanya layanan uji + *auth-db* + *carrier-mock* (19.3.8); ringkasan 19.0 dan PM7 diperbarui; P21 diputuskan: *pool* `load` sendiri 1 × D2as_v5 dengan cek pilot, `infra` 2 × D4as_v5, tabel tata letak *pool* (19.3.8); rancangan *shipping* baru: T_svc lewat `CARRIER_DELAY_SCALE` agar p95 bawaan ≈ *auth* pada λ0, C = C terbesar yang lolos D1-a dan D1-b, W = bulat(C × T̄_svc), beserta urutan ukurnya (19.3.5); `sut` diganti 1 × D16as_v5 (harga sama dengan 4 × D4as_v5, penempatan identik; kurang → D32as_v5) dan dasar `infra` 2 × D4as_v5 dicatat (minimum *pool* sistem AKS) (19.3.2, 19.3.8); langkah per *run* (paket minimal): `EXPORT_WAIT` 180 → 30 s dan *pre-pull* dengan *digest* + `IfNotPresent`, *reset*/*stabilize* tetap K1, hasil pemeriksaan risiko dan pekerjaan wajib (19.3.10); estimasi pilot ±16,5–17,5 jam (19.3.6); P3 diputuskan (kedatangan) dan P7 diputuskan (fraksi permintaan buruk, komponen deskriptif, O1 sekunder); P19 diputuskan (klaim bersyarat f = 0,8, prediksi model untuk 0,7, SENS-f setelah pilot dengan aturan presisi); P8, P15, P16 diputuskan setelah pemeriksaan ulang (*signed-rank* eksak + HL, aturan n berbasis α, aturan 15 s dengan turunan, keluarga per hipotesis dengan sitasi) dan P22 (aturan cadangan berbasis daya) ditambahkan (19.3.7, 19.4.1, 19.4.8); P1, P9, P10, P12, P13, P14, P17, P18 ditetapkan sebagai usulan pemilik, menunggu konfirmasi pembimbing (19.5) | keputusan pemilik dalam diskusi M, *node*, rancangan *shipping*, *overhead*, P3, P7, P19, P8, P15, P16, P22, dan butir pembimbing |
 | 2026-10-19 | v0.6 | tindak lanjut tinjauan *red team* v0.5 (19.11): K-1 diterapkan (langkah *ladder* N *pod*, aturan terima rasio metrik/target 1,0 ± 0,1, cadangan g(N), D1-a pada N = 2–3, `lscpu` per *node*; 19.3.1, 19.3.3, 19.3.5); K-2 diterapkan (b ditetapkan sebelum pilot dengan analisis sensitivitas daya dan tabel efek terkecil yang terdeteksi, P23 baru; P22 dihapus; non-inferioritas *auth* tetap uji; SENS-f hanya prediksi model; pilot untuk gladi dan cek konstruk, σ pilot terpool dengan batas atas 80% hanya untuk laporan; 19.3.1, 19.3.6, 19.3.7, 19.4.1, 19.4.8); catatan tinjauan di 19.1; P23 diputuskan: b = 10 (280 *run*), D1-b memakai b = 10 (19.3.5, 19.3.6, 19.3.7); M-4 (S > |E| lewat D1/D2), M-5 (`ScalingLimited` hanya `TooManyReplicas`), M-6 (§19.3.11 aturan mutu data), M-11 (K = C_SLO × SLO, semantik *bulkhead*), M-12 (label δ_min), N-2 (tingkat putusan), N-3 (disk OS *Managed*) diterapkan; M-1 (dasar praktik *bulkhead*, klaim bersyarat rasio, alasan P13), M-2 (H2p hanya *pod* Ready, *recording rule*), M-3 (D1-b′ mekanisme, model fluida eksploratori), M-7 (*request* DEC), M-8 (cek konstruk (e)), M-9 (klaster tidak dihentikan), M-10 (*pool* `deps`), N-1 (penundaan acak U(0, 15) s) diterapkan; m-1 sampai m-10 diterapkan (jangkar *scale* 0,5 × SLO, T̄_svc laju rendah tetap, SD c_D1, c_tolak di bawah *limit*, klaim efisiensi "selama jendela beban", daftar DaemonSet, cek sisa antar-*run*, waktu blok, ICH E9 terverifikasi); ilustrasi K di 19.3.3 dan urutan *shipping* di 19.3.5 diselaraskan dengan K = C_SLO × SLO | keputusan pemilik atas semua temuan tinjauan *red team* v0.5 |
+| 2026-10-19 | v0.6.1 | pemeriksaan ulang menyeluruh (*triple check*) atas semua keputusan tindak lanjut *red team*: sumber, kode, dan simulasi dicek ulang; fakta baru dicatat (disk OS K1 *Managed* Premium SSD dari label *node*, 19.3.8; batas daya kontras D2 Hipotesis 2, 19.3.7); teks usang diperbaiki (alasan *pool* k6, ringkasan langkah per *run* dan penundaan acak); lima penyempurnaan diterapkan: H2p hanya *pod* yang Ready sepanjang 60 s + asimetri *scale-down* dicatat (19.3.1, 19.3.5 g), pelaporan *run* ulang per konfigurasi + sensitivitas percobaan pertama (19.3.11), acuan pergeseran B2 = median B2 pilot dengan σ = max(SD K1, SD pilot) (19.3.11), aturan konvergensi K (19.3.3), `lscpu` per *run* (19.3.3, 19.3.8, 19.3.11) | permintaan pemilik: verifikasi ulang semua keputusan |
 
 ## 19.11 Tindak lanjut tinjauan *red team* atas v0.5 (2026-10-19)
 
@@ -1137,7 +1169,7 @@ validitas internal 5 setelah fase 2). Status per temuan:
 | M-6 aturan mutu data, pengulangan, penghentian, pergeseran B2 | **diterapkan v0.6**: tabel DQ1–DQ7, pengulangan, penghentian sesi, kovariat | 19.3.11 |
 | M-7 *request*/*limit* 250m/500m berlabel kontinuitas | **diterapkan v0.6**: DEC; klaim lewat rasio CPU(C)/*request*; sensitivitas di model | 19.3.8, 19.4.1 |
 | M-8 uji langkah (e) mengukur kontras tesis | **diterapkan v0.6**: (e) menjadi cek konstruk jeda metrik, tanpa estimasi selisih *scale-up* | 19.3.5 (e) |
-| M-9 Dasv5 heterogen antar-sesi | **diterapkan v0.6**: klaster tidak dihentikan selama *ladder* sampai kampanye, `lscpu` per sesi, aturan henti (19.3.11) | 19.3.3, 19.3.8, 19.3.11 |
+| M-9 Dasv5 heterogen antar-sesi | **diterapkan v0.6**: klaster tidak dihentikan selama *ladder* sampai kampanye, `lscpu` per *run*, aturan henti (19.3.11) | 19.3.3, 19.3.8, 19.3.11 |
 | M-10 `infra` dipakai bersama dependensi dan monitoring | **diterapkan v0.6**: *pool* `deps` ber-*taint* (1 × D4as_v5) untuk *auth-db* dan *carrier-mock* | 19.3.8 |
 | M-11 aturan K berbeda dengan Part 17; semantik *bulkhead* | **diterapkan v0.6**: K = C_SLO × SLO untuk kedua layanan (sama dengan Part 17 R25), semantik *bulkhead* ditulis, c_tolak pada K dan 1,5 × K di *ladder* | 19.3.3, 19.4.7 |
 | M-12 label δ_min | **diterapkan v0.6**: B-konv (turunan B-rumus), sensitivitas ½ × dan 2 × δ_min | 19.3.7 |

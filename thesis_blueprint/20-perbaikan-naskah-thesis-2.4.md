@@ -44,6 +44,8 @@
 | T22 | 4.6.2 | "waktu tunggu mendominasi latensi" tanpa angka | tambahkan hitungan: CPU *shipping* ±7 ms per permintaan (125m pada 17,9 req/s, Tabel H.3) vs penundaan *carrier* paling lambat 464–929 ms (ketiga *carrier* dipanggil paralel) | [E] |
 | T23 | 3.3.5 (ketentuan 12 Oktober) | dibingkai sebagai "ketentuan yang ditambahkan setelah seluruh hasil terlihat" | tulis sebagai fakta bertanggal: pemeriksaan manipulasi gagal, jadi Hipotesis 1 tidak dapat dinilai sebagaimana dirumuskan | [E] |
 | T24 | 3.3.5–3.3.7 | keputusan sebelum dan sesudah data tersebar di beberapa paragraf | satu tabel kronologi "keputusan sebelum vs sesudah data" | [E], [R] m-8 |
+| T25 | 2.1.x Tabel 2.1 ("Disk OS: *Ephemeral OS disk*") dan paragraf pertimbangan desain AKS ("tipe disk OS (*Ephemeral* untuk kinerja dan biaya)") | seri Dasv5 tidak mendukung *Ephemeral OS Disk* (Microsoft Learn *Dasv5 size series*: "Ephemeral OS Disk: Not Supported"), dan label *node* yang terekam di ekspor K1 menunjukkan disk OS *Managed* Premium SSD (`storageprofile="managed"`, `storagetier="Premium_LRS"`) | ganti menjadi disk OS *Managed* (Premium SSD), dengan sumber label *node*; hapus klaim *Ephemeral* | [F], dicek 2026-10-19 |
+| T26 | 2.1.x paragraf VM ("keluarga Dasv5 berbasis prosesor AMD EPYC generasi ketiga") | dokumentasi Dasv5 menyebut dua generasi: EPYC 7763v (Milan, generasi ketiga) dan EPYC 9004 (Genoa, generasi keempat); model CPU *node* K1 tidak tercatat | tulis kedua generasi dan bahwa model CPU *node* K1 tidak dicatat (batasan); Kampanye 2 mencatat `lscpu` | [F], dicek 2026-10-19 |
 
 ## 20.2 Resolusi *metrics-server* (temuan baru, 2026-10-18)
 
