@@ -1,4 +1,4 @@
-# Thesis Blueprint — Part 19: Eksperimen 2 "K1 diperbaiki" — Usulan v0.8
+# Thesis Blueprint — Part 19: Eksperimen 2 "K1 diperbaiki" — Usulan v0.8.2
 
 > Ditulis 2026-10-18 atas usulan pemilik: mengulang Kampanye 1 (K1) dengan perubahan sesedikit mungkin, sebagai
 > alternatif yang lebih ringan dari Kampanye 2-ringan (Part 17). **v0.1** menerapkan temuan tinjauan *red team* atas Part 17
@@ -19,11 +19,16 @@
 > disetujui pemilik 2026-10-19. **v0.8** (2026-10-20) menerapkan 20 keputusan pemilik (19.13): H1 dan H2 dihapus dari
 > kampanye (lima konfigurasi: B1, B2, H2p, H3, K1); Hipotesis 1 menjadi efek jenis sinyal per jenis layanan dan Hipotesis 2
 > dibaca per layanan; platform GKE dengan mesin N2D; rancangan *shipping* tanpa aturan D1 (W = 10 slot); *node* lebih kecil
-> (16 vCPU); pilot 1 blok per strata; b dari aturan berbasis data K1 yang ditetapkan setelah *ladder*. **Status: usulan
-> v0.8 — belum dibekukan, belum ada *run*, belum ada biaya.** Protokol eksperimen (`~/.claude/CLAUDE.md`) berlaku penuh;
+> (16 vCPU); pilot 1 blok per strata; b dari aturan berbasis data K1 yang ditetapkan setelah *ladder*. **v0.8.1**
+> (2026-10-20) mencatat inventaris sumber daya GCP, kuota, bawaan GKE yang diverifikasi, *image node*
+> `ubuntu_containerd`, serta perkiraan waktu nyala dan biaya dengan harga resmi (19.3.8). **v0.8.2** (2026-10-21)
+> menyesuaikan dengan batas anggaran tetap: VM *runner* e2-micro, tabel biaya dengan *free tier*, cek kuota setelah akun
+> dibuat (19.3.8), dan b_max dari kalender dan anggaran (19.3.7). **Status: usulan v0.8.2 — belum dibekukan, belum ada
+> *run*, belum ada biaya.** Protokol eksperimen (`~/.claude/CLAUDE.md`) berlaku penuh;
 > catatan gerbang di 19.1. Varian mana yang dipakai (Part 17 atau bagian ini) adalah keputusan pembimbing dan pemilik.
-> **Anggaran dan jendela kalender terbatas** (fakta pemilik, 2026-10-20): kampanye selesai sebelum akhir 2026, dan
-> *provisioning* memerlukan persetujuan lebih dulu. Ini menggantikan premis "anggaran bukan batasan desain" (2026-10-18).
+> **Anggaran dan jendela kalender terbatas** (fakta pemilik, 2026-10-20; diperbarui 2026-10-21): kampanye selesai sebelum
+> akhir 2026, dan biaya *cloud* dibatasi satu anggaran tetap (angkanya di catatan privat pemilik), sehingga b_max juga
+> dibatasi anggaran (19.3.7). Ini menggantikan premis "anggaran bukan batasan desain" (2026-10-18).
 >
 > **Label.** **B** = berbasis (sumber disebut); **B-konv** = konvensi bernama; **B-rumus** = aturan berbasis, angkanya
 > dari pengukuran; **BB** = belum berbasis (cara memperolehnya ditulis); **DEC** = keputusan pemilik/pembimbing. **[F]**
@@ -120,7 +125,7 @@ pekerjaan gerbang 3 tidak terpengaruh. Kriteria gerbang 3 dan cek terjadwal dipe
 | *Shipping* dibatasi slot | premis jenis layanan gagal (kedua layanan dibatasi CPU) | *bulkhead* (W slot) membatasi kapasitas C ≈ W / T_svc tanpa menaikkan CPU (pola *bulkhead*; batas konkurensi bawaan di pustaka umum: HikariCP `maximumPoolSize` 10 dan Resilience4j *Bulkhead* `maxConcurrentCalls` 25 [F, dokumentasi]); klaim bersyarat "kapasitas dibatasi slot" (19.4.1) | W = 10, cadangan W = 25 (B-konv; diubah 2026-10-20, v0.8); diterima bila cek (c) dan syarat informativitas lolos (19.3.5) |
 | Konfigurasi H1 dan H2 dihapus (v0.8) | di K1, CPU bawaan atau CPU lewat *metrics-server* vs laju mengubah beberapa variabel sekaligus | aturan satu variabel per kontras (Part 17 §17.23.5); fokus sinyal vs mekanisme; efek jalur ukur adalah sifat platform (19.3.9) | diputuskan pemilik 2026-10-20 (P26); menunggu konfirmasi pembimbing |
 | Konfigurasi H2p ditambahkan (pemilik, 2026-10-18) | efek metrik K1 adalah paket sinyal + jalur ukur (tinjauan K1 M-2) | CPU pada jalur yang sama dengan laju, sehingga H2p → H3 hanya berbeda jenis sinyal; tinjauan *red team* O2 (setuju masuk inti) | B (alasan); aturan *adapter* CPU diuji di kind (19.12.2) |
-| Platform GKE dengan N2D (v0.8) | Dasv5 punya dua generasi CPU sehingga klaster harus menyala terus; *add-on* terkelola AKS tidak dapat dikunci (tinjauan v0.6.1 m-7) | N2D hanya berjalan di AMD EPYC Milan [F, dokumentasi *CPU platforms* GCP, dicek 2026-10-20]; KEDA dan *stack* metrik dipasang sendiri dengan versi terkunci | diputuskan pemilik 2026-10-20 (P2), bergantung persetujuan anggaran |
+| Platform GKE dengan N2D (v0.8) | Dasv5 punya dua generasi CPU sehingga klaster harus menyala terus; *add-on* terkelola AKS tidak dapat dikunci (tinjauan v0.6.1 m-7) | N2D hanya berjalan di AMD EPYC Milan [F, dokumentasi *CPU platforms* GCP, dicek 2026-10-20]; KEDA dan *stack* metrik dipasang sendiri dengan versi terkunci | diputuskan pemilik 2026-10-20 (P2); v0.8.2: biaya di dalam batas anggaran (19.3.7, 19.3.8) |
 
 ## 19.3 Yang tetap harus ikut berubah walau "minimal"
 
@@ -633,8 +638,19 @@ tambahan per zona dan *jitter*, dikali `CARRIER_DELAY_SCALE` (`carrier_service.p
     0,037), daya pada b = 10 turun ke 0,21–0,51 dan b_perlu naik ke 19–49. Untuk bacaan *auth* (estimasi, SD selisih 0,033),
     setengah lebar interval 95% pada b = 10 kira-kira ±0,024, jadi bacaan "kompetitif" hanya mungkin bila δ_min sekitar
     0,024 atau lebih [H].
-  - **Biaya per tambahan b [H]:** 20 *run* ≈ ±7 jam mesin. Batas atas b berasal dari jendela kalender (P24: kampanye selesai
-    sebelum akhir 2026); bila b_perlu melebihi batas itu, efek terkecil yang terdeteksi pada b terpilih dibekukan di muka.
+  - **Biaya per tambahan b [H]:** 20 *run* ≈ ±7 jam *node* (±$5 pada ukuran dasar; 19.3.8).
+  - **Batas atas b (diubah v0.8.2, 2026-10-21) [B-rumus; anggaran = fakta pemilik, angkanya di catatan privat
+    pemilik].** b_max = min(b_kalender, b_anggaran). b_kalender: kampanye selesai sebelum akhir 2026 dan sebelum batas
+    waktu anggaran (P24). b_anggaran = ⌊(0,9 × A_sisa − F_sisa − c × h_pilot) / (7 × c)⌋, dihitung setelah *ladder* dari
+    laporan tagihan nyata, dengan A_sisa = sisa anggaran; 0,9 = cadangan 10% untuk *run* ulang dan galat perkiraan [DEC];
+    F_sisa = biaya tetap sampai akhir kampanye (IP dan disk VM, PVC, ditambah biaya klaster bila *free tier* tidak
+    berlaku); c = biaya per jam *node* pada ukuran final termasuk disk *boot* dan IP (±$0,75 pada ukuran dasar, ±$1,26 bila
+    ketiga aturan naik ukuran terpakai) [H, harga 19.3.8]; h_pilot = jam pilot (±10–20). Dengan anggaran saat ini dan
+    *free tier* berlaku, b_anggaran ≥ 22 (b_perlu terbesar di tabel daya) untuk ukuran dasar maupun naik ukuran [H,
+    hitungan 2026-10-21 di catatan privat].
+  - **Aturan b (v0.8.2):** b = min(max(10, b_perlu), b_max). Bila b_perlu > b_max, efek terkecil yang terdeteksi pada b
+    terpilih dibekukan di muka. Bila b_max < 10: deviasi bertanggal sebelum pilot; uji eksak satu sisi 0,025 masih dapat
+    diputuskan dengan n ≥ 6, tetapi cadangan untuk pasangan yang gagal DQ menyusut.
   - **Alternatif yang ditolak:** b dari σ pilot 4 blok (v0.7; lebih mahal, dan σ dengan ν = 3 sangat tidak pasti); b = 10
     tetap tanpa melihat r (daya < 0,8 bila r < ±3,5); b dari "pembenaran sumber daya" saja (sumber daya tidak membatasi
     b di bawah ±20).
@@ -723,8 +739,10 @@ tambahan per zona dan *jitter*, dikali `CARRIER_DELAY_SCALE` (`carrier_service.p
     n2d-standard-4 sebelum pembekuan. CPU *node* `load` dan rasio *throttling* k6 dicatat deskriptif, bukan kriteria: di K1 rasio
     *throttling* k6 mencapai 0,153 pada CPU k6 maksimum 0,135 core tanpa iterasi hilang [F/H, tinjauan v0.6.1 Lampiran A9],
     jadi rasio itu bukan ukuran kejenuhan generator.
-  - **Disk *boot* (diubah v0.8):** GKE memakai *persistent disk* untuk *boot node* (jenis bawaan [BD, dicek di gerbang
-    1]); jenis dan ukurannya dicatat per *run* bersama versi. Catatan K1 tetap berlaku untuk naskah: disk OS K1 sebenarnya
+  - **Disk *boot* (diubah v0.8; dicek v0.8.1):** GKE memakai *persistent disk* untuk *boot node*; bawaannya pd-balanced
+    (GKE ≥ 1.24) berukuran 100 GB [F, dokumentasi GKE *custom boot disks* dan referensi `gcloud container clusters create
+    --disk-size`, dicek 2026-10-20]. Bawaan ini dipakai [B: bawaan platform]; jenis dan ukurannya dicatat per *run* bersama
+    versi. Catatan K1 tetap berlaku untuk naskah: disk OS K1 sebenarnya
     *Managed* Premium SSD (label *node* `kubernetes_azure_com_storageprofile="managed"`, `storagetier="Premium_LRS"` di
     ekspor K1, mis. `experiment-results-openloop/auth-service/b1/gradual/rep1/prom_cpu_usage.json`) [F, dicek 2026-10-19],
     jadi naskah Thesis-2.3 yang menyebut *Ephemeral OS disk* perlu dikoreksi (Part 20 T25).
@@ -736,6 +754,85 @@ tambahan per zona dan *jitter*, dikali `CARRIER_DELAY_SCALE` (`carrier_service.p
   berlaku untuk N2D. Klaster tetap dibuat sekali (*control plane* zonal tetap ada), jadi versi dan konfigurasi tidak
   berubah. `lscpu` (model CPU, *thread* per inti) tetap dicatat setiap *node* **per *run***; bila berbeda dari *run ladder*,
   berlaku aturan henti sesi di 19.3.11.
+- **Inventaris sumber daya GCP (v0.8.1, dicatat atas permintaan pemilik 2026-10-20; diperbarui v0.8.2, 2026-10-21).**
+  Inilah daftar yang akan di-*provision*. Semua butir berada di luar jalur yang diukur (k6, layanan uji, dependensi, dan jalur metrik
+  sudah diatur di tabel *pool*), jadi tidak mengubah kontras [P].
+
+| Sumber daya | Jumlah dan ukuran | Dasar |
+|---|---|---|
+| Klaster GKE Standard zonal | 1, di satu zona us-central1 yang menyediakan N2D | P2, P27 |
+| *Node pool* | `infra` (*pool* bawaan) 1 × n2d-standard-4; `sut` 1 × n2d-standard-8; `load` 1 × n2d-standard-2; `deps` 1 × n2d-standard-2; semua dengan *minimum CPU platform* AMD Milan | tabel *pool* di atas; aturan naik ukuran di 19.3.1 dan 19.3.3 |
+| *Persistent disk* | disk *boot* 4 *node* (pd-balanced 100 GB, bawaan); 1 PVC 10 GiB untuk Prometheus | disk *boot*: bawaan platform [F]; PVC: K1 memakai 10Gi dengan retensi 2 hari / 8 GB (`infrastructure/kubernetes/monitoring/prometheus.yaml`) [B-konv] |
+| Artifact Registry | 1 repositori Docker di us-central1 untuk tiga *image* sendiri (*auth-service*, *shipping-rate-service*, *carrier-mock-service*), dirujuk dengan *digest* | di K1 ketiganya ada di ACR (`ecommerce.azurecr.io/…:latest`) [F]; *image* publik (k6, postgres, Prometheus, Grafana) tetap ditarik dari registri publiknya |
+| VM *runner* | 1 × e2-micro (2 vCPU *shared-core*, 1 GB), Ubuntu LTS, disk pd-standard 20 GB, zona yang sama (v0.8.2; v0.8.1: e2-small dengan disk pd-balanced) | peran dan ukuran memori sama dengan `ecommerce-vm` K1 (Standard_B2ats_v2, ±1 GB RAM): menjalankan kampanye tanpa ditunggui, mengarsipkan hasil, lalu menurunkan *node pool* (`scripts/run-openloop-vm.sh`) [B-konv]; e2-micro termasuk *free tier* Compute Engine (satu instans e2-micro per bulan di us-central1) dan 30 GB-bulan pertama disk pd-standard gratis [F, halaman *free cloud features* dan harga disk, dicek 2026-10-20 dan 2026-10-21]; naik ke e2-small (2 GB) bila memori kurang pada uji kering gerbang 3 [DEC]; disk [B-rumus]: seluruh hasil K1 ±1 GB (`experiment-results-openloop`), kampanye K2 ≤ ±500 *run* ditambah arsip `.tgz`. *Runner* di laptop ditolak: kampanye berjalan berhari-hari, dan gangguan jaringan laptop memutus *run* [P] |
+
+  - **Kuota [H, dari ukuran di atas; aturan kuota F, dokumentasi Compute Engine *resource usage*, dicek 2026-10-20]:**
+    `N2D_CPUS` (us-central1) 16, maksimum 28 bila semua aturan naik ukuran terpakai (`sut` 16 + `infra` 4 + `load` 4 +
+    `deps` 4); N2D memakai kuota sendiri, sedangkan `CPUS` regional hanya untuk E2 dan N1, jadi `CPUS` cukup 2 untuk VM;
+    `CPUS_ALL_REGIONS` 30 bila *project* memiliki kuota global ini (tidak semua *project* memilikinya);
+    `SSD_TOTAL_GB` 410 (4 × 100 + 10; pd-balanced termasuk kuota SSD), 510 bila satu *node* diganti ukurannya dengan
+    *surge*; `DISKS_TOTAL_GB` 20 untuk disk VM pd-standard (v0.8.2); `IN_USE_ADDRESSES` 5 (IP eksternal *ephemeral*
+    termasuk), 6 saat penggantian *node*. Alternatif bila kuota SSD sempit: disk *boot* 50 GB per *node* (210 GB, 260
+    dengan *surge*).
+  - **Cek kuota segera setelah akun dan *project* dibuat (v0.8.2, 2026-10-21; cek terjadwal 20 di 19.12.2).** Halaman
+    Quotas dibaca sebelum klaster apa pun dibuat. Kriteria lolos untuk ukuran dasar: `N2D_CPUS` us-central1 ≥ 16,
+    `CPUS_ALL_REGIONS` ≥ 18 bila ada, `IN_USE_ADDRESSES` ≥ 5, `SSD_TOTAL_GB` ≥ 410 (≥ 210 dengan disk *boot* 50 GB).
+    Bila gagal dan kuota tidak dapat dinaikkan pada jenis akun yang dipakai, jenis akun diubah supaya permintaan kenaikan
+    kuota dapat diajukan (rincian akun di catatan privat pemilik); bila permintaan ditolak, P27 dibuka ulang sebagai deviasi
+    bertanggal sebelum *ladder*. Kuota untuk aturan naik ukuran (`N2D_CPUS` 28) dicek lagi saat aturan itu terpakai. Dasar:
+    dokumentasi kuota Compute Engine menyebut kuota tidak sama untuk semua *project* dan tidak memberi angka bawaan [F,
+    dicek 2026-10-21], jadi angkanya hanya dapat dibaca di *project* itu sendiri.
+  - **Bawaan GKE yang diubah saat pembuatan klaster [F, referensi `gcloud container clusters create`, dicek
+    2026-10-20]:** `--num-nodes` bawaan 3 → 1 untuk *pool* bawaan (`infra`); *Managed Service for Prometheus* menyala
+    otomatis di versi ≥ 1.27 → `--no-enable-managed-prometheus`; *auto-upgrade node* menyala secara bawaan →
+    `--no-enable-autoupgrade` dengan `--release-channel=None`; `--logging=SYSTEM` dan `--monitoring=SYSTEM` (halaman itu
+    tidak menyebut bawaannya, jadi nilainya diisi eksplisit); `--min-cpu-platform` dan `--image-type` diisi per *pool*.
+    Skrip pembuatan klaster ditulis dan diuji kering di gerbang 3.
+  - **Tidak diperlukan:** *bucket* Cloud Storage (data disimpan di disk VM, lalu diunduh); *load balancer* (tidak ada
+    Service bertipe LoadBalancer atau NodePort di *manifest* K1 [F]; Prometheus dan Grafana dibuka lewat *port-forward*);
+    IP statis; Cloud NAT selama *node* memiliki IP publik (bawaan; `--enable-private-nodes` meniadakannya [F]).
+  - **Syarat yang dicek sebelum *ladder*:** us-central1 dan IP publik pada *node* dan VM diizinkan untuk *project*. Bila IP
+    publik tidak diizinkan: ditambah 1 Cloud Router dan 1 Cloud NAT supaya *node* dapat menarik *image* publik. Bila
+    region tidak tersedia: P27 dibuka ulang, termasuk ketersediaan N2D Milan di region pengganti.
+  - **Sistem operasi (diputuskan pemilik 2026-10-20, v0.8.1) [B-konv: kontinuitas K1].** Semua komponen memakai Linux:
+    *node* GKE, kontainer (semua *image* Linux), dan VM *runner*. *Image node* = `ubuntu_containerd` untuk keempat *pool*,
+    karena *node* K1 di AKS juga Ubuntu (label `kubernetes_azure_com_os_sku="Ubuntu"` dan `kubernetes_io_os="linux"` di
+    ekspor K1) [F]. Bawaan GKE tidak dapat dijadikan dasar karena `--image-type` tanpa nilai "defaults to
+    server-specified" [F, referensi gcloud]; nilainya diisi eksplisit, dan *image* serta versi *kernel* dicatat per *run*
+    bersama versi lain. Alternatif: `cos_containerd`, yang disebut OS *node* yang disarankan untuk Autopilot [F, dokumentasi
+    GKE *node images*]. Sensitivitas kecil: semua kontras berada di dalam blok dengan OS yang sama, jadi pilihan ini hanya
+    menyentuh perbandingan deskriptif dengan K1 [P]. `lscpu` tetap diambil dari *pod* di setiap *node*, karena
+    `/proc/cpuinfo` menampilkan CPU *host*.
+- **Perkiraan waktu nyala dan biaya (v0.8.1, dicatat atas permintaan pemilik 2026-10-20; tabel biaya diperbarui v0.8.2,
+  2026-10-21) [H; jam persiapan dan *ladder* BB].** Harga *on-demand* us-central1 diambil dari halaman harga resmi GCP
+  pada 2026-10-20 [F]. Perkiraan ini dipakai untuk aturan b_max (19.3.7) dan untuk daftar *run* serta biaya di gerbang 7;
+  tidak memengaruhi hasil.
+
+| Tahap | Jam *node* aktif | Dasar |
+|---|---|---|
+| Persiapan klaster dan cek gerbang 1 | ±5 | [P, BB: diukur pada pembuatan klaster pertama] |
+| *Ladder* (dua sesi) | ±10–16 | [H] satu *ladder* K1 ±20–24 menit (`experiment-results-openloop/calibration`); jumlah langkah BB sampai skrip *ladder* ditulis di gerbang 3 |
+| Pilot | ±10 (±20 bila diulang) | 19.3.6: 20 *run* + ±6 *run* cek *scale-down* |
+| Kampanye | ±70 (b = 10) sampai ±154 (b = 22) | 19.3.7: 20 *run* per b ≈ ±7 jam |
+| **Total** | **±95–200** | rentang kalender ±1–1,5 bulan [P]; *node pool* diturunkan ke 0 di antara tahap |
+
+| Komponen | Harga resmi us-central1 | Rendah (95 jam, 1 bulan) | Tinggi (200 jam, 1,5 bulan) |
+|---|---|---|---|
+| *Node* 16 vCPU: n2d-standard-8 $0,337968 + n2d-standard-4 $0,168984 + 2 × n2d-standard-2 $0,084492 | $0,675936/jam | $64 | $135 |
+| Disk *boot* 4 × 100 GB (ada hanya selama *node* ada) | pd-balanced $0,000136986/GiB/jam (±$0,10/GiB/bulan) | $5 | $11 |
+| IP publik *node* | $0,005/jam per IP (contoh hitung di halaman harga jaringan) | $2 | $4 |
+| VM *runner* e2-micro | $0,008376/jam; *free tier*: satu e2-micro per *billing account* per bulan di us-central1 | $0 | $0 |
+| IP VM dan disk VM pd-standard 20 GB (VM nyala terus) | $0,005/jam; 30 GB-bulan pertama pd-standard gratis | $4 | $6 |
+| PVC Prometheus 10 GiB | ±$0,10/GiB/bulan | $1 | $2 |
+| Biaya manajemen klaster GKE | $0,10/jam selama klaster ada; *free tier*: satu klaster zonal per *billing account* per bulan | $0 | $0 |
+| Artifact Registry, *logging* sistem, transfer data | — | < $2 | < $2 |
+| **Total** | | **±$80** | **±$160** |
+
+  - **Yang mengubah angka (v0.8.2):** bila *free tier* tidak berlaku untuk *billing account* yang dipakai, ditambah biaya
+    klaster ($73–110) dan VM ($6–9), sehingga total ±$160–280; bila ketiga aturan naik ukuran terpakai (`sut` ke
+    n2d-standard-16, `load` dan `deps` ke n2d-standard-4), *node* menjadi $1,182888/jam dan total sampai ±$260 (±$380 tanpa
+    *free tier*). Penentu terbesar adalah b: setiap tambahan b menambah ±7 jam *node* (±$5 pada ukuran dasar). Tabel
+    v0.8.1 (VM e2-small, tanpa *free tier*: ±$150–290) diganti.
 - **Isi klaster (pemilik 2026-10-19):** hanya layanan uji dan dependensinya, sesuai *manifest*: *auth-service* →
   *auth-db* (PostgreSQL, `DATABASE_URL`); *shipping-rate-service* → *carrier-mock* (`CARRIER_SERVICE_URL`; tetap 5 replika
   dengan *limit* 500m seperti K1, *request* 100m sejak v0.8, dan dicek tidak menjadi hambatan, Part 17 R22/CS-R11). k6 menembak layanan langsung lewat alamat
@@ -748,8 +845,8 @@ tambahan per zona dan *jitter*, dikali `CARRIER_DELAY_SCALE` (`carrier_service.p
     *prometheus-adapter*, KSM, dan *node-exporter* dipasang sendiri lewat Helm dengan versi terkunci, jadi masalah *add-on*
     terkelola AKS tidak berlaku lagi. Klaster memakai versi Kubernetes statis tanpa *release channel* dan tanpa
     *auto-upgrade node*; *Managed Service for Prometheus* dimatikan, dan *logging/monitoring* GKE diturunkan ke komponen
-    sistem saja, supaya agen GKE tidak membebani `sut` [BD: opsi persisnya dicek di gerbang 1]. *Metrics-server* bawaan GKE
-    tetap ada, tetapi tidak dipakai konfigurasi uji mana pun. Bila versi komponen berubah di tengah kampanye, blok
+    sistem saja, supaya agen GKE tidak membebani `sut` (opsi persisnya dicek v0.8.1, lihat inventaris di atas).
+    *Metrics-server* bawaan GKE tetap ada, tetapi tidak dipakai konfigurasi uji mana pun. Bila versi komponen berubah di tengah kampanye, blok
     berikutnya dimulai sebagai sesi baru dan perubahan dicatat sebagai deviasi bertanggal.
   - **Toleransi HPA per objek (v0.7; tinjauan v0.6.1 m-6):** versi Kubernetes baru membuka bidang `tolerance` per HPA di
     `spec.behavior` (fitur `HPAConfigurableTolerance`; status fitur per versi [BD], dicek di gerbang 1). Desain memakai
@@ -1167,7 +1264,7 @@ diuji adalah besarnya, terutama besar efek jenis sinyal yang tidak dapat ditebak
 | # | Keputusan | Pilihan | Usulan saat ini | Pemutus |
 |---|---|---|---|---|
 | P1 | Varian | Part 17 / Part 19 | **usulan pemilik 2026-10-19: Part 19** | pembimbing (konfirmasi) |
-| P2 | Platform | AKS (kontinuitas K1) / GKE / EKS — 19.3.9 | **diputuskan pemilik 2026-10-20 (v0.8): GKE Standard zonal dengan mesin N2D (AMD Milan), bergantung persetujuan anggaran** (19.3.8); AKS ditolak karena Dasv5 memakai dua generasi CPU dan *add-on* terkelolanya tidak dapat dikunci; EKS ditolak karena anggaran dan kuota akun | — |
+| P2 | Platform | AKS (kontinuitas K1) / GKE / EKS — 19.3.9 | **diputuskan pemilik 2026-10-20 (v0.8): GKE Standard zonal dengan mesin N2D (AMD Milan)** (19.3.8); v0.8.2: biaya di dalam batas anggaran tetap, kuota dicek setelah akun dibuat; AKS ditolak karena Dasv5 memakai dua generasi CPU dan *add-on* terkelolanya tidak dapat dikunci; EKS ditolak karena anggaran dan kuota akun | — |
 | P3 | Penghitung laju | dilayani / kedatangan | **diputuskan 2026-10-19 (pemilik): kedatangan** (19.3.4) | — |
 | P4 | Fraksi pemicu f | 0,8 (angka bawaan HPA pada kapasitas SLO) / rentang turunan / lain | **diputuskan 2026-10-18 (pemilik): 0,8**, B-konv (19.3.1) | — |
 | P5 | Puncak r | min(0,8 × λ_runtuh / C_SLO) antar-layanan / r tetap / r per layanan / angka K1 | **diputuskan 2026-10-18 (pemilik): aturan min(0,8 × λ_runtuh / C_SLO)**, B-rumus; angka dari *ladder* baru (19.3.3) | — |
@@ -1188,21 +1285,21 @@ diuji adalah besarnya, terutama besar efek jenis sinyal yang tidak dapat ditebak
 | P20 | Bentuk dan durasi *run*; ekor | bentuk K1, ekor 180 s / *ramp* aman / ekor ≥ 450 s | **diputuskan 2026-10-18 (pemilik): bentuk K1 untuk kedua pola, ekor 180 s, replika-detik hanya di jendela beban, *scale-down* dicek di pilot** (19.3.10) | — |
 | P21 | *Pool* untuk k6 | berbagi `infra` dengan *monitoring*, KEDA, *adapter*, dan dependensi (Part 17 R10) / *pool* `load` sendiri | **diputuskan 2026-10-19 (pemilik): `load` sendiri (*taint*)**; v0.8: n2d-standard-2, gagal DQ2 di pilot → n2d-standard-4; penggabungan k6 ke `infra` ditolak lagi (19.3.8) | — |
 | P22 | Aturan cadangan berbasis daya | tidak ada / komponen *intersection-union* dengan daya < 0,8 menjadi estimasi | **dihapus 2026-10-19 (pemilik; *red team* v0.5 K-2): semua komponen tetap uji; tidak lolos = "tidak terbukti" atau "tidak dapat disimpulkan" (19.4.8)**; v0.7: bagian *auth* Hipotesis 1 menjadi estimasi karena alasan keabsahan, bukan daya (19.4.1) | — |
-| P23 | Jumlah blok kampanye b | b tetap / dari σ pilot / dari daya dengan data K1 | **diputuskan pemilik 2026-10-20 (v0.8): b = max(10, b_perlu pada δ_min(r) dengan SD selisih K1 0,024), ditetapkan setelah *ladder* dan sebelum pilot** (19.3.7); aturan v0.7 (b dari σ pilot 4 blok) dicabut | — |
-| P24 | Jendela kalender kampanye | — | **fakta pemilik 2026-10-20: kampanye selesai sebelum akhir 2026, dan *provisioning* perlu persetujuan lebih dulu** (19.3.7) | — |
+| P23 | Jumlah blok kampanye b | b tetap / dari σ pilot / dari daya dengan data K1 | **diputuskan pemilik 2026-10-20 (v0.8): b = max(10, b_perlu pada δ_min(r) dengan SD selisih K1 0,024), ditetapkan setelah *ladder* dan sebelum pilot** (19.3.7); aturan v0.7 (b dari σ pilot 4 blok) dicabut; v0.8.2: b = min(max(10, b_perlu), b_max), b_max dari kalender dan anggaran (19.3.7) | — |
+| P24 | Jendela kalender dan anggaran kampanye | — | **fakta pemilik 2026-10-20, diperbarui 2026-10-21: kampanye selesai sebelum akhir 2026; biaya *cloud* dibatasi satu anggaran tetap (angka di catatan privat pemilik)** (19.3.7); syarat "*provisioning* perlu persetujuan lebih dulu" (2026-10-20) tidak berlaku lagi | — |
 | P25 | Ukuran pilot | 1 / 2 / 4 blok per strata | **diputuskan pemilik 2026-10-20 (v0.8): 1 blok per strata (20 *run*)** (19.3.6); 4 blok (v0.7) dicabut karena b tidak lagi dari σ pilot | — |
 | P26 | Konfigurasi kampanye | 7 (B1, B2, H1, H2, H2p, H3, K1) / 5 (tanpa H1 dan H2) / 4 (B1 hanya di pilot) | **diputuskan pemilik 2026-10-20 (v0.8): 5 konfigurasi, yaitu B1, B2, H2p, H3, K1** (19.0, 19.13) | pembimbing (konfirmasi) |
-| P27 | Mesin, ukuran *node*, dan region | — | **diputuskan pemilik 2026-10-20 (v0.8): N2D (AMD Milan); `sut` n2d-standard-8, `load` n2d-standard-2, `deps` n2d-standard-2, `infra` 1 × n2d-standard-4 (total 16 vCPU); us-central1; aturan naik ukuran di 19.3.1 dan 19.3.3** (19.3.8) | — |
+| P27 | Mesin, ukuran *node*, dan region | — | **diputuskan pemilik 2026-10-20 (v0.8): N2D (AMD Milan); `sut` n2d-standard-8, `load` n2d-standard-2, `deps` n2d-standard-2, `infra` 1 × n2d-standard-4 (total 16 vCPU); us-central1; aturan naik ukuran di 19.3.1 dan 19.3.3** (19.3.8); v0.8.1: VM *runner* seperti K1 (v0.8.2: e2-micro), *image node* `ubuntu_containerd`, inventaris sumber daya dan kuota di 19.3.8 | — |
 
 ## 19.6 Langkah berikutnya
 
-1. Konfirmasi pembimbing atas usulan pemilik P1, P9, P10, P12, P13, P14, P17, P18, dan P26; persetujuan anggaran untuk P2
-   (GKE).
+1. Konfirmasi pembimbing atas usulan pemilik P1, P9, P10, P12, P13, P14, P17, P18, dan P26.
 2. Gerbang 3 di kind (kriteria 19.12.3): *pipeline*, ekspor, analisis ujung ke ujung, cek kind 19.12.2 (penyaring
    *handler*, *recording rule*, cek (e′) dan (g), aturan *adapter* CPU untuk H2p), skrip cek ukuran uji dan cakupan (19.4.8),
    dan penyesuaian *manifest* untuk GKE (Artifact Registry, label *pool*, KEDA lewat Helm). Tidak ada tinjauan *red team*
    sebelum gerbang 6.
-3. *Ladder* di GKE, dengan persetujuan biaya bertanggal (19.3.3): dua sesi, langkah N *pod* dan kesetaraan pemicu (dengan
+3. Akun dan *project* GCP dibuat setelah gerbang 3 lolos, lalu cek kuota (19.3.8, cek 20). *Ladder* di GKE, dengan
+   persetujuan biaya bertanggal (19.3.3): dua sesi, langkah N *pod* dan kesetaraan pemicu (dengan
    aturan ukuran `sut`), kelebihan beban, penetapan W *shipping* (19.3.5), syarat informativitas, kesegaran jalur CPU bawaan
    GKE, dan ukuran `deps`. Catat keputusan W dan r dengan tanggal, lalu tetapkan b (19.3.7).
 4. Register parameter dan aturan pemilihan (gerbang 2). Butir yang tidak berubah boleh berdasar kontinuitas K1
@@ -1306,6 +1403,20 @@ diuji adalah besarnya, terutama besar efek jenis sinyal yang tidak dapat ditebak
   kalkulator pihak ketiga [H, belum dicek di halaman resmi GCP]; data K1 `prom_carrier_cpu.json` (CPU *carrier-mock*, 30
   *run shipping spike*) dan `analysis/cache` (SD selisih berpasangan dan bentuk sebaran untuk cek ukuran uji, 19.4.8);
   Cohen (1988) untuk daya 0,8; Schenker & Gentleman (2001) untuk bacaan interval.
+- **Ditambahkan v0.8.1 (dicek 2026-10-20):** dokumentasi Compute Engine *resource usage* (E2 dan N1 memakai kuota `CPUS`,
+  N2D memakai kuota sendiri; kuota global *CPUs (All Regions)* hanya di sebagian *project*; pd-balanced termasuk kuota SSD;
+  IP eksternal *ephemeral* termasuk kuota IP); GKE *custom boot disks* (pd-balanced bawaan sejak 1.24); referensi `gcloud
+  container clusters create` (`--disk-size` bawaan 100GB, `--num-nodes` bawaan 3, *Managed Service for Prometheus* menyala
+  di ≥ 1.27, `--release-channel=None`, `--enable-autoupgrade` menyala secara bawaan, `--enable-private-nodes`,
+  `--image-type` "defaults to server-specified"); GKE *node images* (`cos_containerd`, `ubuntu_containerd`,
+  `windows_ltsc_containerd`); berkas K1 `infrastructure/kubernetes/monitoring/prometheus.yaml`,
+  `scripts/run-openloop-vm.sh`, dan label *node* di ekspor K1; halaman harga resmi GCP untuk us-central1 (*General-purpose
+  VM pricing*: N2D dan E2; *Disk and image pricing*: pd-balanced; *Network pricing*: IP eksternal), yang menggantikan
+  harga N2D pihak ketiga dari v0.8.
+- **Ditambahkan v0.8.2 (dicek 2026-10-21):** halaman *Free cloud features* (*free tier* GKE: satu klaster Autopilot atau
+  Standard zonal per bulan, hanya biaya klaster; satu e2-micro per bulan di us-west1, us-central1, us-east1; batas dihitung
+  per *billing account*); halaman harga disk (30 GB-bulan pertama pd-standard gratis per akun); dokumentasi kuota Compute
+  Engine (kuota tidak sama untuk semua *project*, tanpa angka bawaan).
 
 ## 19.10 Catatan perubahan
 
@@ -1321,6 +1432,8 @@ diuji adalah besarnya, terutama besar efek jenis sinyal yang tidak dapat ditebak
 | 2026-10-19 | v0.6.1 | pemeriksaan ulang menyeluruh (*triple check*) atas semua keputusan tindak lanjut *red team*: sumber, kode, dan simulasi dicek ulang; fakta baru dicatat (disk OS K1 *Managed* Premium SSD dari label *node*, 19.3.8; batas daya kontras D2 Hipotesis 2, 19.3.7); teks usang diperbaiki (alasan *pool* k6, ringkasan langkah per *run* dan penundaan acak); lima penyempurnaan diterapkan: H2p hanya *pod* yang Ready sepanjang 60 s + asimetri *scale-down* dicatat (19.3.1, 19.3.5 g), pelaporan *run* ulang per konfigurasi + sensitivitas percobaan pertama (19.3.11), acuan pergeseran B2 = median B2 pilot dengan σ = max(SD K1, SD pilot) (19.3.11), aturan konvergensi K (19.3.3), `lscpu` per *run* (19.3.3, 19.3.8, 19.3.11) | permintaan pemilik: verifikasi ulang semua keputusan |
 | 2026-10-19 | v0.7 | tindak lanjut tinjauan independen v0.6.1 dengan menyederhanakan (19.12): C-1 (D2 dihapus; uji konfirmatori hanya kontras dua konfigurasi; Hipotesis 2 = uji S > 0 + bacaan perbandingan; bagian *auth* Hipotesis 1 = estimasi; klaim randomisasi dibatasi; cek ukuran uji/cakupan dengan cadangan uji tanda); C-2 (b dari simulasi daya di gerbang 4, pilot 4 blok, b_max fakta pemilik P24, tingkat "tidak terbukti"); mayor M-1–M-8 dan minor m-1–m-13 dipilah menjadi aturan sekarang atau cek terjadwal (19.12.1–19.12.2); kriteria keluar ke gerbang 3 dibekukan (19.12.3); P8, P12, P15, P16, P18, P22, P23 diperbarui, P24–P25 ditambahkan | keputusan pemilik 2026-10-19: keluar dari putaran perencanaan; tidak ada *red team* sampai gerbang 6; sembilan keputusan baru (19.12.4) disetujui pemilik 2026-10-19 |
 | 2026-10-20 | v0.8 | 20 keputusan pemilik diterapkan (19.13): H1 dan H2 dihapus, lima konfigurasi B1, B2, H2p, H3, K1 (P26); Hipotesis 1 = efek jenis sinyal per jenis layanan dengan satu uji konfirmatori S *shipping* > 0 pada *spike* dan bacaan *auth* (P13, P14); Hipotesis 2 = bacaan S vs \|E\| per layanan, "mesin" = mekanisme integrasi metrik, dekomposisi dihapus (P18); hipotesis kalibrasi dihapus (P10); rancangan *shipping* tanpa aturan D1: W = 10 (HikariCP), cadangan W = 25 (Resilience4j), diterima lewat cek (c), syarat informativitas, dan kriteria K (P12; 19.3.5); platform GKE zonal, N2D dengan *minimum CPU platform* AMD Milan, us-central1, *node pool* boleh diturunkan ke 0 di antara tahap (P2, P27; 19.3.8); *node* 16 vCPU (`sut` n2d-standard-8 dengan aturan naik ke 16, `deps` n2d-standard-2 dengan *request carrier-mock* 100m, `infra` 1 *node*); b = max(10, b_perlu) dari SD selisih K1 setelah *ladder* (P23; 19.3.7); pilot 1 blok per strata (P25; 19.3.6); cek ukuran uji dan cakupan dijalankan dengan bentuk sebaran K1 → Wilcoxon untuk uji konfirmatori, uji tanda untuk uji sekunder *gradual* (19.4.8); satu keluarga uji tanpa Holm; model fluida tidak wajib; premis anggaran diganti "anggaran dan kalender terbatas" (P24); acuan pergeseran B2 berjalan (19.3.11); cek terjadwal dan kriteria gerbang 3 diperbarui (19.12.2–19.12.3). Kesalahan desain yang dicatat: usulan v0.6–v0.7 "CPU = H1 saja" untuk Hipotesis 1 mengubah 3–4 variabel sekaligus, mengulang kesalahan K1 (ditemukan pemilik 2026-10-20) | permintaan pemilik 2026-10-20: setiap keputusan dibahas dulu, lalu "terapkan semua rekomendasi" |
+| 2026-10-20 | v0.8.1 | inventaris sumber daya GCP dan kuota (19.3.8): klaster, empat *node pool*, disk *boot* bawaan dan PVC Prometheus 10 GiB, Artifact Registry, VM *runner* e2-small seperti `ecommerce-vm` K1; bawaan GKE yang harus diubah saat pembuatan klaster diverifikasi di dokumentasi (jumlah *node* bawaan, *Managed Service for Prometheus*, *auto-upgrade*, *release channel*, *logging/monitoring*); *bucket*, *load balancer*, IP statis, dan Cloud NAT tidak diperlukan (Cloud NAT bersyarat); *image node* `ubuntu_containerd` (P27); perkiraan waktu nyala (±95–200 jam *node*) dan biaya (±US$150–290, paling buruk ±US$390) dengan harga resmi us-central1 | permintaan pemilik 2026-10-20 |
+| 2026-10-21 | v0.8.2 | penyesuaian ke batas anggaran tetap (fakta pemilik 2026-10-21; angka di catatan privat): VM *runner* e2-micro dengan disk pd-standard (*free tier*; memori sama dengan VM *runner* K1); tabel biaya dengan *free tier* GKE dan e2-micro (±US$80–160, paling buruk ±US$260); cek kuota setelah akun dibuat (19.3.8, cek 20); b = min(max(10, b_perlu), b_max) dengan b_max dari kalender dan anggaran (19.3.7, P23, P24); syarat persetujuan *provisioning* dihapus (P2, P24, 19.6) | permintaan pemilik 2026-10-21 |
 
 ## 19.11 Tindak lanjut tinjauan *red team* atas v0.5 (2026-10-19)
 
@@ -1395,10 +1508,11 @@ H2), M-4 (aturan D1 dihapus), dan m-7 (komponen GKE dipasang sendiri). Tabel di 
 | 13 | Ukuran uji pada H0 lemah | dijalankan 2026-10-20 dengan bentuk sebaran K1 (19.4.8); dikonfirmasi kasar dengan pilot | ≤ 0,03 per arah | sudah diputuskan: Wilcoxon untuk uji konfirmatori, uji tanda untuk uji sekunder *gradual*; diubah sebelum kampanye hanya bila bentuk sebaran pilot jauh berbeda (dicatat bertanggal) |
 | 14 | Cakupan interval HL 95% | sama dengan cek 13 | ≥ 0,93 | interval statistik urutan (tidak diperlukan: semua proksi ≥ 0,946) |
 | 15 | Bacaan palsu "sinyal > mekanisme" | uji coba analisis gerbang 4 | dilaporkan (bukan kriteria) | — |
-| 16 | b | setelah *ladder*, sebelum pilot | b = max(10, b_perlu(δ_min(r), SD 0,024)) (19.3.7) | bila b_perlu melebihi jendela kalender, efek terkecil yang terdeteksi pada b terpilih dibekukan di muka |
+| 16 | b | setelah *ladder*, sebelum pilot | b = min(max(10, b_perlu(δ_min(r), SD 0,024)), b_max), b_max dari kalender dan anggaran (19.3.7; v0.8.2) | bila b_perlu melebihi b_max, efek terkecil yang terdeteksi pada b terpilih dibekukan di muka; b_max < 10 → deviasi bertanggal sebelum pilot |
 | 17 | Kesegaran jalur CPU bawaan GKE | *ladder* | dilaporkan (bukan kriteria) | — |
 | 18 | Ukuran `sut` | *ladder* (langkah N *pod*) | kesetaraan pemicu lolos pada N ≥ 2 dengan n2d-standard-8 | naik ke n2d-standard-16, langkah N *pod* diulang sekali |
 | 19 | Ukuran `deps` | *ladder* (puncak *shipping*) | CPU *node* `deps` ≤ 70% *allocatable* [DEC] | naik ke n2d-standard-4 sebelum pilot |
+| 20 | Kuota *project* (v0.8.2) | segera setelah akun dan *project* dibuat, sebelum klaster dibuat | `N2D_CPUS` us-central1 ≥ 16, `CPUS_ALL_REGIONS` ≥ 18 bila ada, `IN_USE_ADDRESSES` ≥ 5, `SSD_TOTAL_GB` ≥ 410 (≥ 210 dengan disk *boot* 50 GB) (19.3.8) | jenis akun diubah supaya kenaikan kuota dapat diajukan; ditolak → P27 dibuka ulang (deviasi bertanggal sebelum *ladder*) |
 
 ### 19.12.3 Kriteria keluar dari perencanaan ke gerbang 3 (dibekukan 2026-10-19; diperbarui v0.8, 2026-10-20)
 
